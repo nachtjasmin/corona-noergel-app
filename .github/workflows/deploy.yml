@@ -14,6 +14,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Write version
+        run: git describe --always --dirty --tags --long > src/data/version.txt
+
       - name: Install and Build
         run: |
           npm install

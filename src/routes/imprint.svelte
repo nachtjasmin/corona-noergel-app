@@ -2,7 +2,7 @@
 <main class="prose my-4">
 	<p>
 		Kleine süße nicht-binäre Hobbits aus deiner Gegend haben diese Website gebaut. Da wir
-		verpflichtend jemand im Impressum benennen müssen, gibt es noch folgende Angaben.
+		verpflichtend jemanden im Impressum benennen müssen, gibt es noch folgende Angaben.
 	</p>
 	<h2>Angaben gemäß § 5 TMG</h2>
 	<address>

@@ -39,11 +39,24 @@
 	});
 
 	let appelle: { text: string; kategorie: string }[] = [];
-	$: appelle = config.appell.filter((a) => {
-		if (a.kategorie === "allgemein" || data.beschwerde.kategorie === "allgemein") return true;
+	$: appelle = config.appell
+		.filter((a) => {
+			if (a.kategorie === "allgemein" || data.beschwerde.kategorie === "allgemein") return true;
 
-		return a.kategorie === data.beschwerde.kategorie;
-	});
+			return a.kategorie === data.beschwerde.kategorie;
+		})
+		.map((a) => {
+			if (empfaenger === undefined || empfaenger === null || empfaenger === "") {
+				return a;
+			}
+
+			const to = config.bundeslaender[empfaenger];
+
+			// todo: find dynamic way for replacing variables
+			a.text = a.text.replace("${Bundesland}", to.land);
+
+			return a;
+		});
 	const buildText = () => {
 		finalText = `${data.anrede},\n\n${data.einleitung}\n${data.beschwerde.text}\n${data.appell.text}\n\n${data.gruss},\n`;
 	};

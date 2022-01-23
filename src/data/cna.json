@@ -1,0 +1,172 @@
+{
+	"anrede": [
+		"Hallo",
+		"Guten Tag",
+		"Moin",
+		"Sehr geehrtes ${bezeichnung}",
+		"Sehr geehrte*r ${titel} ${name}",
+		"Sehr geehrtes Team von ${titel} ${name}",
+		"Sehr geehrte Bearbeitende",
+		"Sehr geehrte zuständige Person"
+	],
+	"gruss": ["Freundliche Grüße", "Mit freundlichen Grüßen", "Beste Grüße", "Hochachtungsvoll"],
+	"einleitung": [
+		"Mit großem Interesse habe ich Berichte zur Telefonkonferenz der Gesundheitsministerkonferenz verfolgt.",
+		"Aus der Presse habe ich von den Beschlüssen zur PCR-Testpriorisierung erfahren.",
+		"In der tagesaktuellen Berichterstattung bin ich über die Beschlüsse zur Priorisierung von PCR-Tests gestolpert."
+	],
+	"beschwerde": [
+		{
+			"text": "Es wurde bereits Ende letzten Jahres vor der ansteckenderen Omikron-Variante gewarnt. Die jetzigen Beschlüsse erwecken den Eindruck, dass die Gesundheitsministerkonferenz rechtzeitiges Handeln hier versäumt hat.",
+			"kategorie": "allgemein"
+		},
+		{
+			"text": "Die Priorisierung ist fest im Beschluss verankert, die Anpassung der Rechtsfolgen für beispielsweise Quarantäne oder Genesenennachweise sollen dagegen nur geprüft werden. Das würde fatale Lücken offen lassen.",
+			"kategorie": "allgemein"
+		}
+	],
+	"appell": [
+		{
+			"text": "In den Beschlüssen vermisse ich insgesamt den Ausbau der vorhandenen Kapazitäten. Hier besteht in meinen Augen dringenden Handlungsbedarf",
+			"kategorie": "allgemein"
+		},
+		{
+			"text": "Es wäre allerhöchste Zeit, niedrigschweillig, kostenlos und für alle tägliche PCR-Tests anzubieten. Der Stadt Wien ist das gelungen, ich erwarte, dass ${Bundesland} hier zeitnah Kapazitäten aufbaut.",
+			"kategorie": "allgemein"
+		},
+		{
+			"text": "Solange Schulen im Pandemiegeschehen offen gehalten werden, müssen Schüler_innen und Lehrkräfte in die Priorisierung eingebunden werden. Das habe ich in der Beschlussfassung vermisst.",
+			"kategorie": "schule"
+		},
+		{
+			"text": "Wenn Schüler_innen und Lehrkräfte tatsächlich nicht in die Priorisierung mit aufgenommen werden, muss sichergestellt werden, dass positive Schnelltests in der Schule ausreichend für Meldungen bei der Unfallversicherung sind.",
+			"kategorie": "schule"
+		},
+		{
+			"text": "Damit Antigentests zuverlässig PCR-Testungen ersetzen können, muss für die zahlreichen Teststellen eine strengere Qualitätskontrolle erfolgen. Zu häufig werden Tests dort nicht mit der nötigen Sorgfalt durchgeführt.",
+			"kategorie": "antigentests"
+		},
+		{
+			"text": "Wenn Antigentests tatsächlich eine Diagnose über PCR ersetzen sollen, muss die Lagerung der Tests für Testzentren dringend regelementiert und überprüft werden. Die aktuellen Außentemperaturen sind weiter außerhalb des für die Tests zugelassenen Bereichs.",
+			"kategorie": "antigentests"
+		},
+		{
+			"text": "Durch die starke Fokussierung auf Antigentests sollte dringend die Empfindlichkeit dieser in die Reglementierung einbezogen werden, da aus den Daten des PEI hervorgeht, dass einige selbst bei sehr hohen Viruslasten nicht zuverlässig anschlagen. Hier müssen Mindeststandards etabliert werden.",
+			"kategorie": "antigentests"
+		}
+	],
+	"bundeslaender": {
+		"BW": {
+			"land": "Baden Württemberg",
+			"bezeichnung": "Ministerium für Soziales, Gesundheit und Integration",
+			"titel": "Minister",
+			"name": "Manne Lucha",
+			"mail": "poststelle@sm.bwl.de"
+		},
+		"BY": {
+			"land": "Bayern",
+			"bezeichnung": "Bayerisches Staatsministerium für Gesundheit und Pflege",
+			"titel": "Staatsminister",
+			"name": "Klaus Holetschek",
+			"mail": "poststelle@stmgp.bayern.de"
+		},
+		"BE": {
+			"land": "Berlin",
+			"bezeichnung": "Senatsverwaltung für Wissenschaft, Gesundheit, Pflege und Gleichstellung",
+			"titel": "Senatorin",
+			"name": "Ulrike Gote",
+			"mail": "post@sengpg.berlin.de"
+		},
+		"BB": {
+			"land": "Brandenburg",
+			"bezeichnung": "Ministerium für Soziales Gedunheit, Integration und Verbraucherschutz",
+			"titel": "Ministerin",
+			"name": "Ursula Nonnenmacher",
+			"mail": "poststelle@msgiv.brandenburg.de"
+		},
+		"HB": {
+			"land": "Bremen",
+			"bezeichnung": "Die Senatorin für Gesundheit, Frauen und Verbraucherschutz",
+			"titel": "Senatorin",
+			"name": "Claudia Bernhard",
+			"mail": "office@gesundheit.bremen.de"
+		},
+		"HH": {
+			"land": "Hamburg",
+			"bezeichnung": "Behörde für Arbeit, Gesundheit Soziales, Familie und Integration",
+			"titel": "Senatorin",
+			"name": "Melanie Leonhard",
+			"mail": "poststelle@soziales.hamburg.de"
+		},
+		"HE": {
+			"land": "Hessen",
+			"bezeichnung": "Hessisches Ministerium für Soziales und Integration",
+			"titel": "Minister",
+			"name": "Kai Klose",
+			"mail": "presse@hsm.hessen.de"
+		},
+		"MV": {
+			"land": "Mecklenburg Vorpommern",
+			"bezeichnung": "Ministerium für Soziales, Gesundheit und Sport",
+			"titel": "Ministerin",
+			"name": "Stefanie Drese",
+			"mail": "poststelle@sm.mv-regierung.de"
+		},
+		"NI": {
+			"land": "Niedersachsen",
+			"bezeichnung": "Niedersächsisches Ministerium für Soziales, Gesundheit und Gleichstellung",
+			"titel": "Ministerin",
+			"name": "Daniela Behrens",
+			"mail": "poststelle@ms.niedersachsen.de"
+		},
+		"NW": {
+			"land": "Nordrhein Westfalen",
+			"bezeichnung": "Ministerium für Arbeit, Gesundheit und Soziales",
+			"titel": "Minister",
+			"name": "Karl-Josef Laumann",
+			"mail": "poststelle@mags.nrw.de"
+		},
+		"RP": {
+			"land": "Rheinland Pfalz",
+			"bezeichnung": "Ministerium für Wissenschaft und Gesundheit",
+			"titel": "Minister",
+			"name": "Clemens Hoch",
+			"mail": "poststelle@mwg.rlp.de"
+		},
+		"SL": {
+			"land": "Saarland",
+			"bezeichnung": "Ministerium für Soziales, Gesundheit, Frauen und Familie",
+			"titel": "Ministerin",
+			"name": "Monika Bachmann",
+			"mail": "buergerbeauftragter@soziales.saarland.de"
+		},
+		"SN": {
+			"land": "Sachsen",
+			"bezeichnung": "Sächsisches Staatsministerium für Soziales und Gesellschaftlichen Zusammenhalt",
+			"titel": "Staatsministerin",
+			"name": "Petra Köpping",
+			"mail": "poststelle@sms.sachsen.de"
+		},
+		"ST": {
+			"land": "Sachsen Anhalt",
+			"bezeichnung": "Ministerium für Arbeit, Soziales und Gesundheit und Gleichstellung",
+			"titel": "Ministerin",
+			"name": "Petra Grimm-Benne",
+			"mail": "ms-presse@ms.sachsen-anhalt.de"
+		},
+		"SH": {
+			"land": "Schleswig-Holstein",
+			"bezeichnung": "Ministerium für Soziales, Gesundheit, Jugend, Familie und Senioren",
+			"titel": "Minister",
+			"name": "Heiner Garg",
+			"mail": "Poststelle@sozmi.landsh.de"
+		},
+		"TH": {
+			"land": "Thüringen",
+			"bezeichnung": "Thüringer Ministerium für Arbeit, Soziales, Gesundheit, Frauen und Familie",
+			"titel": "Ministerin",
+			"name": "Heike Werner",
+			"mail": "Poststelle@tmasgff.thueringen.de"
+		}
+	}
+}

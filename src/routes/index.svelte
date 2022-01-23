@@ -54,11 +54,10 @@
 			}
 
 			const to = config.bundeslaender[empfaenger];
-
-			// todo: find dynamic way for replacing variables
-			a.text = a.text.replace("${Bundesland}", to.land);
-
-			return a;
+			return {
+				kategorie: a.kategorie,
+				text: a.text.replace("${Bundesland}", to.land),
+			};
 		});
 	const buildText = () => {
 		finalText = `${data.anrede},\n\n${data.einleitung}\n${data.beschwerde.text}\n${data.appell.text}\n\n${data.gruss},\n${data.name}`;

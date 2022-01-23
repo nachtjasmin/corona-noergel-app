@@ -146,9 +146,9 @@
 			{/each}
 		</select>
 
-		<label for="gruss">Grußwort</label>
+		<label for="gruss">Grußformel</label>
 		<select id="gruss" bind:value={data.gruss}>
-			<option disabled>Gruß auswählen</option>
+			<option disabled>Grußformel auswählen</option>
 			{#each config.gruss as s}
 				<option value={s}>{s}</option>
 			{/each}

@@ -23,8 +23,7 @@
 		{
 			"text": "Die Priorisierung ist fest im Beschluss verankert, die Anpassung der Rechtsolgen für beispielsweise Quarantäne oder Genesenennachweise sollen dagegen nur geprüft werden. Das würde fatale Lücken offen lassen.",
 			"kategorie": "allgemein"
-		},
-		{ "text": "", "kategorie": "" }
+		}
 	],
 	"appell": [
 		{
@@ -43,7 +42,6 @@
 			"text": "Wenn Schüler_innen und Lehrkräfte tatsächlich nicht in die Priorisierung mit aufgenommen werden, muss sichergestellt werden, dass positive Schnelltests in der Schule ausreichend für Meldungen bei der Unfallversicherung sind.",
 			"kategorie": "schule"
 		},
-		{ "text": "", "kategorie": "" },
 		{
 			"text": "Damit Antigentests zuverlässig PCR-Testungen ersetzen können, muss für die zahlreichen Teststellen eine strengere Qualitätskontrolle erfolgen. Zu häufig werden Tests dort nicht mit der nötigen Sorgfalt durchgeführt",
 			"kategorie": "antigentests"

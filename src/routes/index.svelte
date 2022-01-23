@@ -73,7 +73,6 @@
 		return input[Math.floor(Math.random() * input.length)];
 	}
 	const buildRandom = () => {
-		console.log("build random stuff");
 		data.anrede = getRandom(anreden);
 		data.einleitung = getRandom(config.einleitung);
 		data.beschwerde = getRandom(config.beschwerde);
@@ -81,6 +80,7 @@
 		data.gruss = getRandom(config.gruss);
 
 		buildText();
+		document.getElementById("text").scrollIntoView();
 	};
 </script>
 
@@ -151,7 +151,7 @@
 			{/each}
 		</select>
 	</section>
-	<section class:hidden={!showThirdStep}>
+	<section id="text" class:hidden={!showThirdStep}>
 		<p class="section-header">Schritt 3: Text erzeugen</p>
 		<button type="submit" class="btn">Bastel mir den Text!</button>
 		<textarea readonly class="w-full bg-gray-100 rounded mt-4" rows="10">{finalText}</textarea>

@@ -5,7 +5,7 @@
 
 <div class="container mx-auto my-4 md:mt-12 md:mb-8 lg:my-24 max-w-2xl px-4">
 	<slot />
-	<ul class="flex flex-col sm:flex-row space-x-4 justify-center mb-8">
+	<ul class="flex flex-col sm:flex-row sm:space-x-4 justify-center mb-8">
 		<li><a href="/" class="footer-link">Startseite</a></li>
 		<li><a href="/imprint" class="footer-link">Impressum & Datenschutzerklärung</a></li>
 	</ul>

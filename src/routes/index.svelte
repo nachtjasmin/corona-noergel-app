@@ -29,8 +29,7 @@
 		data.einleitung.length > 0 &&
 		data.beschwerde.text.length > 0 &&
 		data.appell.text.length > 0 &&
-		data.gruss.length > 0 &&
-		data.name.length > 0;
+		data.gruss.length > 0;
 	$: showSendButton = finalText.length > 0;
 	$: mailto = buildMailToLink(empfaenger, finalText);
 	$: anreden = config.anrede.map((a) => {
@@ -157,7 +156,7 @@
 		</select>
 
 		<label for="name">Dein Name</label>
-		<input type="text" bind:value={data.name} />
+		<input type="text" placeholder="(optional)" bind:value={data.name} />
 	</section>
 	<section id="text" class:hidden={!showThirdStep}>
 		<p class="section-header">Schritt 3: Text erzeugen</p>

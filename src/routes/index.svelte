@@ -19,7 +19,7 @@
 		gruss: "",
 	};
 
-	$: showSecondStep = anreden.length > 0;
+	$: showSecondStep = empfaenger.length > 0;
 	$: showThirdStep =
 		showSecondStep &&
 		data.anrede.length > 0 &&
@@ -29,18 +29,21 @@
 		data.gruss.length > 0;
 	$: showSendButton = finalText.length > 0;
 	$: mailto = buildMailToLink(empfaenger, finalText);
-
-	const onReceiverChange = (): void => {
-		if (empfaenger === undefined || empfaenger === null) {
-			anreden = [];
-			return;
+	$: anreden = config.anrede.map((a) => {
+		if (empfaenger === undefined || empfaenger === null || empfaenger === "") {
+			return a;
 		}
 
 		const to = config.bundeslaender[empfaenger];
-		anreden = config.anrede.map((a) => {
-			return a.replace(/\$\{(\w+)\}/g, (_, p) => to[p]);
-		});
-	};
+		return a.replace(/\$\{(\w+)\}/g, (_, p) => to[p]);
+	});
+
+	let appelle: { text: string; kategorie: string }[] = [];
+	$: appelle = config.appell.filter((a) => {
+		if (a.kategorie === "allgemein" || data.beschwerde.kategorie === "allgemein") return true;
+
+		return a.kategorie === data.beschwerde.kategorie;
+	});
 	const buildText = () => {
 		finalText = `${data.anrede},\n\n${data.einleitung}\n${data.beschwerde.text}\n${data.appell.text}\n\n${data.gruss}\n`;
 	};
@@ -65,7 +68,7 @@
 	<form on:submit|preventDefault={buildText}>
 		<section>
 			<p class="section-header">Schritt 1: Bundesland auswählen</p>
-			<select bind:value={empfaenger} on:change={onReceiverChange}>
+			<select bind:value={empfaenger}>
 				<option disabled>Bundesland auswählen</option>
 				{#each Object.keys(config.bundeslaender) as land}
 					<option value={land}>
@@ -103,14 +106,14 @@
 			<label for="appell">Appell</label>
 			<select id="appell" bind:value={data.appell}>
 				<option disabled>Appell auswählen</option>
-				{#each config.appell.filter((a) => a.kategorie === data.beschwerde.kategorie || a.kategorie === "allgemein") as s}
+				{#each appelle as s}
 					<option value={s}>{s.text} </option>
 				{/each}
 			</select>
 
 			<label for="gruss">Grußwort</label>
 			<select id="gruss" bind:value={data.gruss}>
-				<option disabled>gruss auswählen</option>
+				<option disabled>Gruß auswählen</option>
 				{#each config.gruss as s}
 					<option value={s}>{s}</option>
 				{/each}

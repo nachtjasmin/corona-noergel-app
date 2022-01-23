@@ -40,7 +40,6 @@
 		anreden = config.anrede.map((a) => {
 			return a.replace(/\$\{(\w+)\}/g, (_, p) => to[p]);
 		});
-		console.log({ anreden });
 	};
 	const buildText = () => {
 		finalText = `${data.anrede},\n\n${data.einleitung}\n${data.beschwerde.text}\n${data.appell.text}\n\n${data.gruss}\n`;

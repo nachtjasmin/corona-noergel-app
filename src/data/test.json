@@ -1,0 +1,14 @@
+{
+	"receivers": [
+		{
+			"name": "Axel-Springer-Haus",
+			"mail": "test@test.de",
+			"person": {
+				"anrede": "Sehr geehrter Herr",
+				"name": "Ulf Poschardt",
+				"description": "Springerstiefel"
+			}
+		}
+	],
+	"allPhrases": ["Ich mag Sie nicht.", "Sie sind doof.", "Irgendwann zünd ich Ihren Diesel an."]
+}

@@ -4,7 +4,7 @@
 		Kleine süße nicht-binäre Hobbits aus deiner Gegend haben diese Website gebaut. Da wir
 		verpflichtend jemand im Impressum benennen müssen, gibt es noch folgende Angaben.
 	</p>
-	<h2>Angaben gemäß § TMG</h2>
+	<h2>Angaben gemäß § 5 TMG</h2>
 	<address>
 		Aurora Herbst<br />
 		Petersgasse 23<br />

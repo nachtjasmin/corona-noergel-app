@@ -64,7 +64,7 @@
 		if (empfaenger === "" || preview === "") return "";
 
 		const to = config.bundeslaender[empfaenger];
-		let subject = encodeURI("");
+		let subject = encodeURI("Beschwerde zum Beschluss der PCR-Priorisierung vom 22.01.");
 		let body = encodeURI(preview);
 
 		return `mailto:${to.mail}?subject=${subject}&body=${body}`;
@@ -86,9 +86,13 @@
 
 <h1 class="font-bold text-2xl">Corona-Nörgel-App 🦠😷</h1>
 <p class="mt-4">
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facere animi quibusdam mollitia
-	doloremque, illo quis molestiae ipsa officiis sunt eius placeat dolorem a praesentium aliquid
-	corporis cum. Doloribus, distinctio?
+	Am 22.01. haben die Gesundheitsministieren in einer Telefonkonferenz weitgehende <a
+		class="underline"
+		href="https://www.gmkonline.de/Beschluesse.html?uid=268&jahr=2022"
+		>Einschränkungen für PCR-Tests</a
+	> beschlossen. Hier kannst du passend für dein Bundesland eine Beschwerdemail für dein zuständiges
+	Ministerium generieren. Abschicken musst du es noch selbst, dafür brauchst du ein eingerichtetes Mailprogramm
+	wie Thunderbird, Outlook oder K9.
 </p>
 <form on:submit|preventDefault={buildText}>
 	<section>

@@ -1,0 +1,31 @@
+# This is a basic workflow to automatically build a Svelte app and deploy it to GitHub Pages
+
+name: Deploy to Uberspace
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Write version
+        run: git describe --always --tags --long > src/data/version.txt
+
+      - name: Install and Build
+        run: |
+          npm install
+          npm run build
+
+      - name: Setup SSH Key
+        run: |
+          ssh-agent -a $SSH_AUTH_SOCK > /dev/null
+          ssh-add - <<< "${{ secrets.PRIVATE_KEY }}"
+
+      - name: rsync to target
+        run: rsync -Pr -e "ssh -o StrictHostKeyChecking=accept-new" build/ cna@cna.uber.space:/home/cna/html

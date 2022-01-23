@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Write version
-        run: git describe --always --dirty --tags --long > src/data/version.txt
+        run: git describe --always --tags --long > src/data/version.txt
 
       - name: Install and Build
         run: |

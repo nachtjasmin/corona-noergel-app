@@ -56,9 +56,22 @@
 
 		return `mailto:${to.mail}?subject=${subject}&body=${body}`;
 	};
+	function getRandom<T>(input: T[]): T {
+		return input[Math.floor(Math.random() * input.length)];
+	}
+	const buildRandom = () => {
+		console.log("build random stuff");
+		data.anrede = getRandom(anreden);
+		data.einleitung = getRandom(config.einleitung);
+		data.beschwerde = getRandom(config.beschwerde);
+		data.appell = getRandom(appelle);
+		data.gruss = getRandom(config.gruss);
+
+		buildText();
+	};
 </script>
 
-<div class="container mx-auto my-4 md:mt-12 lg:mt-24 max-w-2xl">
+<div class="container mx-auto my-4 md:mt-12 md:mb-8 lg:my-24 max-w-2xl">
 	<h1 class="font-bold text-2xl">Corona-Nörgel-App 🦠😷</h1>
 	<p class="mt-4">
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facere animi quibusdam mollitia
@@ -78,7 +91,10 @@
 			</select>
 		</section>
 		<section class:hidden={!showSecondStep}>
-			<p class="section-header">Schritt 2: Textbausteine wählen</p>
+			<div class="flex flex-col md:flex-row items-baseline justify-between">
+				<p class="section-header">Schritt 2: Textbausteine wählen</p>
+				<button type="button" class="btn-random" on:click={buildRandom}>Zufällig auswählen</button>
+			</div>
 			<label for="anrede">Anrede</label>
 			<select id="anrede" bind:value={data.anrede}>
 				<option disabled>Anrede auswählen</option>
@@ -152,6 +168,13 @@
 	.btn {
 		@apply inline-block px-4 py-2 rounded motion-safe:transition-colors;
 		@apply bg-green-200;
+		@apply border border-green-800;
+		@apply hover:bg-green-300;
+		@apply active:bg-green-800 active:text-white;
+	}
+	.btn-random {
+		@apply text-sm;
+		@apply inline-block px-3 py-1 rounded motion-safe:transition-colors;
 		@apply border border-green-800;
 		@apply hover:bg-green-300;
 		@apply active:bg-green-800 active:text-white;

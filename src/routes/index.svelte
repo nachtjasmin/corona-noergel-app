@@ -55,7 +55,7 @@
 	};
 </script>
 
-<div class="container mx-auto my-4 md:mt-12 lg:mt-24 max-w-xl">
+<div class="container mx-auto my-4 md:mt-12 lg:mt-24 max-w-2xl">
 	<h1 class="font-bold text-2xl">Corona-Nörgel-App 🦠😷</h1>
 	<p class="mt-4">
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facere animi quibusdam mollitia

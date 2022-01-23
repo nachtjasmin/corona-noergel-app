@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { tick } from "svelte";
+
 	import config from "../data/cna.json";
 
 	let empfaenger: string = "";
@@ -72,7 +74,7 @@
 	function getRandom<T>(input: T[]): T {
 		return input[Math.floor(Math.random() * input.length)];
 	}
-	const buildRandom = () => {
+	const buildRandom = async () => {
 		data.anrede = getRandom(anreden);
 		data.einleitung = getRandom(config.einleitung);
 		data.beschwerde = getRandom(config.beschwerde);
@@ -80,6 +82,7 @@
 		data.gruss = getRandom(config.gruss);
 
 		buildText();
+		await tick();
 		document.getElementById("text").scrollIntoView();
 	};
 </script>

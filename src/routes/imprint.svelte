@@ -13,7 +13,7 @@
 
 	<h2>Kontakt</h2>
 	<p>
-		E-Mail: hallo@cna.uber.space<br />
+		E-Mail: hallo@beschweren.rocks<br />
 		Twitter: <a href="https://twitter.com/nachtjasmin">nachtjasmin</a>,
 		<a href="https://twitter.com/Nonxens">Nonxens</a><br />
 		Der Code für dieses Projekt befindet sich auf

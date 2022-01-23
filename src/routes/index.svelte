@@ -19,6 +19,7 @@
 			kategorie: "",
 		},
 		gruss: "",
+		name: "",
 	};
 
 	$: showSecondStep = empfaenger.length > 0;
@@ -28,7 +29,8 @@
 		data.einleitung.length > 0 &&
 		data.beschwerde.text.length > 0 &&
 		data.appell.text.length > 0 &&
-		data.gruss.length > 0;
+		data.gruss.length > 0 &&
+		data.name.length > 0;
 	$: showSendButton = finalText.length > 0;
 	$: mailto = buildMailToLink(empfaenger, finalText);
 	$: anreden = config.anrede.map((a) => {
@@ -60,7 +62,7 @@
 			return a;
 		});
 	const buildText = () => {
-		finalText = `${data.anrede},\n\n${data.einleitung}\n${data.beschwerde.text}\n${data.appell.text}\n\n${data.gruss},\n`;
+		finalText = `${data.anrede},\n\n${data.einleitung}\n${data.beschwerde.text}\n${data.appell.text}\n\n${data.gruss},\n${data.name}`;
 	};
 	const buildMailToLink = (empfaenger: string, preview: string): string => {
 		if (empfaenger === "" || preview === "") return "";
@@ -153,6 +155,9 @@
 				<option value={s}>{s}</option>
 			{/each}
 		</select>
+
+		<label for="name">Dein Name</label>
+		<input type="text" bind:value={data.name} />
 	</section>
 	<section id="text" class:hidden={!showThirdStep}>
 		<p class="section-header">Schritt 3: Text erzeugen</p>
@@ -174,7 +179,8 @@
 	label {
 		@apply text-sm;
 	}
-	select {
+	select,
+	input {
 		@apply w-full rounded mt-1 mb-2;
 	}
 	section {

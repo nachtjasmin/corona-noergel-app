@@ -4,63 +4,53 @@
 	import { onMount } from "svelte";
 
 	// if data is empty, navigate back
-	if ($data.anrede === "") goto("/");
-	onMount(() => window.print());
+	onMount(() => {
+		if ($data.anrede === "") {
+			goto("/", { replaceState: true });
+			return;
+		}
+
+		// otherwise, show the default print menu
+		window.print();
+	});
 </script>
 
-<div class="normal">
-	<div id="wrapper">
-		<!-- only hide it this way to keep the spacing -->
-		<blockquote style="visibility: hidden">
-			<h1 id="macandi">Mac Andi</h1>
+<!-- where should the letter go? -->
+<address class="receiver">
+	Ministerium für Gedöns<br />
+	Musterstraße 3<br />
+	13245 Musterstadt
+</address>
 
-			<p>Markdown-Profi</p>
+<!-- the current date -->
+<p class="text-right">{new Date().toLocaleDateString("de", { dateStyle: "full" })}</p>
 
-			<p>
-				Musterstraße 2<br />
-				12345 Musterdorf
-			</p>
+<p class="subject-line">TODO: Betreffzeile</p>
+<p class="text">
+	{data.buildInnerText()}
+</p>
 
-			<p>
-				Telefon: 01234 56789<br />
-				Mobil: 0123 123456789<br />
-				E-Mail: <a href="mailto:redaktion@mac-and-i.de">redaktion@mac-and-i.de</a><br />
-				Website: <a href="http://www.mac-and-i.de">www.mac-and-i.de</a>
-			</p>
+<p class="mt-8">
+	{$data.gruss}<br />
+	{$data.name}
+</p>
 
-			<p>
-				IBAN: DE00 1234 5678 1234 5678 90<br />
-				BIC: MARKDOW0000
-			</p>
-		</blockquote>
+<style>
+	@page {
+		size: "A4";
+		margin: 0; /* margins are set by the rest of the elements */
+	}
 
-		<hr />
-
-		<blockquote>
-			<h2>
-				<!-- empty to keep layout intact -->
-			</h2>
-
-			<p>
-				Karl Empfänger<br />
-				Musterweg 3<br />
-				67890 Musterstadt
-			</p>
-		</blockquote>
-
-		<hr />
-
-		<blockquote>
-			<p>{new Date().toLocaleDateString("de", { dateStyle: "full" })}</p>
-		</blockquote>
-
-		<h3>TODO: Betreffzeile</h3>
-
-		<p class="whitespace-pre-line">{data.buildInnerText()}</p>
-
-		<blockquote>
-			<p>{$data.gruss}</p>
-			<p>{$data.name}</p>
-		</blockquote>
-	</div>
-</div>
+	.receiver {
+		@apply not-italic;
+		width: 80mm;
+		height: 45mm;
+		margin-top: 45mm; /* vom oberen Blattrand */
+	}
+	.subject-line {
+		@apply font-bold text-lg mb-6;
+	}
+	.text {
+		@apply whitespace-pre-line leading-relaxed;
+	}
+</style>

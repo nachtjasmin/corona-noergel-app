@@ -67,7 +67,7 @@
 		if (empfaenger === "" || preview === "") return "";
 
 		const to = config.bundeslaender[empfaenger];
-		let subject = encodeURI("Beschwerde zum Beschluss der PCR-Priorisierung vom 22.01.");
+		let subject = encodeURI(getRandom(config.betreff));
 		let body = encodeURI(preview);
 
 		return `mailto:${to.mail}?subject=${subject}&body=${body}`;

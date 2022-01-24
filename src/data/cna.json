@@ -75,8 +75,11 @@
 			"name": "Manne Lucha",
 			"mail": "poststelle@sm.bwl.de",
 			"fax": "0711 123 3999",
-			"anschrift": ["Pressestelle/ Öffentlichkeitsarbeit", "Else-Josenhans-Str. 6", "70173 Stuttgart"]
-
+			"anschrift": [
+				"Pressestelle/ Öffentlichkeitsarbeit",
+				"Else-Josenhans-Str. 6",
+				"70173 Stuttgart"
+			]
 		},
 		"BY": {
 			"land": "Bayern",
@@ -139,7 +142,7 @@
 			"name": "Stefanie Drese",
 			"mail": "poststelle@sm.mv-regierung.de",
 			"fax": "0385 588 9709",
-			"anschrift": "19048 Schwerin"
+			"anschrift": ["19048 Schwerin"]
 		},
 		"NI": {
 			"land": "Niedersachsen",
@@ -175,7 +178,7 @@
 			"name": "Monika Bachmann",
 			"mail": "buergerbeauftragter@soziales.saarland.de",
 			"fax": "068 1501 3397",
-			"anschrift": ["Fanz-Josef-Röder-Straße 23", "66119 Saarbrücken"]
+			"anschrift": ["Franz-Josef-Röder-Straße 23", "66119 Saarbrücken"]
 		},
 		"SN": {
 			"land": "Sachsen",

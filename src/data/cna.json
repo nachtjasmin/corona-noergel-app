@@ -15,7 +15,18 @@
 		"Aus der Presse habe ich von den Beschlüssen zur PCR-Testpriorisierung erfahren.",
 		"In der tagesaktuellen Berichterstattung bin ich über die Beschlüsse zur Priorisierung von PCR-Tests gestolpert."
 	],
-	"betreff": ["Beschwerde zum Beschluss der PCR-Priorisierung vom 22.01."],
+	"betreff": [
+		"Beschwerde zum Beschluss der PCR-Priorisierung vom 22.01.",
+		"PCR-Priorisierung: Beschwerde",
+		"Beschwerde zum PCR-Beschluss",
+		"Bitte bei der PCR-Priorisierung noch mal nacharbeiten",
+		"PCR-Priorisierungsbeschluss nicht ausreichend",
+		"PCR-Beschluss vom 22.01. ist nicht gut",
+		"Lückenhafter Beschluss zur Einschränkung PCR-Tests",
+		"PCR-Kapazitäten nicht beschränken",
+		"Beschwerde zu den Beschlüssen vom 22.01.",
+		"PCR-Beschlüsse bitte dringend überdenken"
+	],
 	"beschwerde": [
 		{
 			"text": "Es wurde bereits Ende letzten Jahres vor der ansteckenderen Omikron-Variante gewarnt. Die jetzigen Beschlüsse erwecken den Eindruck, dass die Gesundheitsministerkonferenz rechtzeitiges Handeln hier versäumt hat.",

@@ -34,7 +34,9 @@
 	});
 </script>
 
-<form class="print:hidden flex flex-col mx-auto max-w-2xl px-4">
+<form
+	class="print:hidden flex flex-col container mx-auto my-4 md:mt-12 md:mb-8 lg:my-24 max-w-2xl px-4"
+>
 	<p class="mb-4 italic">
 		Dieses Feature ist noch in einer Entwicklungsphase, daher kann es noch zu Darstellungsfehlern
 		kommen. Probleme können über die Mail-Adresse im <a class="underline" href="/imprint"
@@ -79,7 +81,7 @@
 	</p>
 </form>
 
-<section class="hidden print:block">
+<section class="hidden print:block letter">
 	<!-- where should the letter go? -->
 	<div class="receiver-wrapper">
 		<address class="receiver">
@@ -121,6 +123,16 @@
 		@apply border border-green-800;
 		@apply hover:bg-green-300;
 		@apply active:bg-green-800 active:text-white;
+	}
+
+	.letter {
+		font-size: 10pt; /* reduce default font size for letters */
+		@apply font-sans;
+
+		/* apply margins according to DIN 5008, adjusted for web */
+		margin-top: 25mm;
+		margin-left: 20mm;
+		margin-right: 15mm;
 	}
 
 	@page {

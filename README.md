@@ -2,7 +2,26 @@
 
 _built with SvelteKit, currently in beta_
 
-## Developing
+Complaints as a service. We use prefabricated arguments and public address data to generate individual draft complaint emails. These can then be improved upon before sending, if so desired.
+
+Wir haben einige Argumente gesammelt und kombinieren diese automatisch zu individuellen Mailentwürfen, die dann vor dem Verschicken an das jeweilige Landesministerium, falls gewünscht, noch erweitert und angepasst werden können. 
+
+## Complain / Beschweren
+
+If you ended up here, because you want to complain (to your health ministry that is) - no need to do anything of the following. Just head over to https://beschweren.rocks/ and complain to them.
+
+Wenn du hier gelandet bist, weil du dich über fragwürdige Beschlüsse in der aktuellen Coronapolitik bist: es gibt eine live-version unter https://beschweren.rocks/ - kein programmieren, kein git, kein quelltext, einfach Mails zusammenbauen, ins Mailprogramm übernehmen, individualisieren und verschicken.
+
+If something doesn't work as expected feel free to add an issue here or drop us a line at hallo@beschweren.rocks. 
+
+Wenn du hier bist, um dich zu beschweren, weil etwas an https://beschweren.rocks/ nicht funktioniert, mach gerne eine Issue auf oder schreib uns an hallo@beschweren.rocks
+
+
+## Do it yourself
+
+This code is open source, feel free to fork, file issues or maybe even a pull request. We are using Svelte with Tailwind. For dev and build instructions see below.
+
+### Developing
 
 Install the dependencies with `npm install` (or `pnpm install` or `yarn`). Afterwards, you can start
 the development server:
@@ -14,7 +33,7 @@ npm run dev
 npm run dev -- --open
 ```
 
-## Building
+### Building
 
 To build the application, run:
 

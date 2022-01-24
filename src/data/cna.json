@@ -73,112 +73,145 @@
 			"bezeichnung": "Ministerium für Soziales, Gesundheit und Integration",
 			"titel": "Minister",
 			"name": "Manne Lucha",
-			"mail": "poststelle@sm.bwl.de"
+			"mail": "poststelle@sm.bwl.de",
+			"fax": "0711 123 3999",
+			"anschrift": ["Pressestelle/ Öffentlichkeitsarbeit", "Else-Josenhans-Str. 6", "70173 Stuttgart"]
+
 		},
 		"BY": {
 			"land": "Bayern",
 			"bezeichnung": "Bayerisches Staatsministerium für Gesundheit und Pflege",
 			"titel": "Staatsminister",
 			"name": "Klaus Holetschek",
-			"mail": "poststelle@stmgp.bayern.de"
+			"mail": "poststelle@stmgp.bayern.de",
+			"fax": "089 540233 90999",
+			"anschrift": ["Haidenauplatz 1", "81667 München"]
 		},
 		"BE": {
 			"land": "Berlin",
 			"bezeichnung": "Senatsverwaltung für Wissenschaft, Gesundheit, Pflege und Gleichstellung",
 			"titel": "Senatorin",
 			"name": "Ulrike Gote",
-			"mail": "post@sengpg.berlin.de"
+			"mail": "post@sengpg.berlin.de",
+			"fax": "030 9028 3102",
+			"anschrift": ["Oranienstr. 106", "10969 Berlin"]
 		},
 		"BB": {
 			"land": "Brandenburg",
 			"bezeichnung": "Ministerium für Soziales, Gesundheit, Integration und Verbraucherschutz",
 			"titel": "Ministerin",
 			"name": "Ursula Nonnenmacher",
-			"mail": "poststelle@msgiv.brandenburg.de"
+			"mail": "poststelle@msgiv.brandenburg.de",
+			"fax": "0331 866 5108",
+			"anschrift": ["Haus S", "Henning-von-Tresckow-Straße 2-13", "14467 Potsdam"]
 		},
 		"HB": {
 			"land": "Bremen",
 			"bezeichnung": "Die Senatorin für Gesundheit, Frauen und Verbraucherschutz",
 			"titel": "Senatorin",
 			"name": "Claudia Bernhard",
-			"mail": "office@gesundheit.bremen.de"
+			"mail": "office@gesundheit.bremen.de",
+			"fax": "0421 496 54492",
+			"anschrift": ["Contrescarpe 72", "28195 Bremen"]
 		},
 		"HH": {
 			"land": "Hamburg",
 			"bezeichnung": "Behörde für Arbeit, Gesundheit Soziales, Familie und Integration",
 			"titel": "Senatorin",
 			"name": "Melanie Leonhard",
-			"mail": "poststelle@soziales.hamburg.de"
+			"mail": "poststelle@soziales.hamburg.de",
+			"fax": "040 4279 63030",
+			"anschrift": ["Hamburger Straße 47", "22083 Hamburg"]
 		},
 		"HE": {
 			"land": "Hessen",
 			"bezeichnung": "Hessisches Ministerium für Soziales und Integration",
 			"titel": "Minister",
 			"name": "Kai Klose",
-			"mail": "presse@hsm.hessen.de"
+			"mail": "presse@hsm.hessen.de",
+			"fax": "0611 32719 3700",
+			"anschrift": ["Sonnenberger Str. 2/2a", "65193 Wiesbaden"]
 		},
 		"MV": {
 			"land": "Mecklenburg Vorpommern",
 			"bezeichnung": "Ministerium für Soziales, Gesundheit und Sport",
 			"titel": "Ministerin",
 			"name": "Stefanie Drese",
-			"mail": "poststelle@sm.mv-regierung.de"
+			"mail": "poststelle@sm.mv-regierung.de",
+			"fax": "0385 588 9709",
+			"anschrift": "19048 Schwerin"
 		},
 		"NI": {
 			"land": "Niedersachsen",
 			"bezeichnung": "Niedersächsisches Ministerium für Soziales, Gesundheit und Gleichstellung",
 			"titel": "Ministerin",
 			"name": "Daniela Behrens",
-			"mail": "poststelle@ms.niedersachsen.de"
+			"mail": "poststelle@ms.niedersachsen.de",
+			"fax": "0511 120 4296",
+			"anschrift": ["Hannah-Ahrendt-Platz 2", "30159 Hannover"]
 		},
 		"NW": {
 			"land": "Nordrhein Westfalen",
 			"bezeichnung": "Ministerium für Arbeit, Gesundheit und Soziales",
 			"titel": "Minister",
 			"name": "Karl-Josef Laumann",
-			"mail": "poststelle@mags.nrw.de"
+			"mail": "poststelle@mags.nrw.de",
+			"fax": "0211 855 3211",
+			"anschrift": ["Fürstenwall 25", "40219 Düsseldorf"]
 		},
 		"RP": {
 			"land": "Rheinland Pfalz",
 			"bezeichnung": "Ministerium für Wissenschaft und Gesundheit",
 			"titel": "Minister",
 			"name": "Clemens Hoch",
-			"mail": "poststelle@mwg.rlp.de"
+			"mail": "poststelle@mwg.rlp.de",
+			"fax": "06131 1629 97",
+			"anschrift": ["Postfach 32 20", "55022 Mainz"]
 		},
 		"SL": {
 			"land": "Saarland",
 			"bezeichnung": "Ministerium für Soziales, Gesundheit, Frauen und Familie",
 			"titel": "Ministerin",
 			"name": "Monika Bachmann",
-			"mail": "buergerbeauftragter@soziales.saarland.de"
+			"mail": "buergerbeauftragter@soziales.saarland.de",
+			"fax": "068 1501 3397",
+			"anschrift": ["Fanz-Josef-Röder-Straße 23", "66119 Saarbrücken"]
 		},
 		"SN": {
 			"land": "Sachsen",
 			"bezeichnung": "Sächsisches Staatsministerium für Soziales und Gesellschaftlichen Zusammenhalt",
 			"titel": "Staatsministerin",
 			"name": "Petra Köpping",
-			"mail": "poststelle@sms.sachsen.de"
+			"mail": "poststelle@sms.sachsen.de",
+			"fax": "0351 564 55060",
+			"anschrift": ["Alberstraße 10", "01097 Dresden"]
 		},
 		"ST": {
 			"land": "Sachsen Anhalt",
 			"bezeichnung": "Ministerium für Arbeit, Soziales und Gesundheit und Gleichstellung",
 			"titel": "Ministerin",
 			"name": "Petra Grimm-Benne",
-			"mail": "ms-presse@ms.sachsen-anhalt.de"
+			"mail": "ms-presse@ms.sachsen-anhalt.de",
+			"fax": "0391 567 4622",
+			"anschrift": ["Turmschanzenstraße 25", "39114 Magdeburg"]
 		},
 		"SH": {
 			"land": "Schleswig-Holstein",
 			"bezeichnung": "Ministerium für Soziales, Gesundheit, Jugend, Familie und Senioren",
 			"titel": "Minister",
 			"name": "Heiner Garg",
-			"mail": "Poststelle@sozmi.landsh.de"
+			"mail": "Poststelle@sozmi.landsh.de",
+			"fax": "0431 988 5416",
+			"anschrift": ["Adolf-Wesphal-Str. 4", "24143 Kiel"]
 		},
 		"TH": {
 			"land": "Thüringen",
 			"bezeichnung": "Thüringer Ministerium für Arbeit, Soziales, Gesundheit, Frauen und Familie",
 			"titel": "Ministerin",
 			"name": "Heike Werner",
-			"mail": "Poststelle@tmasgff.thueringen.de"
+			"mail": "Poststelle@tmasgff.thueringen.de",
+			"fax": "0361 379 8800",
+			"anschrift": ["Werner-Seelenbinder-Str. 6", "99096 Erfurt"]
 		}
 	}
 }

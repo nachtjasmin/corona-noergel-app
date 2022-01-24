@@ -33,9 +33,14 @@ const emptyStructure: StoreStructure = {
 function createDataStore() {
 	const structure = writable<StoreStructure>(emptyStructure);
 
+	const buildInnerText = (): string => {
+		const data = get(structure);
+		return `${data.einleitung}\n${data.beschwerde.text}\n${data.appell.text}`;
+	};
+
 	const buildText = (): string => {
 		const data = get(structure);
-		return `${data.anrede},\n\n${data.einleitung}\n${data.beschwerde.text}\n${data.appell.text}\n\n${data.gruss}\n${data.name}`;
+		return `${data.anrede},\n\n${buildInnerText()}\n\n${data.gruss}\n${data.name}`;
 	};
 
 	return {
@@ -44,6 +49,7 @@ function createDataStore() {
 		set: structure.set, // required for direct access like $data.value = <value>
 		reset: () => structure.set({ ...emptyStructure }),
 		buildText,
+		buildInnerText,
 	};
 }
 

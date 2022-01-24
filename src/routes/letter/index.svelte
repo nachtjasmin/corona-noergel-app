@@ -53,7 +53,7 @@
 		Informationen. Diese Informationen werden zu keinem Zeitpunkt an uns übermittelt.
 	</p>
 	<label for="name">Dein vollständiger Name</label>
-	<input type="text" bind:value={letterInformation.name} />
+	<input type="text" id="name" bind:value={letterInformation.name} />
 	<label for="address1">Addresszeile 1</label>
 	<input
 		id="address1"
@@ -112,7 +112,6 @@
 	label {
 		@apply text-sm mt-2;
 	}
-	select,
 	input {
 		@apply w-full rounded mt-1 mb-2;
 		@apply dark:bg-slate-800;

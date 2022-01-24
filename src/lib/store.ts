@@ -1,6 +1,7 @@
 import { get, writable } from "svelte/store";
 
 export type StoreStructure = {
+	bundesland: string;
 	anrede: string;
 	einleitung: string;
 	beschwerde: {
@@ -16,6 +17,7 @@ export type StoreStructure = {
 };
 
 const emptyStructure: StoreStructure = {
+	bundesland: "",
 	anrede: "",
 	einleitung: "",
 	beschwerde: {

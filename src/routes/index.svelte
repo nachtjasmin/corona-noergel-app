@@ -5,11 +5,10 @@
 	import config from "../data/cna.json";
 	import { getRandom } from "$lib/helpers";
 
-	let empfaenger: string = "";
 	let anreden: string[] = [];
 	let finalText: string = "";
 
-	$: showSecondStep = empfaenger.length > 0;
+	$: showSecondStep = $data.bundesland.length > 0;
 	$: showThirdStep =
 		showSecondStep &&
 		$data.anrede.length > 0 &&
@@ -18,13 +17,13 @@
 		$data.appell.text.length > 0 &&
 		$data.gruss.length > 0;
 	$: showSendButton = finalText.length > 0;
-	$: mailto = buildMailToLink(empfaenger, finalText);
+	$: mailto = buildMailToLink($data.bundesland, finalText);
 	$: anreden = config.anrede.map((a) => {
-		if (empfaenger === undefined || empfaenger === null || empfaenger === "") {
+		if ($data.bundesland === undefined || $data.bundesland === null || $data.bundesland === "") {
 			return a;
 		}
 
-		const to = config.bundeslaender[empfaenger];
+		const to = config.bundeslaender[$data.bundesland];
 		return a.replace(/\$\{(\w+)\}/g, (_, p) => to[p]);
 	});
 
@@ -36,11 +35,11 @@
 			return a.kategorie === $data.beschwerde.kategorie;
 		})
 		.map((a) => {
-			if (empfaenger === undefined || empfaenger === null || empfaenger === "") {
+			if ($data.bundesland === undefined || $data.bundesland === null || $data.bundesland === "") {
 				return a;
 			}
 
-			const to = config.bundeslaender[empfaenger];
+			const to = config.bundeslaender[$data.bundesland];
 
 			// todo: find dynamic way for replacing variables
 			a.text = a.text.replace("${Bundesland}", to.land);
@@ -51,7 +50,7 @@
 	const buildMailToLink = (empfaenger: string, preview: string): string => {
 		if (empfaenger === "" || preview === "") return "";
 
-		const to = config.bundeslaender[empfaenger];
+		const to = config.bundeslaender[$data.bundesland];
 		let subject = encodeURI(getRandom(config.betreff));
 		let body = encodeURI(preview);
 
@@ -84,7 +83,7 @@
 <form on:submit|preventDefault={() => (finalText = data.buildText())}>
 	<section>
 		<p class="section-header">Schritt 1: Bundesland auswählen</p>
-		<select bind:value={empfaenger} on:change={() => data.reset()}>
+		<select bind:value={$data.bundesland} on:change={() => data.reset()}>
 			<option disabled>Bundesland auswählen</option>
 			{#each Object.keys(config.bundeslaender) as land}
 				<option value={land}>

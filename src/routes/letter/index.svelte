@@ -83,7 +83,7 @@
 <section class="hidden print:block">
 	<!-- where should the letter go? -->
 	<address class="receiver whitespace-pre-line">
-		<div class="text-xs">
+		<div class="text-xs mb-6">
 			<p>{letterInformation.name}</p>
 			<p>{letterInformation.address1}</p>
 			{#if letterInformation.address2}
@@ -95,17 +95,15 @@
 	</address>
 
 	<!-- the current date -->
-	<p class="text-right">{new Date().toLocaleDateString("de", { dateStyle: "full" })}</p>
+	<p class="text-right mt-8">{new Date().toLocaleDateString("de", { dateStyle: "full" })}</p>
 
 	<p class="subject-line">{subject}</p>
 	<p class="text">
 		{data.buildInnerText()}
 	</p>
 
-	<p class="mt-8">
-		{$data.gruss}<br />
-		{$data.name}
-	</p>
+	<p class="mt-8">{$data.gruss}</p>
+	<p class="mt-[2cm]">{letterInformation.name}</p>
 </section>
 
 <style lang="postcss">
@@ -131,7 +129,7 @@
 
 	.receiver {
 		@apply not-italic;
-		@apply flex flex-col justify-between;
+		@apply flex flex-col;
 		width: 80mm;
 		height: 45mm;
 		margin-top: 45mm; /* vom oberen Blattrand */

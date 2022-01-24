@@ -8,7 +8,7 @@
 		@apply font-sans;
 
 		/* apply margins according to DIN 5008, adjusted for web */
-		margin-top: 45mm;
+		margin-top: 25mm;
 		margin-left: 20mm;
 		margin-right: 15mm;
 	}

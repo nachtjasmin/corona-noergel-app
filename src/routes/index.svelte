@@ -161,9 +161,16 @@
 	<section id="text" class:hidden={!showThirdStep}>
 		<p class="section-header">Schritt 3: Text erzeugen</p>
 		<button type="submit" class="btn">Bastel mir den Text!</button>
-		<textarea readonly class="w-full bg-gray-100 dark:bg-slate-800 rounded mt-4" rows="10"
-			>{finalText}</textarea
-		>
+		<div class="mt-8">
+			<p class="mb-2 text-sm">
+				Empfänger*in: <code class="px-2 py-1 bg-gray-100 dark:bg-slate-800 rounded"
+					>{config.bundeslaender[empfaenger]?.mail ?? ""}</code
+				>
+			</p>
+			<textarea readonly class="w-full bg-gray-100 dark:bg-slate-800 rounded" rows="10"
+				>{finalText}</textarea
+			>
+		</div>
 	</section>
 </form>
 <section class:hidden={!showSendButton}>

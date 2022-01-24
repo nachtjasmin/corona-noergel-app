@@ -83,8 +83,15 @@
 <section class="hidden print:block">
 	<!-- where should the letter go? -->
 	<address class="receiver whitespace-pre-line">
-		<small class="text-xs italic underline">{addressLine}</small><br />
-		{receiver}
+		<div class="text-xs">
+			<p>{letterInformation.name}</p>
+			<p>{letterInformation.address1}</p>
+			{#if letterInformation.address2}
+				<p>{letterInformation.address2}</p>
+			{/if}
+			<p>{letterInformation.postalCode} {letterInformation.city}</p>
+		</div>
+		<p class="whitespace-pre-line">{receiver}</p>
 	</address>
 
 	<!-- the current date -->
@@ -125,6 +132,7 @@
 
 	.receiver {
 		@apply not-italic;
+		@apply flex flex-col justify-between;
 		width: 80mm;
 		height: 45mm;
 		margin-top: 45mm; /* vom oberen Blattrand */

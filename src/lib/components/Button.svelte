@@ -1,14 +1,23 @@
 <script lang="ts">
 	export let type: "button" | "submit" | "reset" = "button";
 	export let size: "small" | "regular" = "regular";
+	export let href: string = "";
+	let clazz = "";
+	export { clazz as class };
 </script>
 
-<button {type} class:small={size === "small"} on:click>
-	<slot />
-</button>
+{#if href !== ""}
+	<a class="btn {clazz}" class:small={size === "small"} on:click {href}>
+		<slot />
+	</a>
+{:else}
+	<button {type} class="btn {clazz}" class:small={size === "small"} on:click>
+		<slot />
+	</button>
+{/if}
 
 <style lang="postcss">
-	button {
+	.btn {
 		@apply inline-block px-4 py-2 rounded motion-safe:transition-colors;
 		@apply bg-green-200 text-black;
 		@apply border border-green-800;

@@ -165,7 +165,7 @@
 		Dieser öffnet dein E-Mail-Programm mit dem obigen Text. Dabei werden zu keinem Zeitpunkt
 		Informationen an uns übermittelt.
 	</p>
-	<a href={mailto} class="btn mt-4">Mail senden</a>
+	<Button href={mailto} class="mt-4">Mail senden</Button>
 
 	<p class="section-header mt-4">
 		Alternativ: Brief/Fax senden <sup class="text-gray-600 dark:text-gray-400">(beta)</sup>
@@ -174,7 +174,7 @@
 		Papier ist in Deutschland heilig, wenn du möchstest, kannst du den obigen Text auch als fertigen
 		Brief ausdrucken oder als Fax absenden.
 	</p>
-	<a href="/letter" class="btn mt-4">Brief/Fax senden</a>
+	<Button href="/letter" class="mt-4">Brief/Fax senden</Button>
 </section>
 
 <style lang="postcss">

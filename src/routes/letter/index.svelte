@@ -48,6 +48,12 @@
 </script>
 
 <form class="print:hidden flex flex-col mx-auto max-w-2xl px-4">
+	<p class="mb-4 italic">
+		Dieses Feature ist noch in einer Entwicklungsphase, daher kann es noch zu Darstellungsfehlern
+		kommen. Probleme können über die Mail-Adresse im <a class="underline" href="/imprint"
+			>Impressum</a
+		> gerne gemeldet werden.
+	</p>
 	<p class="mb-12 text-base">
 		Damit dein Brief auch alle notwendigen Daten enthält, brauchen wir noch ein paar weitere
 		Informationen. Diese Informationen werden zu keinem Zeitpunkt an uns übermittelt.

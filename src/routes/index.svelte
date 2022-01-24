@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { tick } from "svelte";
+	import { data } from "$lib/store";
 
 	import config from "../data/cna.json";
 
@@ -7,29 +8,14 @@
 	let anreden: string[] = [];
 	let finalText: string = "";
 
-	let data = {
-		anrede: "",
-		einleitung: "",
-		beschwerde: {
-			text: "",
-			kategorie: "",
-		},
-		appell: {
-			text: "",
-			kategorie: "",
-		},
-		gruss: "",
-		name: "",
-	};
-
 	$: showSecondStep = empfaenger.length > 0;
 	$: showThirdStep =
 		showSecondStep &&
-		data.anrede.length > 0 &&
-		data.einleitung.length > 0 &&
-		data.beschwerde.text.length > 0 &&
-		data.appell.text.length > 0 &&
-		data.gruss.length > 0;
+		$data.anrede.length > 0 &&
+		$data.einleitung.length > 0 &&
+		$data.beschwerde.text.length > 0 &&
+		$data.appell.text.length > 0 &&
+		$data.gruss.length > 0;
 	$: showSendButton = finalText.length > 0;
 	$: mailto = buildMailToLink(empfaenger, finalText);
 	$: anreden = config.anrede.map((a) => {
@@ -44,9 +30,9 @@
 	let appelle: { text: string; kategorie: string }[] = [];
 	$: appelle = config.appell
 		.filter((a) => {
-			if (a.kategorie === "allgemein" || data.beschwerde.kategorie === "allgemein") return true;
+			if (a.kategorie === "allgemein" || $data.beschwerde.kategorie === "allgemein") return true;
 
-			return a.kategorie === data.beschwerde.kategorie;
+			return a.kategorie === $data.beschwerde.kategorie;
 		})
 		.map((a) => {
 			if (empfaenger === undefined || empfaenger === null || empfaenger === "") {
@@ -60,9 +46,7 @@
 
 			return a;
 		});
-	const buildText = () => {
-		finalText = `${data.anrede},\n\n${data.einleitung}\n${data.beschwerde.text}\n${data.appell.text}\n\n${data.gruss}\n${data.name}`;
-	};
+
 	const buildMailToLink = (empfaenger: string, preview: string): string => {
 		if (empfaenger === "" || preview === "") return "";
 
@@ -76,13 +60,13 @@
 		return input[Math.floor(Math.random() * input.length)];
 	}
 	const buildRandom = async () => {
-		data.anrede = getRandom(anreden);
-		data.einleitung = getRandom(config.einleitung);
-		data.beschwerde = getRandom(config.beschwerde);
-		data.appell = getRandom(appelle);
-		data.gruss = getRandom(config.gruss);
+		$data.anrede = getRandom(anreden);
+		$data.einleitung = getRandom(config.einleitung);
+		$data.beschwerde = getRandom(config.beschwerde);
+		$data.appell = getRandom(appelle);
+		$data.gruss = getRandom(config.gruss);
 
-		buildText();
+		finalText = data.buildText();
 		await tick();
 		document.getElementById("text").scrollIntoView();
 	};
@@ -98,10 +82,10 @@
 	Ministerium generieren. Abschicken musst du es noch selbst, dafür brauchst du ein eingerichtetes Mailprogramm
 	wie Thunderbird, Outlook oder K9.
 </p>
-<form on:submit|preventDefault={buildText}>
+<form on:submit|preventDefault={() => (finalText = data.buildText())}>
 	<section>
 		<p class="section-header">Schritt 1: Bundesland auswählen</p>
-		<select bind:value={empfaenger}>
+		<select bind:value={empfaenger} on:change={() => data.reset()}>
 			<option disabled>Bundesland auswählen</option>
 			{#each Object.keys(config.bundeslaender) as land}
 				<option value={land}>
@@ -116,47 +100,47 @@
 			<button type="button" class="btn-random" on:click={buildRandom}>Zufällig auswählen</button>
 		</div>
 		<label for="anrede">Anrede</label>
-		<select id="anrede" bind:value={data.anrede}>
-			<option disabled>Anrede auswählen</option>
+		<select id="anrede" bind:value={$data.anrede}>
+			<option disabled value="">Anrede auswählen</option>
 			{#each anreden as s}
 				<option value={s}>{s} </option>
 			{/each}
 		</select>
 
 		<label for="einleitung">Einleitung</label>
-		<select id="einleitung" bind:value={data.einleitung}>
-			<option disabled>Einleitung auswählen</option>
+		<select id="einleitung" bind:value={$data.einleitung}>
+			<option disabled value="">Einleitung auswählen</option>
 			{#each config.einleitung as s}
 				<option value={s}>{s} </option>
 			{/each}
 		</select>
 
 		<label for="beschwerde">Beschwerde</label>
-		<select id="beschwerde" bind:value={data.beschwerde}>
-			<option disabled>Beschwerde auswählen</option>
+		<select id="beschwerde" bind:value={$data.beschwerde}>
+			<option disabled value="">Beschwerde auswählen</option>
 			{#each config.beschwerde as s}
 				<option value={s}>{s.text} </option>
 			{/each}
 		</select>
 
 		<label for="appell">Appell</label>
-		<select id="appell" bind:value={data.appell}>
-			<option disabled>Appell auswählen</option>
+		<select id="appell" bind:value={$data.appell}>
+			<option disabled value="">Appell auswählen</option>
 			{#each appelle as s}
 				<option value={s}>{s.text} </option>
 			{/each}
 		</select>
 
 		<label for="gruss">Grußformel</label>
-		<select id="gruss" bind:value={data.gruss}>
-			<option disabled>Grußformel auswählen</option>
+		<select id="gruss" bind:value={$data.gruss}>
+			<option disabled value="">Grußformel auswählen</option>
 			{#each config.gruss as s}
 				<option value={s}>{s}</option>
 			{/each}
 		</select>
 
 		<label for="name">Dein Name</label>
-		<input type="text" placeholder="(optional)" bind:value={data.name} />
+		<input type="text" placeholder="(optional)" bind:value={$data.name} />
 	</section>
 	<section id="text" class:hidden={!showThirdStep}>
 		<p class="section-header">Schritt 3: Text erzeugen</p>

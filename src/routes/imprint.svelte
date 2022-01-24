@@ -1,5 +1,5 @@
 <h1 class="font-bold text-2xl">Impressum und Datenschutzerklärung</h1>
-<main class="prose my-4">
+<main class="prose my-4 dark:prose-invert">
 	<p>
 		Kleine süße nicht-binäre Hobbits aus deiner Gegend haben diese Website gebaut. Da wir
 		verpflichtend jemanden im Impressum benennen müssen, gibt es noch folgende Angaben.

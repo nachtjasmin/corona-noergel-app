@@ -11,11 +11,12 @@
 	</ul>
 
 	<!-- The app version is set in the svelte.config.js -->
-	<p class="text-center italic  text-xs mt-8 text-gray-500">Version: {version}</p>
+	<p class="text-center italic text-xs mt-8 text-gray-600 dark:text-gray-200">Version: {version}</p>
 </div>
 
 <style lang="postcss">
 	.footer-link {
-		@apply text-sm text-gray-500 underline;
+		@apply text-sm underline;
+		@apply text-gray-600 dark:text-gray-200;
 	}
 </style>

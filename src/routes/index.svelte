@@ -147,7 +147,7 @@
 		<div class="mt-8">
 			<p class="mb-2 text-sm">
 				Empfänger*in: <code class="px-2 py-1 bg-gray-100 dark:bg-slate-800 rounded"
-					>{config.bundeslaender[empfaenger]?.mail ?? ""}</code
+					>{config.bundeslaender[$data.bundesland]?.mail ?? ""}</code
 				>
 			</p>
 			<textarea readonly class="w-full bg-gray-100 dark:bg-slate-800 rounded" rows="10"

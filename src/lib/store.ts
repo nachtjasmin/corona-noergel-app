@@ -49,7 +49,12 @@ function createDataStore() {
 		subscribe: structure.subscribe,
 		update: structure.update,
 		set: structure.set, // required for direct access like $data.value = <value>
-		reset: () => structure.set({ ...emptyStructure }),
+		reset: () => {
+			structure.set({
+				...emptyStructure,
+				bundesland: get(structure).bundesland, // do not overwrite the bundesland, it's excluded for the reset
+			});
+		},
 		buildText,
 		buildInnerText,
 	};

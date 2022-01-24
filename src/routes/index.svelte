@@ -101,7 +101,8 @@
 <form on:submit|preventDefault={buildText}>
 	<section>
 		<p class="section-header">Schritt 1: Bundesland auswählen</p>
-		<select bind:value={empfaenger}>
+		<label class="sr-only" for="bundesland">Bundesland</label>
+		<select id="bundesland" bind:value={empfaenger}>
 			<option disabled>Bundesland auswählen</option>
 			{#each Object.keys(config.bundeslaender) as land}
 				<option value={land}>
@@ -156,7 +157,7 @@
 		</select>
 
 		<label for="name">Dein Name</label>
-		<input type="text" placeholder="(optional)" bind:value={data.name} />
+		<input id="name" type="text" placeholder="(optional)" bind:value={data.name} />
 	</section>
 	<section id="text" class:hidden={!showThirdStep}>
 		<p class="section-header">Schritt 3: Text erzeugen</p>

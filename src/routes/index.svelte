@@ -158,6 +158,13 @@
 		Informationen an uns übermittelt.
 	</p>
 	<a href={mailto} class="btn mt-4">Mail senden</a>
+
+	<p class="section-header mt-4">Alternativ: Brief/Fax senden</p>
+	<p class="text-sm">
+		Papier ist in Deutschland heilig, wenn du möchstest, kannst du den obigen Text auch als fertigen
+		Brief ausdrucken und absenden.
+	</p>
+	<a href="/letter" class="btn mt-4">Brief/Fax senden</a>
 </section>
 
 <style lang="postcss">

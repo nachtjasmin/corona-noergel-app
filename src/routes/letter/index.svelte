@@ -15,21 +15,6 @@
 	} = {
 		name: $data.name,
 	};
-	let addressLine = "";
-	$: {
-		const withComma = (v?: string) => {
-			if (v === undefined || v === null) return "";
-			return v + ", ";
-		};
-		let res = "";
-		res += withComma(letterInformation.name);
-		res += withComma(letterInformation.address1);
-		res += withComma(letterInformation.address2);
-		res += letterInformation.postalCode ?? "";
-		res += " ";
-		res += letterInformation.city ?? "";
-		addressLine = res;
-	}
 
 	let subject: string = "";
 	let receiver: string = "";
@@ -88,8 +73,11 @@
 
 <section class="hidden print:block">
 	<!-- where should the letter go? -->
-	<address class="receiver whitespace-pre-line">
-		<div class="text-xs mb-6">
+	<div class="receiver-wrapper">
+		<address class="receiver">
+			<p class="whitespace-pre-line">{receiver}</p>
+		</address>
+		<div class="text-right justify-self-end">
 			<p>{letterInformation.name}</p>
 			<p>{letterInformation.address1}</p>
 			{#if letterInformation.address2}
@@ -97,8 +85,7 @@
 			{/if}
 			<p>{letterInformation.postalCode} {letterInformation.city}</p>
 		</div>
-		<p class="whitespace-pre-line">{receiver}</p>
-	</address>
+	</div>
 
 	<!-- the current date -->
 	<p class="text-right mt-8">{new Date().toLocaleDateString("de", { dateStyle: "full" })}</p>
@@ -133,12 +120,15 @@
 		margin: 0; /* margins are set by the rest of the elements */
 	}
 
+	.receiver-wrapper {
+		height: 45mm;
+		margin-top: 45mm; /* vom oberen Blattrand */
+		@apply grid grid-cols-[8cm,1fr] gap-[2cm];
+	}
 	.receiver {
 		@apply not-italic;
 		@apply flex flex-col;
 		width: 80mm;
-		height: 45mm;
-		margin-top: 45mm; /* vom oberen Blattrand */
 	}
 	.subject-line {
 		@apply font-bold text-lg mt-2 mb-6;

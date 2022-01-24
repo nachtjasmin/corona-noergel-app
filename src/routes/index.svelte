@@ -3,6 +3,7 @@
 	import { data } from "$lib/store";
 
 	import config from "../data/cna.json";
+	import { getRandom } from "$lib/helpers";
 
 	let empfaenger: string = "";
 	let anreden: string[] = [];
@@ -56,9 +57,7 @@
 
 		return `mailto:${to.mail}?subject=${subject}&body=${body}`;
 	};
-	function getRandom<T>(input: T[]): T {
-		return input[Math.floor(Math.random() * input.length)];
-	}
+
 	const buildRandom = async () => {
 		$data.anrede = getRandom(anreden);
 		$data.einleitung = getRandom(config.einleitung);

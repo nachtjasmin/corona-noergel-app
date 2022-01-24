@@ -4,7 +4,32 @@
 	import config from "../../data/cna.json";
 
 	import { data } from "$lib/store";
-	import { onMount, tick } from "svelte";
+	import { onMount } from "svelte";
+
+	let letterInformation: {
+		name?: string;
+		address1?: string;
+		address2?: string;
+		postalCode?: string;
+		city?: string;
+	} = {
+		name: $data.name,
+	};
+	let addressLine = "";
+	$: {
+		const withComma = (v?: string) => {
+			if (v === undefined || v === null) return "";
+			return v + ", ";
+		};
+		let res = "";
+		res += withComma(letterInformation.name);
+		res += withComma(letterInformation.address1);
+		res += withComma(letterInformation.address2);
+		res += letterInformation.postalCode ?? "";
+		res += " ";
+		res += letterInformation.city ?? "";
+		addressLine = res;
+	}
 
 	let subject: string = "";
 	let receiver: string = "";
@@ -19,31 +44,80 @@
 		const to = config.bundeslaender[$data.bundesland];
 		receiver = to.bezeichnung + "\n";
 		to.anschrift.forEach((l: string) => (receiver += l + "\n"));
-
-		await tick(); // wait for changes to be applied
-		window.print(); // finally print the current page
 	});
 </script>
 
-<!-- where should the letter go? -->
-<address class="receiver whitespace-pre-line">
-	{receiver}
-</address>
+<form class="print:hidden flex flex-col mx-auto max-w-2xl px-4">
+	<p class="mb-12 text-base">
+		Damit dein Brief auch alle notwendigen Daten enthält, brauchen wir noch ein paar weitere
+		Informationen. Diese Informationen werden zu keinem Zeitpunkt an uns übermittelt.
+	</p>
+	<label for="name">Dein vollständiger Name</label>
+	<input type="text" bind:value={letterInformation.name} />
+	<label for="address1">Addresszeile 1</label>
+	<input
+		id="address1"
+		placeholder="Musterstraße 1"
+		type="text"
+		bind:value={letterInformation.address1}
+	/>
+	<label for="address2">Addresszeile 2</label>
+	<input
+		id="address2"
+		placeholder="(optional)"
+		type="text"
+		bind:value={letterInformation.address2}
+	/>
+	<label for="postalCode">Postleitzahl (PLZ)</label>
+	<input
+		id="postalCode"
+		placeholder="12345"
+		type="text"
+		bind:value={letterInformation.postalCode}
+	/>
+	<label for="city">Stadt</label>
+	<input id="city" type="text" placeholder="Musterstadt" bind:value={letterInformation.city} />
+	<button class="btn mt-2" type="button" on:click={() => window.print()}>Brief ausdrucken</button>
+</form>
 
-<!-- the current date -->
-<p class="text-right">{new Date().toLocaleDateString("de", { dateStyle: "full" })}</p>
+<section class="hidden print:block">
+	<!-- where should the letter go? -->
+	<address class="receiver whitespace-pre-line">
+		<small class="text-xs italic underline">{addressLine}</small><br />
+		{receiver}
+	</address>
 
-<p class="subject-line">{subject}</p>
-<p class="text">
-	{data.buildInnerText()}
-</p>
+	<!-- the current date -->
+	<p class="text-right">{new Date().toLocaleDateString("de", { dateStyle: "full" })}</p>
 
-<p class="mt-8">
-	{$data.gruss}<br />
-	{$data.name}
-</p>
+	<p class="subject-line">{subject}</p>
+	<p class="text">
+		{data.buildInnerText()}
+	</p>
 
-<style>
+	<p class="mt-8">
+		{$data.gruss}<br />
+		{$data.name}
+	</p>
+</section>
+
+<style lang="postcss">
+	label {
+		@apply text-sm mt-2;
+	}
+	select,
+	input {
+		@apply w-full rounded mt-1 mb-2;
+		@apply dark:bg-slate-800;
+	}
+	.btn {
+		@apply inline-block px-4 py-2 rounded motion-safe:transition-colors;
+		@apply bg-green-200 text-black;
+		@apply border border-green-800;
+		@apply hover:bg-green-300;
+		@apply active:bg-green-800 active:text-white;
+	}
+
 	@page {
 		size: "A4";
 		margin: 0; /* margins are set by the rest of the elements */

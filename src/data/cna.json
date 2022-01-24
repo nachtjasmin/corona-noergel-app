@@ -15,6 +15,7 @@
 		"Aus der Presse habe ich von den Beschlüssen zur PCR-Testpriorisierung erfahren.",
 		"In der tagesaktuellen Berichterstattung bin ich über die Beschlüsse zur Priorisierung von PCR-Tests gestolpert."
 	],
+	"betreff": ["Beschwerde zum Beschluss der PCR-Priorisierung vom 22.01."],
 	"beschwerde": [
 		{
 			"text": "Es wurde bereits Ende letzten Jahres vor der ansteckenderen Omikron-Variante gewarnt. Die jetzigen Beschlüsse erwecken den Eindruck, dass die Gesundheitsministerkonferenz rechtzeitiges Handeln hier versäumt hat.",
@@ -27,11 +28,11 @@
 	],
 	"appell": [
 		{
-			"text": "In den Beschlüssen vermisse ich insgesamt den Ausbau der vorhandenen Kapazitäten. Hier besteht in meinen Augen dringenden Handlungsbedarf",
+			"text": "In den Beschlüssen vermisse ich insgesamt den Ausbau der vorhandenen Kapazitäten. Hier besteht in meinen Augen dringender Handlungsbedarf.",
 			"kategorie": "allgemein"
 		},
 		{
-			"text": "Es wäre allerhöchste Zeit, niedrigschweillig, kostenlos und für alle tägliche PCR-Tests anzubieten. Der Stadt Wien ist das gelungen, ich erwarte, dass ${Bundesland} hier zeitnah Kapazitäten aufbaut.",
+			"text": "Es wäre allerhöchste Zeit, niedrigschwellig, kostenlos und für alle tägliche PCR-Tests anzubieten. Der Stadt Wien ist das gelungen, ich erwarte, dass ${Bundesland} hier zeitnah Kapazitäten aufbaut.",
 			"kategorie": "allgemein"
 		},
 		{
@@ -79,7 +80,7 @@
 		},
 		"BB": {
 			"land": "Brandenburg",
-			"bezeichnung": "Ministerium für Soziales Gedunheit, Integration und Verbraucherschutz",
+			"bezeichnung": "Ministerium für Soziales, Gesundheit, Integration und Verbraucherschutz",
 			"titel": "Ministerin",
 			"name": "Ursula Nonnenmacher",
 			"mail": "poststelle@msgiv.brandenburg.de"

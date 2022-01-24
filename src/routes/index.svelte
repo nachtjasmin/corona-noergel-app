@@ -29,8 +29,7 @@
 		data.einleitung.length > 0 &&
 		data.beschwerde.text.length > 0 &&
 		data.appell.text.length > 0 &&
-		data.gruss.length > 0 &&
-		data.name.length > 0;
+		data.gruss.length > 0;
 	$: showSendButton = finalText.length > 0;
 	$: mailto = buildMailToLink(empfaenger, finalText);
 	$: anreden = config.anrede.map((a) => {
@@ -62,13 +61,13 @@
 			return a;
 		});
 	const buildText = () => {
-		finalText = `${data.anrede},\n\n${data.einleitung}\n${data.beschwerde.text}\n${data.appell.text}\n\n${data.gruss},\n${data.name}`;
+		finalText = `${data.anrede},\n\n${data.einleitung}\n${data.beschwerde.text}\n${data.appell.text}\n\n${data.gruss}\n${data.name}`;
 	};
 	const buildMailToLink = (empfaenger: string, preview: string): string => {
 		if (empfaenger === "" || preview === "") return "";
 
 		const to = config.bundeslaender[empfaenger];
-		let subject = encodeURI("Beschwerde zum Beschluss der PCR-Priorisierung vom 22.01.");
+		let subject = encodeURI(getRandom(config.betreff));
 		let body = encodeURI(preview);
 
 		return `mailto:${to.mail}?subject=${subject}&body=${body}`;
@@ -157,12 +156,14 @@
 		</select>
 
 		<label for="name">Dein Name</label>
-		<input type="text" bind:value={data.name} />
+		<input type="text" placeholder="(optional)" bind:value={data.name} />
 	</section>
 	<section id="text" class:hidden={!showThirdStep}>
 		<p class="section-header">Schritt 3: Text erzeugen</p>
 		<button type="submit" class="btn">Bastel mir den Text!</button>
-		<textarea readonly class="w-full bg-gray-100 rounded mt-4" rows="10">{finalText}</textarea>
+		<textarea readonly class="w-full bg-gray-100 dark:bg-slate-800 rounded mt-4" rows="10"
+			>{finalText}</textarea
+		>
 	</section>
 </form>
 <section class:hidden={!showSendButton}>
@@ -182,6 +183,7 @@
 	select,
 	input {
 		@apply w-full rounded mt-1 mb-2;
+		@apply dark:bg-slate-800;
 	}
 	section {
 		@apply my-8;
@@ -191,7 +193,7 @@
 	}
 	.btn {
 		@apply inline-block px-4 py-2 rounded motion-safe:transition-colors;
-		@apply bg-green-200;
+		@apply bg-green-200 text-black;
 		@apply border border-green-800;
 		@apply hover:bg-green-300;
 		@apply active:bg-green-800 active:text-white;
@@ -202,5 +204,6 @@
 		@apply border border-green-800;
 		@apply hover:bg-green-300;
 		@apply active:bg-green-800 active:text-white;
+		@apply dark:bg-green-200 dark:text-black;
 	}
 </style>

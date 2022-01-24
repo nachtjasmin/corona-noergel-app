@@ -5,6 +5,9 @@
 
 	import { data } from "$lib/store";
 	import { onMount } from "svelte";
+	import FormContainer from "$lib/components/FormContainer.svelte";
+	import Button from "$lib/components/Button.svelte";
+	import MonospacedInfo from "$lib/components/MonospacedInfo.svelte";
 
 	let letterInformation: {
 		name?: string;
@@ -34,51 +37,51 @@
 	});
 </script>
 
-<form
-	class="print:hidden flex flex-col container mx-auto my-4 md:mt-12 md:mb-8 lg:my-24 max-w-2xl px-4"
->
-	<p class="mb-4 italic">
-		Dieses Feature ist noch in einer Entwicklungsphase, daher kann es noch zu Darstellungsfehlern
-		kommen. Probleme können über die Mail-Adresse im <a class="underline" href="/imprint"
-			>Impressum</a
-		> gerne gemeldet werden.
-	</p>
-	<p class="mb-12 text-base">
-		Damit dein Brief auch alle notwendigen Daten enthält, brauchen wir noch ein paar weitere
-		Informationen. Diese Informationen werden zu keinem Zeitpunkt an uns übermittelt.
-	</p>
-	<label for="name">Dein vollständiger Name</label>
-	<input type="text" id="name" bind:value={letterInformation.name} />
-	<label for="address1">Addresszeile 1</label>
-	<input
-		id="address1"
-		placeholder="Musterstraße 1"
-		type="text"
-		bind:value={letterInformation.address1}
-	/>
-	<label for="address2">Addresszeile 2</label>
-	<input
-		id="address2"
-		placeholder="(optional)"
-		type="text"
-		bind:value={letterInformation.address2}
-	/>
-	<label for="postalCode">Postleitzahl (PLZ)</label>
-	<input
-		id="postalCode"
-		placeholder="12345"
-		type="text"
-		bind:value={letterInformation.postalCode}
-	/>
-	<label for="city">Stadt</label>
-	<input id="city" type="text" placeholder="Musterstadt" bind:value={letterInformation.city} />
-	<button class="btn mt-2" type="button" on:click={() => window.print()}>Brief ausdrucken</button>
+<form class="print:hidden">
+	<FormContainer>
+		<p class="mb-4 italic">
+			Dieses Feature ist noch in einer Entwicklungsphase, daher kann es noch zu Darstellungsfehlern
+			kommen. Probleme können über die Mail-Adresse im <a class="underline" href="/imprint"
+				>Impressum</a
+			> gerne gemeldet werden.
+		</p>
+		<p class="mb-12 text-base">
+			Damit dein Brief auch alle notwendigen Daten enthält, brauchen wir noch ein paar weitere
+			Informationen. Diese Informationen werden zu keinem Zeitpunkt an uns übermittelt.
+		</p>
+		<label for="name">Dein vollständiger Name</label>
+		<input type="text" id="name" bind:value={letterInformation.name} />
+		<label for="address1">Addresszeile 1</label>
+		<input
+			id="address1"
+			placeholder="Musterstraße 1"
+			type="text"
+			bind:value={letterInformation.address1}
+		/>
+		<label for="address2">Addresszeile 2</label>
+		<input
+			id="address2"
+			placeholder="(optional)"
+			type="text"
+			bind:value={letterInformation.address2}
+		/>
+		<label for="postalCode">Postleitzahl (PLZ)</label>
+		<input
+			id="postalCode"
+			placeholder="12345"
+			type="text"
+			bind:value={letterInformation.postalCode}
+		/>
+		<label for="city">Stadt</label>
+		<input id="city" type="text" placeholder="Musterstadt" bind:value={letterInformation.city} />
+		<Button on:click={() => window.print()}>Brief ausdrucken</Button>
 
-	<p class="mt-8 text-center">
-		<span> Du kannst diesen Brief auch per Fax an folgende Fax-Nummer senden: </span>
-		<br />
-		<code class="mt-2 block text-xl">{fax}</code>
-	</p>
+		<p class="mt-8 text-center">
+			<span> Du kannst diesen Brief auch per Fax an folgende Fax-Nummer senden: </span>
+			<br />
+			<MonospacedInfo class="mt-2 text-lg">{fax}</MonospacedInfo>
+		</p>
+	</FormContainer>
 </form>
 
 <section class="hidden print:block letter">
@@ -116,13 +119,6 @@
 	input {
 		@apply w-full rounded mt-1 mb-2;
 		@apply dark:bg-slate-800;
-	}
-	.btn {
-		@apply inline-block px-4 py-2 rounded motion-safe:transition-colors;
-		@apply bg-green-200 text-black;
-		@apply border border-green-800;
-		@apply hover:bg-green-300;
-		@apply active:bg-green-800 active:text-white;
 	}
 
 	.letter {

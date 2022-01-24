@@ -4,6 +4,8 @@
 
 	import config from "../data/cna.json";
 	import { getRandom } from "$lib/helpers";
+	import Button from "$lib/components/Button.svelte";
+	import MonospacedInfo from "$lib/components/MonospacedInfo.svelte";
 
 	let anreden: string[] = [];
 	let finalText: string = "";
@@ -96,7 +98,7 @@
 	<section class:hidden={!showSecondStep}>
 		<div class="flex flex-col md:flex-row items-baseline justify-between">
 			<p class="section-header">Schritt 2: Textbausteine wählen</p>
-			<button type="button" class="btn-random" on:click={buildRandom}>Zufällig auswählen</button>
+			<Button size="small" on:click={buildRandom}>Zufällig auswählen</Button>
 		</div>
 		<label for="anrede">Anrede</label>
 		<select id="anrede" bind:value={$data.anrede}>
@@ -143,11 +145,11 @@
 	</section>
 	<section id="text" class:hidden={!showThirdStep}>
 		<p class="section-header">Schritt 3: Text erzeugen</p>
-		<button type="submit" class="btn">Bastel mir den Text!</button>
+		<Button type="submit">Bastel mir den Text</Button>
 		<div class="mt-8">
 			<p class="mb-2 text-sm">
-				Empfänger*in: <code class="px-2 py-1 bg-gray-100 dark:bg-slate-800 rounded"
-					>{config.bundeslaender[$data.bundesland]?.mail ?? ""}</code
+				Empfänger*in: <MonospacedInfo
+					>{config.bundeslaender[$data.bundesland]?.mail ?? ""}</MonospacedInfo
 				>
 			</p>
 			<textarea readonly class="w-full bg-gray-100 dark:bg-slate-800 rounded" rows="10"
@@ -189,20 +191,5 @@
 	}
 	.section-header {
 		@apply mb-2 font-semibold;
-	}
-	.btn {
-		@apply inline-block px-4 py-2 rounded motion-safe:transition-colors;
-		@apply bg-green-200 text-black;
-		@apply border border-green-800;
-		@apply hover:bg-green-300;
-		@apply active:bg-green-800 active:text-white;
-	}
-	.btn-random {
-		@apply text-sm;
-		@apply inline-block px-3 py-1 rounded motion-safe:transition-colors;
-		@apply border border-green-800;
-		@apply hover:bg-green-300;
-		@apply active:bg-green-800 active:text-white;
-		@apply dark:bg-green-200 dark:text-black;
 	}
 </style>

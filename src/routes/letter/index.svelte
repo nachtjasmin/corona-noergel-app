@@ -18,6 +18,7 @@
 
 	let subject: string = "";
 	let receiver: string = "";
+	let fax: string = "";
 
 	// if data is empty, navigate back
 	onMount(async () => {
@@ -29,6 +30,7 @@
 		const to = config.bundeslaender[$data.bundesland];
 		receiver = to.bezeichnung + "\n";
 		to.anschrift.forEach((l: string) => (receiver += l + "\n"));
+		fax = to.fax;
 	});
 </script>
 
@@ -69,6 +71,12 @@
 	<label for="city">Stadt</label>
 	<input id="city" type="text" placeholder="Musterstadt" bind:value={letterInformation.city} />
 	<button class="btn mt-2" type="button" on:click={() => window.print()}>Brief ausdrucken</button>
+
+	<p class="mt-8 text-center">
+		<span> Du kannst diesen Brief auch per Fax an folgende Fax-Nummer senden: </span>
+		<br />
+		<code class="mt-2 block text-xl">{fax}</code>
+	</p>
 </form>
 
 <section class="hidden print:block">

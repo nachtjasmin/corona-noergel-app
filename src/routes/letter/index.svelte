@@ -7,6 +7,7 @@
 	import { onMount, tick } from "svelte";
 
 	let subject: string = "";
+	let receiver: string = "";
 
 	// if data is empty, navigate back
 	onMount(async () => {
@@ -15,18 +16,18 @@
 			return;
 		}
 		subject = getRandom(config.betreff);
-		await tick(); // wait for changes to be applied
+		const to = config.bundeslaender[$data.bundesland];
+		receiver = to.bezeichnung + "\n";
+		to.anschrift.forEach((l: string) => (receiver += l + "\n"));
 
-		// finally print the current page
-		window.print();
+		await tick(); // wait for changes to be applied
+		window.print(); // finally print the current page
 	});
 </script>
 
 <!-- where should the letter go? -->
-<address class="receiver">
-	Ministerium für Gedöns<br />
-	Musterstraße 3<br />
-	13245 Musterstadt
+<address class="receiver whitespace-pre-line">
+	{receiver}
 </address>
 
 <!-- the current date -->

@@ -4,12 +4,12 @@
 
 <style lang="postcss">
 	.letter {
-		font-size: 11pt; /* reduce default font size for letters */
+		font-size: 10pt; /* reduce default font size for letters */
 		@apply font-sans;
 
-		/* apply margins according to DIN 5008 */
+		/* apply margins according to DIN 5008, adjusted for web */
 		margin-top: 45mm;
-		margin-left: 25mm;
-		margin-right: 20mm;
+		margin-left: 20mm;
+		margin-right: 15mm;
 	}
 </style>

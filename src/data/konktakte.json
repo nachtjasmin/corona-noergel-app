@@ -1,150 +1,310 @@
 {
 	"BW": {
 		"land": "Baden Württemberg",
-		"bezeichnung": "Ministerium für Soziales, Gesundheit und Integration",
-		"titel": "Minister",
-		"name": "Manne Lucha",
-		"mail": "poststelle@sm.bwl.de",
-		"fax": "0711 123 3999",
-		"anschrift": [
-			"Pressestelle/ Öffentlichkeitsarbeit",
-			"Else-Josenhans-Str. 6",
-			"70173 Stuttgart"
-		]
+		"gesundheit": {
+			"bezeichnung": "Ministerium für Soziales, Gesundheit und Integration",
+			"titel": "Minister",
+			"name": "Manne Lucha",
+			"mail": "poststelle@sm.bwl.de",
+			"fax": "0711 123 3999",
+			"anschrift": [
+				"Pressestelle/ Öffentlichkeitsarbeit",
+				"Else-Josenhans-Str. 6",
+				"70173 Stuttgart"
+			]
+		},
+		"chef": {
+			"bezeichnung": "Staatsministerium Baden-Württemberg",
+			"titel": "Ministerpräsident",
+			"name": "Winfried Kretschmann",
+			"mail": "poststelle@stm.bwl.de",
+			"fax": "0711 2153 340",
+			"anschrift": ["Richard-Wagner-Strasse 15", "70184 Stuttgart"]
+		}
 	},
 	"BY": {
 		"land": "Bayern",
-		"bezeichnung": "Bayerisches Staatsministerium für Gesundheit und Pflege",
-		"titel": "Staatsminister",
-		"name": "Klaus Holetschek",
-		"mail": "poststelle@stmgp.bayern.de",
-		"fax": "089 540233 90999",
-		"anschrift": ["Haidenauplatz 1", "81667 München"]
+		"gesundheit": {
+			"bezeichnung": "Bayerisches Staatsministerium für Gesundheit und Pflege",
+			"titel": "Staatsminister",
+			"name": "Klaus Holetschek",
+			"mail": "poststelle@stmgp.bayern.de",
+			"fax": "089 540233 90999",
+			"anschrift": ["Haidenauplatz 1", "81667 München"]
+		},
+		"chef": {
+			"bezeichnung": "Bayerische Staatskanzlei",
+			"titel": "Ministerpräsident",
+			"name": "Markus Söder",
+			"mail": "poststelle@stk.bayern.de",
+			"fax": "089 2940 44",
+			"anschrift": ["Franz-Josef-Strauß-Ring 1", "80539 München"]
+		}
 	},
 	"BE": {
 		"land": "Berlin",
-		"bezeichnung": "Senatsverwaltung für Wissenschaft, Gesundheit, Pflege und Gleichstellung",
-		"titel": "Senatorin",
-		"name": "Ulrike Gote",
-		"mail": "post@sengpg.berlin.de",
-		"fax": "030 9028 3102",
-		"anschrift": ["Oranienstr. 106", "10969 Berlin"]
+		"gesundheit": {
+			"bezeichnung": "Senatsverwaltung für Wissenschaft, Gesundheit, Pflege und Gleichstellung",
+			"titel": "Senatorin",
+			"name": "Ulrike Gote",
+			"mail": "post@sengpg.berlin.de",
+			"fax": "030 9028 3102",
+			"anschrift": ["Oranienstr. 106", "10969 Berlin"]
+		},
+		"chef": {
+			"bezeichnung": "Senatskanzlei",
+			"titel": "Regierende Bürgermeisterin",
+			"name": "Franziska Giffey",
+			"mail": "Die-Regierende-Buergermeisterin@senatskanzlei.berlin.de",
+			"fax": "030 9026 2013",
+			"anschrift": ["Jüdenstr. 1", "10178 Berlin"]			
+		}
 	},
 	"BB": {
 		"land": "Brandenburg",
-		"bezeichnung": "Ministerium für Soziales, Gesundheit, Integration und Verbraucherschutz",
-		"titel": "Ministerin",
-		"name": "Ursula Nonnenmacher",
-		"mail": "poststelle@msgiv.brandenburg.de",
-		"fax": "0331 866 5108",
-		"anschrift": ["Haus S", "Henning-von-Tresckow-Straße 2-13", "14467 Potsdam"]
+		"gesundheit": {
+			"bezeichnung": "Ministerium für Soziales, Gesundheit, Integration und Verbraucherschutz",
+			"titel": "Ministerin",
+			"name": "Ursula Nonnenmacher",
+			"mail": "poststelle@msgiv.brandenburg.de",
+			"fax": "0331 866 5108",
+			"anschrift": ["Haus S", "Henning-von-Tresckow-Straße 2-13", "14467 Potsdam"]
+		},
+		"chef": {
+			"bezeichnung": "Staatskanzlei Brandenburg",
+			"titel": "Ministerpräsident",
+			"name": "Dietmar Woidke",
+			"mail": "poststelle@stk.brandenburg.de",
+			"fax": "0331 866 1416",
+			"anschrift": ["Heinrich-Mann-Allee 107", "14473 Potsdam"]			
+		}
 	},
 	"HB": {
 		"land": "Bremen",
-		"bezeichnung": "Die Senatorin für Gesundheit, Frauen und Verbraucherschutz",
-		"titel": "Senatorin",
-		"name": "Claudia Bernhard",
-		"mail": "office@gesundheit.bremen.de",
-		"fax": "0421 496 54492",
-		"anschrift": ["Contrescarpe 72", "28195 Bremen"]
+		"gesundheit": {
+			"bezeichnung": "Die Senatorin für Gesundheit, Frauen und Verbraucherschutz",
+			"titel": "Senatorin",
+			"name": "Claudia Bernhard",
+			"mail": "office@gesundheit.bremen.de",
+			"fax": "0421 496 54492",
+			"anschrift": ["Contrescarpe 72", "28195 Bremen"]
+		},
+		"chef": {
+			"bezeichnung": "Senatskanzlei",
+			"titel": "Bremer Bürgermeister",
+			"name": "Andreas Bovenschulte",
+			"mail": "office@sk.bremen.de",
+			"fax": "0421 496 6132",
+			"anschrift": ["Am Markt 21", "28195 Bremen"]
+		}
 	},
 	"HH": {
 		"land": "Hamburg",
-		"bezeichnung": "Behörde für Arbeit, Gesundheit Soziales, Familie und Integration",
-		"titel": "Senatorin",
-		"name": "Melanie Leonhard",
-		"mail": "poststelle@soziales.hamburg.de",
-		"fax": "040 4279 63030",
-		"anschrift": ["Hamburger Straße 47", "22083 Hamburg"]
+		"gesundheit": {
+			"bezeichnung": "Behörde für Arbeit, Gesundheit Soziales, Familie und Integration",
+			"titel": "Senatorin",
+			"name": "Melanie Leonhard",
+			"mail": "poststelle@soziales.hamburg.de",
+			"fax": "040 4279 63030",
+			"anschrift": ["Hamburger Straße 47", "22083 Hamburg"]
+		},
+		"chef": {
+			"bezeichnung": "Senatskanzlei der Freien und Hansestadt Hamburg",
+			"titel": "Regierender Bürgermeister",
+			"name": "Peter Tschentscher",
+			"mail": "poststelle@rs.hamburg.de",
+			"fax": "040 42831 2555",
+			"anschrift": ["Rathausmarkt 1", "20095 Hamburg"]
+		}
 	},
 	"HE": {
 		"land": "Hessen",
-		"bezeichnung": "Hessisches Ministerium für Soziales und Integration",
-		"titel": "Minister",
-		"name": "Kai Klose",
-		"mail": "presse@hsm.hessen.de",
-		"fax": "0611 32719 3700",
-		"anschrift": ["Sonnenberger Str. 2/2a", "65193 Wiesbaden"]
+		"gesundheit": {
+			"bezeichnung": "Hessisches Ministerium für Soziales und Integration",
+			"titel": "Minister",
+			"name": "Kai Klose",
+			"mail": "presse@hsm.hessen.de",
+			"fax": "0611 32719 3700",
+			"anschrift": ["Sonnenberger Str. 2/2a", "65193 Wiesbaden"]
+		},
+		"chef": {
+			"bezeichnung": "Hessische Senatskanzlei",
+			"titel": "Ministerpräsident",
+			"name": "Volker Bouffier",
+			"mail": "poststelle@stk.hessen.de",
+			"fax": "0611 32 3708",
+			"anschrift": ["Georg-August-Zinn Straße 1", "65183 Wiesbaden"]
+		}
 	},
 	"MV": {
 		"land": "Mecklenburg Vorpommern",
-		"bezeichnung": "Ministerium für Soziales, Gesundheit und Sport",
-		"titel": "Ministerin",
-		"name": "Stefanie Drese",
-		"mail": "poststelle@sm.mv-regierung.de",
-		"fax": "0385 588 9709",
-		"anschrift": ["19048 Schwerin"]
+		"gesundheit": {
+			"bezeichnung": "Ministerium für Soziales, Gesundheit und Sport",
+			"titel": "Ministerin",
+			"name": "Stefanie Drese",
+			"mail": "poststelle@sm.mv-regierung.de",
+			"fax": "0385 588 9709",
+			"anschrift": ["19048 Schwerin"]
+		},
+		"chef": {
+			"bezeichnung": "Staatskanzlei Mecklenburg-Vorpommern",
+			"titel": "Ministerpräsidentin des Landes Mecklenburg Vorpommern",
+			"name": "Manuela Schwesig",
+			"mail": "poststelle@stk.mv-regierung.de",
+			"fax": "0385 565 144",
+			"anschrift": ["Schloßstr. 2-4", "19053 Schwerin"]
+		}
 	},
 	"NI": {
 		"land": "Niedersachsen",
-		"bezeichnung": "Niedersächsisches Ministerium für Soziales, Gesundheit und Gleichstellung",
-		"titel": "Ministerin",
-		"name": "Daniela Behrens",
-		"mail": "poststelle@ms.niedersachsen.de",
-		"fax": "0511 120 4296",
-		"anschrift": ["Hannah-Ahrendt-Platz 2", "30159 Hannover"]
+		"gesundheit": {
+			"bezeichnung": "Niedersächsisches Ministerium für Soziales, Gesundheit und Gleichstellung",
+			"titel": "Ministerin",
+			"name": "Daniela Behrens",
+			"mail": "poststelle@ms.niedersachsen.de",
+			"fax": "0511 120 4296",
+			"anschrift": ["Hannah-Ahrendt-Platz 2", "30159 Hannover"]
+		},
+		"chef": {
+			"bezeichnung": "Niedersächsiche Staatskanzlei",
+			"titel": "Ministerpräsident",
+			"name": "Stephan Weil", 
+			"mail": "poststelle@stk.niedersachsen.de",
+			"fax": "0511 120 6830",
+			"anschrift": ["Planckstraße 2", "30169 Hannover"]
+		}
 	},
 	"NW": {
 		"land": "Nordrhein Westfalen",
-		"bezeichnung": "Ministerium für Arbeit, Gesundheit und Soziales",
-		"titel": "Minister",
-		"name": "Karl-Josef Laumann",
-		"mail": "poststelle@mags.nrw.de",
-		"fax": "0211 855 3211",
-		"anschrift": ["Fürstenwall 25", "40219 Düsseldorf"]
+		"gesundheit": {
+			"bezeichnung": "Ministerium für Arbeit, Gesundheit und Soziales",
+			"titel": "Minister",
+			"name": "Karl-Josef Laumann",
+			"mail": "poststelle@mags.nrw.de",
+			"fax": "0211 855 3211",
+			"anschrift": ["Fürstenwall 25", "40219 Düsseldorf"]
+		},
+		"chef": {
+			"bezichnung": "Staatskanzlei des Lanbdes Nordrhein-Westfalen",
+			"titel": "Ministerpräsident",
+			"name": "Hendrik Wüst",
+			"mail": "poststelle@stk.nrw.de",
+			"fax": "0211 837 1150",
+			"anschrift": ["Horionplatz 1", "40213 Düsseldorf"]
+		}
 	},
 	"RP": {
 		"land": "Rheinland Pfalz",
-		"bezeichnung": "Ministerium für Wissenschaft und Gesundheit",
-		"titel": "Minister",
-		"name": "Clemens Hoch",
-		"mail": "poststelle@mwg.rlp.de",
-		"fax": "06131 1629 97",
-		"anschrift": ["Postfach 32 20", "55022 Mainz"]
+		"gesundheit": {
+			"bezeichnung": "Ministerium für Wissenschaft und Gesundheit",
+			"titel": "Minister",
+			"name": "Clemens Hoch",
+			"mail": "poststelle@mwg.rlp.de",
+			"fax": "06131 1629 97",
+			"anschrift": ["Postfach 32 20", "55022 Mainz"]
+		},
+		"chef": {
+			"bezeichnung": "Staatskanzlei Rheinland Pfalz",
+			"titel": "Ministerpräsidentin",
+			"name": "Malu Dreyer",
+			"mail": "poststelle@stk.rlp.de",
+			"fax": "06131 16 4771",
+			"anschrift": ["Postfach 38 80", "55028 Mainz"]
+		}
 	},
 	"SL": {
 		"land": "Saarland",
-		"bezeichnung": "Ministerium für Soziales, Gesundheit, Frauen und Familie",
-		"titel": "Ministerin",
-		"name": "Monika Bachmann",
-		"mail": "buergerbeauftragter@soziales.saarland.de",
-		"fax": "068 1501 3397",
-		"anschrift": ["Franz-Josef-Röder-Straße 23", "66119 Saarbrücken"]
+		"gesundheit": {
+			"bezeichnung": "Ministerium für Soziales, Gesundheit, Frauen und Familie",
+			"titel": "Ministerin",
+			"name": "Monika Bachmann",
+			"mail": "buergerbeauftragter@soziales.saarland.de",
+			"fax": "068 1501 3397",
+			"anschrift": ["Franz-Josef-Röder-Straße 23", "66119 Saarbrücken"]
+		},
+		"chef": {
+			"bezeichnung": "Staatskanzlei Saarland",
+			"titel": "Ministerpräsident",
+			"name": "Tobias Hans",
+			"mail": "poststelle@staatskanzlei.saarland.de",
+			"fax": "0681 501 1159",
+			"anschrift": ["Am Ludwigsplatz 14", "66117 Saarbrücken"]
+		}
 	},
 	"SN": {
 		"land": "Sachsen",
-		"bezeichnung": "Sächsisches Staatsministerium für Soziales und Gesellschaftlichen Zusammenhalt",
-		"titel": "Staatsministerin",
-		"name": "Petra Köpping",
-		"mail": "poststelle@sms.sachsen.de",
-		"fax": "0351 564 55060",
-		"anschrift": ["Alberstraße 10", "01097 Dresden"]
+		"gesundheit": {
+			"bezeichnung": "Sächsisches Staatsministerium für Soziales und Gesellschaftlichen Zusammenhalt",
+			"titel": "Staatsministerin",
+			"name": "Petra Köpping",
+			"mail": "poststelle@sms.sachsen.de",
+			"fax": "0351 564 55060",
+			"anschrift": ["Alberstraße 10", "01097 Dresden"]
+		},
+		"chef": {
+			"bezeichnung": "Sächsische Staatskanzlei",
+			"titel": "Ministerpräsident",
+			"name": "Michael Kretschmer",
+			"mail": "info@sk.sachsen.de",
+			"fax": "0351 564 10999",
+			"anschrift": ["01095 Dresden"]
+		}
 	},
 	"ST": {
 		"land": "Sachsen Anhalt",
-		"bezeichnung": "Ministerium für Arbeit, Soziales und Gesundheit und Gleichstellung",
-		"titel": "Ministerin",
-		"name": "Petra Grimm-Benne",
-		"mail": "ms-presse@ms.sachsen-anhalt.de",
-		"fax": "0391 567 4622",
-		"anschrift": ["Turmschanzenstraße 25", "39114 Magdeburg"]
+		"gesundheit": {
+			"bezeichnung": "Ministerium für Arbeit, Soziales und Gesundheit und Gleichstellung",
+			"titel": "Ministerin",
+			"name": "Petra Grimm-Benne",
+			"mail": "ms-presse@ms.sachsen-anhalt.de",
+			"fax": "0391 567 4622",
+			"anschrift": ["Turmschanzenstraße 25", "39114 Magdeburg"]
+		},
+		"chef": {
+			"bezeichnung": "Staatskanzlei und Ministerium für Kultur des Landes Sachsen-Anhalt",
+			"titel": "Ministerpräsident",
+			"name": "Rainer Haseloff",
+			"fax": "0391 567 6565",
+			"mail": "Staatskanzlei@stk.sachsen-anhalt.de",
+			"anschrift": ["Hegelstraße 40-42", "39104 Magdeburg"]
+		}
 	},
 	"SH": {
 		"land": "Schleswig-Holstein",
-		"bezeichnung": "Ministerium für Soziales, Gesundheit, Jugend, Familie und Senioren",
-		"titel": "Minister",
-		"name": "Heiner Garg",
-		"mail": "Poststelle@sozmi.landsh.de",
-		"fax": "0431 988 5416",
-		"anschrift": ["Adolf-Wesphal-Str. 4", "24143 Kiel"]
+		"gesundheit": {
+			"bezeichnung": "Ministerium für Soziales, Gesundheit, Jugend, Familie und Senioren",
+			"titel": "Minister",
+			"name": "Heiner Garg",
+			"mail": "Poststelle@sozmi.landsh.de",
+			"fax": "0431 988 5416",
+			"anschrift": ["Adolf-Wesphal-Str. 4", "24143 Kiel"]
+		},
+		"chef": {
+			"bezeichnung": "Staatskanzlei des Landes Schleswig-Holstein",
+			"titel": "Ministerpräsident",
+			"name": "Daniel Günther",
+			"fax": "0431 988 1960",
+			"mail": "poststelle@stk.landsh.de",
+			"anschrift": ["Düsternbrooker Weg 104", "24105 Kiel"]
+		}
 	},
 	"TH": {
 		"land": "Thüringen",
-		"bezeichnung": "Thüringer Ministerium für Arbeit, Soziales, Gesundheit, Frauen und Familie",
-		"titel": "Ministerin",
-		"name": "Heike Werner",
-		"mail": "Poststelle@tmasgff.thueringen.de",
-		"fax": "0361 379 8800",
-		"anschrift": ["Werner-Seelenbinder-Str. 6", "99096 Erfurt"]
+		"gesundheit": {
+			"bezeichnung": "Thüringer Ministerium für Arbeit, Soziales, Gesundheit, Frauen und Familie",
+			"titel": "Ministerin",
+			"name": "Heike Werner",
+			"mail": "Poststelle@tmasgff.thueringen.de",
+			"fax": "0361 379 8800",
+			"anschrift": ["Werner-Seelenbinder-Str. 6", "99096 Erfurt"]
+		},
+		"chef": {
+			"bezeichnung": "Thüringer Staatskanzlei",
+			"titel": "Ministerpräsident",
+			"name": "Bodo Ramelow",
+			"mail": "poststelle@stk.thueringen.de",
+			"fax": "0361 37 92402",
+			"anschrift": ["Postfach 90 02 53", "99105 Erfurt"]
+		}
 	}
 }

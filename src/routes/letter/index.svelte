@@ -2,6 +2,7 @@
 	import { goto } from "$app/navigation";
 	import { getRandom } from "$lib/helpers";
 	import config from "../../data/cna.json";
+	import bundeslaender from "../../data/bundeslaender.json";
 
 	import { data } from "$lib/store";
 	import { onMount } from "svelte";
@@ -30,7 +31,7 @@
 			return;
 		}
 		subject = getRandom(config.betreff);
-		const to = config.bundeslaender[$data.bundesland];
+		const to = bundeslaender[$data.bundesland].gesundheit;
 		receiver = to.bezeichnung + "\n";
 		to.anschrift.forEach((l: string) => (receiver += l + "\n"));
 		fax = to.fax;

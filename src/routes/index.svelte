@@ -3,6 +3,7 @@
 	import { data } from "$lib/store";
 
 	import config from "../data/cna.json";
+	import bundeslaender from "../data/bundeslaender.json";
 	import { getRandom } from "$lib/helpers";
 	import Button from "$lib/components/Button.svelte";
 	import MonospacedInfo from "$lib/components/MonospacedInfo.svelte";
@@ -25,7 +26,7 @@
 			return a;
 		}
 
-		const to = config.bundeslaender[$data.bundesland];
+		const to = bundeslaender[$data.bundesland].gesundheit;
 		return a.replace(/\$\{(\w+)\}/g, (_, p) => to[p]);
 	});
 
@@ -41,7 +42,7 @@
 				return a;
 			}
 
-			const to = config.bundeslaender[$data.bundesland];
+			const to = bundeslaender[$data.bundesland].gesundheit;
 
 			// todo: find dynamic way for replacing variables
 			a.text = a.text.replace("${Bundesland}", to.land);
@@ -52,7 +53,7 @@
 	const buildMailToLink = (empfaenger: string, preview: string): string => {
 		if (empfaenger === "" || preview === "") return "";
 
-		const to = config.bundeslaender[$data.bundesland];
+		const to = bundeslaender[$data.bundesland].gesundheit;
 		let subject = encodeURI(getRandom(config.betreff));
 		let body = encodeURI(preview);
 
@@ -88,9 +89,9 @@
 		<label class="sr-only" for="bundesland">Bundesland</label>
 		<select id="bundesland" bind:value={$data.bundesland} on:change={() => data.reset()}>
 			<option disabled>Bundesland auswählen</option>
-			{#each Object.keys(config.bundeslaender) as land}
+			{#each Object.keys(bundeslaender) as land}
 				<option value={land}>
-					{config.bundeslaender[land].land}
+					{bundeslaender[land].land}
 				</option>
 			{/each}
 		</select>
@@ -148,9 +149,7 @@
 		<Button type="submit">Bastel mir den Text</Button>
 		<div class="mt-8">
 			<p class="mb-2 text-sm">
-				Empfänger*in: <MonospacedInfo
-					>{config.bundeslaender[$data.bundesland]?.mail ?? ""}</MonospacedInfo
-				>
+				Empfänger*in: <MonospacedInfo>{bundeslaender[$data.bundesland]?.mail ?? ""}</MonospacedInfo>
 			</p>
 			<textarea readonly class="w-full bg-gray-100 dark:bg-slate-800 rounded" rows="10"
 				>{finalText}</textarea

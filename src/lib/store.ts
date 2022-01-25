@@ -1,7 +1,15 @@
 import { get, writable } from "svelte/store";
 
 export type StoreStructure = {
-	bundesland: string;
+	bundeslandKey: string;
+	empfaenger?: {
+		bezeichnung: string;
+		titel: string;
+		name: string;
+		mail: string;
+		fax: string;
+		anschrift: string[];
+	};
 	anrede: string;
 	einleitung: string;
 	beschwerde: {
@@ -17,7 +25,7 @@ export type StoreStructure = {
 };
 
 const emptyStructure: StoreStructure = {
-	bundesland: "",
+	bundeslandKey: "",
 	anrede: "",
 	einleitung: "",
 	beschwerde: {
@@ -52,7 +60,7 @@ function createDataStore() {
 		reset: () => {
 			structure.set({
 				...emptyStructure,
-				bundesland: get(structure).bundesland, // do not overwrite the bundesland, it's excluded for the reset
+				empfaenger: get(structure).empfaenger, // do not overwrite the bundesland, it's excluded for the reset
 			});
 		},
 		buildText,

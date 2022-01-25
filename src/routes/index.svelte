@@ -11,7 +11,7 @@
 	let anreden: string[] = [];
 	let finalText: string = "";
 
-	$: showSecondStep = $data.bundesland.length > 0;
+	$: showSecondStep = $data.bundeslandKey !== "";
 	$: showThirdStep =
 		showSecondStep &&
 		$data.anrede.length > 0 &&
@@ -20,13 +20,13 @@
 		$data.appell.text.length > 0 &&
 		$data.gruss.length > 0;
 	$: showSendButton = finalText.length > 0;
-	$: mailto = buildMailToLink($data.bundesland, finalText);
+	$: mailto = buildMailToLink($data.empfaenger?.mail ?? "", finalText);
 	$: anreden = config.anrede.map((a) => {
-		if ($data.bundesland === undefined || $data.bundesland === null || $data.bundesland === "") {
+		if ($data.empfaenger === undefined) {
 			return a;
 		}
 
-		const to = bundeslaender[$data.bundesland].gesundheit;
+		const to = $data.empfaenger;
 		return a.replace(/\$\{(\w+)\}/g, (_, p) => to[p]);
 	});
 
@@ -38,11 +38,17 @@
 			return a.kategorie === $data.beschwerde.kategorie;
 		})
 		.map((a) => {
-			if ($data.bundesland === undefined || $data.bundesland === null || $data.bundesland === "") {
+			// It's important to query all information here, not just the contact information.
+
+			if (
+				$data.bundeslandKey === undefined ||
+				$data.bundeslandKey === null ||
+				$data.bundeslandKey === ""
+			) {
 				return a;
 			}
 
-			const to = bundeslaender[$data.bundesland].gesundheit;
+			const to = bundeslaender[$data.bundeslandKey];
 
 			// todo: find dynamic way for replacing variables
 			a.text = a.text.replace("${Bundesland}", to.land);
@@ -53,7 +59,7 @@
 	const buildMailToLink = (empfaenger: string, preview: string): string => {
 		if (empfaenger === "" || preview === "") return "";
 
-		const to = bundeslaender[$data.bundesland].gesundheit;
+		const to = $data.empfaenger;
 		let subject = encodeURI(getRandom(config.betreff));
 		let body = encodeURI(preview);
 
@@ -92,8 +98,8 @@
 <form on:submit|preventDefault={() => (finalText = data.buildText())}>
 	<section>
 		<p class="section-header">Schritt 1: Bundesland auswählen</p>
-		<label class="sr-only" for="bundesland">Bundesland</label>
-		<select id="bundesland" bind:value={$data.bundesland} on:change={() => data.reset()}>
+		<label for="bundesland">Bundesland</label>
+		<select id="bundesland" bind:value={$data.bundeslandKey} on:change={() => data.reset()}>
 			<option disabled>Bundesland auswählen</option>
 			{#each Object.keys(bundeslaender) as land}
 				<option value={land}>
@@ -101,6 +107,18 @@
 				</option>
 			{/each}
 		</select>
+
+		{#if $data.bundeslandKey}
+			<label for="kontakt">Empfänger*in</label>
+			<select id="kontakt" bind:value={$data.empfaenger}>
+				<option value={bundeslaender[$data.bundeslandKey].gesundheit}>
+					{bundeslaender[$data.bundeslandKey].gesundheit.bezeichnung}
+				</option>
+				<option value={bundeslaender[$data.bundeslandKey].chef}>
+					{bundeslaender[$data.bundeslandKey].chef.bezeichnung}
+				</option>
+			</select>
+		{/if}
 	</section>
 	<section class:hidden={!showSecondStep}>
 		<div class="flex flex-col md:flex-row items-baseline justify-between">
@@ -155,7 +173,7 @@
 		<Button type="submit">Bastel mir den Text</Button>
 		<div class="mt-8">
 			<p class="mb-2 text-sm">
-				Empfänger*in: <MonospacedInfo>{bundeslaender[$data.bundesland]?.mail ?? ""}</MonospacedInfo>
+				Empfänger*in: <MonospacedInfo>{$data.empfaenger?.mail ?? ""}</MonospacedInfo>
 			</p>
 			<textarea readonly class="w-full bg-gray-100 dark:bg-slate-800 rounded" rows="10"
 				>{finalText}</textarea

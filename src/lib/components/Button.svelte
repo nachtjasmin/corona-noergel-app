@@ -23,6 +23,8 @@
 		@apply border border-green-800;
 		@apply hover:bg-green-300;
 		@apply active:bg-green-800 active:text-white;
+
+		@apply dark:bg-green-600 dark:text-white dark:hover:bg-green-700 dark:active:bg-green-900;
 	}
 
 	.small {

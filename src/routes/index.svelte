@@ -74,15 +74,21 @@
 </script>
 
 <h1 class="font-bold text-2xl">Corona-Nörgel-App 🦠😷</h1>
-<p class="mt-4">
-	Am 22.01. haben die Gesundheitsministieren in einer Telefonkonferenz weitgehende <a
-		class="underline"
-		href="https://www.gmkonline.de/Beschluesse.html?uid=268&jahr=2022"
-		>Einschränkungen für PCR-Tests</a
-	> beschlossen. Hier kannst du passend für dein Bundesland eine Beschwerdemail für dein zuständiges
-	Ministerium generieren. Abschicken musst du es noch selbst, dafür brauchst du ein eingerichtetes Mailprogramm
-	wie Thunderbird, Outlook oder K9.
-</p>
+<div class="prose mt-4">
+	<p>
+		Am 22.01. haben die Gesundheitsministieren in einer Telefonkonferenz weitgehende <a
+			href="https://www.gmkonline.de/Beschluesse.html?uid=268&jahr=2022"
+			>Einschränkungen für PCR-Tests</a
+		> beschlossen. Hier kannst du passend für dein Bundesland eine Beschwerdemail für dein zuständiges
+		Ministerium generieren. Abschicken musst du es noch selbst, dafür brauchst du ein eingerichtetes
+		Mailprogramm wie Thunderbird, Outlook oder K9.
+	</p>
+	<p>
+		<b>Update (25.01.2022):</b> Wir haben die Kontaktdaten um die jeweiligen Staats- und Senatskanzleien
+		erweitert, sodass diese nun auch auf einfachem Wege kontaktiert werden können.
+	</p>
+</div>
+
 <form on:submit|preventDefault={() => (finalText = data.buildText())}>
 	<section>
 		<p class="section-header">Schritt 1: Bundesland auswählen</p>

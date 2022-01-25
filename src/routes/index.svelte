@@ -80,7 +80,7 @@
 </script>
 
 <h1 class="font-bold text-2xl">Corona-Nörgel-App 🦠😷</h1>
-<div class="prose mt-4">
+<div class="prose mt-4 dark:prose-invert">
 	<p>
 		Am 22.01. haben die Gesundheitsministieren in einer Telefonkonferenz weitgehende <a
 			href="https://www.gmkonline.de/Beschluesse.html?uid=268&jahr=2022"

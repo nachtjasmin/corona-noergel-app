@@ -3,6 +3,7 @@
 	import { data } from "$lib/store";
 
 	import config from "../data/cna.json";
+	import bundeslaender from "../data/bundeslaender.json";
 	import { getRandom } from "$lib/helpers";
 	import Button from "$lib/components/Button.svelte";
 	import MonospacedInfo from "$lib/components/MonospacedInfo.svelte";
@@ -10,7 +11,7 @@
 	let anreden: string[] = [];
 	let finalText: string = "";
 
-	$: showSecondStep = $data.bundesland.length > 0;
+	$: showSecondStep = $data.bundeslandKey !== "";
 	$: showThirdStep =
 		showSecondStep &&
 		$data.anrede.length > 0 &&
@@ -19,13 +20,13 @@
 		$data.appell.text.length > 0 &&
 		$data.gruss.length > 0;
 	$: showSendButton = finalText.length > 0;
-	$: mailto = buildMailToLink($data.bundesland, finalText);
+	$: mailto = buildMailToLink($data.empfaenger?.mail ?? "", finalText);
 	$: anreden = config.anrede.map((a) => {
-		if ($data.bundesland === undefined || $data.bundesland === null || $data.bundesland === "") {
+		if ($data.empfaenger === undefined) {
 			return a;
 		}
 
-		const to = config.bundeslaender[$data.bundesland];
+		const to = $data.empfaenger;
 		return a.replace(/\$\{(\w+)\}/g, (_, p) => to[p]);
 	});
 
@@ -37,11 +38,17 @@
 			return a.kategorie === $data.beschwerde.kategorie;
 		})
 		.map((a) => {
-			if ($data.bundesland === undefined || $data.bundesland === null || $data.bundesland === "") {
+			// It's important to query all information here, not just the contact information.
+
+			if (
+				$data.bundeslandKey === undefined ||
+				$data.bundeslandKey === null ||
+				$data.bundeslandKey === ""
+			) {
 				return a;
 			}
 
-			const to = config.bundeslaender[$data.bundesland];
+			const to = bundeslaender[$data.bundeslandKey];
 
 			// todo: find dynamic way for replacing variables
 			a.text = a.text.replace("${Bundesland}", to.land);
@@ -52,7 +59,7 @@
 	const buildMailToLink = (empfaenger: string, preview: string): string => {
 		if (empfaenger === "" || preview === "") return "";
 
-		const to = config.bundeslaender[$data.bundesland];
+		const to = $data.empfaenger;
 		let subject = encodeURI(getRandom(config.betreff));
 		let body = encodeURI(preview);
 
@@ -73,27 +80,45 @@
 </script>
 
 <h1 class="font-bold text-2xl">Corona-Nörgel-App 🦠😷</h1>
-<p class="mt-4">
-	Am 22.01. haben die Gesundheitsministieren in einer Telefonkonferenz weitgehende <a
-		class="underline"
-		href="https://www.gmkonline.de/Beschluesse.html?uid=268&jahr=2022"
-		>Einschränkungen für PCR-Tests</a
-	> beschlossen. Hier kannst du passend für dein Bundesland eine Beschwerdemail für dein zuständiges
-	Ministerium generieren. Abschicken musst du es noch selbst, dafür brauchst du ein eingerichtetes Mailprogramm
-	wie Thunderbird, Outlook oder K9.
-</p>
+<div class="prose mt-4">
+	<p>
+		Am 22.01. haben die Gesundheitsministieren in einer Telefonkonferenz weitgehende <a
+			href="https://www.gmkonline.de/Beschluesse.html?uid=268&jahr=2022"
+			>Einschränkungen für PCR-Tests</a
+		> beschlossen. Hier kannst du passend für dein Bundesland eine Beschwerdemail für dein zuständiges
+		Ministerium generieren. Abschicken musst du es noch selbst, dafür brauchst du ein eingerichtetes
+		Mailprogramm wie Thunderbird, Outlook oder K9.
+	</p>
+	<p>
+		<b>Update (25.01.2022):</b> Wir haben die Kontaktdaten um die jeweiligen Staats- und Senatskanzleien
+		erweitert, sodass diese nun auch auf einfachem Wege kontaktiert werden können.
+	</p>
+</div>
+
 <form on:submit|preventDefault={() => (finalText = data.buildText())}>
 	<section>
 		<p class="section-header">Schritt 1: Bundesland auswählen</p>
-		<label class="sr-only" for="bundesland">Bundesland</label>
-		<select id="bundesland" bind:value={$data.bundesland} on:change={() => data.reset()}>
+		<label for="bundesland">Bundesland</label>
+		<select id="bundesland" bind:value={$data.bundeslandKey} on:change={() => data.reset()}>
 			<option disabled>Bundesland auswählen</option>
-			{#each Object.keys(config.bundeslaender) as land}
+			{#each Object.keys(bundeslaender) as land}
 				<option value={land}>
-					{config.bundeslaender[land].land}
+					{bundeslaender[land].land}
 				</option>
 			{/each}
 		</select>
+
+		{#if $data.bundeslandKey}
+			<label for="kontakt">Empfänger*in</label>
+			<select id="kontakt" bind:value={$data.empfaenger}>
+				<option value={bundeslaender[$data.bundeslandKey].gesundheit}>
+					{bundeslaender[$data.bundeslandKey].gesundheit.bezeichnung}
+				</option>
+				<option value={bundeslaender[$data.bundeslandKey].chef}>
+					{bundeslaender[$data.bundeslandKey].chef.bezeichnung}
+				</option>
+			</select>
+		{/if}
 	</section>
 	<section class:hidden={!showSecondStep}>
 		<div class="flex flex-col md:flex-row items-baseline justify-between">
@@ -148,9 +173,7 @@
 		<Button type="submit">Bastel mir den Text</Button>
 		<div class="mt-8">
 			<p class="mb-2 text-sm">
-				Empfänger*in: <MonospacedInfo
-					>{config.bundeslaender[$data.bundesland]?.mail ?? ""}</MonospacedInfo
-				>
+				Empfänger*in: <MonospacedInfo>{$data.empfaenger?.mail ?? ""}</MonospacedInfo>
 			</p>
 			<textarea readonly class="w-full bg-gray-100 dark:bg-slate-800 rounded" rows="10"
 				>{finalText}</textarea

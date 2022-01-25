@@ -2,7 +2,6 @@
 	import { goto } from "$app/navigation";
 	import { getRandom } from "$lib/helpers";
 	import config from "../../data/cna.json";
-
 	import { data } from "$lib/store";
 	import { onMount } from "svelte";
 	import FormContainer from "$lib/components/FormContainer.svelte";
@@ -30,7 +29,7 @@
 			return;
 		}
 		subject = getRandom(config.betreff);
-		const to = config.bundeslaender[$data.bundesland];
+		const to = $data.empfaenger;
 		receiver = to.bezeichnung + "\n";
 		to.anschrift.forEach((l: string) => (receiver += l + "\n"));
 		fax = to.fax;

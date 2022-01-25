@@ -57,7 +57,7 @@
 			"name": "Franziska Giffey",
 			"mail": "Die-Regierende-Buergermeisterin@senatskanzlei.berlin.de",
 			"fax": "030 9026 2013",
-			"anschrift": ["Jüdenstr. 1", "10178 Berlin"]			
+			"anschrift": ["Jüdenstr. 1", "10178 Berlin"]
 		}
 	},
 	"BB": {
@@ -76,7 +76,7 @@
 			"name": "Dietmar Woidke",
 			"mail": "poststelle@stk.brandenburg.de",
 			"fax": "0331 866 1416",
-			"anschrift": ["Heinrich-Mann-Allee 107", "14473 Potsdam"]			
+			"anschrift": ["Heinrich-Mann-Allee 107", "14473 Potsdam"]
 		}
 	},
 	"HB": {
@@ -168,7 +168,7 @@
 		"chef": {
 			"bezeichnung": "Niedersächsiche Staatskanzlei",
 			"titel": "Ministerpräsident",
-			"name": "Stephan Weil", 
+			"name": "Stephan Weil",
 			"mail": "poststelle@stk.niedersachsen.de",
 			"fax": "0511 120 6830",
 			"anschrift": ["Planckstraße 2", "30169 Hannover"]

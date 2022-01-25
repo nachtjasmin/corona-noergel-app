@@ -103,6 +103,7 @@
 	<p class="text-right mt-8">{new Date().toLocaleDateString("de", { dateStyle: "full" })}</p>
 
 	<p class="subject-line">{subject}</p>
+	<p class="mb-4 mt-2">{$data.anrede},</p>
 	<p class="text">
 		{data.buildInnerText()}
 	</p>

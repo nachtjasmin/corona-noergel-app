@@ -5,6 +5,9 @@ name: Deploy to Uberspace
 on:
   push:
     branches: ["main"]
+    paths-ignore:
+      - ".vscode/"
+      - "README.md"
 
 jobs:
   build:

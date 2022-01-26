@@ -17,65 +17,70 @@
 		"Hochachtungsvoll",
 		"Danki, UwU"
 	],
-	"einleitung": [
-		"Mit großem Interesse habe ich Berichte zur Telefonkonferenz der Gesundheitsministerkonferenz verfolgt.",
-		"Aus der Presse habe ich von den Beschlüssen zur PCR-Testpriorisierung erfahren.",
-		"In der tagesaktuellen Berichterstattung bin ich über die Beschlüsse zur Priorisierung von PCR-Tests gestolpert."
-	],
-	"betreff": [
-		"Beschwerde zum Beschluss der PCR-Priorisierung vom 22.01.",
-		"PCR-Priorisierung: Beschwerde",
-		"Beschwerde zum PCR-Beschluss",
-		"Bitte bei der PCR-Priorisierung noch mal nacharbeiten",
-		"PCR-Priorisierungsbeschluss nicht ausreichend",
-		"PCR-Beschluss vom 22.01. ist nicht gut",
-		"Lückenhafter Beschluss zur Einschränkung PCR-Tests",
-		"PCR-Kapazitäten nicht beschränken",
-		"Beschwerde zu den Beschlüssen vom 22.01.",
-		"PCR-Beschlüsse bitte dringend überdenken"
-	],
-	"beschwerde": [
-		{
-			"text": "Es wurde bereits Ende letzten Jahres vor der ansteckenderen Omikron-Variante gewarnt. Die jetzigen Beschlüsse erwecken den Eindruck, dass die Gesundheitsministerkonferenz rechtzeitiges Handeln hier versäumt hat.",
-			"kategorie": "allgemein"
-		},
-		{
-			"text": "Die Inzidenzen bundesweit sind bei circa 1000 angelangt. Bestehende Maßnahmen bieten offensichtlich keinen ausreichenden Schutz.",
-			"kategorie": "allgemein"
-		},
-		{
-			"text": "Die Priorisierung ist fest im Beschluss verankert, die Anpassung der Rechtsfolgen für beispielsweise Quarantäne oder Genesenennachweise sollen dagegen nur geprüft werden. Das würde fatale Lücken offen lassen.",
-			"kategorie": "allgemein"
+	"topics": {
+		"pcr-testpriorisierung": {
+			"name": "Beschlüsse zur PCR-Testpriorisierung",
+			"einleitung": [
+				"Mit großem Interesse habe ich Berichte zur Telefonkonferenz der Gesundheitsministerkonferenz verfolgt.",
+				"Aus der Presse habe ich von den Beschlüssen zur PCR-Testpriorisierung erfahren.",
+				"In der tagesaktuellen Berichterstattung bin ich über die Beschlüsse zur Priorisierung von PCR-Tests gestolpert."
+			],
+			"betreff": [
+				"Beschwerde zum Beschluss der PCR-Priorisierung vom 22.01.",
+				"PCR-Priorisierung: Beschwerde",
+				"Beschwerde zum PCR-Beschluss",
+				"Bitte bei der PCR-Priorisierung noch mal nacharbeiten",
+				"PCR-Priorisierungsbeschluss nicht ausreichend",
+				"PCR-Beschluss vom 22.01. ist nicht gut",
+				"Lückenhafter Beschluss zur Einschränkung PCR-Tests",
+				"PCR-Kapazitäten nicht beschränken",
+				"Beschwerde zu den Beschlüssen vom 22.01.",
+				"PCR-Beschlüsse bitte dringend überdenken"
+			],
+			"beschwerde": [
+				{
+					"text": "Es wurde bereits Ende letzten Jahres vor der ansteckenderen Omikron-Variante gewarnt. Die jetzigen Beschlüsse erwecken den Eindruck, dass die Gesundheitsministerkonferenz rechtzeitiges Handeln hier versäumt hat.",
+					"kategorie": "allgemein"
+				},
+				{
+					"text": "Die Inzidenzen bundesweit sind bei circa 1000 angelangt. Bestehende Maßnahmen bieten offensichtlich keinen ausreichenden Schutz.",
+					"kategorie": "allgemein"
+				},
+				{
+					"text": "Die Priorisierung ist fest im Beschluss verankert, die Anpassung der Rechtsfolgen für beispielsweise Quarantäne oder Genesenennachweise sollen dagegen nur geprüft werden. Das würde fatale Lücken offen lassen.",
+					"kategorie": "allgemein"
+				}
+			],
+			"appell": [
+				{
+					"text": "In den Beschlüssen vermisse ich insgesamt den Ausbau der vorhandenen Kapazitäten. Hier besteht in meinen Augen dringender Handlungsbedarf.",
+					"kategorie": "allgemein"
+				},
+				{
+					"text": "Es wäre allerhöchste Zeit, niedrigschwellig, kostenlos und für alle tägliche PCR-Tests anzubieten. Der Stadt Wien ist das gelungen, ich erwarte, dass ${Bundesland} hier zeitnah Kapazitäten aufbaut.",
+					"kategorie": "allgemein"
+				},
+				{
+					"text": "Solange Schulen im Pandemiegeschehen offen gehalten werden, müssen Schüler_innen und Lehrkräfte in die Priorisierung eingebunden werden. Das habe ich in der Beschlussfassung vermisst.",
+					"kategorie": "schule"
+				},
+				{
+					"text": "Wenn Schüler_innen und Lehrkräfte tatsächlich nicht in die Priorisierung mit aufgenommen werden, muss sichergestellt werden, dass positive Schnelltests in der Schule ausreichend für Meldungen bei der Unfallversicherung sind.",
+					"kategorie": "schule"
+				},
+				{
+					"text": "Damit Antigentests zuverlässig PCR-Testungen ersetzen können, muss für die zahlreichen Teststellen eine strengere Qualitätskontrolle erfolgen. Zu häufig werden Tests dort nicht mit der nötigen Sorgfalt durchgeführt.",
+					"kategorie": "antigentests"
+				},
+				{
+					"text": "Wenn Antigentests tatsächlich eine Diagnose über PCR ersetzen sollen, muss die Lagerung der Tests für Testzentren dringend regelementiert und überprüft werden. Die aktuellen Außentemperaturen sind weiter außerhalb des für die Tests zugelassenen Bereichs.",
+					"kategorie": "antigentests"
+				},
+				{
+					"text": "Durch die starke Fokussierung auf Antigentests sollte dringend die Empfindlichkeit dieser in die Reglementierung einbezogen werden, da aus den Daten des PEI hervorgeht, dass einige selbst bei sehr hohen Viruslasten nicht zuverlässig anschlagen. Hier müssen Mindeststandards etabliert werden.",
+					"kategorie": "antigentests"
+				}
+			]
 		}
-	],
-	"appell": [
-		{
-			"text": "In den Beschlüssen vermisse ich insgesamt den Ausbau der vorhandenen Kapazitäten. Hier besteht in meinen Augen dringender Handlungsbedarf.",
-			"kategorie": "allgemein"
-		},
-		{
-			"text": "Es wäre allerhöchste Zeit, niedrigschwellig, kostenlos und für alle tägliche PCR-Tests anzubieten. Der Stadt Wien ist das gelungen, ich erwarte, dass ${Bundesland} hier zeitnah Kapazitäten aufbaut.",
-			"kategorie": "allgemein"
-		},
-		{
-			"text": "Solange Schulen im Pandemiegeschehen offen gehalten werden, müssen Schüler_innen und Lehrkräfte in die Priorisierung eingebunden werden. Das habe ich in der Beschlussfassung vermisst.",
-			"kategorie": "schule"
-		},
-		{
-			"text": "Wenn Schüler_innen und Lehrkräfte tatsächlich nicht in die Priorisierung mit aufgenommen werden, muss sichergestellt werden, dass positive Schnelltests in der Schule ausreichend für Meldungen bei der Unfallversicherung sind.",
-			"kategorie": "schule"
-		},
-		{
-			"text": "Damit Antigentests zuverlässig PCR-Testungen ersetzen können, muss für die zahlreichen Teststellen eine strengere Qualitätskontrolle erfolgen. Zu häufig werden Tests dort nicht mit der nötigen Sorgfalt durchgeführt.",
-			"kategorie": "antigentests"
-		},
-		{
-			"text": "Wenn Antigentests tatsächlich eine Diagnose über PCR ersetzen sollen, muss die Lagerung der Tests für Testzentren dringend regelementiert und überprüft werden. Die aktuellen Außentemperaturen sind weiter außerhalb des für die Tests zugelassenen Bereichs.",
-			"kategorie": "antigentests"
-		},
-		{
-			"text": "Durch die starke Fokussierung auf Antigentests sollte dringend die Empfindlichkeit dieser in die Reglementierung einbezogen werden, da aus den Daten des PEI hervorgeht, dass einige selbst bei sehr hohen Viruslasten nicht zuverlässig anschlagen. Hier müssen Mindeststandards etabliert werden.",
-			"kategorie": "antigentests"
-		}
-	]
+	}
 }

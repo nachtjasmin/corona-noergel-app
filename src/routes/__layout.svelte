@@ -10,7 +10,6 @@
 </svelte:head>
 
 <FormContainer>
-	<pre>{$pageTitle}</pre>
 	<slot />
 	<ul class="flex flex-col sm:flex-row sm:space-x-4 justify-center mb-8">
 		<li><a href="/" class="footer-link">Startseite</a></li>

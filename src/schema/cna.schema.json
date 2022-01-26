@@ -1,6 +1,5 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema",
-	"$id": "https://example.com/product.schema.json",
 	"title": "Beschwerde-Informationen",
 	"description": "Dieses Objekt enthält alle notwendigen Informationen, die erforderlich sind, damit die E-Mails an die zuständigen Bundesländer geschrieben werden können.",
 	"type": "object",
@@ -11,7 +10,7 @@
 			"items": { "type": "string" },
 			"uniqueItems": true,
 			"title": "Liste der Anreden",
-			"examples": ["Hallo", "Guten Tag"],
+			"examples": [["Hallo", "Guten Tag"]],
 			"minItems": 1
 		},
 		"gruss": {
@@ -19,7 +18,7 @@
 			"items": { "type": "string" },
 			"uniqueItems": true,
 			"title": "Liste der Grüße",
-			"examples": ["Auf Wiederhören", "Ciao Kakao"],
+			"examples": [["Auf Wiederhören", "Ciao Kakao"]],
 			"minItems": 1
 		},
 		"einleitung": {
@@ -29,8 +28,8 @@
 			"title": "Liste der Einleitungen",
 			"description": "Die Einleitungen werden in den Texten verwendet, um darauf hinzuweisen, weshalb diese Mail oder der Brief geschickt wurde.",
 			"examples": [
-				"Ich find ihre Spätzle ganz lecker.",
-				"Der Salat hätte etwas frischer sein dürfen."
+				["Ich find ihre Spätzle ganz lecker."],
+				["Der Salat hätte etwas frischer sein dürfen."]
 			],
 			"minItems": 1
 		},
@@ -40,7 +39,7 @@
 			"uniqueItems": true,
 			"title": "Mögliche Optionen für den Betreff",
 			"description": "Der Betreff wird dazu verwendet, um für die E-Mail oder den Brief einen ersten Anlass zum Lesen zu geben.",
-			"examples": ["Feedback zu Ihren Spätzle", "Beschwerde zu Ihrem Feldsalat"]
+			"examples": [["Feedback zu Ihren Spätzle"], ["Beschwerde zu Ihrem Feldsalat"]]
 		},
 		"beschwerde": {
 			"type": "array",

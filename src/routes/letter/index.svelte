@@ -1,13 +1,16 @@
 <script lang="ts">
 	import { goto } from "$app/navigation";
 	import { getRandom } from "$lib/helpers";
-	import config from "../../data/cna.json";
+	import cnaConfig from "../../data/cna.json";
 	import { data, pageTitle } from "$lib/store";
 	import { onMount } from "svelte";
 	import FormContainer from "$lib/components/FormContainer.svelte";
 	import Button from "$lib/components/Button.svelte";
 	import MonospacedInfo from "$lib/components/MonospacedInfo.svelte";
+	import type { CNAData } from "$lib/definitions";
 	pageTitle.setTitle("Brief- und Fax-Erstellung");
+
+	let cna: CNAData = cnaConfig as CNAData;
 
 	let letterInformation: {
 		name?: string;
@@ -29,7 +32,7 @@
 			goto("/", { replaceState: true });
 			return;
 		}
-		subject = getRandom(config.betreff);
+		subject = getRandom(cna.betreff);
 		const to = $data.empfaenger;
 		receiver = to.bezeichnung + "\n";
 		to.anschrift.forEach((l: string) => (receiver += l + "\n"));

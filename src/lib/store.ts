@@ -1,7 +1,8 @@
 import { get, writable } from "svelte/store";
+import type { Beschwerde, Bundeslaender } from "./definitions";
 
 export type StoreStructure = {
-	bundeslandKey: string;
+	bundeslandKey: keyof Bundeslaender | "";
 	empfaenger?: {
 		bezeichnung: string;
 		titel: string;
@@ -12,14 +13,8 @@ export type StoreStructure = {
 	};
 	anrede: string;
 	einleitung: string;
-	beschwerde: {
-		text: string;
-		kategorie: string;
-	};
-	appell: {
-		text: string;
-		kategorie: string;
-	};
+	beschwerde: Beschwerde;
+	appell: Beschwerde;
 	gruss: string;
 	name: string;
 };

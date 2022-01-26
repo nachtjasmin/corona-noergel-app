@@ -2,11 +2,15 @@
 	import { tick } from "svelte";
 	import { data, pageTitle } from "$lib/store";
 
-	import config from "../data/cna.json";
-	import bundeslaender from "../data/bundeslaender.json";
+	import cnaConfig from "../data/cna.json";
+	import bundeslaenderJson from "../data/bundeslaender.json";
 	import { getRandom } from "$lib/helpers";
 	import Button from "$lib/components/Button.svelte";
 	import MonospacedInfo from "$lib/components/MonospacedInfo.svelte";
+	import type { Bundeslaender, CNAData } from "$lib/definitions";
+
+	let cna: CNAData = cnaConfig as CNAData;
+	let bundeslaender = bundeslaenderJson as Bundeslaender;
 
 	pageTitle.reset();
 
@@ -23,7 +27,7 @@
 		$data.gruss.length > 0;
 	$: showSendButton = finalText.length > 0;
 	$: mailto = buildMailToLink($data.empfaenger?.mail ?? "", finalText);
-	$: anreden = config.anrede.map((a) => {
+	$: anreden = cna.anrede.map((a) => {
 		if ($data.empfaenger === undefined) {
 			return a;
 		}
@@ -33,7 +37,7 @@
 	});
 
 	let appelle: { text: string; kategorie: string }[] = [];
-	$: appelle = config.appell
+	$: appelle = cna.appell
 		.filter((a) => {
 			if (a.kategorie === "allgemein" || $data.beschwerde.kategorie === "allgemein") return true;
 
@@ -62,7 +66,7 @@
 		if (empfaenger === "" || preview === "") return "";
 
 		const to = $data.empfaenger;
-		let subject = encodeURI(getRandom(config.betreff));
+		let subject = encodeURI(getRandom(cna.betreff));
 		let body = encodeURI(preview);
 
 		return `mailto:${to.mail}?subject=${subject}&body=${body}`;
@@ -70,10 +74,10 @@
 
 	const buildRandom = async () => {
 		$data.anrede = getRandom(anreden);
-		$data.einleitung = getRandom(config.einleitung);
-		$data.beschwerde = getRandom(config.beschwerde);
+		$data.einleitung = getRandom(cna.einleitung);
+		$data.beschwerde = getRandom(cna.beschwerde);
 		$data.appell = getRandom(appelle);
-		$data.gruss = getRandom(config.gruss);
+		$data.gruss = getRandom(cna.gruss);
 
 		finalText = data.buildText();
 		await tick();
@@ -145,7 +149,7 @@
 		<label for="einleitung">Einleitung</label>
 		<select id="einleitung" bind:value={$data.einleitung}>
 			<option disabled value="">Einleitung auswählen</option>
-			{#each config.einleitung as s}
+			{#each cna.einleitung as s}
 				<option value={s}>{s} </option>
 			{/each}
 		</select>
@@ -153,7 +157,7 @@
 		<label for="beschwerde">Beschwerde</label>
 		<select id="beschwerde" bind:value={$data.beschwerde}>
 			<option disabled value="">Beschwerde auswählen</option>
-			{#each config.beschwerde as s}
+			{#each cna.beschwerde as s}
 				<option value={s}>{s.text} </option>
 			{/each}
 		</select>
@@ -169,7 +173,7 @@
 		<label for="gruss">Grußformel</label>
 		<select id="gruss" bind:value={$data.gruss}>
 			<option disabled value="">Grußformel auswählen</option>
-			{#each config.gruss as s}
+			{#each cna.gruss as s}
 				<option value={s}>{s}</option>
 			{/each}
 		</select>

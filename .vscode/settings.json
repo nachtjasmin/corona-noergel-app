@@ -1,0 +1,15 @@
+{
+	"files.exclude": {
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true,
+		"**/Thumbs.db": true,
+		"**/.svelte-kit/": true,
+		"**/build/": true
+	},
+	"yaml.schemas": {
+		"https://json.schemastore.org/github-workflow.json": "file:///home/jasmin/repos/corona-noergel-app/.github/workflows/deploy.yml"
+	}
+}

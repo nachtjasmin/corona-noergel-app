@@ -98,7 +98,13 @@
 	</p>
 </div>
 
-<form on:submit|preventDefault={() => (finalText = data.buildText())}>
+<!--
+	Workaround for #19. Right now, the mobile Safari on iOS (tested with iOS 15.2.1) increases the
+	viewport width and ignores the viewport settings defined in the <meta> tag.
+	Although there is no overflowing content on this page, setting the overflow to hidden prevents
+	the appearance of the the horizontal scrollbar.
+-->
+<form on:submit|preventDefault={() => (finalText = data.buildText())} class="overflow-hidden">
 	<section>
 		<p class="section-header">Schritt 1: Bundesland auswählen</p>
 		<label for="bundesland">Bundesland</label>

@@ -1,4 +1,5 @@
 {
+	"$schema": "../schema/cna.schema.json",
 	"anrede": [
 		"Hallo",
 		"Guten Tag",

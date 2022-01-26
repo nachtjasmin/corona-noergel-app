@@ -1,4 +1,5 @@
 {
+	"$schema": "../schema/bundeslaender.schema.json",
 	"BW": {
 		"land": "Baden Württemberg",
 		"gesundheit": {

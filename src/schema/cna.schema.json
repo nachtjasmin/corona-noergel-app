@@ -1,0 +1,87 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema",
+	"$id": "https://example.com/product.schema.json",
+	"title": "Beschwerde-Informationen",
+	"description": "Dieses Objekt enthält alle notwendigen Informationen, die erforderlich sind, damit die E-Mails an die zuständigen Bundesländer geschrieben werden können.",
+	"type": "object",
+	"properties": {
+		"$schema": true,
+		"anrede": {
+			"type": "array",
+			"items": { "type": "string" },
+			"uniqueItems": true,
+			"title": "Liste der Anreden",
+			"examples": ["Hallo", "Guten Tag"],
+			"minItems": 1
+		},
+		"gruss": {
+			"type": "array",
+			"items": { "type": "string" },
+			"uniqueItems": true,
+			"title": "Liste der Grüße",
+			"examples": ["Auf Wiederhören", "Ciao Kakao"],
+			"minItems": 1
+		},
+		"einleitung": {
+			"type": "array",
+			"items": { "type": "string" },
+			"uniqueItems": true,
+			"title": "Liste der Einleitungen",
+			"description": "Die Einleitungen werden in den Texten verwendet, um darauf hinzuweisen, weshalb diese Mail oder der Brief geschickt wurde.",
+			"examples": [
+				"Ich find ihre Spätzle ganz lecker.",
+				"Der Salat hätte etwas frischer sein dürfen."
+			],
+			"minItems": 1
+		},
+		"betreff": {
+			"type": "array",
+			"items": { "type": "string" },
+			"uniqueItems": true,
+			"title": "Mögliche Optionen für den Betreff",
+			"description": "Der Betreff wird dazu verwendet, um für die E-Mail oder den Brief einen ersten Anlass zum Lesen zu geben.",
+			"examples": ["Feedback zu Ihren Spätzle", "Beschwerde zu Ihrem Feldsalat"]
+		},
+		"beschwerde": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"$ref": "#/definitions/text_mit_kategorie",
+				"title": "Eine Beschwerdemöglichkeit, zusammen mit einer Kategorie."
+			},
+			"minItems": 1,
+			"title": "Liste von Beschwerden"
+		},
+		"appell": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"$ref": "#/definitions/text_mit_kategorie",
+				"title": "Ein Appell, zusammen mit einer Kategorie."
+			},
+			"minItems": 1,
+			"title": "Liste von Appellen"
+		}
+	},
+	"additionalProperties": false,
+	"definitions": {
+		"text_mit_kategorie": {
+			"type": "object",
+			"description": "Ein Text, der zusätzlich mit einer Kategorie versehen ist.",
+			"properties": {
+				"text": {
+					"type": "string",
+					"description": "Der eigentliche Text."
+				},
+				"kategorie": {
+					"type": "string",
+					"description": "Die Kategorie. Sofern keine Klassifizierung möglich ist, sollte 'allgemein' genutzt werden.",
+					"default": "allgemein"
+				}
+			},
+			"additionalProperties": false,
+			"required": ["text", "kategorie"]
+		}
+	},
+	"required": ["anrede", "gruss", "einleitung", "betreff", "beschwerde", "appell"]
+}

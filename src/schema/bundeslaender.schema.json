@@ -1,0 +1,109 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema",
+	"$id": "https://example.com/product.schema.json",
+	"title": "Sammlung von Bundesländern",
+	"description": "Eine Sammlung von Bundesländern und deren Kontaktdaten.",
+	"type": "object",
+	"properties": {
+		"$schema": true,
+		"BW": { "type": "object", "$ref": "#/definitions/bundesland" },
+		"BY": { "type": "object", "$ref": "#/definitions/bundesland" },
+		"BE": { "type": "object", "$ref": "#/definitions/bundesland" },
+		"BB": { "type": "object", "$ref": "#/definitions/bundesland" },
+		"HB": { "type": "object", "$ref": "#/definitions/bundesland" },
+		"HH": { "type": "object", "$ref": "#/definitions/bundesland" },
+		"HE": { "type": "object", "$ref": "#/definitions/bundesland" },
+		"MV": { "type": "object", "$ref": "#/definitions/bundesland" },
+		"NI": { "type": "object", "$ref": "#/definitions/bundesland" },
+		"NW": { "type": "object", "$ref": "#/definitions/bundesland" },
+		"RP": { "type": "object", "$ref": "#/definitions/bundesland" },
+		"SL": { "type": "object", "$ref": "#/definitions/bundesland" },
+		"SN": { "type": "object", "$ref": "#/definitions/bundesland" },
+		"ST": { "type": "object", "$ref": "#/definitions/bundesland" },
+		"SH": { "type": "object", "$ref": "#/definitions/bundesland" },
+		"TH": { "type": "object", "$ref": "#/definitions/bundesland" }
+	},
+	"additionalProperties": false,
+	"definitions": {
+		"bundesland": {
+			"type": "object",
+			"title": "Daten für das Bundesland.",
+			"properties": {
+				"land": {
+					"title": "Der Name des Bundeslandes.",
+					"type": "string"
+				},
+				"gesundheit": {
+					"title": "Die Kontaktdaten des Gesundheitsministeriums.",
+					"type": "object",
+					"$ref": "#/definitions/information"
+				},
+				"chef": {
+					"title": "Die Kontaktdaten des*der Minister*in.",
+					"type": "object",
+					"$ref": "#/definitions/information"
+				}
+			},
+			"additionalProperties": false,
+			"required": ["land", "gesundheit", "chef"]
+		},
+		"information": {
+			"type": "object",
+			"title": "Informationen über ein Ministerium.",
+			"properties": {
+				"bezeichnung": {
+					"type": "string",
+					"title": "Die Bezeichnung des Ministeriums.",
+					"examples": ["Gesundheitsministerium für Zauberwesen"]
+				},
+				"titel": {
+					"type": "string",
+					"title": "Der Titel des*der zuständigen Minister*in. Sollte auf den Namen zugeschnitten sein.",
+					"default": "Minister*in"
+				},
+				"name": {
+					"type": "string",
+					"title": "Der Name des*der zuständigen Minister*in."
+				},
+				"mail": {
+					"type": "string",
+					"pattern": ".+@.+",
+					"title": "Die E-Mail-Adresse eines Ministeriums."
+				},
+				"fax": {
+					"type": "string",
+					"pattern": "[0-9 ]+",
+					"title": "Die Fax-Nummer eines Ministeriums."
+				},
+				"anschrift": {
+					"title": "Die Anschrift eines Ministeriums.",
+					"examples": [["Test-Straße 1", "12345 Musterstadt"]],
+					"type": "array",
+					"uniqueItems": true,
+					"minItems": 1,
+					"items": { "type": "string" }
+				}
+			},
+			"additionalProperties": false,
+			"required": ["bezeichnung", "titel", "name", "mail", "fax", "anschrift"]
+		}
+	},
+	"required": [
+		"BW",
+		"BY",
+		"BE",
+		"BB",
+		"HB",
+		"HH",
+		"HE",
+		"MV",
+		"NI",
+		"NW",
+		"RP",
+		"SL",
+		"SN",
+		"ST",
+		"SH",
+		"TH"
+	]
+}

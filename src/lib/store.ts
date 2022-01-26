@@ -67,5 +67,17 @@ function createDataStore() {
 		buildInnerText,
 	};
 }
-
 export const data = createDataStore();
+
+function buildPageTitleStore() {
+	const appName = "Corona-Nörgel-App";
+	const { subscribe, set } = writable<string>(appName);
+
+	return {
+		subscribe,
+		setTitle: (title: string) => set(`${title} | ${appName}`),
+		reset: () => set(appName),
+	};
+}
+
+export const pageTitle = buildPageTitleStore();

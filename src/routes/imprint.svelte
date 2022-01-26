@@ -1,3 +1,9 @@
+<script lang="ts">
+	import { pageTitle } from "$lib/store";
+
+	pageTitle.setTitle("Impressum und Datenschutzerklärung");
+</script>
+
 <h1 class="font-bold text-2xl">Impressum und Datenschutzerklärung</h1>
 <main class="prose my-4 dark:prose-invert">
 	<p>

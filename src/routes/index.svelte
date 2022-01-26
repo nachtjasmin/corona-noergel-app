@@ -1,12 +1,14 @@
 <script lang="ts">
 	import { tick } from "svelte";
-	import { data } from "$lib/store";
+	import { data, pageTitle } from "$lib/store";
 
 	import config from "../data/cna.json";
 	import bundeslaender from "../data/bundeslaender.json";
 	import { getRandom } from "$lib/helpers";
 	import Button from "$lib/components/Button.svelte";
 	import MonospacedInfo from "$lib/components/MonospacedInfo.svelte";
+
+	pageTitle.reset();
 
 	let anreden: string[] = [];
 	let finalText: string = "";

@@ -2,11 +2,12 @@
 	import { goto } from "$app/navigation";
 	import { getRandom } from "$lib/helpers";
 	import config from "../../data/cna.json";
-	import { data } from "$lib/store";
+	import { data, pageTitle } from "$lib/store";
 	import { onMount } from "svelte";
 	import FormContainer from "$lib/components/FormContainer.svelte";
 	import Button from "$lib/components/Button.svelte";
 	import MonospacedInfo from "$lib/components/MonospacedInfo.svelte";
+	pageTitle.setTitle("Brief- und Fax-Erstellung");
 
 	let letterInformation: {
 		name?: string;

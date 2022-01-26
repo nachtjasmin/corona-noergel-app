@@ -1,10 +1,16 @@
 <script>
 	import FormContainer from "$lib/components/FormContainer.svelte";
+	import { pageTitle } from "$lib/store";
 	import "../app.css";
 	import version from "../data/version.txt?raw";
 </script>
 
+<svelte:head>
+	<title>{$pageTitle}</title>
+</svelte:head>
+
 <FormContainer>
+	<pre>{$pageTitle}</pre>
 	<slot />
 	<ul class="flex flex-col sm:flex-row sm:space-x-4 justify-center mb-8">
 		<li><a href="/" class="footer-link">Startseite</a></li>

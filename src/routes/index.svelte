@@ -75,8 +75,9 @@
 
 		finalText = data.buildText();
 		await tick();
-		document.getElementById("text").scrollIntoView();
+		focusText();
 	};
+	const focusText = () => document.getElementById("text").focus();
 </script>
 
 <h1 class="font-bold text-2xl">Corona-Nörgel-App 🦠😷</h1>
@@ -168,14 +169,14 @@
 		<label for="name">Dein Name</label>
 		<input id="name" type="text" placeholder="(optional)" bind:value={$data.name} />
 	</section>
-	<section id="text" class:hidden={!showThirdStep}>
+	<section class:hidden={!showThirdStep}>
 		<p class="section-header">Schritt 3: Text erzeugen</p>
-		<Button type="submit">Bastel mir den Text</Button>
+		<Button type="submit" on:click={focusText}>Bastel mir den Text</Button>
 		<div class="mt-8">
 			<p class="mb-2 text-sm">
 				Empfänger*in: <MonospacedInfo>{$data.empfaenger?.mail ?? ""}</MonospacedInfo>
 			</p>
-			<textarea readonly class="w-full bg-gray-100 dark:bg-slate-800 rounded" rows="10"
+			<textarea id="text" readonly class="w-full bg-gray-100 dark:bg-slate-800 rounded" rows="10"
 				>{finalText}</textarea
 			>
 		</div>

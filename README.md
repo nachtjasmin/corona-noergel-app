@@ -42,3 +42,7 @@ npm run build
 
 The generated files are found in the `build` folder of the repository and can be delivered with any server.
 After all, it's just plain JavaScript.
+
+## Licenses
+
+The favicon was downloaded [here](https://favicon.io/emoji-favicons/face-with-medical-mask) and is based on the Twemoji emoji set by Twitter, licensed under CC-BY 4.0

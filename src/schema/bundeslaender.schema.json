@@ -41,6 +41,11 @@
 					"title": "Die Kontaktdaten des*der Ministerpräsident*in.",
 					"type": "object",
 					"$ref": "#/definitions/information"
+				},
+				"schule": {
+					"title": "Die Kontaktdaten des Schulministeriums.",
+					"type": "object",
+					"$ref": "#/definitions/information"
 				}
 			},
 			"additionalProperties": false,

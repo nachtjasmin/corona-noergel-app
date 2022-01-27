@@ -21,6 +21,14 @@
 			"mail": "poststelle@stm.bwl.de",
 			"fax": "0711 2153 340",
 			"anschrift": ["Richard-Wagner-Strasse 15", "70184 Stuttgart"]
+		},
+		"schule": {
+			"bezeichnung": "Ministerium für Kultus, Jugend und Sport Baden-Württemberg",
+			"titel": "Ministerin",
+			"name": "Theresa Schopper",
+			"mail": "poststelle@km.kv.bwl.de",
+			"fax": "0711 279-2810",
+			"anschrift": ["Thouretstraße 6", "70173 Stuttgart"]
 		}
 	},
 	"BY": {
@@ -40,6 +48,14 @@
 			"mail": "poststelle@stk.bayern.de",
 			"fax": "089 2940 44",
 			"anschrift": ["Franz-Josef-Strauß-Ring 1", "80539 München"]
+		},
+		"schule": {
+			"bezeichnung": "Bayerisches Staatsministerium für Unterricht und Kultus",
+			"titel": "Minister",
+			"name": "Prof. Dr. Michael Piazolo",
+			"anschrift": ["Salvatorstraße 2", "80327 München"],
+			"fax": "089/2186-2800",
+			"mail": "poststelle@stmuk.bayern.de"
 		}
 	},
 	"BE": {
@@ -59,6 +75,14 @@
 			"mail": "Die-Regierende-Buergermeisterin@senatskanzlei.berlin.de",
 			"fax": "030 9026 2013",
 			"anschrift": ["Jüdenstr. 1", "10178 Berlin"]
+		},
+		"schule": {
+			"bezeichnung": "Senatsverwaltung für Bildung, Jugend und Familie",
+			"mail": "Corona-Schulbetrieb@senbjf.berlin.de",
+			"anschrift": ["Bernhard-Weiß-Straße 6", "10178 Berlin"],
+			"name": "Astrid-Sabine Busse",
+			"titel": "Senatorin",
+			"fax": "030 90227 5021"
 		}
 	},
 	"BB": {
@@ -78,6 +102,14 @@
 			"mail": "poststelle@stk.brandenburg.de",
 			"fax": "0331 866 1416",
 			"anschrift": ["Heinrich-Mann-Allee 107", "14473 Potsdam"]
+		},
+		"schule": {
+			"bezeichnung": "Ministerium für Bildung, Jugend und Sport",
+			"name": "Britta Ernst",
+			"titel": "Ministerin",
+			"anschrift": ["Heinrich-Mann-Allee 107", "Haus 1/1a", "14473 Potsdam"],
+			"fax": "0331 27548 4906",
+			"mail": "poststelle@mbjs.brandenburg.de"
 		}
 	},
 	"HB": {
@@ -97,6 +129,14 @@
 			"mail": "office@sk.bremen.de",
 			"fax": "0421 496 6132",
 			"anschrift": ["Am Markt 21", "28195 Bremen"]
+		},
+		"schule": {
+			"bezeichnung": "Die Senatorin für Kinder und Bildung",
+			"titel": "Senatorin",
+			"name": "Sascha Karolin Aulepp",
+			"anschrift": ["Rembertiring 8-12", "28195 Bremen"],
+			"mail": "office@bildung.bremen.de",
+			"fax": "0421 496 4176"
 		}
 	},
 	"HH": {
@@ -116,6 +156,14 @@
 			"mail": "poststelle@rs.hamburg.de",
 			"fax": "040 42831 2555",
 			"anschrift": ["Rathausmarkt 1", "20095 Hamburg"]
+		},
+		"schule": {
+			"bezeichnung": "Behörde für Schule und Berufsbildung",
+			"titel": "Senator",
+			"name": "Ties Rabe",
+			"mail": "poststelle@bsb.hamburg.de",
+			"anschrift": ["Hamburger Straße 31", "22083 Hamburg"],
+			"fax": "040 4279 63030"
 		}
 	},
 	"HE": {
@@ -135,6 +183,14 @@
 			"mail": "poststelle@stk.hessen.de",
 			"fax": "0611 32 3708",
 			"anschrift": ["Georg-August-Zinn Straße 1", "65183 Wiesbaden"]
+		},
+		"schule": {
+			"bezeichnung": "Hessisches Kultusministerium",
+			"mail": "poststelle.hkm@kultus.hessen.de",
+			"anschrift": ["Luisenplatz 10", "65185 Wiesbaden"],
+			"name": "Alexander Dorz",
+			"titel": "Minister",
+			"fax": "06113 682013"
 		}
 	},
 	"MV": {
@@ -154,6 +210,14 @@
 			"mail": "poststelle@stk.mv-regierung.de",
 			"fax": "0385 565 144",
 			"anschrift": ["Schloßstr. 2-4", "19053 Schwerin"]
+		},
+		"schule": {
+			"bezeichnung": "Ministerium für Bildung und Kindertagesförderung",
+			"titel": "Ministerin",
+			"name": "Simone Oldenburg",
+			"mail": "poststelle@bm.mv-regierung.de",
+			"fax": "03855 887082",
+			"anschrift": ["Schmiedestraße 8", "19053 Schwerin"]
 		}
 	},
 	"NI": {
@@ -173,6 +237,14 @@
 			"mail": "poststelle@stk.niedersachsen.de",
 			"fax": "0511 120 6830",
 			"anschrift": ["Planckstraße 2", "30169 Hannover"]
+		},
+		"schule": {
+			"bezeichnung": "Niedersächsisches Kultusministerium",
+			"titel": "Minister",
+			"name": "Grant Hendrik Tonne",
+			"mail": "poststelle@mk.niedersachsen.de",
+			"fax": "0511 120 7450",
+			"anschrift": ["Hans-Böckler-Allee 5", "30173 Hannover"]
 		}
 	},
 	"NW": {
@@ -192,6 +264,14 @@
 			"mail": "poststelle@stk.nrw.de",
 			"fax": "0211 837 1150",
 			"anschrift": ["Horionplatz 1", "40213 Düsseldorf"]
+		},
+		"schule": {
+			"bezeichnung": "Ministerium für Schule und Bildung",
+			"titel": "Ministerin",
+			"name": "Yvonne Gebauer",
+			"mail": "poststelle@msb.nrw.de",
+			"fax": "0211 58 67 32 20",
+			"anschrift": ["40190 Düsseldorf"]
 		}
 	},
 	"RP": {
@@ -211,6 +291,14 @@
 			"mail": "poststelle@stk.rlp.de",
 			"fax": "06131 16 4771",
 			"anschrift": ["Postfach 38 80", "55028 Mainz"]
+		},
+		"schule": {
+			"bezeichnung": "Ministerium für Bildbung",
+			"titel": "Minsterin",
+			"name": "Stefanie Hubig",
+			"mail": "poststelle@bm.rlp.de",
+			"fax": "06131 16 29 97",
+			"anschrift": ["Postfach 32 20", "55022 Mainz"]
 		}
 	},
 	"SL": {
@@ -230,6 +318,14 @@
 			"mail": "poststelle@staatskanzlei.saarland.de",
 			"fax": "0681 501 1159",
 			"anschrift": ["Am Ludwigsplatz 14", "66117 Saarbrücken"]
+		},
+		"schule": {
+			"bezeichnung": "Ministerium für Bildung und Kultur",
+			"titel": "Ministerin",
+			"name": "Christine Streichert-Clivot",
+			"mail": "poststelle@bildung-saarland.de",
+			"fax": "0681 501 7500",
+			"anschrift": ["Trierer Straße 33", "66111 Saarbrücken"]
 		}
 	},
 	"SN": {
@@ -249,6 +345,14 @@
 			"mail": "info@sk.sachsen.de",
 			"fax": "0351 564 10999",
 			"anschrift": ["01095 Dresden"]
+		},
+		"schule": {
+			"bezeichnung": "Sächsisches Staatsministerium für Kultus",
+			"titel": "Staatsminister",
+			"name": "Christian Piwarz",
+			"mail": "poststelle@smk.sachsen.de",
+			"fax": "0351 564 66248",
+			"anschrift": ["Postfach 10 09 10", "01079 Dresdeb"]
 		}
 	},
 	"ST": {
@@ -268,6 +372,14 @@
 			"fax": "0391 567 6565",
 			"mail": "Staatskanzlei@stk.sachsen-anhalt.de",
 			"anschrift": ["Hegelstraße 40-42", "39104 Magdeburg"]
+		},
+		"schule": {
+			"bezeichnung": "Ministerium für Bildung",
+			"titel": "Bildungsministerin",
+			"name": "Eva Feußner",
+			"fax": "0391 567 3695",
+			"mail": "poststelle@mb.sachsen-anhalt.de ",
+			"anschrift": ["Turmschanzenstraße 32", "39114 Magdeburg"]
 		}
 	},
 	"SH": {
@@ -287,6 +399,14 @@
 			"fax": "0431 988 1960",
 			"mail": "poststelle@stk.landsh.de",
 			"anschrift": ["Düsternbrooker Weg 104", "24105 Kiel"]
+		},
+		"schule": {
+			"bezeichnung": "Ministerium für Bildung, Wissenschaft und Kultur",
+			"titel": "Ministerin",
+			"name": "Karin Prien",
+			"fax": "0431 988 5903",
+			"mail": "poststelle@bimi.landsh.de",
+			"anschrift": ["Brunsiwcker Staße 16-22", "24105 Kiel"]
 		}
 	},
 	"TH": {
@@ -306,6 +426,14 @@
 			"mail": "poststelle@stk.thueringen.de",
 			"fax": "0361 37 92402",
 			"anschrift": ["Postfach 90 02 53", "99105 Erfurt"]
+		},
+		"schule": {
+			"bezeichnung": "Thüringer Ministerium für Bildung, Jugend und Sport",
+			"titel": "Minister",
+			"name": "Helmut Holter",
+			"mail": "poststelle@tmbjs.theuringen.de",
+			"fax": "0361 3794690",
+			"anschrift": ["Postfach 900463", "99107 Erfurt"]
 		}
 	}
 }

@@ -66,7 +66,7 @@
 		if (empfaenger === "" || preview === "") return "";
 
 		const to = $data.empfaenger;
-		let subject = encodeURI(getRandom(cna.betreff));
+		let subject = encodeURI(getRandom(cna.betreff).text);
 		let body = encodeURI(preview);
 
 		return `mailto:${to.mail}?subject=${subject}&body=${body}`;
@@ -153,7 +153,7 @@
 		<select id="einleitung" bind:value={$data.einleitung}>
 			<option disabled value="">Einleitung auswählen</option>
 			{#each cna.einleitung as s}
-				<option value={s}>{s} </option>
+				<option value={s}>{s.text} </option>
 			{/each}
 		</select>
 

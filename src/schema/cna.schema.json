@@ -23,23 +23,28 @@
 		},
 		"einleitung": {
 			"type": "array",
-			"items": { "type": "string" },
+			"items": {
+				"type": "object",
+				"$ref": "#/definitions/text_mit_kategorie",
+				"title": "Eine Beschwerdemöglichkeit, zusammen mit einer Kategorie."
+			},
 			"uniqueItems": true,
 			"title": "Liste der Einleitungen",
 			"description": "Die Einleitungen werden in den Texten verwendet, um darauf hinzuweisen, weshalb diese Mail oder der Brief geschickt wurde.",
-			"examples": [
-				["Ich find ihre Spätzle ganz lecker."],
-				["Der Salat hätte etwas frischer sein dürfen."]
-			],
+			"examples": [{ "text": "Ich find ihre Spätzle ganz lecker.", "kategorie": "allgemein" }],
 			"minItems": 1
 		},
 		"betreff": {
 			"type": "array",
-			"items": { "type": "string" },
+			"items": {
+				"type": "object",
+				"$ref": "#/definitions/text_mit_kategorie",
+				"title": "Eine Beschwerdemöglichkeit, zusammen mit einer Kategorie."
+			},
 			"uniqueItems": true,
 			"title": "Mögliche Optionen für den Betreff",
 			"description": "Der Betreff wird dazu verwendet, um für die E-Mail oder den Brief einen ersten Anlass zum Lesen zu geben.",
-			"examples": [["Feedback zu Ihren Spätzle"], ["Beschwerde zu Ihrem Feldsalat"]]
+			"examples": [{ "text": "Feedback zu Ihren Spätzle", "kategorie": "allgemein" }]
 		},
 		"beschwerde": {
 			"type": "array",

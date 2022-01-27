@@ -7,7 +7,7 @@
 	import { getRandom } from "$lib/helpers";
 	import Button from "$lib/components/Button.svelte";
 	import MonospacedInfo from "$lib/components/MonospacedInfo.svelte";
-	import type { Bundeslaender, CNAData } from "$lib/definitions";
+	import { Bundeslaender, BundeslandIDs, CNAData } from "$lib/definitions";
 
 	let cna: CNAData = cnaConfig as CNAData;
 	let bundeslaender = bundeslaenderJson as Bundeslaender;
@@ -114,7 +114,7 @@
 		<label for="bundesland">Bundesland</label>
 		<select id="bundesland" bind:value={$data.bundeslandKey} on:change={() => data.reset()}>
 			<option disabled>Bundesland auswählen</option>
-			{#each Object.keys(bundeslaender) as land}
+			{#each BundeslandIDs as land}
 				<option value={land}>
 					{bundeslaender[land].land}
 				</option>

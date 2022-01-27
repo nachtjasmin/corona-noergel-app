@@ -55,7 +55,7 @@ function createDataStore() {
 		reset: () => {
 			structure.set({
 				...emptyStructure,
-				empfaenger: get(structure).empfaenger, // do not overwrite the bundesland, it's excluded for the reset
+				bundeslandKey: get(structure).bundeslandKey, // do not overwrite the bundesland, it's excluded for the reset
 			});
 		},
 		buildText,

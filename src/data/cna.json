@@ -18,21 +18,33 @@
 		"Danki, UwU"
 	],
 	"einleitung": [
-		"Mit großem Interesse habe ich Berichte zur Telefonkonferenz der Gesundheitsministerkonferenz verfolgt.",
-		"Aus der Presse habe ich von den Beschlüssen zur PCR-Testpriorisierung erfahren.",
-		"In der tagesaktuellen Berichterstattung bin ich über die Beschlüsse zur Priorisierung von PCR-Tests gestolpert."
+		{
+			"text": "Mit großem Interesse habe ich Berichte zur Telefonkonferenz der Gesundheitsministerkonferenz verfolgt.",
+			"kategorie": "allgemein"
+		},
+		{
+			"text": "Aus der Presse habe ich von den Beschlüssen zur PCR-Testpriorisierung erfahren.",
+			"kategorie": "allgemein"
+		},
+		{
+			"text": "In der tagesaktuellen Berichterstattung bin ich über die Beschlüsse zur Priorisierung von PCR-Tests gestolpert.",
+			"kategorie": "allgemein"
+		}
 	],
 	"betreff": [
-		"Beschwerde zum Beschluss der PCR-Priorisierung vom 22.01.",
-		"PCR-Priorisierung: Beschwerde",
-		"Beschwerde zum PCR-Beschluss",
-		"Bitte bei der PCR-Priorisierung noch mal nacharbeiten",
-		"PCR-Priorisierungsbeschluss nicht ausreichend",
-		"PCR-Beschluss vom 22.01. ist nicht gut",
-		"Lückenhafter Beschluss zur Einschränkung PCR-Tests",
-		"PCR-Kapazitäten nicht beschränken",
-		"Beschwerde zu den Beschlüssen vom 22.01.",
-		"PCR-Beschlüsse bitte dringend überdenken"
+		{
+			"text": "Beschwerde zum Beschluss der PCR-Priorisierung vom 22.01.",
+			"kategorie": "allgemein"
+		},
+		{ "text": "PCR-Priorisierung: Beschwerde", "kategorie": "allgemein" },
+		{ "text": "Beschwerde zum PCR-Beschluss", "kategorie": "allgemein" },
+		{ "text": "Bitte bei der PCR-Priorisierung noch mal nacharbeiten", "kategorie": "allgemein" },
+		{ "text": "PCR-Priorisierungsbeschluss nicht ausreichend", "kategorie": "allgemein" },
+		{ "text": "PCR-Beschluss vom 22.01. ist nicht gut", "kategorie": "allgemein" },
+		{ "text": "Lückenhafter Beschluss zur Einschränkung PCR-Tests", "kategorie": "allgemein" },
+		{ "text": "PCR-Kapazitäten nicht beschränken", "kategorie": "allgemein" },
+		{ "text": "Beschwerde zu den Beschlüssen vom 22.01.", "kategorie": "allgemein" },
+		{ "text": "PCR-Beschlüsse bitte dringend überdenken", "kategorie": "allgemein" }
 	],
 	"beschwerde": [
 		{

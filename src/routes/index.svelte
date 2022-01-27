@@ -130,6 +130,9 @@
 				<option value={bundeslaender[$data.bundeslandKey].chef}>
 					{bundeslaender[$data.bundeslandKey].chef.bezeichnung}
 				</option>
+				<option value={bundeslaender[$data.bundeslandKey].schule}>
+					{bundeslaender[$data.bundeslandKey].schule.bezeichnung}
+				</option>
 			</select>
 		{/if}
 	</section>

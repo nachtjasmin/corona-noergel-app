@@ -45,6 +45,7 @@ export interface Bundesland {
 	land: string;
 	gesundheit: Information;
 	chef: Information;
+	schule: Information;
 }
 
 export interface Information {

@@ -1,5 +1,5 @@
 import { get, writable } from "svelte/store";
-import type { Beschwerde, Bundeslaender } from "./definitions";
+import type { WithCategory, Bundeslaender } from "./definitions";
 
 export type StoreStructure = {
 	bundeslandKey: keyof Bundeslaender | "";
@@ -12,9 +12,9 @@ export type StoreStructure = {
 		anschrift: string[];
 	};
 	anrede: string;
-	einleitung: string;
-	beschwerde: Beschwerde;
-	appell: Beschwerde;
+	einleitung: WithCategory;
+	beschwerde: WithCategory;
+	appell: WithCategory;
 	gruss: string;
 	name: string;
 };
@@ -22,7 +22,10 @@ export type StoreStructure = {
 const emptyStructure: StoreStructure = {
 	bundeslandKey: "",
 	anrede: "",
-	einleitung: "",
+	einleitung: {
+		text: "",
+		kategorie: "",
+	},
 	beschwerde: {
 		text: "",
 		kategorie: "",

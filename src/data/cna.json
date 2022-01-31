@@ -17,8 +17,8 @@
 		"Hochachtungsvoll",
 		"Danki, UwU"
 	],
-	"topics": {
-		"pcr-testpriorisierung": {
+	"topics": [
+		{
 			"name": "Beschlüsse zur PCR-Testpriorisierung",
 			"einleitung": [
 				"Mit großem Interesse habe ich Berichte zur Telefonkonferenz der Gesundheitsministerkonferenz verfolgt.",
@@ -82,5 +82,5 @@
 				}
 			]
 		}
-	}
+	]
 }

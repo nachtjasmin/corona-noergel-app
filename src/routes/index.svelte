@@ -95,7 +95,6 @@
 		<legend>Schritt 1 von 5: Auswahl des Themas</legend>
 		<label for="Thema">Thema</label>
 		<select id="Thema" bind:value={$data.topicName} on:change={reset}>
-			<option disabled>Thema auswählen</option>
 			{#each $cna.topics as topic}
 				<option value={topic.name}> {topic.name} </option>
 			{/each}

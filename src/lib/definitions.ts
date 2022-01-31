@@ -41,37 +41,37 @@ export const BundeslandIDs = [
 	"TH",
 ];
 
-export interface Bundesland {
+export class Bundesland {
 	land: string;
 	gesundheit: Information;
 	chef: Information;
 	schule: Information;
 }
 
-export interface Information {
-	bezeichnung: string;
-	titel: string;
-	name: string;
-	mail: string;
-	fax: string;
-	anschrift: string[];
+export class Information {
+	bezeichnung = "";
+	titel = "";
+	name = "";
+	mail = "";
+	fax = "";
+	anschrift: string[] = [];
 }
 
-export interface CNAData {
-	anrede: string[];
-	gruss: string[];
-	topics: Topic[];
+export class CNAData {
+	anrede: string[] = [];
+	gruss: string[] = [];
+	topics: Topic[] = [];
 }
 
-export interface Topic {
-	name: string;
-	einleitung: WithCategory[];
-	betreff: WithCategory[];
-	beschwerde: WithCategory[];
-	appell: WithCategory[];
+export class Topic {
+	name?: string;
+	einleitung: WithCategory[] = [];
+	betreff: WithCategory[] = [];
+	beschwerde: WithCategory[] = [];
+	appell: WithCategory[] = [];
 }
 
-export interface WithCategory {
-	text: string;
-	kategorie: string;
+export class WithCategory {
+	text = "";
+	kategorie = "allgemein";
 }

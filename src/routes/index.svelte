@@ -1,83 +1,65 @@
 <script lang="ts">
-	import { tick } from "svelte";
-	import { data, pageTitle } from "$lib/store";
+	import { cna } from "$lib/cna";
 
-	import cnaConfig from "../data/cna.json";
-	import bundeslaenderJson from "../data/bundeslaender.json";
-	import { getRandom } from "$lib/helpers";
 	import Button from "$lib/components/Button.svelte";
 	import MonospacedInfo from "$lib/components/MonospacedInfo.svelte";
-	import { Bundeslaender, BundeslandIDs, CNAData } from "$lib/definitions";
-
-	let cna: CNAData = cnaConfig as CNAData;
+	import { Bundeslaender, BundeslandIDs } from "$lib/definitions";
+	import {
+		filterByCategory,
+		getRandom,
+		replaceCategoryTextPlaceholders,
+		replaceStringPlaceholders,
+	} from "$lib/helpers";
+	import { data, pageTitle } from "$lib/store";
+	import { tick } from "svelte";
+	import bundeslaenderJson from "../data/bundeslaender.json";
 	let bundeslaender = bundeslaenderJson as Bundeslaender;
 
 	pageTitle.reset();
 
-	let anreden: string[] = [];
 	let finalText: string = "";
 
-	$: showSecondStep = $data.bundeslandKey !== "";
-	$: showThirdStep =
-		showSecondStep &&
+	$: topic = $cna.topics.find((x) => x.name === $data.topicName);
+	$: showBundeslandSelection = topic?.name?.length > 0;
+	$: showSnippetSelection = $data.bundeslandKey !== "" && $data.empfaenger;
+	$: showTextBuilder =
+		showSnippetSelection &&
 		$data.anrede.length > 0 &&
-		$data.einleitung.length > 0 &&
-		$data.beschwerde.text.length > 0 &&
-		$data.appell.text.length > 0 &&
-		$data.gruss.length > 0;
+		$data.einleitung?.text?.length > 0 &&
+		$data.beschwerde?.text?.length > 0 &&
+		$data.appell?.text?.length > 0 &&
+		$data.gruss?.length > 0;
 	$: showSendButton = finalText.length > 0;
 	$: mailto = buildMailToLink($data.empfaenger?.mail ?? "", finalText);
-	$: anreden = cna.anrede.map((a) => {
-		if ($data.empfaenger === undefined) {
-			return a;
-		}
-
-		const to = $data.empfaenger;
-		return a.replace(/\$\{(\w+)\}/g, (_, p) => to[p]);
-	});
-
-	let appelle: { text: string; kategorie: string }[] = [];
-	$: appelle = cna.appell
-		.filter((a) => {
-			if (a.kategorie === "allgemein" || $data.beschwerde.kategorie === "allgemein") return true;
-
-			return a.kategorie === $data.beschwerde.kategorie;
-		})
-		.map((a) => {
-			// It's important to query all information here, not just the contact information.
-
-			if (
-				$data.bundeslandKey === undefined ||
-				$data.bundeslandKey === null ||
-				$data.bundeslandKey === ""
-			) {
-				return a;
-			}
-
-			const to = bundeslaender[$data.bundeslandKey];
-
-			// todo: find dynamic way for replacing variables
-			a.text = a.text.replace("${Bundesland}", to.land);
-
-			return a;
-		});
+	$: beschwerden = filterByCategory(topic?.beschwerde, $data.einleitung?.kategorie);
+	$: anreden = replaceStringPlaceholders($cna.anrede, { receiver: $data.empfaenger });
+	$: appelle = replaceCategoryTextPlaceholders(
+		filterByCategory(topic?.appell, $data.einleitung?.kategorie),
+		{
+			bundesland: bundeslaender[$data.bundeslandKey]?.land ?? "",
+		},
+	);
 
 	const buildMailToLink = (empfaenger: string, preview: string): string => {
 		if (empfaenger === "" || preview === "") return "";
 
 		const to = $data.empfaenger;
-		let subject = encodeURI(getRandom(cna.betreff));
+		let subject = encodeURI(getRandom(topic.betreff).text);
 		let body = encodeURI(preview);
 
 		return `mailto:${to.mail}?subject=${subject}&body=${body}`;
 	};
+	const reset = () => {
+		data.reset();
+		cna.reset();
+	};
 
 	const buildRandom = async () => {
 		$data.anrede = getRandom(anreden);
-		$data.einleitung = getRandom(cna.einleitung);
-		$data.beschwerde = getRandom(cna.beschwerde);
+		$data.einleitung = getRandom(topic.einleitung);
+		$data.beschwerde = getRandom(topic.beschwerde);
 		$data.appell = getRandom(appelle);
-		$data.gruss = getRandom(cna.gruss);
+		$data.gruss = getRandom($cna.gruss);
 
 		finalText = data.buildText();
 		await tick();
@@ -109,10 +91,19 @@
 	the appearance of the the horizontal scrollbar.
 -->
 <form on:submit|preventDefault={() => (finalText = data.buildText())} class="overflow-hidden">
-	<section>
-		<p class="section-header">Schritt 1: Bundesland auswählen</p>
+	<fieldset>
+		<legend>Schritt 1 von 5: Auswahl des Themas</legend>
+		<label for="Thema">Thema</label>
+		<select id="Thema" bind:value={$data.topicName} on:change={reset}>
+			{#each $cna.topics as topic}
+				<option value={topic.name}> {topic.name} </option>
+			{/each}
+		</select>
+	</fieldset>
+	<fieldset class:hidden={!showBundeslandSelection}>
+		<legend>Schritt 2 von 5: Auswahl des Bundeslandes</legend>
 		<label for="bundesland">Bundesland</label>
-		<select id="bundesland" bind:value={$data.bundeslandKey} on:change={() => data.reset()}>
+		<select id="bundesland" bind:value={$data.bundeslandKey} on:change={reset}>
 			<option disabled>Bundesland auswählen</option>
 			{#each BundeslandIDs as land}
 				<option value={land}>
@@ -130,12 +121,15 @@
 				<option value={bundeslaender[$data.bundeslandKey].chef}>
 					{bundeslaender[$data.bundeslandKey].chef.bezeichnung}
 				</option>
+				<option value={bundeslaender[$data.bundeslandKey].schule}>
+					{bundeslaender[$data.bundeslandKey].schule.bezeichnung}
+				</option>
 			</select>
 		{/if}
-	</section>
-	<section class:hidden={!showSecondStep}>
+	</fieldset>
+	<fieldset class:hidden={!showSnippetSelection}>
 		<div class="flex flex-col md:flex-row items-baseline justify-between">
-			<p class="section-header">Schritt 2: Textbausteine wählen</p>
+			<legend>Schritt 3 von 5: Textbausteine wählen</legend>
 			<Button size="small" on:click={buildRandom}>Zufällig auswählen</Button>
 		</div>
 		<label for="anrede">Anrede</label>
@@ -149,15 +143,15 @@
 		<label for="einleitung">Einleitung</label>
 		<select id="einleitung" bind:value={$data.einleitung}>
 			<option disabled value="">Einleitung auswählen</option>
-			{#each cna.einleitung as s}
-				<option value={s}>{s} </option>
+			{#each topic?.einleitung || [] as s}
+				<option value={s}>{s.text} </option>
 			{/each}
 		</select>
 
 		<label for="beschwerde">Beschwerde</label>
 		<select id="beschwerde" bind:value={$data.beschwerde}>
 			<option disabled value="">Beschwerde auswählen</option>
-			{#each cna.beschwerde as s}
+			{#each beschwerden || [] as s}
 				<option value={s}>{s.text} </option>
 			{/each}
 		</select>
@@ -165,7 +159,7 @@
 		<label for="appell">Appell</label>
 		<select id="appell" bind:value={$data.appell}>
 			<option disabled value="">Appell auswählen</option>
-			{#each appelle as s}
+			{#each appelle || [] as s}
 				<option value={s}>{s.text} </option>
 			{/each}
 		</select>
@@ -173,16 +167,16 @@
 		<label for="gruss">Grußformel</label>
 		<select id="gruss" bind:value={$data.gruss}>
 			<option disabled value="">Grußformel auswählen</option>
-			{#each cna.gruss as s}
+			{#each $cna.gruss as s}
 				<option value={s}>{s}</option>
 			{/each}
 		</select>
 
 		<label for="name">Dein Name</label>
 		<input id="name" type="text" placeholder="(optional)" bind:value={$data.name} />
-	</section>
-	<section class:hidden={!showThirdStep}>
-		<p class="section-header">Schritt 3: Text erzeugen</p>
+	</fieldset>
+	<fieldset class:hidden={!showTextBuilder}>
+		<legend>Schritt 4 von 5: Text erzeugen</legend>
 		<Button type="submit" on:click={focusText}>Bastel mir den Text</Button>
 		<div class="mt-8">
 			<p class="mb-2 text-sm">
@@ -192,10 +186,10 @@
 				>{finalText}</textarea
 			>
 		</div>
-	</section>
+	</fieldset>
 </form>
 <section class:hidden={!showSendButton}>
-	<p class="section-header">Schritt 4: Mail verschicken</p>
+	<p class="section-header">Schritt 5 von 5: Mail verschicken</p>
 	<p class="text-sm">
 		Bei dem Klick auf den folgenden Button wird ein sogenannter <code>mailto:</code>-Link erzeugt.
 		Dieser öffnet dein E-Mail-Programm mit dem obigen Text. Dabei werden zu keinem Zeitpunkt
@@ -222,9 +216,11 @@
 		@apply w-full rounded mt-1 mb-2;
 		@apply dark:bg-slate-800;
 	}
+	fieldset,
 	section {
 		@apply my-8;
 	}
+	legend,
 	.section-header {
 		@apply mb-2 font-semibold;
 	}

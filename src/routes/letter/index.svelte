@@ -1,16 +1,13 @@
 <script lang="ts">
 	import { goto } from "$app/navigation";
+	import { cna } from "$lib/cna";
+	import Button from "$lib/components/Button.svelte";
+	import FormContainer from "$lib/components/FormContainer.svelte";
+	import MonospacedInfo from "$lib/components/MonospacedInfo.svelte";
 	import { getRandom } from "$lib/helpers";
-	import cnaConfig from "../../data/cna.json";
 	import { data, pageTitle } from "$lib/store";
 	import { onMount } from "svelte";
-	import FormContainer from "$lib/components/FormContainer.svelte";
-	import Button from "$lib/components/Button.svelte";
-	import MonospacedInfo from "$lib/components/MonospacedInfo.svelte";
-	import type { CNAData } from "$lib/definitions";
 	pageTitle.setTitle("Brief- und Fax-Erstellung");
-
-	let cna: CNAData = cnaConfig as CNAData;
 
 	let letterInformation: {
 		name?: string;
@@ -27,17 +24,16 @@
 	let fax: string = "";
 
 	// if data is empty, navigate back
-	onMount(async () => {
-		if ($data.anrede === "") {
-			goto("/", { replaceState: true });
-			return;
-		}
-		subject = getRandom(cna.betreff);
-		const to = $data.empfaenger;
-		receiver = to.bezeichnung + "\n";
-		to.anschrift.forEach((l: string) => (receiver += l + "\n"));
-		fax = to.fax;
-	});
+	if (!$data.topicName || $data.anrede === "") {
+		goto("/", { replaceState: true });
+	}
+
+	const topic = $cna.topics.find((x) => x.name === $data.topicName);
+	subject = getRandom(topic.betreff).text;
+	const to = $data.empfaenger;
+	receiver = to.bezeichnung + "\n";
+	to.anschrift.forEach((l: string) => (receiver += l + "\n"));
+	fax = to.fax;
 </script>
 
 <form class="print:hidden">

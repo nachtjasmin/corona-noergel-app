@@ -1,46 +1,26 @@
 import { get, writable } from "svelte/store";
-import type { Beschwerde, Bundeslaender } from "./definitions";
+import type { Bundeslaender, Receiver, WithCategory } from "./definitions";
 
 export type StoreStructure = {
 	bundeslandKey: keyof Bundeslaender | "";
-	empfaenger?: {
-		bezeichnung: string;
-		titel: string;
-		name: string;
-		mail: string;
-		fax: string;
-		anschrift: string[];
-	};
-	anrede: string;
-	einleitung: string;
-	beschwerde: Beschwerde;
-	appell: Beschwerde;
-	gruss: string;
-	name: string;
+	topicName?: string;
+	empfaenger?: Receiver;
+	anrede?: string;
+	einleitung?: WithCategory;
+	beschwerde?: WithCategory;
+	appell?: WithCategory;
+	gruss?: string;
+	name?: string;
 };
 
-const emptyStructure: StoreStructure = {
-	bundeslandKey: "",
-	anrede: "",
-	einleitung: "",
-	beschwerde: {
-		text: "",
-		kategorie: "",
-	},
-	appell: {
-		text: "",
-		kategorie: "",
-	},
-	gruss: "",
-	name: "",
-};
+const emptyStructure: StoreStructure = { bundeslandKey: "", name: "" };
 
 function createDataStore() {
 	const structure = writable<StoreStructure>(emptyStructure);
 
 	const buildInnerText = (): string => {
 		const data = get(structure);
-		return `${data.einleitung}\n${data.beschwerde.text}\n${data.appell.text}`;
+		return `${data.einleitung?.text}\n${data.beschwerde?.text}\n${data.appell?.text}`;
 	};
 
 	const buildText = (): string => {
@@ -55,7 +35,10 @@ function createDataStore() {
 		reset: () => {
 			structure.set({
 				...emptyStructure,
-				bundeslandKey: get(structure).bundeslandKey, // do not overwrite the bundesland, it's excluded for the reset
+
+				// do not overwrite the following properties
+				topicName: get(structure).topicName,
+				bundeslandKey: get(structure).bundeslandKey,
 			});
 		},
 		buildText,

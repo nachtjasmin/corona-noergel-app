@@ -21,52 +21,77 @@
 			"examples": [["Auf Wiederhören", "Ciao Kakao"]],
 			"minItems": 1
 		},
-		"einleitung": {
-			"type": "array",
-			"items": { "type": "string" },
-			"uniqueItems": true,
-			"title": "Liste der Einleitungen",
-			"description": "Die Einleitungen werden in den Texten verwendet, um darauf hinzuweisen, weshalb diese Mail oder der Brief geschickt wurde.",
-			"examples": [
-				["Ich find ihre Spätzle ganz lecker."],
-				["Der Salat hätte etwas frischer sein dürfen."]
-			],
-			"minItems": 1
-		},
-		"betreff": {
-			"type": "array",
-			"items": { "type": "string" },
-			"uniqueItems": true,
-			"title": "Mögliche Optionen für den Betreff",
-			"description": "Der Betreff wird dazu verwendet, um für die E-Mail oder den Brief einen ersten Anlass zum Lesen zu geben.",
-			"examples": [["Feedback zu Ihren Spätzle"], ["Beschwerde zu Ihrem Feldsalat"]]
-		},
-		"beschwerde": {
+		"topics": {
 			"type": "array",
 			"items": {
 				"type": "object",
-				"$ref": "#/definitions/text_mit_kategorie",
-				"title": "Eine Beschwerdemöglichkeit, zusammen mit einer Kategorie."
-			},
-			"minItems": 1,
-			"title": "Liste von Beschwerden"
-		},
-		"appell": {
-			"type": "array",
-			"items": {
-				"type": "object",
-				"$ref": "#/definitions/text_mit_kategorie",
-				"title": "Ein Appell, zusammen mit einer Kategorie."
-			},
-			"minItems": 1,
-			"title": "Liste von Appellen"
+				"title": "Verschiedene Beschwerdethemen.",
+				"$ref": "#/definitions/topic"
+			}
 		}
 	},
 	"additionalProperties": false,
 	"definitions": {
+		"topic": {
+			"type": "object",
+			"title": "Ein Thema für eine Beschwerde.",
+			"properties": {
+				"name": {
+					"type": "string",
+					"title": "Der Titel des Beschwerdethemas."
+				},
+				"einleitung": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"$ref": "#/definitions/text_mit_kategorie",
+						"title": "Eine Beschwerdemöglichkeit, zusammen mit einer Kategorie."
+					},
+					"uniqueItems": true,
+					"title": "Liste der Einleitungen",
+					"description": "Die Einleitungen werden in den Texten verwendet, um darauf hinzuweisen, weshalb diese Mail oder der Brief geschickt wurde.",
+					"examples": [[{ "text": "Ich find ihre Spätzle ganz lecker." }]],
+					"minItems": 1
+				},
+				"betreff": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"$ref": "#/definitions/text_mit_kategorie",
+						"title": "Eine Beschwerdemöglichkeit, zusammen mit einer Kategorie."
+					},
+					"uniqueItems": true,
+					"title": "Mögliche Optionen für den Betreff",
+					"description": "Der Betreff wird dazu verwendet, um für die E-Mail oder den Brief einen ersten Anlass zum Lesen zu geben.",
+					"examples": [[{ "text": "Feedback zu Ihren Spätzle" }]]
+				},
+				"beschwerde": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"$ref": "#/definitions/text_mit_kategorie",
+						"title": "Eine Beschwerdemöglichkeit, zusammen mit einer Kategorie."
+					},
+					"minItems": 1,
+					"title": "Liste von Beschwerden"
+				},
+				"appell": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"$ref": "#/definitions/text_mit_kategorie",
+						"title": "Ein Appell, zusammen mit einer Kategorie."
+					},
+					"minItems": 1,
+					"title": "Liste von Appellen"
+				}
+			},
+			"additionalProperties": false,
+			"required": ["einleitung", "betreff", "beschwerde", "appell"]
+		},
 		"text_mit_kategorie": {
 			"type": "object",
-			"description": "Ein Text, der zusätzlich mit einer Kategorie versehen ist.",
+			"title": "Ein Text, der zusätzlich mit einer Kategorie versehen ist.",
 			"properties": {
 				"text": {
 					"type": "string",
@@ -74,13 +99,13 @@
 				},
 				"kategorie": {
 					"type": "string",
-					"description": "Die Kategorie. Sofern keine Klassifizierung möglich ist, sollte 'allgemein' genutzt werden.",
+					"description": "Die Kategorie, optional.",
 					"default": "allgemein"
 				}
 			},
 			"additionalProperties": false,
-			"required": ["text", "kategorie"]
+			"required": ["text"]
 		}
 	},
-	"required": ["anrede", "gruss", "einleitung", "betreff", "beschwerde", "appell"]
+	"required": ["anrede", "gruss", "topics"]
 }

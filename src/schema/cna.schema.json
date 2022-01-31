@@ -50,7 +50,7 @@
 					"uniqueItems": true,
 					"title": "Liste der Einleitungen",
 					"description": "Die Einleitungen werden in den Texten verwendet, um darauf hinzuweisen, weshalb diese Mail oder der Brief geschickt wurde.",
-					"examples": [{ "text": "Ich find ihre Spätzle ganz lecker.", "kategorie": "allgemein" }],
+					"examples": [[{ "text": "Ich find ihre Spätzle ganz lecker." }]],
 					"minItems": 1
 				},
 				"betreff": {
@@ -63,7 +63,7 @@
 					"uniqueItems": true,
 					"title": "Mögliche Optionen für den Betreff",
 					"description": "Der Betreff wird dazu verwendet, um für die E-Mail oder den Brief einen ersten Anlass zum Lesen zu geben.",
-					"examples": [{ "text": "Feedback zu Ihren Spätzle", "kategorie": "allgemein" }]
+					"examples": [[{ "text": "Feedback zu Ihren Spätzle" }]]
 				},
 				"beschwerde": {
 					"type": "array",
@@ -99,7 +99,7 @@
 				},
 				"kategorie": {
 					"type": "string",
-					"description": "Die Kategorie. Sofern keine Klassifizierung möglich ist, sollte 'allgemein' genutzt werden.",
+					"description": "Die Kategorie, optional.",
 					"default": "allgemein"
 				}
 			},

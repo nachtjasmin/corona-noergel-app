@@ -32,7 +32,7 @@
 			goto("/", { replaceState: true });
 			return;
 		}
-		subject = getRandom(cna.betreff).text;
+		subject = getRandom($data.topic.betreff).text;
 		const to = $data.empfaenger;
 		receiver = to.bezeichnung + "\n";
 		to.anschrift.forEach((l: string) => (receiver += l + "\n"));

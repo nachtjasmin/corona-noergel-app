@@ -91,7 +91,7 @@
 		},
 		"text_mit_kategorie": {
 			"type": "object",
-			"description": "Ein Text, der zusätzlich mit einer Kategorie versehen ist.",
+			"title": "Ein Text, der zusätzlich mit einer Kategorie versehen ist.",
 			"properties": {
 				"text": {
 					"type": "string",
@@ -104,7 +104,7 @@
 				}
 			},
 			"additionalProperties": false,
-			"required": ["text", "kategorie"]
+			"required": ["text"]
 		}
 	},
 	"required": ["anrede", "gruss", "topics"]

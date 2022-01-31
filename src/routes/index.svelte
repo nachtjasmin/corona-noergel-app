@@ -109,8 +109,8 @@
 	the appearance of the the horizontal scrollbar.
 -->
 <form on:submit|preventDefault={() => (finalText = data.buildText())} class="overflow-hidden">
-	<section>
-		<p class="section-header">Schritt 0: Thema auswählen</p>
+	<fieldset>
+		<legend>Schritt 1 von 5: Auswahl des Themas</legend>
 		<label for="Thema">Thema</label>
 		<select id="Thema" bind:value={$data.topic} on:change={() => data.reset()}>
 			<option disabled>Thema auswählen</option>
@@ -118,9 +118,9 @@
 				<option value={topic}> {topic.name} </option>
 			{/each}
 		</select>
-	</section>
-	<section class:hidden={!showBundeslandSelection}>
-		<p class="section-header">Schritt 1: Bundesland auswählen</p>
+	</fieldset>
+	<fieldset class:hidden={!showBundeslandSelection}>
+		<legend>Schritt 2 von 5: Auswahl des Bundeslandes</legend>
 		<label for="bundesland">Bundesland</label>
 		<select id="bundesland" bind:value={$data.bundeslandKey} on:change={() => data.reset()}>
 			<option disabled>Bundesland auswählen</option>
@@ -145,10 +145,10 @@
 				</option>
 			</select>
 		{/if}
-	</section>
-	<section class:hidden={!showSecondStep}>
+	</fieldset>
+	<fieldset class:hidden={!showSecondStep}>
 		<div class="flex flex-col md:flex-row items-baseline justify-between">
-			<p class="section-header">Schritt 2: Textbausteine wählen</p>
+			<legend>Schritt 3 von 5: Textbausteine wählen</legend>
 			<Button size="small" on:click={buildRandom}>Zufällig auswählen</Button>
 		</div>
 		<label for="anrede">Anrede</label>
@@ -193,9 +193,9 @@
 
 		<label for="name">Dein Name</label>
 		<input id="name" type="text" placeholder="(optional)" bind:value={$data.name} />
-	</section>
-	<section class:hidden={!showThirdStep}>
-		<p class="section-header">Schritt 3: Text erzeugen</p>
+	</fieldset>
+	<fieldset class:hidden={!showThirdStep}>
+		<legend>Schritt 4 von 5: Text erzeugen</legend>
 		<Button type="submit" on:click={focusText}>Bastel mir den Text</Button>
 		<div class="mt-8">
 			<p class="mb-2 text-sm">
@@ -205,10 +205,10 @@
 				>{finalText}</textarea
 			>
 		</div>
-	</section>
+	</fieldset>
 </form>
 <section class:hidden={!showSendButton}>
-	<p class="section-header">Schritt 4: Mail verschicken</p>
+	<p class="section-header">Schritt 5 von 5: Mail verschicken</p>
 	<p class="text-sm">
 		Bei dem Klick auf den folgenden Button wird ein sogenannter <code>mailto:</code>-Link erzeugt.
 		Dieser öffnet dein E-Mail-Programm mit dem obigen Text. Dabei werden zu keinem Zeitpunkt
@@ -235,9 +235,11 @@
 		@apply w-full rounded mt-1 mb-2;
 		@apply dark:bg-slate-800;
 	}
+	fieldset,
 	section {
 		@apply my-8;
 	}
+	legend,
 	.section-header {
 		@apply mb-2 font-semibold;
 	}

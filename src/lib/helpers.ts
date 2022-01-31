@@ -18,6 +18,7 @@ export function getRandom<T>(input: T[]): T {
  */
 export const filterByCategory = (input: WithCategory[], kategorie?: string): WithCategory[] => {
 	if (!kategorie) return input;
+	if (kategorie === "allgemein") return input;
 
 	return input.filter((x) => x.kategorie === kategorie || x.kategorie === "allgemein");
 };

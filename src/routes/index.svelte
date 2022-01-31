@@ -16,9 +16,9 @@
 	let finalText: string = "";
 
 	$: showBundeslandSelection = $data.topic?.name?.length > 0;
-	$: showSecondStep = $data.bundeslandKey !== "";
-	$: showThirdStep =
-		showSecondStep &&
+	$: showSnippetSelection = $data.bundeslandKey !== "";
+	$: showTextBuilder =
+		showSnippetSelection &&
 		$data.anrede.length > 0 &&
 		$data.einleitung.text.length > 0 &&
 		$data.beschwerde.text.length > 0 &&
@@ -146,7 +146,7 @@
 			</select>
 		{/if}
 	</fieldset>
-	<fieldset class:hidden={!showSecondStep}>
+	<fieldset class:hidden={!showSnippetSelection}>
 		<div class="flex flex-col md:flex-row items-baseline justify-between">
 			<legend>Schritt 3 von 5: Textbausteine wählen</legend>
 			<Button size="small" on:click={buildRandom}>Zufällig auswählen</Button>
@@ -194,7 +194,7 @@
 		<label for="name">Dein Name</label>
 		<input id="name" type="text" placeholder="(optional)" bind:value={$data.name} />
 	</fieldset>
-	<fieldset class:hidden={!showThirdStep}>
+	<fieldset class:hidden={!showTextBuilder}>
 		<legend>Schritt 4 von 5: Text erzeugen</legend>
 		<Button type="submit" on:click={focusText}>Bastel mir den Text</Button>
 		<div class="mt-8">

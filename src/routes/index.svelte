@@ -1,8 +1,13 @@
 <script lang="ts">
 	import Button from "$lib/components/Button.svelte";
 	import MonospacedInfo from "$lib/components/MonospacedInfo.svelte";
-	import { Bundeslaender, BundeslandIDs, CNAData } from "$lib/definitions";
-	import { getRandom } from "$lib/helpers";
+	import { Bundeslaender, BundeslandIDs, CNAData, WithCategory } from "$lib/definitions";
+	import {
+		filterByCategory,
+		getRandom,
+		replaceCategoryTextPlaceholders,
+		replaceStringPlaceholders,
+	} from "$lib/helpers";
 	import { data, pageTitle } from "$lib/store";
 	import { tick } from "svelte";
 	import bundeslaenderJson from "../data/bundeslaender.json";
@@ -20,47 +25,21 @@
 	$: showTextBuilder =
 		showSnippetSelection &&
 		$data.anrede.length > 0 &&
-		$data.einleitung.text.length > 0 &&
-		$data.beschwerde.text.length > 0 &&
-		$data.appell.text.length > 0 &&
+		$data.einleitung?.text.length > 0 &&
+		$data.beschwerde?.text.length > 0 &&
+		$data.appell?.text.length > 0 &&
 		$data.gruss.length > 0;
 	$: showSendButton = finalText.length > 0;
 	$: mailto = buildMailToLink($data.empfaenger?.mail ?? "", finalText);
-	$: anreden = cna.anrede.map((a) => {
-		if ($data.empfaenger === undefined) {
-			return a;
-		}
+	$: anreden = replaceStringPlaceholders(cna.anrede, { receiver: $data.empfaenger });
+	$: appelle = replaceCategoryTextPlaceholders(
+		filterByCategory($data.topic?.appell, $data.beschwerde?.kategorie),
+		{
+			bundesland: bundeslaender[$data.bundeslandKey]?.land ?? "",
+		},
+	);
 
-		const to = $data.empfaenger;
-		return a.replace(/\$\{(\w+)\}/g, (_, p) => to[p]);
-	});
-
-	let appelle: { text: string; kategorie: string }[] = [];
-	$: appelle =
-		$data.topic?.appell
-			?.filter((a) => {
-				if (a.kategorie === "allgemein" || $data.beschwerde.kategorie === "allgemein") return true;
-
-				return a.kategorie === $data.beschwerde.kategorie;
-			})
-			?.map((a) => {
-				// It's important to query all information here, not just the contact information.
-
-				if (
-					$data.bundeslandKey === undefined ||
-					$data.bundeslandKey === null ||
-					$data.bundeslandKey === ""
-				) {
-					return a;
-				}
-
-				const to = bundeslaender[$data.bundeslandKey];
-
-				// todo: find dynamic way for replacing variables
-				a.text = a.text.replace("${Bundesland}", to.land);
-
-				return a;
-			}) ?? [];
+	$: console.log($data.appell);
 
 	const buildMailToLink = (empfaenger: string, preview: string): string => {
 		if (empfaenger === "" || preview === "") return "";
@@ -178,7 +157,7 @@
 		<label for="appell">Appell</label>
 		<select id="appell" bind:value={$data.appell}>
 			<option disabled value="">Appell auswählen</option>
-			{#each $data.topic?.appell || [] as s}
+			{#each appelle || [] as s}
 				<option value={s}>{s.text} </option>
 			{/each}
 		</select>

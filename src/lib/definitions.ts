@@ -75,3 +75,12 @@ export class WithCategory {
 	text = "";
 	kategorie = "allgemein";
 }
+
+export type Receiver = {
+	bezeichnung: string;
+	titel: string;
+	name: string;
+	mail: string;
+	fax: string;
+	anschrift: string[];
+};

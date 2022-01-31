@@ -1,17 +1,10 @@
 import { get, writable } from "svelte/store";
-import type { Bundeslaender, Topic, WithCategory } from "./definitions";
+import type { Bundeslaender, Receiver, Topic, WithCategory } from "./definitions";
 
 export type StoreStructure = {
 	bundeslandKey: keyof Bundeslaender | "";
 	topic?: Topic;
-	empfaenger?: {
-		bezeichnung: string;
-		titel: string;
-		name: string;
-		mail: string;
-		fax: string;
-		anschrift: string[];
-	};
+	empfaenger?: Receiver;
 	anrede?: string;
 	einleitung?: WithCategory;
 	beschwerde?: WithCategory;

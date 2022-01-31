@@ -1,7 +1,9 @@
 <script lang="ts">
+	import { cna } from "$lib/cna";
+
 	import Button from "$lib/components/Button.svelte";
 	import MonospacedInfo from "$lib/components/MonospacedInfo.svelte";
-	import { Bundeslaender, BundeslandIDs, CNAData, WithCategory } from "$lib/definitions";
+	import { Bundeslaender, BundeslandIDs } from "$lib/definitions";
 	import {
 		filterByCategory,
 		getRandom,
@@ -11,52 +13,52 @@
 	import { data, pageTitle } from "$lib/store";
 	import { tick } from "svelte";
 	import bundeslaenderJson from "../data/bundeslaender.json";
-	import cnaConfig from "../data/cna.json";
-
-	let cna: CNAData = cnaConfig as CNAData;
 	let bundeslaender = bundeslaenderJson as Bundeslaender;
 
 	pageTitle.reset();
 
 	let finalText: string = "";
 
-	$: showBundeslandSelection = $data.topic?.name?.length > 0;
-	$: showSnippetSelection = $data.bundeslandKey !== "";
+	$: topic = $cna.topics.find((x) => x.name === $data.topicName);
+	$: showBundeslandSelection = topic?.name?.length > 0;
+	$: showSnippetSelection = $data.bundeslandKey !== "" && $data.empfaenger;
 	$: showTextBuilder =
 		showSnippetSelection &&
 		$data.anrede.length > 0 &&
-		$data.einleitung?.text.length > 0 &&
-		$data.beschwerde?.text.length > 0 &&
-		$data.appell?.text.length > 0 &&
-		$data.gruss.length > 0;
+		$data.einleitung?.text?.length > 0 &&
+		$data.beschwerde?.text?.length > 0 &&
+		$data.appell?.text?.length > 0 &&
+		$data.gruss?.length > 0;
 	$: showSendButton = finalText.length > 0;
 	$: mailto = buildMailToLink($data.empfaenger?.mail ?? "", finalText);
-	$: anreden = replaceStringPlaceholders(cna.anrede, { receiver: $data.empfaenger });
+	$: anreden = replaceStringPlaceholders($cna.anrede, { receiver: $data.empfaenger });
 	$: appelle = replaceCategoryTextPlaceholders(
-		filterByCategory($data.topic?.appell, $data.beschwerde?.kategorie),
+		filterByCategory(topic?.appell, $data.beschwerde?.kategorie),
 		{
 			bundesland: bundeslaender[$data.bundeslandKey]?.land ?? "",
 		},
 	);
 
-	$: console.log($data.appell);
-
 	const buildMailToLink = (empfaenger: string, preview: string): string => {
 		if (empfaenger === "" || preview === "") return "";
 
 		const to = $data.empfaenger;
-		let subject = encodeURI(getRandom($data.topic.betreff).text);
+		let subject = encodeURI(getRandom(topic.betreff).text);
 		let body = encodeURI(preview);
 
 		return `mailto:${to.mail}?subject=${subject}&body=${body}`;
 	};
+	const reset = () => {
+		data.reset();
+		cna.reset();
+	};
 
 	const buildRandom = async () => {
 		$data.anrede = getRandom(anreden);
-		$data.einleitung = getRandom($data.topic.einleitung);
-		$data.beschwerde = getRandom($data.topic.beschwerde);
+		$data.einleitung = getRandom(topic.einleitung);
+		$data.beschwerde = getRandom(topic.beschwerde);
 		$data.appell = getRandom(appelle);
-		$data.gruss = getRandom(cna.gruss);
+		$data.gruss = getRandom($cna.gruss);
 
 		finalText = data.buildText();
 		await tick();
@@ -91,17 +93,17 @@
 	<fieldset>
 		<legend>Schritt 1 von 5: Auswahl des Themas</legend>
 		<label for="Thema">Thema</label>
-		<select id="Thema" bind:value={$data.topic} on:change={() => data.reset()}>
+		<select id="Thema" bind:value={$data.topicName} on:change={reset}>
 			<option disabled>Thema auswählen</option>
-			{#each cna.topics as topic}
-				<option value={topic}> {topic.name} </option>
+			{#each $cna.topics as topic}
+				<option value={topic.name}> {topic.name} </option>
 			{/each}
 		</select>
 	</fieldset>
 	<fieldset class:hidden={!showBundeslandSelection}>
 		<legend>Schritt 2 von 5: Auswahl des Bundeslandes</legend>
 		<label for="bundesland">Bundesland</label>
-		<select id="bundesland" bind:value={$data.bundeslandKey} on:change={() => data.reset()}>
+		<select id="bundesland" bind:value={$data.bundeslandKey} on:change={reset}>
 			<option disabled>Bundesland auswählen</option>
 			{#each BundeslandIDs as land}
 				<option value={land}>
@@ -141,7 +143,7 @@
 		<label for="einleitung">Einleitung</label>
 		<select id="einleitung" bind:value={$data.einleitung}>
 			<option disabled value="">Einleitung auswählen</option>
-			{#each $data.topic?.einleitung || [] as s}
+			{#each topic?.einleitung || [] as s}
 				<option value={s}>{s.text} </option>
 			{/each}
 		</select>
@@ -149,7 +151,7 @@
 		<label for="beschwerde">Beschwerde</label>
 		<select id="beschwerde" bind:value={$data.beschwerde}>
 			<option disabled value="">Beschwerde auswählen</option>
-			{#each $data.topic?.beschwerde || [] as s}
+			{#each topic?.beschwerde || [] as s}
 				<option value={s}>{s.text} </option>
 			{/each}
 		</select>
@@ -165,7 +167,7 @@
 		<label for="gruss">Grußformel</label>
 		<select id="gruss" bind:value={$data.gruss}>
 			<option disabled value="">Grußformel auswählen</option>
-			{#each cna.gruss as s}
+			{#each $cna.gruss as s}
 				<option value={s}>{s}</option>
 			{/each}
 		</select>

@@ -31,9 +31,10 @@
 		$data.gruss?.length > 0;
 	$: showSendButton = finalText.length > 0;
 	$: mailto = buildMailToLink($data.empfaenger?.mail ?? "", finalText);
+	$: beschwerden = filterByCategory(topic?.beschwerde, $data.einleitung?.kategorie);
 	$: anreden = replaceStringPlaceholders($cna.anrede, { receiver: $data.empfaenger });
 	$: appelle = replaceCategoryTextPlaceholders(
-		filterByCategory(topic?.appell, $data.beschwerde?.kategorie),
+		filterByCategory(topic?.appell, $data.einleitung?.kategorie),
 		{
 			bundesland: bundeslaender[$data.bundeslandKey]?.land ?? "",
 		},
@@ -151,7 +152,7 @@
 		<label for="beschwerde">Beschwerde</label>
 		<select id="beschwerde" bind:value={$data.beschwerde}>
 			<option disabled value="">Beschwerde auswählen</option>
-			{#each topic?.beschwerde || [] as s}
+			{#each beschwerden || [] as s}
 				<option value={s}>{s.text} </option>
 			{/each}
 		</select>

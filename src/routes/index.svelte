@@ -1,27 +1,26 @@
 <script lang="ts">
-	import { tick } from "svelte";
-	import { data, pageTitle } from "$lib/store";
-
-	import cnaConfig from "../data/cna.json";
-	import bundeslaenderJson from "../data/bundeslaender.json";
-	import { getRandom } from "$lib/helpers";
 	import Button from "$lib/components/Button.svelte";
 	import MonospacedInfo from "$lib/components/MonospacedInfo.svelte";
 	import { Bundeslaender, BundeslandIDs, CNAData } from "$lib/definitions";
+	import { getRandom } from "$lib/helpers";
+	import { data, pageTitle } from "$lib/store";
+	import { tick } from "svelte";
+	import bundeslaenderJson from "../data/bundeslaender.json";
+	import cnaConfig from "../data/cna.json";
 
 	let cna: CNAData = cnaConfig as CNAData;
 	let bundeslaender = bundeslaenderJson as Bundeslaender;
 
 	pageTitle.reset();
 
-	let anreden: string[] = [];
 	let finalText: string = "";
 
+	$: showBundeslandSelection = $data.topic?.name?.length > 0;
 	$: showSecondStep = $data.bundeslandKey !== "";
 	$: showThirdStep =
 		showSecondStep &&
 		$data.anrede.length > 0 &&
-		$data.einleitung.length > 0 &&
+		$data.einleitung.text.length > 0 &&
 		$data.beschwerde.text.length > 0 &&
 		$data.appell.text.length > 0 &&
 		$data.gruss.length > 0;
@@ -37,36 +36,37 @@
 	});
 
 	let appelle: { text: string; kategorie: string }[] = [];
-	$: appelle = cna.appell
-		.filter((a) => {
-			if (a.kategorie === "allgemein" || $data.beschwerde.kategorie === "allgemein") return true;
+	$: appelle =
+		$data.topic?.appell
+			?.filter((a) => {
+				if (a.kategorie === "allgemein" || $data.beschwerde.kategorie === "allgemein") return true;
 
-			return a.kategorie === $data.beschwerde.kategorie;
-		})
-		.map((a) => {
-			// It's important to query all information here, not just the contact information.
+				return a.kategorie === $data.beschwerde.kategorie;
+			})
+			?.map((a) => {
+				// It's important to query all information here, not just the contact information.
 
-			if (
-				$data.bundeslandKey === undefined ||
-				$data.bundeslandKey === null ||
-				$data.bundeslandKey === ""
-			) {
+				if (
+					$data.bundeslandKey === undefined ||
+					$data.bundeslandKey === null ||
+					$data.bundeslandKey === ""
+				) {
+					return a;
+				}
+
+				const to = bundeslaender[$data.bundeslandKey];
+
+				// todo: find dynamic way for replacing variables
+				a.text = a.text.replace("${Bundesland}", to.land);
+
 				return a;
-			}
-
-			const to = bundeslaender[$data.bundeslandKey];
-
-			// todo: find dynamic way for replacing variables
-			a.text = a.text.replace("${Bundesland}", to.land);
-
-			return a;
-		});
+			}) ?? [];
 
 	const buildMailToLink = (empfaenger: string, preview: string): string => {
 		if (empfaenger === "" || preview === "") return "";
 
 		const to = $data.empfaenger;
-		let subject = encodeURI(getRandom(cna.betreff).text);
+		let subject = encodeURI(getRandom($data.topic.betreff).text);
 		let body = encodeURI(preview);
 
 		return `mailto:${to.mail}?subject=${subject}&body=${body}`;
@@ -74,8 +74,8 @@
 
 	const buildRandom = async () => {
 		$data.anrede = getRandom(anreden);
-		$data.einleitung = getRandom(cna.einleitung);
-		$data.beschwerde = getRandom(cna.beschwerde);
+		$data.einleitung = getRandom($data.topic.einleitung);
+		$data.beschwerde = getRandom($data.topic.beschwerde);
 		$data.appell = getRandom(appelle);
 		$data.gruss = getRandom(cna.gruss);
 
@@ -110,6 +110,16 @@
 -->
 <form on:submit|preventDefault={() => (finalText = data.buildText())} class="overflow-hidden">
 	<section>
+		<p class="section-header">Schritt 0: Thema auswählen</p>
+		<label for="Thema">Thema</label>
+		<select id="Thema" bind:value={$data.topic} on:change={() => data.reset()}>
+			<option disabled>Thema auswählen</option>
+			{#each cna.topics as topic}
+				<option value={topic}> {topic.name} </option>
+			{/each}
+		</select>
+	</section>
+	<section class:hidden={!showBundeslandSelection}>
 		<p class="section-header">Schritt 1: Bundesland auswählen</p>
 		<label for="bundesland">Bundesland</label>
 		<select id="bundesland" bind:value={$data.bundeslandKey} on:change={() => data.reset()}>
@@ -152,7 +162,7 @@
 		<label for="einleitung">Einleitung</label>
 		<select id="einleitung" bind:value={$data.einleitung}>
 			<option disabled value="">Einleitung auswählen</option>
-			{#each cna.einleitung as s}
+			{#each $data.topic?.einleitung || [] as s}
 				<option value={s}>{s.text} </option>
 			{/each}
 		</select>
@@ -160,7 +170,7 @@
 		<label for="beschwerde">Beschwerde</label>
 		<select id="beschwerde" bind:value={$data.beschwerde}>
 			<option disabled value="">Beschwerde auswählen</option>
-			{#each cna.beschwerde as s}
+			{#each $data.topic?.beschwerde || [] as s}
 				<option value={s}>{s.text} </option>
 			{/each}
 		</select>
@@ -168,7 +178,7 @@
 		<label for="appell">Appell</label>
 		<select id="appell" bind:value={$data.appell}>
 			<option disabled value="">Appell auswählen</option>
-			{#each appelle as s}
+			{#each $data.topic?.appell || [] as s}
 				<option value={s}>{s.text} </option>
 			{/each}
 		</select>

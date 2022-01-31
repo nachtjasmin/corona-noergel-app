@@ -60,6 +60,11 @@ export interface Information {
 export interface CNAData {
 	anrede: string[];
 	gruss: string[];
+	topics: Topic[];
+}
+
+export interface Topic {
+	name: string;
 	einleitung: WithCategory[];
 	betreff: WithCategory[];
 	beschwerde: WithCategory[];

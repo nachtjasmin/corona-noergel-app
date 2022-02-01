@@ -82,6 +82,94 @@
 					"kategorie": "antigentests"
 				}
 			]
+		},
+		{
+			"name": "Unzureichende Maßnahmen an Schulen",
+			"betreff": [
+				{ "text": "Schützen Sie unsere Kinder!" },
+				{ "text": "Durchseuchung auf Kosten der Kinder" },
+				{ "text": "Unterrichtsausfälle und Strategie der Bundesregierung" }
+			],
+			"einleitung": [
+				{
+					"text": "Mit Entsetzen musste ich die Bundespressekonferenz vom 28.01.2022 sehen, in der unser Bundesgesundheitsminister von einem Verlauf nach Plan spricht."
+				},
+				{
+					"text": "Deutschland treibt auf immer höheren, kurz aufeinanderfolgenden Corona-Wellen. Nach der Delta-Welle steht nun Omikron an. Dennoch bleiben die Schulen geöffnet."
+				},
+				{
+					"text": "Aufgrund der hohen Inzidenzen, insbesondere unter Schüler*innen, fällt immer häufiger der Unterricht aus oder kann nicht wie geplant stattfinden."
+				}
+			],
+			"beschwerde": [
+				{
+					"text": "Angesichts der hohen Inzidenzen jenseits der 1200, finde ich es fatal, dass der Schutz der Kinder keine Priorität mehr aufweist."
+				},
+				{
+					"text": "Kinder, insbesondere in den Kitas, haben bisher nicht die Möglichkeit gehabt, geimpft werden zu können. Die hohen Inzidenzen deuten darauf hin, dass der Schutz dieser Bevölkerungsgruppe egal scheint."
+				},
+				{
+					"text": "Eltern werden seit Beginn in dieser Pandemie alleine gelassen, sowohl auf Landesebene und auf Bundesebene scheint der Schutz von Familien keine Rolle zu spielen."
+				}
+			],
+			"appell": [
+				{
+					"text": "Ich bitte sie daher, schleunigst eine Null-Inzidenz-Strategie zu etablieren, um Kinder und Jugendliche in dieser Pandemie zu schützen."
+				},
+				{
+					"text": "Zum Schutz unserer Kinder, bitte ich Sie daher darum, geeignete Maßnahmen an den Schulen und Kitas zu ergreifen, etwa die Wiedereinführung der flächendeckenden PCR-Tests."
+				},
+				{
+					"text": "Bitte schützen Sie unsere Kinder!"
+				}
+			]
+		},
+		{
+			"name": "Verlängerung der Arbeitszeiten für die kritische Infrastruktur",
+			"betreff": [
+				{
+					"text": "12 Stunden und Sonntagsarbeit, ist das euer Ernst?"
+				},
+				{
+					"text": "Ausweitung der Arbeitszeiten bei einer pandemie-müden Bevölkerung"
+				},
+				{
+					"text": "Längere Arbeitszeiten als Dank nach zwei Jahren unermüdlichem Einsatz?"
+				}
+			],
+			"einleitung": [
+				{
+					"text": "Niedersachsen und Hessen haben damit begonnen, die Begrenzung der Arbeitszeit für den Erhalt der kritischen Infrastruktur aufzuheben."
+				},
+				{
+					"text": "Eine Ausweitung der Arbeitszeit zum Erhalt der Infrastruktur ist ein fatales Zeichen in Richtung des Arbeitnehmerschutzes. Das Aufrechterhalten der Wirtschaft wird wichtiger gesehen, als der Schutz der Bevölkerung."
+				},
+				{
+					"text": "Mit Bedauern musste ich lesen, dass nach Niedersachsen nun auch Hessen eine entsprechende Ausweitung der Arbeitszeit einführt."
+				}
+			],
+			"beschwerde": [
+				{
+					"text": "Dabei zeigen wissenschaftliche Daten, dass längere Arbeitszeiten nicht den gewünschten Effekt erzielen, sondern nur zu Burnouts und Fehlern während der Arbeit führen. Ich finde es daher unerhört, dass diese Maßnahme in Betracht gezogen wird."
+				},
+				{
+					"text": "Es ist ein Schlag in die Magengrube, ausgerechnet die Menschen zu bestrafen, die bereits seit zwei Jahren ihr Bestes geben."
+				}
+			],
+			"appell": [
+				{
+					"text": "Ich bitte Sie daher, eine Null-Inzidenz-Strategie und entsprechende Notfallpläne auszuarbeiten, von einer bundesweiten Einführung der längeren Arbeitszeit ist abzusehen."
+				},
+				{
+					"text": "Die Einführung einer Null-Inzidenz-Strategie ist in meinen Augen deutlich zielführender als das \"Ausbrennen\" einer Bevölkerungsgruppe."
+				},
+				{
+					"text": "Ich bitte Sie daher, dieses Vorgehen zu überdenken und auf entsprechende Maßnahmen zu verzichten. Der Schutz der Bevölkerung sollte über den wirtschaftlichen Interessen stehen."
+				},
+				{
+					"text": "Diese Strategie ist kurzfristig gedacht, verwirkt aber das noch übrige Vertrauen in politische Maßnahmen. Daher ist davon abzusehen und stattdessen ein langfristiges Schutzkonzept zu etablieren."
+				}
+			]
 		}
 	]
 }

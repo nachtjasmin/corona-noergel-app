@@ -16,6 +16,12 @@ If something doesn't work as expected feel free to add an issue here or drop us 
 
 Wenn du hier bist, um dich zu beschweren, weil etwas an https://beschweren.rocks/ nicht funktioniert, mach gerne eine Issue auf oder schreib uns an hallo@beschweren.rocks
 
+## Money / Geld
+
+We neither need money for the project nor do we have a suitable legal form to accept money cleanly. However, if you find this useful, you are welcome to donate a little something to the non-profit Queer Lexikon e.V.. Links are in the sidebar.
+
+Wir brauchen weder Geld für das Projekt noch haben wir eine passende Rechtsform, um Geld sauber anzunehmen. Falls du das hier nützlich findest, kannst du aber gerne eine Kleinigkeit an den gemeinnützigen Queer Lexikon e.V. spenden. Die Links dafür sind in der Sidebar.
+
 ## Do it yourself
 
 This code is open source, feel free to fork, file issues or maybe even a pull request. We are using Svelte with Tailwind. For dev and build instructions see below.

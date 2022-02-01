@@ -82,6 +82,11 @@
 		<b>Update (25.01.2022):</b> Wir haben die Kontaktdaten um die jeweiligen Staats- und Senatskanzleien
 		erweitert, sodass diese nun auch auf einfachem Wege kontaktiert werden können.
 	</p>
+	<p>
+		<b>Update (01.02.2022):</b> Es gibt nun deutlich mehr Beschwerden und Forderungen. Die sind nun auch
+		gruppiert, was im ersten Schritt dann ausgewählt werden kann. Dazu noch Fehlerbehebungen und Verbesserungen
+		in der UX und Barrierfreiheit.
+	</p>
 </div>
 
 <!--

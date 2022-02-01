@@ -25,6 +25,14 @@
 		Der Code für dieses Projekt befindet sich auf
 		<a href="https://github.com/chloe-the-catgirl/corona-noergel-app">GitHub</a>.
 	</p>
+	<h2>Unterstützung</h2>
+	<p>
+		Jene nicht-binären Hobbits sind für die Umsetzung dieser Seite nicht auf finanzielle
+		Unterstützung angewiesen. Wer genre etwas in eine virtuelle Kaffeekasse geben möchte,
+		sei eingeladen, das gemeinnützige <a href="https://queer-lexikon.net/unterstuetze-uns/">
+		Queer Lexikon</a> bei wichtiger Aufklärungsarbeit zu unterstützen. Zum Beispiel
+		unkompliziert über <a href="https://ko-fi.com/queerlexikon">ko-fi</a>. 
+	</p>
 	<h2>Datenschutzerklärung</h2>
 	<p>
 		Alle eingegeben Informationen verbleiben lokal im Browser. Es werden zu keinem Zeitpunkt

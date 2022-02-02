@@ -24,6 +24,7 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         name: Commit possible changes
         with:
+          token: ${{ secrets.PAT }}
           commit_message: "style: format files using prettier"
 
   build:

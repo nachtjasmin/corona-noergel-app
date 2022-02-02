@@ -15,6 +15,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.PAT }}
+
       - name: Install dependencies
         run: npm ci
 
@@ -24,7 +27,6 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         name: Commit possible changes
         with:
-          token: ${{ secrets.PAT }}
           commit_message: "style: format files using prettier"
 
   build:

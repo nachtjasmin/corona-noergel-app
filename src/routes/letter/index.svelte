@@ -6,7 +6,6 @@
 	import MonospacedInfo from "$lib/components/MonospacedInfo.svelte";
 	import { getRandom } from "$lib/helpers";
 	import { data, pageTitle } from "$lib/store";
-	import { onMount } from "svelte";
 	pageTitle.setTitle("Brief- und Fax-Erstellung");
 
 	let letterInformation: {

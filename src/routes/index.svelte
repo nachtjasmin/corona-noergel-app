@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { cna } from "$lib/cna";
-
 	import Button from "$lib/components/Button.svelte";
 	import MonospacedInfo from "$lib/components/MonospacedInfo.svelte";
 	import { Bundeslaender, BundeslandIDs } from "$lib/definitions";

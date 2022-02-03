@@ -32,24 +32,20 @@
 					"title": "Der Name des Bundeslandes.",
 					"type": "string"
 				},
-				"gesundheit": {
-					"title": "Die Kontaktdaten des Gesundheitsministeriums.",
-					"type": "object",
-					"$ref": "#/definitions/information"
-				},
-				"chef": {
-					"title": "Die Kontaktdaten des*der Ministerpräsident*in.",
-					"type": "object",
-					"$ref": "#/definitions/information"
-				},
-				"schule": {
-					"title": "Die Kontaktdaten des Schulministeriums.",
-					"type": "object",
-					"$ref": "#/definitions/information"
+				"kontakte": {
+					"title": "Kontaktdaten für das Bundesland.",
+					"type": "array",
+					"items": {
+						"type": "object",
+						"$ref": "#/definitions/information",
+						"title": "Spezifische Kontaktdaten für ein Ministerium, ein*e Minister*in oder eine*n andere*n Ansprechpartner*in."
+					},
+					"uniqueItems": true,
+					"minItems": 1
 				}
 			},
 			"additionalProperties": false,
-			"required": ["land", "gesundheit", "chef"]
+			"required": ["land", "kontakte"]
 		},
 		"information": {
 			"type": "object",

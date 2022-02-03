@@ -111,15 +111,9 @@
 		{#if $data.bundeslandKey}
 			<label for="kontakt">Empfänger*in</label>
 			<select id="kontakt" bind:value={$data.empfaenger}>
-				<option value={bundeslaender[$data.bundeslandKey].gesundheit}>
-					{bundeslaender[$data.bundeslandKey].gesundheit.bezeichnung}
-				</option>
-				<option value={bundeslaender[$data.bundeslandKey].chef}>
-					{bundeslaender[$data.bundeslandKey].chef.bezeichnung}
-				</option>
-				<option value={bundeslaender[$data.bundeslandKey].schule}>
-					{bundeslaender[$data.bundeslandKey].schule.bezeichnung}
-				</option>
+				{#each bundeslaender[$data.bundeslandKey].kontakte as k}
+					<option value={k}>{k.bezeichnung}</option>
+				{/each}
 			</select>
 		{/if}
 	</fieldset>

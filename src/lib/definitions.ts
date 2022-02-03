@@ -43,9 +43,7 @@ export const BundeslandIDs = [
 
 export class Bundesland {
 	land: string;
-	gesundheit: Information;
-	chef: Information;
-	schule: Information;
+	kontakte: Information[];
 }
 
 export class Information {

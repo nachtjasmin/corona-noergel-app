@@ -43,68 +43,50 @@
 				"einleitung": {
 					"type": "array",
 					"items": {
-						"type": "object",
-						"$ref": "#/definitions/text_mit_kategorie",
-						"title": "Eine Beschwerdemöglichkeit, zusammen mit einer Kategorie."
+						"type": "string",
+						"title": "Eine Einleitung."
 					},
 					"uniqueItems": true,
 					"title": "Liste der Einleitungen",
 					"description": "Die Einleitungen werden in den Texten verwendet, um darauf hinzuweisen, weshalb diese Mail oder der Brief geschickt wurde.",
-					"examples": [[{ "text": "Ich find ihre Spätzle ganz lecker." }]],
+					"examples": [["Ich find ihre Spätzle ganz lecker."]],
 					"minItems": 1
 				},
 				"betreff": {
 					"type": "array",
 					"items": {
-						"type": "object",
-						"$ref": "#/definitions/text_mit_kategorie",
-						"title": "Eine Beschwerdemöglichkeit, zusammen mit einer Kategorie."
+						"type": "string",
+						"title": "Eine Betreff."
 					},
 					"uniqueItems": true,
+					"minItems": 1,
 					"title": "Mögliche Optionen für den Betreff",
 					"description": "Der Betreff wird dazu verwendet, um für die E-Mail oder den Brief einen ersten Anlass zum Lesen zu geben.",
-					"examples": [[{ "text": "Feedback zu Ihren Spätzle" }]]
+					"examples": [["Feedback zu Ihren Spätzle"]]
 				},
 				"beschwerde": {
 					"type": "array",
 					"items": {
-						"type": "object",
-						"$ref": "#/definitions/text_mit_kategorie",
-						"title": "Eine Beschwerdemöglichkeit, zusammen mit einer Kategorie."
+						"type": "string",
+						"title": "Eine Beschwerdemöglichkeit."
 					},
 					"minItems": 1,
+					"uniqueItems": true,
 					"title": "Liste von Beschwerden"
 				},
 				"appell": {
 					"type": "array",
 					"items": {
-						"type": "object",
-						"$ref": "#/definitions/text_mit_kategorie",
-						"title": "Ein Appell, zusammen mit einer Kategorie."
+						"type": "string",
+						"title": "Ein Appell."
 					},
 					"minItems": 1,
+					"uniqueItems": true,
 					"title": "Liste von Appellen"
 				}
 			},
 			"additionalProperties": false,
 			"required": ["einleitung", "betreff", "beschwerde", "appell"]
-		},
-		"text_mit_kategorie": {
-			"type": "object",
-			"title": "Ein Text, der zusätzlich mit einer Kategorie versehen ist.",
-			"properties": {
-				"text": {
-					"type": "string",
-					"description": "Der eigentliche Text."
-				},
-				"kategorie": {
-					"type": "string",
-					"description": "Die Kategorie, optional.",
-					"default": "allgemein"
-				}
-			},
-			"additionalProperties": false,
-			"required": ["text"]
 		}
 	},
 	"required": ["anrede", "gruss", "topics"]

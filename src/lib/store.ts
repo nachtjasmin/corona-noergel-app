@@ -1,14 +1,14 @@
 import { get, writable } from "svelte/store";
-import type { Bundeslaender, Receiver, WithCategory } from "./definitions";
+import type { Bundeslaender, Receiver } from "./definitions";
 
 export type StoreStructure = {
 	bundeslandKey: keyof Bundeslaender | "";
 	topicName?: string;
 	empfaenger?: Receiver;
 	anrede?: string;
-	einleitung?: WithCategory;
-	beschwerde?: WithCategory;
-	appell?: WithCategory;
+	einleitung?: string;
+	beschwerde?: string;
+	appell?: string;
 	gruss?: string;
 	name?: string;
 };
@@ -20,7 +20,7 @@ function createDataStore() {
 
 	const buildInnerText = (): string => {
 		const data = get(structure);
-		return `${data.einleitung?.text}\n${data.beschwerde?.text}\n${data.appell?.text}`;
+		return `${data.einleitung}\n${data.beschwerde}\n${data.appell}`;
 	};
 
 	const buildText = (): string => {

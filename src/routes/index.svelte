@@ -3,12 +3,7 @@
 	import Button from "$lib/components/Button.svelte";
 	import MonospacedInfo from "$lib/components/MonospacedInfo.svelte";
 	import { Bundeslaender, BundeslandIDs } from "$lib/definitions";
-	import {
-		filterByCategory,
-		getRandom,
-		replaceCategoryTextPlaceholders,
-		replaceStringPlaceholders,
-	} from "$lib/helpers";
+	import { getRandom, replaceStringPlaceholders } from "$lib/helpers";
 	import { data, pageTitle } from "$lib/store";
 	import { tick } from "svelte";
 	import bundeslaenderJson from "../data/bundeslaender.json";
@@ -24,26 +19,23 @@
 	$: showTextBuilder =
 		showSnippetSelection &&
 		$data.anrede.length > 0 &&
-		$data.einleitung?.text?.length > 0 &&
-		$data.beschwerde?.text?.length > 0 &&
-		$data.appell?.text?.length > 0 &&
+		$data.einleitung?.length > 0 &&
+		$data.beschwerde?.length > 0 &&
+		$data.appell?.length > 0 &&
 		$data.gruss?.length > 0;
 	$: showSendButton = finalText.length > 0;
 	$: mailto = buildMailToLink($data.empfaenger?.mail ?? "", finalText);
-	$: beschwerden = filterByCategory(topic?.beschwerde, $data.einleitung?.kategorie);
+	$: beschwerden = topic?.beschwerde;
 	$: anreden = replaceStringPlaceholders($cna.anrede, { receiver: $data.empfaenger });
-	$: appelle = replaceCategoryTextPlaceholders(
-		filterByCategory(topic?.appell, $data.einleitung?.kategorie),
-		{
-			bundesland: bundeslaender[$data.bundeslandKey]?.land ?? "",
-		},
-	);
+	$: appelle = replaceStringPlaceholders(topic?.appell, {
+		bundesland: bundeslaender[$data.bundeslandKey]?.land ?? "",
+	});
 
 	const buildMailToLink = (empfaenger: string, preview: string): string => {
 		if (empfaenger === "" || preview === "") return "";
 
 		const to = $data.empfaenger;
-		let subject = encodeURI(getRandom(topic.betreff).text);
+		let subject = encodeURI(getRandom(topic.betreff));
 		let body = encodeURI(preview);
 
 		return `mailto:${to.mail}?subject=${subject}&body=${body}`;
@@ -148,7 +140,7 @@
 		<select id="einleitung" bind:value={$data.einleitung}>
 			<option disabled value="">Einleitung auswählen</option>
 			{#each topic?.einleitung || [] as s}
-				<option value={s}>{s.text} </option>
+				<option value={s}>{s} </option>
 			{/each}
 		</select>
 
@@ -156,7 +148,7 @@
 		<select id="beschwerde" bind:value={$data.beschwerde}>
 			<option disabled value="">Beschwerde auswählen</option>
 			{#each beschwerden || [] as s}
-				<option value={s}>{s.text} </option>
+				<option value={s}>{s} </option>
 			{/each}
 		</select>
 
@@ -164,7 +156,7 @@
 		<select id="appell" bind:value={$data.appell}>
 			<option disabled value="">Appell auswählen</option>
 			{#each appelle || [] as s}
-				<option value={s}>{s.text} </option>
+				<option value={s}>{s} </option>
 			{/each}
 		</select>
 

@@ -28,7 +28,7 @@
 	}
 
 	const topic = $cna.topics.find((x) => x.name === $data.topicName);
-	subject = getRandom(topic.betreff).text;
+	subject = getRandom(topic.betreff);
 	const to = $data.empfaenger;
 	receiver = to.bezeichnung + "\n";
 	to.anschrift.forEach((l: string) => (receiver += l + "\n"));

@@ -21,172 +21,87 @@
 		{
 			"name": "Beschlüsse zur PCR-Testpriorisierung",
 			"einleitung": [
-				{
-					"text": "Mit großem Interesse habe ich Berichte zur Telefonkonferenz der Gesundheitsministerkonferenz verfolgt."
-				},
-				{
-					"text": "Aus der Presse habe ich von den Beschlüssen zur PCR-Testpriorisierung erfahren."
-				},
-				{
-					"text": "In der tagesaktuellen Berichterstattung bin ich über die Beschlüsse zur Priorisierung von PCR-Tests gestolpert."
-				}
+				"Mit großem Interesse habe ich Berichte zur Telefonkonferenz der Gesundheitsministerkonferenz verfolgt.",
+				"Aus der Presse habe ich von den Beschlüssen zur PCR-Testpriorisierung erfahren.",
+				"In der tagesaktuellen Berichterstattung bin ich über die Beschlüsse zur Priorisierung von PCR-Tests gestolpert."
 			],
 			"betreff": [
-				{ "text": "Beschwerde zum Beschluss der PCR-Priorisierung vom 22.01." },
-				{ "text": "PCR-Priorisierung: Beschwerde" },
-				{ "text": "Beschwerde zum PCR-Beschluss" },
-				{ "text": "Bitte bei der PCR-Priorisierung noch mal nacharbeiten" },
-				{ "text": "PCR-Priorisierungsbeschluss nicht ausreichend" },
-				{ "text": "PCR-Beschluss vom 22.01. ist nicht gut" },
-				{ "text": "Lückenhafter Beschluss zur Einschränkung PCR-Tests" },
-				{ "text": "PCR-Kapazitäten nicht beschränken" },
-				{ "text": "Beschwerde zu den Beschlüssen vom 22.01." },
-				{ "text": "PCR-Beschlüsse bitte dringend überdenken" }
+				"Beschwerde zum Beschluss der PCR-Priorisierung vom 22.01.",
+				"PCR-Priorisierung: Beschwerde",
+				"Beschwerde zum PCR-Beschluss",
+				"Bitte bei der PCR-Priorisierung noch mal nacharbeiten",
+				"PCR-Priorisierungsbeschluss nicht ausreichend",
+				"PCR-Beschluss vom 22.01. ist nicht gut",
+				"Lückenhafter Beschluss zur Einschränkung PCR-Tests",
+				"PCR-Kapazitäten nicht beschränken",
+				"Beschwerde zu den Beschlüssen vom 22.01.",
+				"PCR-Beschlüsse bitte dringend überdenken"
 			],
 			"beschwerde": [
-				{
-					"text": "Es wurde bereits Ende letzten Jahres vor der ansteckenderen Omikron-Variante gewarnt. Die jetzigen Beschlüsse erwecken den Eindruck, dass die Gesundheitsministerkonferenz rechtzeitiges Handeln hier versäumt hat."
-				},
-				{
-					"text": "Die Inzidenzen bundesweit sind bei circa 1000 angelangt. Bestehende Maßnahmen bieten offensichtlich keinen ausreichenden Schutz."
-				},
-				{
-					"text": "Die Priorisierung ist fest im Beschluss verankert, die Anpassung der Rechtsfolgen für beispielsweise Quarantäne oder Genesenennachweise sollen dagegen nur geprüft werden. Das würde fatale Lücken offen lassen."
-				}
+				"Es wurde bereits Ende letzten Jahres vor der ansteckenderen Omikron-Variante gewarnt. Die jetzigen Beschlüsse erwecken den Eindruck, dass die Gesundheitsministerkonferenz rechtzeitiges Handeln hier versäumt hat.",
+				"Die Inzidenzen bundesweit sind bei circa 1000 angelangt. Bestehende Maßnahmen bieten offensichtlich keinen ausreichenden Schutz.",
+				"Die Priorisierung ist fest im Beschluss verankert, die Anpassung der Rechtsfolgen für beispielsweise Quarantäne oder Genesenennachweise sollen dagegen nur geprüft werden. Das würde fatale Lücken offen lassen."
 			],
 			"appell": [
-				{
-					"text": "In den Beschlüssen vermisse ich insgesamt den Ausbau der vorhandenen Kapazitäten. Hier besteht in meinen Augen dringender Handlungsbedarf."
-				},
-				{
-					"text": "Es wäre allerhöchste Zeit, niedrigschwellig, kostenlos und für alle tägliche PCR-Tests anzubieten. Der Stadt Wien ist das gelungen, ich erwarte, dass ${Bundesland} hier zeitnah Kapazitäten aufbaut."
-				},
-				{
-					"text": "Solange Schulen im Pandemiegeschehen offen gehalten werden, müssen Schüler_innen und Lehrkräfte in die Priorisierung eingebunden werden. Das habe ich in der Beschlussfassung vermisst.",
-					"kategorie": "schule"
-				},
-				{
-					"text": "Wenn Schüler_innen und Lehrkräfte tatsächlich nicht in die Priorisierung mit aufgenommen werden, muss sichergestellt werden, dass positive Schnelltests in der Schule ausreichend für Meldungen bei der Unfallversicherung sind.",
-					"kategorie": "schule"
-				},
-				{
-					"text": "Damit Antigentests zuverlässig PCR-Testungen ersetzen können, muss für die zahlreichen Teststellen eine strengere Qualitätskontrolle erfolgen. Zu häufig werden Tests dort nicht mit der nötigen Sorgfalt durchgeführt.",
-					"kategorie": "antigentests"
-				},
-				{
-					"text": "Wenn Antigentests tatsächlich eine Diagnose über PCR ersetzen sollen, muss die Lagerung der Tests für Testzentren dringend regelementiert und überprüft werden. Die aktuellen Außentemperaturen sind weiter außerhalb des für die Tests zugelassenen Bereichs.",
-					"kategorie": "antigentests"
-				},
-				{
-					"text": "Durch die starke Fokussierung auf Antigentests sollte dringend die Empfindlichkeit dieser in die Reglementierung einbezogen werden, da aus den Daten des PEI hervorgeht, dass einige selbst bei sehr hohen Viruslasten nicht zuverlässig anschlagen. Hier müssen Mindeststandards etabliert werden.",
-					"kategorie": "antigentests"
-				}
+				"In den Beschlüssen vermisse ich insgesamt den Ausbau der vorhandenen Kapazitäten. Hier besteht in meinen Augen dringender Handlungsbedarf.",
+				"Es wäre allerhöchste Zeit, niedrigschwellig, kostenlos und für alle tägliche PCR-Tests anzubieten. Der Stadt Wien ist das gelungen, ich erwarte, dass ${Bundesland} hier zeitnah Kapazitäten aufbaut.",
+				"Solange Schulen im Pandemiegeschehen offen gehalten werden, müssen Schüler_innen und Lehrkräfte in die Priorisierung eingebunden werden. Das habe ich in der Beschlussfassung vermisst.",
+				"Wenn Schüler_innen und Lehrkräfte tatsächlich nicht in die Priorisierung mit aufgenommen werden, muss sichergestellt werden, dass positive Schnelltests in der Schule ausreichend für Meldungen bei der Unfallversicherung sind.",
+				"Damit Antigentests zuverlässig PCR-Testungen ersetzen können, muss für die zahlreichen Teststellen eine strengere Qualitätskontrolle erfolgen. Zu häufig werden Tests dort nicht mit der nötigen Sorgfalt durchgeführt.",
+				"Wenn Antigentests tatsächlich eine Diagnose über PCR ersetzen sollen, muss die Lagerung der Tests für Testzentren dringend regelementiert und überprüft werden. Die aktuellen Außentemperaturen sind weiter außerhalb des für die Tests zugelassenen Bereichs.",
+				"Durch die starke Fokussierung auf Antigentests sollte dringend die Empfindlichkeit dieser in die Reglementierung einbezogen werden, da aus den Daten des PEI hervorgeht, dass einige selbst bei sehr hohen Viruslasten nicht zuverlässig anschlagen. Hier müssen Mindeststandards etabliert werden."
 			]
 		},
 		{
 			"name": "Unzureichende Maßnahmen an Schulen",
 			"betreff": [
-				{ "text": "Schützen Sie unsere Kinder!" },
-				{ "text": "Durchseuchung auf Kosten der Kinder" },
-				{ "text": "Unterrichtsausfälle und Strategie der Bundesregierung" }
+				"Schützen Sie unsere Kinder!",
+				"Durchseuchung auf Kosten der Kinder",
+				"Unterrichtsausfälle und Strategie der Bundesregierung"
 			],
 			"einleitung": [
-				{
-					"text": "Mit Entsetzen musste ich die Bundespressekonferenz vom 28.01.2022 sehen, in der unser Bundesgesundheitsminister von einem Verlauf nach Plan spricht."
-				},
-				{
-					"text": "Deutschland treibt auf immer höheren, kurz aufeinanderfolgenden Corona-Wellen. Nach der Delta-Welle steht nun Omikron an. Dennoch bleiben die Schulen geöffnet."
-				},
-				{
-					"text": "Aufgrund der hohen Inzidenzen, insbesondere unter Schüler*innen, fällt immer häufiger der Unterricht aus oder kann nicht wie geplant stattfinden."
-				}
+				"Mit Entsetzen musste ich die Bundespressekonferenz vom 28.01.2022 sehen, in der unser Bundesgesundheitsminister von einem Verlauf nach Plan spricht.",
+				"Deutschland treibt auf immer höheren, kurz aufeinanderfolgenden Corona-Wellen. Nach der Delta-Welle steht nun Omikron an. Dennoch bleiben die Schulen geöffnet.",
+				"Aufgrund der hohen Inzidenzen, insbesondere unter Schüler*innen, fällt immer häufiger der Unterricht aus oder kann nicht wie geplant stattfinden."
 			],
 			"beschwerde": [
-				{
-					"text": "Angesichts der hohen Inzidenzen jenseits der 1200, finde ich es fatal, dass der Schutz der Kinder keine Priorität mehr aufweist."
-				},
-				{
-					"text": "Kinder, insbesondere in den Kitas, haben bisher nicht die Möglichkeit gehabt, geimpft werden zu können. Die hohen Inzidenzen deuten darauf hin, dass der Schutz dieser Bevölkerungsgruppe egal scheint."
-				},
-				{
-					"text": "Eltern werden seit Beginn in dieser Pandemie alleine gelassen, sowohl auf Landesebene und auf Bundesebene scheint der Schutz von Familien keine Rolle zu spielen."
-				},
-				{
-					"text": "Während es eine legitime politische Entscheidung sein kann, Kontakte und Begegnungen durch Aufrechterhalten von schulischem Alltag inkaufzunehmen, vermisse ich aktuell den Teil des Konzepten, der Lernende und Lehrende ausreichend schützt."
-				},
-				{
-					"text": "Es entsteht der Eindruck, dass der Wille Schüler*innen vor einer der für sie aktuell gefährlichsten Krankheiten zu schützen ein paar plakativen Alibi-Regeln gewichen ist."
-				}
+				"Angesichts der hohen Inzidenzen jenseits der 1200, finde ich es fatal, dass der Schutz der Kinder keine Priorität mehr aufweist.",
+				"Kinder, insbesondere in den Kitas, haben bisher nicht die Möglichkeit gehabt, geimpft werden zu können. Die hohen Inzidenzen deuten darauf hin, dass der Schutz dieser Bevölkerungsgruppe egal scheint.",
+				"Eltern werden seit Beginn in dieser Pandemie alleine gelassen, sowohl auf Landesebene und auf Bundesebene scheint der Schutz von Familien keine Rolle zu spielen.",
+				"Während es eine legitime politische Entscheidung sein kann, Kontakte und Begegnungen durch Aufrechterhalten von schulischem Alltag inkaufzunehmen, vermisse ich aktuell den Teil des Konzepten, der Lernende und Lehrende ausreichend schützt.",
+				"Es entsteht der Eindruck, dass der Wille Schüler*innen vor einer der für sie aktuell gefährlichsten Krankheiten zu schützen ein paar plakativen Alibi-Regeln gewichen ist."
 			],
 			"appell": [
-				{
-					"text": "Ich bitte sie daher, schleunigst eine Null-Inzidenz-Strategie zu etablieren, um Kinder und Jugendliche in dieser Pandemie zu schützen."
-				},
-				{
-					"text": "Zum Schutz unserer Kinder, bitte ich Sie daher darum, geeignete Maßnahmen an den Schulen und Kitas zu ergreifen, etwa die Wiedereinführung der flächendeckenden PCR-Tests."
-				},
-				{
-					"text": "Bitte schützen Sie unsere Kinder!"
-				},
-				{
-					"text": "Als absolutes Minimum sollten dringend zeitnah die S3-Leitlinien zum Schulbetrieb in der Pandemie umgesetzt werden."
-				},
-				{
-					"text": "Hören Sie endlich auf, regulären Schulbetrieb als absolute unantastbare Priorität zu behandeln, hinter dem alles andere zurückweichen muss."
-				},
-				{
-					"text": "In einer Situation, in der die Auflösung positiver PCR-Pools an Schulen nicht mehr gewährleistet werden kann, muss mindestens die Präsenzpflicht ausgesetzt werden."
-				},
-				{
-					"text": "Vielleicht wäre es an der Zeit anzuerkennen, dass es dringend ein Umdenken in der Schul-Corona-Politik braucht, da es dem Virus herzlich egal ist, ob \"Schule\" über dem Eingang eines Gebäudes steht."
-				}
+				"Ich bitte sie daher, schleunigst eine Null-Inzidenz-Strategie zu etablieren, um Kinder und Jugendliche in dieser Pandemie zu schützen.",
+				"Zum Schutz unserer Kinder, bitte ich Sie daher darum, geeignete Maßnahmen an den Schulen und Kitas zu ergreifen, etwa die Wiedereinführung der flächendeckenden PCR-Tests.",
+				"Bitte schützen Sie unsere Kinder!",
+				"Als absolutes Minimum sollten dringend zeitnah die S3-Leitlinien zum Schulbetrieb in der Pandemie umgesetzt werden.",
+				"Hören Sie endlich auf, regulären Schulbetrieb als absolute unantastbare Priorität zu behandeln, hinter dem alles andere zurückweichen muss.",
+				"In einer Situation, in der die Auflösung positiver PCR-Pools an Schulen nicht mehr gewährleistet werden kann, muss mindestens die Präsenzpflicht ausgesetzt werden.",
+				"Vielleicht wäre es an der Zeit anzuerkennen, dass es dringend ein Umdenken in der Schul-Corona-Politik braucht, da es dem Virus herzlich egal ist, ob \"Schule\" über dem Eingang eines Gebäudes steht."
 			]
 		},
 		{
 			"name": "Verlängerung der Arbeitszeiten für die kritische Infrastruktur",
 			"betreff": [
-				{
-					"text": "12 Stunden und Sonntagsarbeit, ist das euer Ernst?"
-				},
-				{
-					"text": "Ausweitung der Arbeitszeiten bei einer pandemie-müden Bevölkerung"
-				},
-				{
-					"text": "Längere Arbeitszeiten als Dank nach zwei Jahren unermüdlichem Einsatz?"
-				}
+				"12 Stunden und Sonntagsarbeit, ist das euer Ernst?",
+				"Ausweitung der Arbeitszeiten bei einer pandemie-müden Bevölkerung",
+				"Längere Arbeitszeiten als Dank nach zwei Jahren unermüdlichem Einsatz?"
 			],
 			"einleitung": [
-				{
-					"text": "Niedersachsen und Hessen haben damit begonnen, die Begrenzung der Arbeitszeit für den Erhalt der kritischen Infrastruktur aufzuheben."
-				},
-				{
-					"text": "Eine Ausweitung der Arbeitszeit zum Erhalt der Infrastruktur ist ein fatales Zeichen in Richtung des Arbeitnehmerschutzes. Das Aufrechterhalten der Wirtschaft wird wichtiger gesehen, als der Schutz der Bevölkerung."
-				},
-				{
-					"text": "Mit Bedauern musste ich lesen, dass nach Niedersachsen nun auch Hessen eine entsprechende Ausweitung der Arbeitszeit einführt."
-				}
+				"Niedersachsen und Hessen haben damit begonnen, die Begrenzung der Arbeitszeit für den Erhalt der kritischen Infrastruktur aufzuheben.",
+				"Eine Ausweitung der Arbeitszeit zum Erhalt der Infrastruktur ist ein fatales Zeichen in Richtung des Arbeitnehmerschutzes. Das Aufrechterhalten der Wirtschaft wird wichtiger gesehen, als der Schutz der Bevölkerung.",
+				"Mit Bedauern musste ich lesen, dass nach Niedersachsen nun auch Hessen eine entsprechende Ausweitung der Arbeitszeit einführt."
 			],
 			"beschwerde": [
-				{
-					"text": "Dabei zeigen wissenschaftliche Daten, dass längere Arbeitszeiten nicht den gewünschten Effekt erzielen, sondern nur zu Burnouts und Fehlern während der Arbeit führen. Ich finde es daher unerhört, dass diese Maßnahme in Betracht gezogen wird."
-				},
-				{
-					"text": "Es ist ein Schlag in die Magengrube, ausgerechnet die Menschen zu bestrafen, die bereits seit zwei Jahren ihr Bestes geben."
-				}
+				"Dabei zeigen wissenschaftliche Daten, dass längere Arbeitszeiten nicht den gewünschten Effekt erzielen, sondern nur zu Burnouts und Fehlern während der Arbeit führen. Ich finde es daher unerhört, dass diese Maßnahme in Betracht gezogen wird.",
+				"Es ist ein Schlag in die Magengrube, ausgerechnet die Menschen zu bestrafen, die bereits seit zwei Jahren ihr Bestes geben."
 			],
 			"appell": [
-				{
-					"text": "Ich bitte Sie daher, eine Null-Inzidenz-Strategie und entsprechende Notfallpläne auszuarbeiten, von einer bundesweiten Einführung der längeren Arbeitszeit ist abzusehen."
-				},
-				{
-					"text": "Die Einführung einer Null-Inzidenz-Strategie ist in meinen Augen deutlich zielführender als das \"Ausbrennen\" einer Bevölkerungsgruppe."
-				},
-				{
-					"text": "Ich bitte Sie daher, dieses Vorgehen zu überdenken und auf entsprechende Maßnahmen zu verzichten. Der Schutz der Bevölkerung sollte über den wirtschaftlichen Interessen stehen."
-				},
-				{
-					"text": "Diese Strategie ist kurzfristig gedacht, verwirkt aber das noch übrige Vertrauen in politische Maßnahmen. Daher ist davon abzusehen und stattdessen ein langfristiges Schutzkonzept zu etablieren."
-				}
+				"Ich bitte Sie daher, eine Null-Inzidenz-Strategie und entsprechende Notfallpläne auszuarbeiten, von einer bundesweiten Einführung der längeren Arbeitszeit ist abzusehen.",
+				"Die Einführung einer Null-Inzidenz-Strategie ist in meinen Augen deutlich zielführender als das \"Ausbrennen\" einer Bevölkerungsgruppe.",
+				"Ich bitte Sie daher, dieses Vorgehen zu überdenken und auf entsprechende Maßnahmen zu verzichten. Der Schutz der Bevölkerung sollte über den wirtschaftlichen Interessen stehen.",
+				"Diese Strategie ist kurzfristig gedacht, verwirkt aber das noch übrige Vertrauen in politische Maßnahmen. Daher ist davon abzusehen und stattdessen ein langfristiges Schutzkonzept zu etablieren."
 			]
 		}
 	]

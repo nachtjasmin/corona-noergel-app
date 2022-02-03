@@ -65,15 +65,10 @@ export class CNAData {
 
 export class Topic {
 	name?: string;
-	einleitung: WithCategory[] = [];
-	betreff: WithCategory[] = [];
-	beschwerde: WithCategory[] = [];
-	appell: WithCategory[] = [];
-}
-
-export class WithCategory {
-	text = "";
-	kategorie = "allgemein";
+	einleitung: string[] = [];
+	betreff: string[] = [];
+	beschwerde: string[] = [];
+	appell: string[] = [];
 }
 
 export type Receiver = {

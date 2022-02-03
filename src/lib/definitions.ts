@@ -22,25 +22,6 @@ export interface Bundeslaender {
 	TH: Bundesland;
 }
 
-export const BundeslandIDs = [
-	"BW",
-	"BY",
-	"BE",
-	"BB",
-	"HB",
-	"HH",
-	"HE",
-	"MV",
-	"NI",
-	"NW",
-	"RP",
-	"SL",
-	"SN",
-	"ST",
-	"SH",
-	"TH",
-];
-
 export class Bundesland {
 	land: string;
 	kontakte: Information[];

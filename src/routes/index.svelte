@@ -2,7 +2,7 @@
 	import { cna } from "$lib/cna";
 	import Button from "$lib/components/Button.svelte";
 	import MonospacedInfo from "$lib/components/MonospacedInfo.svelte";
-	import { Bundeslaender, BundeslandIDs } from "$lib/definitions";
+	import type { Bundeslaender } from "$lib/definitions";
 	import { getRandom, replaceStringPlaceholders } from "$lib/helpers";
 	import { data, pageTitle } from "$lib/store";
 	import { tick } from "svelte";
@@ -101,7 +101,7 @@
 		<label for="bundesland">Bundesland</label>
 		<select id="bundesland" bind:value={$data.bundeslandKey} on:change={reset}>
 			<option disabled>Bundesland auswählen</option>
-			{#each BundeslandIDs as land}
+			{#each Object.keys(bundeslaender).filter((x) => x !== "$schema") as land}
 				<option value={land}>
 					{bundeslaender[land].land}
 				</option>

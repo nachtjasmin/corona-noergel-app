@@ -31,14 +31,7 @@ jobs:
         with:
           ref: ${{ github.head_ref }} # required for usage with pull requests
 
-      - name: Validate bundeslaender JSON
-        uses: docker://orrosenblatt/validate-json-action:latest
-        env:
-          INPUT_SCHEMA: ./src/schema/bundeslaender.schema.json
-          INPUT_JSONS: ./src/data/bundeslaender.json
-
-      - name: Validate cna JSON
-        uses: docker://orrosenblatt/validate-json-action:latest
-        env:
-          INPUT_SCHEMA: ./src/schema/cna.schema.json
-          INPUT_JSONS: ./src/data/cna.json
+      - name: Validate JSON files
+        uses: cardinalby/schema-validator-action@v1
+        with:
+          file: "src/data/*.json"

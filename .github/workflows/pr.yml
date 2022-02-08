@@ -23,3 +23,22 @@ jobs:
 
       - name: Run build
         run: npm run build
+
+  schema-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }} # required for usage with pull requests
+
+      - name: Validate bundeslaender.json against schema
+        uses: cardinalby/schema-validator-action@v1
+        with:
+          file: "src/data/bundeslaender.json"
+          schema: "src/schema/bundeslaender.schema.json"
+
+      - name: Validate cna.json against schema
+        uses: cardinalby/schema-validator-action@v1
+        with:
+          file: "src/data/cna.json"
+          schema: "src/schema/cna.schema.json"

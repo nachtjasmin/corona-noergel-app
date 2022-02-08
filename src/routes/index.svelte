@@ -78,6 +78,11 @@
 		gruppiert, was im ersten Schritt dann ausgewählt werden kann. Dazu noch Fehlerbehebungen und Verbesserungen
 		in der UX und Barrierfreiheit.
 	</p>
+	<p>
+		<b>Update (08.02.2022):</b> Teilerfolg bei PCR-Tests.
+		<a href="https://twitter.com/MDRAktuell/status/1491006160874483713">Laut MDR</a>
+		kündigt Lauterbach an, dass Anspruch auf PCR-Tests bei positivem Schnelltest weiterhin bestehen soll.
+	</p>
 </div>
 
 <!--

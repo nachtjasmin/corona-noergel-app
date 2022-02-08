@@ -34,11 +34,11 @@ jobs:
       - name: Validate bundeslaender JSON
         uses: docker://orrosenblatt/validate-json-action:latest
         env:
-          INPUT_SCHEMA: ./src/bundeslaender.schema.json
+          INPUT_SCHEMA: ./src/schema/bundeslaender.schema.json
           INPUT_JSONS: ./src/data/bundeslaender.json
 
       - name: Validate cna JSON
         uses: docker://orrosenblatt/validate-json-action:latest
         env:
-          INPUT_SCHEMA: ./src/cna.schema.json
+          INPUT_SCHEMA: ./src/schema/cna.schema.json
           INPUT_JSONS: ./src/data/cna.json

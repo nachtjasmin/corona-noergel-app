@@ -103,6 +103,30 @@
 				"Ich bitte Sie daher, dieses Vorgehen zu überdenken und auf entsprechende Maßnahmen zu verzichten. Der Schutz der Bevölkerung sollte über den wirtschaftlichen Interessen stehen.",
 				"Diese Strategie ist kurzfristig gedacht, verwirkt aber das noch übrige Vertrauen in politische Maßnahmen. Daher ist davon abzusehen und stattdessen ein langfristiges Schutzkonzept zu etablieren."
 			]
+		},
+		{
+			"name": "Lage in Kindertagesstätten",
+			"betrff": [
+				"Corona-Situation in KiTas",
+				"Pandemie ist auch in KiTas"
+			],
+			"einleitung": [
+				"Viele Familien sind auch in der Pandemie auf Kindertagesstätten und Kindergärten angewiesen.",
+				"KiTas sind für viele Elternteile unverzichtbare Unterstützung für den Alltag."	
+			],
+			"beschwerde": [
+				"Konsequentes Maskentragen ist in KiTas ein äußerst unrealistisches Szenario.",
+				"Lüften mit entsprechenden Temperatur-Unterschieden ist bei den Jüngsten nicht die beste aller Ideen.",
+				"Für unter 5-jährige sind bislang keine Impfstoffe gegen Covid zugelassen.",
+				"Auch wenn im Vergleich zu anderen Altersgruppen Infektionen für Kleinkinder weniger gefährlich sind, können sie ältere Familienmitglieder infizieren.",
+				"Covid kann bei sehr jungen Personen hohes Fieber auslösen, was in der Altersgruppe sehr gefährlich ist.",
+				"Nach Covid-Erkrankungen besteht bei Kindern ein vielfach erhöhtes Risiko für PIMS."
+			],
+			"appell": [
+				"Da sich die Kleinsten nicht individuell durch Masken, Abstand oder Impfung schützen können, ist es notwendig, Gruppen zu verkleinern.",
+				"KiTas müssen konsequent mit Luftfiltern ausgestattet werden, um Infektionen - nicht nur mit Covid - zu vermeiden.",
+				"Der Eindruck, dass KiTas in der Pandemiepolitik als komplett ungefährliche Orte gehandelt werden, sollte nicht erhalten bleiben."
+			]
 		}
 	]
 }

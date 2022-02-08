@@ -23,3 +23,22 @@ jobs:
 
       - name: Run build
         run: npm run build
+
+  schema-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }} # required for usage with pull requests
+
+      - name: Validate bundeslaender JSON
+        uses: docker://orrosenblatt/validate-json-action:latest
+        env:
+          INPUT_SCHEMA: ./src/bundeslaender.schema.json
+          INPUT_JSONS: ./src/data/bundeslaender.json
+
+      - name: Validate cna JSON
+        uses: docker://orrosenblatt/validate-json-action:latest
+        env:
+          INPUT_SCHEMA: ./src/cna.schema.json
+          INPUT_JSONS: ./src/data/cna.json

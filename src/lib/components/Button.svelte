@@ -1,7 +1,7 @@
 <script lang="ts">
 	export let type: "button" | "submit" | "reset" = "button";
 	export let size: "small" | "regular" = "regular";
-	export let href: string = "";
+	export let href = "";
 	let clazz = "";
 	export { clazz as class };
 </script>

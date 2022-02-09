@@ -18,9 +18,9 @@
 		name: $data.name,
 	};
 
-	let subject: string = "";
-	let receiver: string = "";
-	let fax: string = "";
+	let subject = "";
+	let receiver = "";
+	let fax = "";
 
 	// if data is empty, navigate back
 	if (!$data.topicName || $data.anrede === "") {

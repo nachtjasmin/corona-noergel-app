@@ -11,7 +11,7 @@
 
 	pageTitle.reset();
 
-	let finalText: string = "";
+	let finalText = "";
 
 	$: topic = $cna.topics.find((x) => x.name === $data.topicName);
 	$: showBundeslandSelection = topic?.name?.length > 0;

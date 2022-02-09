@@ -59,7 +59,7 @@
 	const focusText = () => document.getElementById("text").focus();
 </script>
 
-<h1 class="font-bold text-2xl">Corona-Nörgel-App 🦠😷</h1>
+<h1 class="text-2xl font-bold">Corona-Nörgel-App 🦠😷</h1>
 <div class="prose mt-4 dark:prose-invert">
 	<p>
 		Am 22.01. haben die Gesundheitsministieren in einer Telefonkonferenz weitgehende <a
@@ -123,7 +123,7 @@
 		{/if}
 	</fieldset>
 	<fieldset class:hidden={!showSnippetSelection}>
-		<div class="flex flex-col md:flex-row items-baseline justify-between">
+		<div class="flex flex-col items-baseline justify-between md:flex-row">
 			<legend>Schritt 3 von 5: Textbausteine wählen</legend>
 			<Button size="small" on:click={buildRandom}>Zufällig auswählen</Button>
 		</div>
@@ -177,7 +177,7 @@
 			<p class="mb-2 text-sm">
 				Empfänger*in: <MonospacedInfo>{$data.empfaenger?.mail ?? ""}</MonospacedInfo>
 			</p>
-			<textarea id="text" readonly class="w-full bg-gray-100 dark:bg-slate-800 rounded" rows="10"
+			<textarea id="text" readonly class="w-full rounded bg-gray-100 dark:bg-slate-800" rows="10"
 				>{finalText}</textarea
 			>
 		</div>
@@ -208,7 +208,7 @@
 	}
 	select,
 	input {
-		@apply w-full rounded mt-1 mb-2;
+		@apply mt-1 mb-2 w-full rounded;
 		@apply dark:bg-slate-800;
 	}
 	fieldset,

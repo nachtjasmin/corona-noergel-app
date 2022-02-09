@@ -18,7 +18,7 @@
 
 <style lang="postcss">
 	.btn {
-		@apply inline-block px-4 py-2 rounded motion-safe:transition-colors;
+		@apply inline-block rounded px-4 py-2 motion-safe:transition-colors;
 		@apply bg-green-200 text-black;
 		@apply border border-green-800;
 		@apply hover:bg-green-300;
@@ -28,6 +28,6 @@
 	}
 
 	.small {
-		@apply text-sm px-3 py-1;
+		@apply px-3 py-1 text-sm;
 	}
 </style>

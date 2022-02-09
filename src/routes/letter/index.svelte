@@ -82,13 +82,13 @@
 	</FormContainer>
 </form>
 
-<section class="hidden print:block letter">
+<section class="letter hidden print:block">
 	<!-- where should the letter go? -->
 	<div class="receiver-wrapper">
 		<address class="receiver">
 			<p class="whitespace-pre-line">{receiver}</p>
 		</address>
-		<div class="text-right justify-self-end">
+		<div class="justify-self-end text-right">
 			<p>{letterInformation.name}</p>
 			<p>{letterInformation.address1}</p>
 			{#if letterInformation.address2}
@@ -99,7 +99,7 @@
 	</div>
 
 	<!-- the current date -->
-	<p class="text-right mt-8">{new Date().toLocaleDateString("de", { dateStyle: "full" })}</p>
+	<p class="mt-8 text-right">{new Date().toLocaleDateString("de", { dateStyle: "full" })}</p>
 
 	<p class="subject-line">{subject}</p>
 	<p class="mb-4 mt-2">{$data.anrede},</p>
@@ -113,10 +113,10 @@
 
 <style lang="postcss">
 	label {
-		@apply text-sm mt-2;
+		@apply mt-2 text-sm;
 	}
 	input {
-		@apply w-full rounded mt-1 mb-2;
+		@apply mt-1 mb-2 w-full rounded;
 		@apply dark:bg-slate-800;
 	}
 
@@ -146,7 +146,7 @@
 		width: 80mm;
 	}
 	.subject-line {
-		@apply font-bold text-lg mt-2 mb-6;
+		@apply mt-2 mb-6 text-lg font-bold;
 	}
 	.text {
 		@apply whitespace-pre-line leading-relaxed;

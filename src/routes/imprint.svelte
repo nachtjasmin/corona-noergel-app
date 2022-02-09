@@ -4,7 +4,7 @@
 	pageTitle.setTitle("Impressum und Datenschutzerklärung");
 </script>
 
-<h1 class="font-bold text-2xl">Impressum und Datenschutzerklärung</h1>
+<h1 class="text-2xl font-bold">Impressum und Datenschutzerklärung</h1>
 <main class="prose my-4 dark:prose-invert">
 	<p>
 		Kleine süße nicht-binäre Hobbits aus deiner Gegend haben diese Website gebaut. Da wir

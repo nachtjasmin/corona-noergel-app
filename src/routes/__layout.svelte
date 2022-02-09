@@ -11,13 +11,13 @@
 
 <FormContainer>
 	<slot />
-	<ul class="flex flex-col sm:flex-row sm:space-x-4 justify-center mb-8">
+	<ul class="mb-8 flex flex-col justify-center sm:flex-row sm:space-x-4">
 		<li><a href="/" class="footer-link">Startseite</a></li>
 		<li><a href="/imprint" class="footer-link">Impressum & Datenschutzerklärung</a></li>
 	</ul>
 
 	<!-- The app version is set in the svelte.config.js -->
-	<p class="text-center italic text-xs mt-8 text-gray-600 dark:text-gray-200">Version: {version}</p>
+	<p class="mt-8 text-center text-xs italic text-gray-600 dark:text-gray-200">Version: {version}</p>
 </FormContainer>
 
 <style lang="postcss">

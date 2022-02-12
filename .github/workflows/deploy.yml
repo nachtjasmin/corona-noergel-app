@@ -4,7 +4,7 @@ name: Deploy to Uberspace
 
 on:
   push:
-    branches: ["main"]
+    branches: ["karin-prien-wtf"]
     paths-ignore:
       - ".vscode/"
       - "README.md"
@@ -52,4 +52,4 @@ jobs:
           ssh-add - <<< "${{ secrets.PRIVATE_KEY }}"
 
       - name: rsync to target
-        run: rsync -Pr -e "ssh -o StrictHostKeyChecking=accept-new" build/ cna@cna.uber.space:/home/cna/html
+        run: rsync -Pr -e "ssh -o StrictHostKeyChecking=accept-new" build/ cna@cna.uber.space:/var/www/virtual/cna/karinprien.wtf

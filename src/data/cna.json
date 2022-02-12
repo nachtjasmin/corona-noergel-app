@@ -4,7 +4,6 @@
 		"Hallo",
 		"Guten Tag",
 		"Moin",
-		"Sehr geehrtes ${bezeichnung}",
 		"Sehr geehrte*r ${titel} ${name}",
 		"Sehr geehrtes Team von ${titel} ${name}",
 		"Sehr geehrte Bearbeitende",

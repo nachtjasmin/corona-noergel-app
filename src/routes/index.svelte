@@ -69,7 +69,8 @@
 			target="_"
 			href="https://twitter.com/PrienKarin/status/1492205554021904392"
 			>einen unsäglichen Tweet abgesetzt</a
-		>, der an die Eugenik in der Nazi-Diktatur erinnert. (Anmerkung: Nazis schlecht, Diktatur auch schlecht.)
+		>, der an die Eugenik in der Nazi-Diktatur erinnert. (Anmerkung: Nazis schlecht, Diktatur auch
+		schlecht.)
 	</p>
 	<blockquote>
 		Bitte differenzieren: Kinder sterben. Das ist extrem tragisch. Aber sie sterben mit COVID_19 und
@@ -83,7 +84,6 @@
 			Rücktritt hervorrufen.</b
 		>
 	</p>
-	
 </div>
 
 <!--

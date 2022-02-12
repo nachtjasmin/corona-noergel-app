@@ -65,7 +65,7 @@
 <h1 class="text-2xl font-black">Fordern wir den Rücktritt von Karin Prien!</h1>
 <div class="prose mt-8 dark:prose-invert">
 	<p>
-		Am 08.02.2022 hat Karin Prien, Bildungsministerin in Schleswig-Holstein <a
+		Am 11.02.2022 hat Karin Prien, Bildungsministerin in Schleswig-Holstein <a
 			target="_"
 			href="https://twitter.com/PrienKarin/status/1492205554021904392"
 			>einen unsäglichen Tweet abgesetzt</a

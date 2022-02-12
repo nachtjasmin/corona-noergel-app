@@ -48,7 +48,7 @@ function createDataStore() {
 export const data = createDataStore();
 
 function buildPageTitleStore() {
-	const appName = "Corona-Nörgel-App";
+	const appName = "Rücktrittsforderung für Karin Prien";
 	const { subscribe, set } = writable<string>(appName);
 
 	return {

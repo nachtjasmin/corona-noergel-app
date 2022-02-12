@@ -62,7 +62,7 @@
 	$data.topicName = $cna.topics[0].name;
 </script>
 
-<h1 class="text-2xl font-bold">Corona-Nörgel-App 🦠😷</h1>
+<h1 class="text-2xl font-black">Fordern wir den Rücktritt von Karin Prien!</h1>
 <div class="prose mt-4 dark:prose-invert">
 	<p>
 		Am 08.02.2022 hat Karin Prien, Bildungsministerin in Schleswig-Holstein <a

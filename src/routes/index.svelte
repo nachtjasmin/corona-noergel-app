@@ -93,7 +93,7 @@
 -->
 <form on:submit|preventDefault={() => (finalText = data.buildText())} class="overflow-hidden">
 	<fieldset class:hidden={!showBundeslandSelection}>
-		<legend>Schritt 2 von 5: Auswahl des*der Empfänger*in</legend>
+		<legend>Schritt 1 von 4: Auswahl des*der Empfänger*in</legend>
 		{#if $data.bundeslandKey}
 			<label for="kontakt">Empfänger*in</label>
 			<select id="kontakt" bind:value={$data.empfaenger}>
@@ -105,7 +105,7 @@
 	</fieldset>
 	<fieldset class:hidden={!showSnippetSelection}>
 		<div class="flex flex-col items-baseline justify-between md:flex-row">
-			<legend>Schritt 3 von 5: Textbausteine wählen</legend>
+			<legend>Schritt 2 von 4: Textbausteine wählen</legend>
 			<Button size="small" on:click={buildRandom}>Zufällig auswählen</Button>
 		</div>
 		<label for="anrede">Anrede</label>
@@ -152,7 +152,7 @@
 		<input id="name" type="text" placeholder="(optional)" bind:value={$data.name} />
 	</fieldset>
 	<fieldset class:hidden={!showTextBuilder}>
-		<legend>Schritt 4 von 5: Text erzeugen</legend>
+		<legend>Schritt 3 von 4: Text erzeugen</legend>
 		<Button type="submit" on:click={focusText}>Bastel mir den Text</Button>
 		<div class="mt-8">
 			<p class="mb-2 text-sm">
@@ -165,7 +165,7 @@
 	</fieldset>
 </form>
 <section class:hidden={!showSendButton}>
-	<p class="section-header">Schritt 5 von 5: Mail verschicken</p>
+	<p class="section-header">Schritt 4 von 4: Mail verschicken</p>
 	<p class="text-sm">
 		Bei dem Klick auf den folgenden Button wird ein sogenannter <code>mailto:</code>-Link erzeugt.
 		Dieser öffnet dein E-Mail-Programm mit dem obigen Text. Dabei werden zu keinem Zeitpunkt

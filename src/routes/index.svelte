@@ -57,6 +57,9 @@
 		focusText();
 	};
 	const focusText = () => document.getElementById("text").focus();
+
+	$data.bundeslandKey = "SH";
+	$data.topicName = $cna.topics[0].name;
 </script>
 
 <h1 class="text-2xl font-bold">Corona-Nörgel-App 🦠😷</h1>
@@ -89,27 +92,8 @@
 	the appearance of the the horizontal scrollbar.
 -->
 <form on:submit|preventDefault={() => (finalText = data.buildText())} class="overflow-hidden">
-	<fieldset>
-		<legend>Schritt 1 von 5: Auswahl des Themas</legend>
-		<label for="Thema">Thema</label>
-		<select id="Thema" bind:value={$data.topicName} on:change={reset}>
-			{#each $cna.topics as topic}
-				<option value={topic.name}> {topic.name} </option>
-			{/each}
-		</select>
-	</fieldset>
 	<fieldset class:hidden={!showBundeslandSelection}>
-		<legend>Schritt 2 von 5: Auswahl des Bundeslandes</legend>
-		<label for="bundesland">Bundesland</label>
-		<select id="bundesland" bind:value={$data.bundeslandKey} on:change={reset}>
-			<option disabled>Bundesland auswählen</option>
-			{#each Object.keys(bundeslaender).filter((x) => x !== "$schema") as land}
-				<option value={land}>
-					{bundeslaender[land].land}
-				</option>
-			{/each}
-		</select>
-
+		<legend>Schritt 2 von 5: Auswahl des*der Empfänger*in</legend>
 		{#if $data.bundeslandKey}
 			<label for="kontakt">Empfänger*in</label>
 			<select id="kontakt" bind:value={$data.empfaenger}>

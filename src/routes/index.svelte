@@ -84,6 +84,8 @@
 			Rücktritt hervorrufen.</b
 		>
 	</p>
+	<p><b>Update: 14.02.:</b> Karin Prien hat ihren Twitteraccount gelöscht, weil sie sich dort ungerecht behandelt fühlte.
+		An der Eignung für den Ministerposten zweifelt sie indes nicht.</p>
 </div>
 
 <!--

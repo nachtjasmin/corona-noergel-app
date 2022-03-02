@@ -62,26 +62,20 @@
 <h1 class="text-2xl font-bold">Corona-Nörgel-App 🦠😷</h1>
 <div class="prose mt-4 dark:prose-invert">
 	<p>
-		Am 22.01. haben die Gesundheitsministieren in einer Telefonkonferenz weitgehende <a
-			href="https://www.gmkonline.de/Beschluesse.html?uid=268&jahr=2022"
-			>Einschränkungen für PCR-Tests</a
-		> beschlossen. Hier kannst du passend für dein Bundesland eine Beschwerdemail für dein zuständiges
-		Ministerium generieren. Abschicken musst du es noch selbst, dafür brauchst du ein eingerichtetes
+		Die deutsche Bundesregierung ist weiterhin nicht in der Lage, angemessen mit der Corona-Pandemie
+		umzugehen. So sorgt uns beispielsweise die als <i>"Freedom Day"</i> bekannte Aufhebung aller Schutzmaßnahmen
+		(niederschwellige Dinge wie Maskenpflicht ausgenommen) sehr. Nur durch einen Schutz der gesamten
+		Bevölkerung und nicht nur des als gesund wahrgenommenen Teils können wir die Pandemie beenden. Aber
+		nicht durch planloses Herumgeiere.
+	</p>
+	<p>
+		Hier kannst du passend für dein Bundesland eine Beschwerdemail für dein zuständiges Ministerium
+		generieren. Abschicken musst du es noch selbst, dafür brauchst du ein eingerichtetes
 		Mailprogramm wie Thunderbird, Outlook oder K9.
 	</p>
 	<p>
-		<b>Update (25.01.2022):</b> Wir haben die Kontaktdaten um die jeweiligen Staats- und Senatskanzleien
-		erweitert, sodass diese nun auch auf einfachem Wege kontaktiert werden können.
-	</p>
-	<p>
-		<b>Update (01.02.2022):</b> Es gibt nun deutlich mehr Beschwerden und Forderungen. Die sind nun auch
-		gruppiert, was im ersten Schritt dann ausgewählt werden kann. Dazu noch Fehlerbehebungen und Verbesserungen
-		in der UX und Barrierfreiheit.
-	</p>
-	<p>
-		<b>Update (08.02.2022):</b> Teilerfolg bei PCR-Tests.
-		<a href="https://twitter.com/MDRAktuell/status/1491006160874483713">Laut MDR</a>
-		kündigt Lauterbach an, dass Anspruch auf PCR-Tests bei positivem Schnelltest weiterhin bestehen soll.
+		Die bisherige Historie von <i>beschweren.rocks</i> lässt sich
+		<a href="/history">hier einsehen</a>, dort sind Updates und bisherige Teilerfolge verbucht.
 	</p>
 </div>
 

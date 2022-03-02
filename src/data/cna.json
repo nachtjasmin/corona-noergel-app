@@ -19,35 +19,28 @@
 	],
 	"topics": [
 		{
-			"name": "Beschlüsse zur PCR-Testpriorisierung",
-			"einleitung": [
-				"Mit großem Interesse habe ich Berichte zur Telefonkonferenz der Gesundheitsministerkonferenz verfolgt.",
-				"Aus der Presse habe ich von den Beschlüssen zur PCR-Testpriorisierung erfahren.",
-				"In der tagesaktuellen Berichterstattung bin ich über die Beschlüsse zur Priorisierung von PCR-Tests gestolpert."
-			],
+			"name": "Ungenutzte Kapazitäten für PCR-Tests",
 			"betreff": [
 				"Beschwerde zum Beschluss der PCR-Priorisierung vom 22.01.",
 				"PCR-Priorisierung: Beschwerde",
-				"Beschwerde zum PCR-Beschluss",
-				"Bitte bei der PCR-Priorisierung noch mal nacharbeiten",
-				"PCR-Priorisierungsbeschluss nicht ausreichend",
-				"PCR-Beschluss vom 22.01. ist nicht gut",
-				"Lückenhafter Beschluss zur Einschränkung PCR-Tests",
-				"PCR-Kapazitäten nicht beschränken",
-				"Beschwerde zu den Beschlüssen vom 22.01.",
-				"PCR-Beschlüsse bitte dringend überdenken"
+				"PCR-Beschlüsse bitte dringend überdenken",
+				"PCR-Testkapazitäten ungenutzt, bitte wieder für alle ermöglichen!",
+				"45% Positivrate, potenziell hohe Untererfassung: wieder mehr PCR-Tests ermöglichen!"
+			],
+			"einleitung": [
+				"Der ALM e.V. berichtet von einer deutlich rückläufigen Anzahl angeforderter PCR-Tests. Dies ist auf die Beschlüsse zur PCR-Testpriorisierung zurückzuführen.",
+				"Aus der Presse habe ich von den Beschlüssen zur PCR-Testpriorisierung erfahren.",
+				"In der tagesaktuellen Berichterstattung bin ich über die Beschlüsse zur Priorisierung von PCR-Tests gestolpert."
 			],
 			"beschwerde": [
-				"Es wurde bereits Ende letzten Jahres vor der ansteckenderen Omikron-Variante gewarnt. Die jetzigen Beschlüsse erwecken den Eindruck, dass die Gesundheitsministerkonferenz rechtzeitiges Handeln hier versäumt hat.",
-				"Die Inzidenzen bundesweit sind bei circa 1000 angelangt. Bestehende Maßnahmen bieten offensichtlich keinen ausreichenden Schutz.",
-				"Die Priorisierung ist fest im Beschluss verankert, die Anpassung der Rechtsfolgen für beispielsweise Quarantäne oder Genesenennachweise sollen dagegen nur geprüft werden. Das würde fatale Lücken offen lassen."
+				"Bei einer Test-Positivrate von knapp 45% ist die Pandemie noch lange nicht unter Kontrolle. Maßnahmen wie der \"Freedom Day\" sind aktuell falsch am Platze.",
+				"Die Inzidenzen bundesweit sind seit Wochen stabil über 1000. Bestehende Maßnahmen bieten offensichtlich keinen ausreichenden Schutz.",
+				"Statistiken lassen sich zwar durch das Weglassen von Tests schönigen, der Bevölkerung ist damit aber nicht geholfen."
 			],
 			"appell": [
-				"In den Beschlüssen vermisse ich insgesamt den Ausbau der vorhandenen Kapazitäten. Hier besteht in meinen Augen dringender Handlungsbedarf.",
-				"Es wäre allerhöchste Zeit, niedrigschwellig, kostenlos und für alle tägliche PCR-Tests anzubieten. Der Stadt Wien ist das gelungen, ich erwarte, dass ${Bundesland} hier zeitnah Kapazitäten aufbaut.",
-				"Solange Schulen im Pandemiegeschehen offen gehalten werden, müssen Schüler_innen und Lehrkräfte in die Priorisierung eingebunden werden. Das habe ich in der Beschlussfassung vermisst.",
-				"Wenn Schüler_innen und Lehrkräfte tatsächlich nicht in die Priorisierung mit aufgenommen werden, muss sichergestellt werden, dass positive Schnelltests in der Schule ausreichend für Meldungen bei der Unfallversicherung sind.",
-				"Damit Antigentests zuverlässig PCR-Testungen ersetzen können, muss für die zahlreichen Teststellen eine strengere Qualitätskontrolle erfolgen. Zu häufig werden Tests dort nicht mit der nötigen Sorgfalt durchgeführt.",
+				"Die Labore weisen Kapazitäten auf, diese sollten auch genutzt werden! Ohne einen Überblick über das Pandemiegeschehen, rauschen wir nur wieder in die nächste Welle.",
+				"Es wäre allerhöchste Zeit, niedrigschwellig, kostenlos und für alle tägliche PCR-Tests anzubieten. Der Stadt Wien ist das gelungen, ich erwarte, dass ${Bundesland} hier weiter Kapazitäten aufbaut.",
+				"Antigentests unterliegen nicht den gleichen Kontrollen wie PCR-Tests, sie bieten keinen Ersatz. Die Aufhebung der PCR-Test-Priorisierung ist das Mindeste, was Sie jetzt tun können.",
 				"Wenn Antigentests tatsächlich eine Diagnose über PCR ersetzen sollen, muss die Lagerung der Tests für Testzentren dringend regelementiert und überprüft werden. Die aktuellen Außentemperaturen sind weiter außerhalb des für die Tests zugelassenen Bereichs.",
 				"Durch die starke Fokussierung auf Antigentests sollte dringend die Empfindlichkeit dieser in die Reglementierung einbezogen werden, da aus den Daten des PEI hervorgeht, dass einige selbst bei sehr hohen Viruslasten nicht zuverlässig anschlagen. Hier müssen Mindeststandards etabliert werden."
 			]

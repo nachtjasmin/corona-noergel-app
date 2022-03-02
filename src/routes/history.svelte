@@ -1,5 +1,5 @@
 <h1 class="text-2xl font-bold">Historie von beschweren.rocks</h1>
-<div class="prose mt-4 dark:prose-invert">
+<div class="prose mt-4 mb-8 dark:prose-invert">
 	<p>
 		Am 22.01. haben die Gesundheitsministieren in einer Telefonkonferenz weitgehende <a
 			href="https://www.gmkonline.de/Beschluesse.html?uid=268&jahr=2022"

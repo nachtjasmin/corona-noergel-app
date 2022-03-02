@@ -1,7 +1,7 @@
 {
 	"$schema": "../schema/bundeslaender.schema.json",
 	"BW": {
-		"land": "Baden Württemberg",
+		"land": "Baden-Württemberg",
 		"kontakte": [
 			{
 				"bezeichnung": "Ministerium für Soziales, Gesundheit und Integration",
@@ -208,7 +208,7 @@
 		]
 	},
 	"MV": {
-		"land": "Mecklenburg Vorpommern",
+		"land": "Mecklenburg-Vorpommern",
 		"kontakte": [
 			{
 				"bezeichnung": "Ministerium für Soziales, Gesundheit und Sport",
@@ -266,7 +266,7 @@
 		]
 	},
 	"NW": {
-		"land": "Nordrhein Westfalen",
+		"land": "Nordrhein-Westfalen",
 		"kontakte": [
 			{
 				"bezeichnung": "Ministerium für Arbeit, Gesundheit und Soziales",
@@ -295,7 +295,7 @@
 		]
 	},
 	"RP": {
-		"land": "Rheinland Pfalz",
+		"land": "Rheinland-Pfalz",
 		"kontakte": [
 			{
 				"bezeichnung": "Ministerium für Wissenschaft und Gesundheit",
@@ -382,7 +382,7 @@
 		]
 	},
 	"ST": {
-		"land": "Sachsen Anhalt",
+		"land": "Sachsen-Anhalt",
 		"kontakte": [
 			{
 				"bezeichnung": "Ministerium für Arbeit, Soziales und Gesundheit und Gleichstellung",

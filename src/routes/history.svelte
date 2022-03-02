@@ -20,4 +20,12 @@
 		<a href="https://twitter.com/MDRAktuell/status/1491006160874483713">Laut MDR</a>
 		kündigt Lauterbach an, dass Anspruch auf PCR-Tests bei positivem Schnelltest weiterhin bestehen soll.
 	</p>
+	<p>
+		<b>Update (02.03.2022):</b> PCR-Tests rückläufig, Anpassung der Daten. Laut dem <i>ALM e.V.</i>,
+		einem Zusammenschluss von Laboren,
+		<a
+			href="https://www.alm-ev.de/kw08-deutlich-weniger-sars-cov-2-pcr-tests-bei-weiter-hoher-positivrate-untererfassung-koennte-hoch-sein/"
+			>könnte die Unterfassung der Corona-Infektionen hoch sein</a
+		>. Daher wurden die Beschwerden aktualisiert, um auf diesen Umstand aufmerksam zu machen.
+	</p>
 </div>

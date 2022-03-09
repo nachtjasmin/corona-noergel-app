@@ -18,11 +18,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run linters
-        run: npm run check
-
       - name: Run build
         run: npm run build
+
+      # Linters need to run after the build, because the build is generating the SvelteKit tsconfig.json.
+      - name: Run linters
+        run: npm run check
 
   schema-validation:
     runs-on: ubuntu-latest

@@ -60,7 +60,6 @@
 		focusText();
 	};
 	const focusText = () => document.getElementById("text").focus();
-	$: console.log($data.empfaenger);
 </script>
 
 <h1 class="text-2xl font-bold">Corona-Nörgel-App 🦠😷</h1>

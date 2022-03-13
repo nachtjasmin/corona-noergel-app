@@ -106,10 +106,15 @@
 		},
 		{
 			"name": "Lage in Kindertagesstätten",
-			"betreff": ["Corona-Situation in KiTas", "Pandemie ist auch in KiTas"],
+			"betreff": [
+				"Corona-Situation in KiTas",
+				"Pandemie ist auch in KiTas",
+				"Kitas außer Kontrolle"
+			],
 			"einleitung": [
 				"Viele Familien sind auch in der Pandemie auf Kindertagesstätten und Kindergärten angewiesen.",
-				"KiTas sind für viele Elternteile unverzichtbare Unterstützung für den Alltag."
+				"KiTas sind für viele Elternteile unverzichtbare Unterstützung für den Alltag.",
+				"Als Arbeitgeber sind auch Kindertagesstätten in der Verantwortung, sowohl Mitarbeitende als auch die Kinder zu schützen."
 			],
 			"beschwerde": [
 				"Konsequentes Maskentragen ist in KiTas ein äußerst unrealistisches Szenario.",
@@ -117,7 +122,8 @@
 				"Für unter 5-jährige sind bislang keine Impfstoffe gegen Covid zugelassen.",
 				"Auch wenn im Vergleich zu anderen Altersgruppen Infektionen für Kleinkinder weniger gefährlich sind, können sie ältere Familienmitglieder infizieren.",
 				"Covid kann bei sehr jungen Personen hohes Fieber auslösen, was in der Altersgruppe sehr gefährlich ist.",
-				"Nach Covid-Erkrankungen besteht bei Kindern ein vielfach erhöhtes Risiko für PIMS."
+				"Nach Covid-Erkrankungen besteht bei Kindern ein vielfach erhöhtes Risiko für PIMS.",
+				"Durch die Omikron-Welle sind sowohl die Infektionszahlen bei Beschäftigten als auch bei Kindern deutlich angestiegen, Konsequenzen sind dringend geboten."
 			],
 			"appell": [
 				"Da sich die Kleinsten nicht individuell durch Masken, Abstand oder Impfung schützen können, ist es notwendig, Gruppen zu verkleinern.",

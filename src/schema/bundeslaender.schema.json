@@ -59,6 +59,11 @@
 					"pattern": "[0-9 ]+",
 					"title": "Die Fax-Nummer eines Ministeriums."
 				},
+				"tel": {
+					"type": "string",
+					"pattern": "[0-9 ]+",
+					"title": "Die Telefon-Nummer eines Ministeriums."
+				},
 				"anschrift": {
 					"title": "Die Anschrift eines Ministeriums.",
 					"examples": [["Test-Straße 1", "12345 Musterstadt"]],

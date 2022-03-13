@@ -25,6 +25,7 @@
 		$data.gruss?.length > 0;
 	$: showSendButton = finalText.length > 0;
 	$: mailto = buildMailToLink($data.empfaenger?.mail ?? "", finalText);
+	$: telLink = `tel:${$data?.empfaenger?.tel}`;
 	$: beschwerden = topic?.beschwerde;
 	$: anreden = replaceStringPlaceholders($data.empfaenger?.anreden ?? $cna.anrede, {
 		receiver: $data.empfaenger,
@@ -181,22 +182,45 @@
 	</fieldset>
 </form>
 <section class:hidden={!showSendButton}>
-	<p class="section-header">Schritt 5 von 5: Mail verschicken</p>
-	<p class="text-sm">
-		Bei dem Klick auf den folgenden Button wird ein sogenannter <code>mailto:</code>-Link erzeugt.
-		Dieser öffnet dein E-Mail-Programm mit dem obigen Text. Dabei werden zu keinem Zeitpunkt
-		Informationen an uns übermittelt.
+	<p class="section-header">Schritt 5 von 5: Druck aufbauen!</p>
+	<p>
+		Damit wir endlich gehört werden, ist es Zeit, Druck auf die Verantwortlichen aufzubauen! Dies
+		kann über verschiedene Wege geschehen, der Einfachste dürfte dabei für Viele der Versand der
+		automatisch erstellten E-Mail sein.
 	</p>
-	<Button href={mailto} class="mt-4">Mail senden</Button>
+	<p>
+		Aber auch der Anruf oder das Versanden eines Faxes sind <b>sehr effektive Methoden</b>, um Druck
+		aufzubauen. Diese sind aber nicht für alle zugänglich. Sofern Du jedoch Kapazitäten für den ein
+		oder anderen Anruf hast, scheue dich nicht!
+	</p>
 
-	<p class="section-header mt-4">
-		Alternativ: Brief/Fax senden <sup class="text-gray-600 dark:text-gray-400">(beta)</sup>
-	</p>
-	<p class="text-sm">
-		Papier ist in Deutschland heilig, wenn du möchstest, kannst du den obigen Text auch als fertigen
-		Brief ausdrucken oder als Fax absenden.
-	</p>
-	<Button href="/letter" class="mt-4">Brief/Fax senden</Button>
+	<div class="mt-4 flex flex-col justify-between gap-8">
+		<div>
+			<p class="mb-2 text-sm">
+				Bei dem Klick auf den Button wird ein sogenannter <code>mailto:</code>-Link erzeugt. Dieser
+				öffnet dein E-Mail-Programm mit dem obigen Text. Dabei werden zu keinem Zeitpunkt
+				Informationen an uns übermittelt.
+			</p>
+			<Button href={mailto}>Mail senden</Button>
+		</div>
+		<div>
+			<p class="mb-2 text-sm">
+				Papier ist in Deutschland heilig, wenn du möchstest, kannst du den obigen Text auch als
+				fertigen Brief ausdrucken oder als Fax absenden.
+			</p>
+			<Button href="/letter">Brief/Fax senden</Button>
+		</div>
+		{#if $data.empfaenger.tel}
+			<div>
+				<p class="mb-2 text-sm">
+					Der Text kann für einen Anruf als Gedankenstütze dienen. Erreichen tust du die
+					Verantwortlichen unter:
+					<MonospacedInfo>{$data.empfaenger.tel}</MonospacedInfo>
+				</p>
+				<Button href={telLink}>Anrufen</Button>
+			</div>
+		{/if}
+	</div>
 </section>
 
 <style lang="postcss">

@@ -56,6 +56,7 @@ export type Receiver = {
 	name: string;
 	mail: string;
 	fax: string;
+	tel?: string;
 	anschrift: string[];
 	anreden?: string[];
 };

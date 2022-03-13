@@ -23,7 +23,7 @@
 		$data.beschwerde?.length > 0 &&
 		$data.appell?.length > 0 &&
 		$data.gruss?.length > 0;
-	$: showSendButton = finalText.length > 0;
+	$: showSendButton = showTextBuilder && finalText.length > 0;
 	$: mailto = buildMailToLink($data.empfaenger?.mail ?? "", finalText);
 	$: telLink = `tel:${$data?.empfaenger?.tel}`;
 	$: beschwerden = topic?.beschwerde;
@@ -210,7 +210,7 @@
 			</p>
 			<Button href="/letter">Brief/Fax senden</Button>
 		</div>
-		{#if $data.empfaenger.tel}
+		{#if $data?.empfaenger?.tel}
 			<div>
 				<p class="mb-2 text-sm">
 					Der Text kann für einen Anruf als Gedankenstütze dienen. Erreichen tust du die

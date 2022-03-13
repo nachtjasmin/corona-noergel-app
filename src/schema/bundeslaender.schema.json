@@ -66,6 +66,17 @@
 					"uniqueItems": true,
 					"minItems": 1,
 					"items": { "type": "string" }
+				},
+				"anreden": {
+					"title": "Eine alternative Liste von Anreden.",
+					"description": "Sofern diese gesetzt sind, werden die Standardanreden nicht berücksichtigt. Dies kann nützlich sein, um Fehler wie etwa 'Sehr geehrtes Minister...' o.ä. zu vermeiden.",
+					"type": "array",
+					"uniqueItems": true,
+					"minItems": 1,
+					"items": { "type": "string" },
+					"examples": [
+						["Sehr geehrtes Zauberministerium", "Sehr geehrtes Team vom Zauberministerium"]
+					]
 				}
 			},
 			"additionalProperties": false,

@@ -26,7 +26,9 @@
 	$: showSendButton = finalText.length > 0;
 	$: mailto = buildMailToLink($data.empfaenger?.mail ?? "", finalText);
 	$: beschwerden = topic?.beschwerde;
-	$: anreden = replaceStringPlaceholders($cna.anrede, { receiver: $data.empfaenger });
+	$: anreden = replaceStringPlaceholders($data.empfaenger?.anreden ?? $cna.anrede, {
+		receiver: $data.empfaenger,
+	});
 	$: appelle = replaceStringPlaceholders(topic?.appell, {
 		bundesland: bundeslaender[$data.bundeslandKey]?.land ?? "",
 	});
@@ -57,6 +59,7 @@
 		focusText();
 	};
 	const focusText = () => document.getElementById("text").focus();
+	$: console.log($data.empfaenger);
 </script>
 
 <h1 class="text-2xl font-bold">Corona-Nörgel-App 🦠😷</h1>

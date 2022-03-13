@@ -3,26 +3,10 @@
 	"title": "Sammlung von Bundesländern",
 	"description": "Eine Sammlung von Bundesländern und deren Kontaktdaten.",
 	"type": "object",
-	"properties": {
-		"$schema": true,
-		"BW": { "type": "object", "$ref": "#/definitions/bundesland" },
-		"BY": { "type": "object", "$ref": "#/definitions/bundesland" },
-		"BE": { "type": "object", "$ref": "#/definitions/bundesland" },
-		"BB": { "type": "object", "$ref": "#/definitions/bundesland" },
-		"HB": { "type": "object", "$ref": "#/definitions/bundesland" },
-		"HH": { "type": "object", "$ref": "#/definitions/bundesland" },
-		"HE": { "type": "object", "$ref": "#/definitions/bundesland" },
-		"MV": { "type": "object", "$ref": "#/definitions/bundesland" },
-		"NI": { "type": "object", "$ref": "#/definitions/bundesland" },
-		"NW": { "type": "object", "$ref": "#/definitions/bundesland" },
-		"RP": { "type": "object", "$ref": "#/definitions/bundesland" },
-		"SL": { "type": "object", "$ref": "#/definitions/bundesland" },
-		"SN": { "type": "object", "$ref": "#/definitions/bundesland" },
-		"ST": { "type": "object", "$ref": "#/definitions/bundesland" },
-		"SH": { "type": "object", "$ref": "#/definitions/bundesland" },
-		"TH": { "type": "object", "$ref": "#/definitions/bundesland" }
+	"properties": { "$schema": true },
+	"patternProperties": {
+		"^.*$": { "type": "object", "$ref": "#/definitions/bundesland" }
 	},
-	"additionalProperties": false,
 	"definitions": {
 		"bundesland": {
 			"type": "object",

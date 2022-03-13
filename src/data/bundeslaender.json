@@ -1,5 +1,23 @@
 {
 	"$schema": "../schema/bundeslaender.schema.json",
+	"BUND": {
+		"land": "Gesundheitsausschuss des Bundes",
+		"kontakte": [
+			{
+				"bezeichnung": "Allgemeine Kontaktadresse",
+				"titel": "Menschen",
+				"name": "vom Gesundheitsausschuss",
+				"anschrift": ["Platz der Republik 1", "11011 Berlin"],
+				"fax": "+49 (0)30 227 36724",
+				"mail": "gesundheitsausschuss@bundestag.de",
+				"anreden": [
+					"Sehr geehrter Gesundheitsausschuss",
+					"Sehr geehrte Mitglieder*innen vom Gesundheitsausschuss",
+					"Sehr geehrte Vorsitzende des Gesundheitsausschusses"
+				]
+			}
+		]
+	},
 	"BW": {
 		"land": "Baden-Württemberg",
 		"kontakte": [

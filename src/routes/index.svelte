@@ -2,7 +2,7 @@
 	import { cna } from "$lib/cna";
 	import Button from "$lib/components/Button.svelte";
 	import MonospacedInfo from "$lib/components/MonospacedInfo.svelte";
-	import { Bundesland, Topic, type Bundeslaender } from "$lib/definitions";
+	import type { Bundesland, Topic, Bundeslaender } from "$lib/definitions";
 	import { getRandom, replaceStringPlaceholders } from "$lib/helpers";
 	import { data, pageTitle } from "$lib/store";
 	import { tick } from "svelte";

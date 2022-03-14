@@ -2,6 +2,7 @@
 	"$schema": "../schema/bundeslaender.schema.json",
 	"BUND": {
 		"land": "Gesundheitsausschuss des Bundes",
+		"onlyLimitedEntries": true,
 		"kontakte": [
 			{
 				"bezeichnung": "Allgemeine Kontaktadresse",

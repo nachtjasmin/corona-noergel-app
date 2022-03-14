@@ -16,6 +16,11 @@
 					"title": "Der Name des Bundeslandes.",
 					"type": "string"
 				},
+				"onlyLimitedEntries": {
+					"title": "Beschränkt die Einträge für dieses Bundesland auf ausschließlich die gefilterten Themen.",
+					"type": "boolean",
+					"default": false
+				},
 				"kontakte": {
 					"title": "Kontaktdaten für das Bundesland.",
 					"type": "array",

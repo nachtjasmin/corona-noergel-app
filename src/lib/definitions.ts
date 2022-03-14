@@ -24,6 +24,7 @@ export interface Bundeslaender {
 
 export class Bundesland {
 	land: string;
+	onlyLimitedEntries = false;
 	kontakte: Information[];
 }
 

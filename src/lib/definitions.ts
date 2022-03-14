@@ -24,6 +24,7 @@ export interface Bundeslaender {
 
 export class Bundesland {
 	land: string;
+	onlyLimitedEntries?: boolean = false;
 	kontakte: Information[];
 }
 
@@ -44,6 +45,7 @@ export class CNAData {
 
 export class Topic {
 	name?: string;
+	limit?: string[];
 	einleitung: string[] = [];
 	betreff: string[] = [];
 	beschwerde: string[] = [];
@@ -56,5 +58,7 @@ export type Receiver = {
 	name: string;
 	mail: string;
 	fax: string;
+	tel?: string;
 	anschrift: string[];
+	anreden?: string[];
 };

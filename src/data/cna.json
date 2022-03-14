@@ -10,44 +10,30 @@
 		"Sehr geehrte Bearbeitende",
 		"Sehr geehrte zuständige Person"
 	],
-	"gruss": [
-		"Freundliche Grüße",
-		"Mit freundlichen Grüßen",
-		"Beste Grüße",
-		"Hochachtungsvoll",
-		"Danki, UwU"
-	],
+	"gruss": ["Freundliche Grüße", "Mit freundlichen Grüßen", "Beste Grüße", "Hochachtungsvoll"],
 	"topics": [
 		{
-			"name": "Beschlüsse zur PCR-Testpriorisierung",
+			"name": "Ungenutzte Kapazitäten für PCR-Tests",
+			"betreff": [
+				"PCR-Priorisierung: Beschwerde",
+				"PCR-Beschlüsse bitte dringend überdenken",
+				"PCR-Testkapazitäten ungenutzt, bitte wieder für alle ermöglichen!",
+				"50% Positivrate, potenziell hohe Untererfassung: wieder mehr PCR-Tests ermöglichen!"
+			],
 			"einleitung": [
-				"Mit großem Interesse habe ich Berichte zur Telefonkonferenz der Gesundheitsministerkonferenz verfolgt.",
+				"Der ALM e.V., ein Zusammenschluss von Laboren, berichtet von einer deutlich rückläufigen Anzahl angeforderter PCR-Tests. Dies ist auf die Beschlüsse zur PCR-Testpriorisierung zurückzuführen.",
 				"Aus der Presse habe ich von den Beschlüssen zur PCR-Testpriorisierung erfahren.",
 				"In der tagesaktuellen Berichterstattung bin ich über die Beschlüsse zur Priorisierung von PCR-Tests gestolpert."
 			],
-			"betreff": [
-				"Beschwerde zum Beschluss der PCR-Priorisierung vom 22.01.",
-				"PCR-Priorisierung: Beschwerde",
-				"Beschwerde zum PCR-Beschluss",
-				"Bitte bei der PCR-Priorisierung noch mal nacharbeiten",
-				"PCR-Priorisierungsbeschluss nicht ausreichend",
-				"PCR-Beschluss vom 22.01. ist nicht gut",
-				"Lückenhafter Beschluss zur Einschränkung PCR-Tests",
-				"PCR-Kapazitäten nicht beschränken",
-				"Beschwerde zu den Beschlüssen vom 22.01.",
-				"PCR-Beschlüsse bitte dringend überdenken"
-			],
 			"beschwerde": [
-				"Es wurde bereits Ende letzten Jahres vor der ansteckenderen Omikron-Variante gewarnt. Die jetzigen Beschlüsse erwecken den Eindruck, dass die Gesundheitsministerkonferenz rechtzeitiges Handeln hier versäumt hat.",
-				"Die Inzidenzen bundesweit sind bei circa 1000 angelangt. Bestehende Maßnahmen bieten offensichtlich keinen ausreichenden Schutz.",
-				"Die Priorisierung ist fest im Beschluss verankert, die Anpassung der Rechtsfolgen für beispielsweise Quarantäne oder Genesenennachweise sollen dagegen nur geprüft werden. Das würde fatale Lücken offen lassen."
+				"Bei einer Test-Positivrate von rund 50% ist die Pandemie noch lange nicht unter Kontrolle. Maßnahmen wie der \"Freedom Day\" sind aktuell falsch am Platze.",
+				"Wir erreichen aktuell neue Inzidenz-Höchstwerte, zuletzt von 1500. Bestehende Maßnahmen bieten offensichtlich keinen ausreichenden Schutz.",
+				"Statistiken lassen sich zwar durch das Weglassen von Tests schönigen, der Bevölkerung ist damit aber nicht geholfen."
 			],
 			"appell": [
-				"In den Beschlüssen vermisse ich insgesamt den Ausbau der vorhandenen Kapazitäten. Hier besteht in meinen Augen dringender Handlungsbedarf.",
-				"Es wäre allerhöchste Zeit, niedrigschwellig, kostenlos und für alle tägliche PCR-Tests anzubieten. Der Stadt Wien ist das gelungen, ich erwarte, dass ${Bundesland} hier zeitnah Kapazitäten aufbaut.",
-				"Solange Schulen im Pandemiegeschehen offen gehalten werden, müssen Schüler_innen und Lehrkräfte in die Priorisierung eingebunden werden. Das habe ich in der Beschlussfassung vermisst.",
-				"Wenn Schüler_innen und Lehrkräfte tatsächlich nicht in die Priorisierung mit aufgenommen werden, muss sichergestellt werden, dass positive Schnelltests in der Schule ausreichend für Meldungen bei der Unfallversicherung sind.",
-				"Damit Antigentests zuverlässig PCR-Testungen ersetzen können, muss für die zahlreichen Teststellen eine strengere Qualitätskontrolle erfolgen. Zu häufig werden Tests dort nicht mit der nötigen Sorgfalt durchgeführt.",
+				"Die Labore weisen Kapazitäten auf, diese sollten auch genutzt werden! Ohne einen Überblick über das Pandemiegeschehen, rauschen wir nur wieder in die nächste Welle.",
+				"Es wäre allerhöchste Zeit, niedrigschwellig, kostenlos und für alle tägliche PCR-Tests anzubieten. Der Stadt Wien ist das gelungen, ich erwarte, dass ${Bundesland} hier weiter Kapazitäten aufbaut.",
+				"Antigentests unterliegen nicht den gleichen Kontrollen wie PCR-Tests, sie bieten keinen Ersatz. Die Aufhebung der PCR-Test-Priorisierung ist das Mindeste, was Sie jetzt tun können.",
 				"Wenn Antigentests tatsächlich eine Diagnose über PCR ersetzen sollen, muss die Lagerung der Tests für Testzentren dringend regelementiert und überprüft werden. Die aktuellen Außentemperaturen sind weiter außerhalb des für die Tests zugelassenen Bereichs.",
 				"Durch die starke Fokussierung auf Antigentests sollte dringend die Empfindlichkeit dieser in die Reglementierung einbezogen werden, da aus den Daten des PEI hervorgeht, dass einige selbst bei sehr hohen Viruslasten nicht zuverlässig anschlagen. Hier müssen Mindeststandards etabliert werden."
 			]
@@ -60,21 +46,20 @@
 				"Unterrichtsausfälle und Strategie der Bundesregierung"
 			],
 			"einleitung": [
-				"Mit Entsetzen musste ich die Bundespressekonferenz vom 28.01.2022 sehen, in der unser Bundesgesundheitsminister von einem Verlauf nach Plan spricht.",
-				"Deutschland treibt auf immer höheren, kurz aufeinanderfolgenden Corona-Wellen. Nach der Delta-Welle steht nun Omikron an. Dennoch bleiben die Schulen geöffnet.",
+				"Deutschland treibt auf immer höheren, kurz aufeinanderfolgenden Corona-Wellen. Die Omikron-Welle dominiert seit Wochen das Infektionsgeschehen. Dennoch bleiben die Schulen geöffnet.",
 				"Aufgrund der hohen Inzidenzen, insbesondere unter Schüler*innen, fällt immer häufiger der Unterricht aus oder kann nicht wie geplant stattfinden."
 			],
 			"beschwerde": [
-				"Angesichts der hohen Inzidenzen jenseits der 1200, finde ich es fatal, dass der Schutz der Kinder keine Priorität mehr aufweist.",
+				"Angesichts der hohen Inzidenzen jenseits der 1000, finde ich es fatal, dass der Schutz der Kinder keine Priorität mehr aufweist.",
 				"Kinder, insbesondere in den Kitas, haben bisher nicht die Möglichkeit gehabt, geimpft werden zu können. Die hohen Inzidenzen deuten darauf hin, dass der Schutz dieser Bevölkerungsgruppe egal scheint.",
 				"Eltern werden seit Beginn in dieser Pandemie alleine gelassen, sowohl auf Landesebene und auf Bundesebene scheint der Schutz von Familien keine Rolle zu spielen.",
 				"Während es eine legitime politische Entscheidung sein kann, Kontakte und Begegnungen durch Aufrechterhalten von schulischem Alltag inkaufzunehmen, vermisse ich aktuell den Teil des Konzepten, der Lernende und Lehrende ausreichend schützt.",
-				"Es entsteht der Eindruck, dass der Wille Schüler*innen vor einer der für sie aktuell gefährlichsten Krankheiten zu schützen ein paar plakativen Alibi-Regeln gewichen ist."
+				"Es entsteht der Eindruck, dass der Wille Schüler*innen vor einer der für sie aktuell gefährlichsten Krankheiten zu schützen, ein paar plakativen Alibi-Regeln gewichen ist."
 			],
 			"appell": [
 				"Ich bitte sie daher, schleunigst eine Null-Inzidenz-Strategie zu etablieren, um Kinder und Jugendliche in dieser Pandemie zu schützen.",
 				"Zum Schutz unserer Kinder, bitte ich Sie daher darum, geeignete Maßnahmen an den Schulen und Kitas zu ergreifen, etwa die Wiedereinführung der flächendeckenden PCR-Tests.",
-				"Bitte schützen Sie unsere Kinder!",
+				"Ein Auslaufen der Schutzmaßnahmen zum Mai ist angesichts dieser Lage unverantwortlich. Das Gegenteil - die Umsetzung der S3-Richtlinien - ist als absolutes Minimum zu ergreifen.",
 				"Als absolutes Minimum sollten dringend zeitnah die S3-Leitlinien zum Schulbetrieb in der Pandemie umgesetzt werden.",
 				"Hören Sie endlich auf, regulären Schulbetrieb als absolute unantastbare Priorität zu behandeln, hinter dem alles andere zurückweichen muss.",
 				"In einer Situation, in der die Auflösung positiver PCR-Pools an Schulen nicht mehr gewährleistet werden kann, muss mindestens die Präsenzpflicht ausgesetzt werden.",
@@ -82,34 +67,16 @@
 			]
 		},
 		{
-			"name": "Verlängerung der Arbeitszeiten für die kritische Infrastruktur",
-			"betreff": [
-				"12 Stunden und Sonntagsarbeit, ist das euer Ernst?",
-				"Ausweitung der Arbeitszeiten bei einer pandemie-müden Bevölkerung",
-				"Längere Arbeitszeiten als Dank nach zwei Jahren unermüdlichem Einsatz?"
-			],
-			"einleitung": [
-				"Niedersachsen und Hessen haben damit begonnen, die Begrenzung der Arbeitszeit für den Erhalt der kritischen Infrastruktur aufzuheben.",
-				"Eine Ausweitung der Arbeitszeit zum Erhalt der Infrastruktur ist ein fatales Zeichen in Richtung des Arbeitnehmerschutzes. Das Aufrechterhalten der Wirtschaft wird wichtiger gesehen, als der Schutz der Bevölkerung.",
-				"Mit Bedauern musste ich lesen, dass nach Niedersachsen nun auch Hessen eine entsprechende Ausweitung der Arbeitszeit einführt."
-			],
-			"beschwerde": [
-				"Dabei zeigen wissenschaftliche Daten, dass längere Arbeitszeiten nicht den gewünschten Effekt erzielen, sondern nur zu Burnouts und Fehlern während der Arbeit führen. Ich finde es daher unerhört, dass diese Maßnahme in Betracht gezogen wird.",
-				"Es ist ein Schlag in die Magengrube, ausgerechnet die Menschen zu bestrafen, die bereits seit zwei Jahren ihr Bestes geben."
-			],
-			"appell": [
-				"Ich bitte Sie daher, eine Null-Inzidenz-Strategie und entsprechende Notfallpläne auszuarbeiten, von einer bundesweiten Einführung der längeren Arbeitszeit ist abzusehen.",
-				"Die Einführung einer Null-Inzidenz-Strategie ist in meinen Augen deutlich zielführender als das \"Ausbrennen\" einer Bevölkerungsgruppe.",
-				"Ich bitte Sie daher, dieses Vorgehen zu überdenken und auf entsprechende Maßnahmen zu verzichten. Der Schutz der Bevölkerung sollte über den wirtschaftlichen Interessen stehen.",
-				"Diese Strategie ist kurzfristig gedacht, verwirkt aber das noch übrige Vertrauen in politische Maßnahmen. Daher ist davon abzusehen und stattdessen ein langfristiges Schutzkonzept zu etablieren."
-			]
-		},
-		{
 			"name": "Lage in Kindertagesstätten",
-			"betreff": ["Corona-Situation in KiTas", "Pandemie ist auch in KiTas"],
+			"betreff": [
+				"Corona-Situation in KiTas",
+				"Pandemie ist auch in KiTas",
+				"Kitas außer Kontrolle"
+			],
 			"einleitung": [
 				"Viele Familien sind auch in der Pandemie auf Kindertagesstätten und Kindergärten angewiesen.",
-				"KiTas sind für viele Elternteile unverzichtbare Unterstützung für den Alltag."
+				"KiTas sind für viele Elternteile unverzichtbare Unterstützung für den Alltag.",
+				"Als Arbeitgeber sind auch Kindertagesstätten in der Verantwortung, sowohl Mitarbeitende als auch die Kinder zu schützen."
 			],
 			"beschwerde": [
 				"Konsequentes Maskentragen ist in KiTas ein äußerst unrealistisches Szenario.",
@@ -117,12 +84,59 @@
 				"Für unter 5-jährige sind bislang keine Impfstoffe gegen Covid zugelassen.",
 				"Auch wenn im Vergleich zu anderen Altersgruppen Infektionen für Kleinkinder weniger gefährlich sind, können sie ältere Familienmitglieder infizieren.",
 				"Covid kann bei sehr jungen Personen hohes Fieber auslösen, was in der Altersgruppe sehr gefährlich ist.",
-				"Nach Covid-Erkrankungen besteht bei Kindern ein vielfach erhöhtes Risiko für PIMS."
+				"Nach Covid-Erkrankungen besteht bei Kindern ein vielfach erhöhtes Risiko für PIMS.",
+				"Durch die Omikron-Welle sind sowohl die Infektionszahlen bei Beschäftigten als auch bei Kindern deutlich angestiegen, Konsequenzen sind dringend geboten."
 			],
 			"appell": [
 				"Da sich die Kleinsten nicht individuell durch Masken, Abstand oder Impfung schützen können, ist es notwendig, Gruppen zu verkleinern.",
 				"KiTas müssen konsequent mit Luftfiltern ausgestattet werden, um Infektionen - nicht nur mit Covid - zu vermeiden.",
-				"Der Eindruck, dass KiTas in der Pandemiepolitik als komplett ungefährliche Orte gehandelt werden, sollte nicht erhalten bleiben."
+				"Der Eindruck, dass KiTas in der Pandemiepolitik als komplett ungefährliche Orte gehandelt werden, sollte nicht erhalten bleiben.",
+				"Ein Aussteigen aus dem allgemeinen Testen, so wie es NRW angekündigt hatte, ist mindestens grobe Fahrlässigkeit auf Kosten der Kinder."
+			]
+		},
+		{
+			"name": "Sinn und Unsinn des \"Freedom Day\"",
+			"betreff": [
+				"Dauerhafte Einschränkungen eines nicht unbeträchtlichen Teil für den Spaß einiger?",
+				"Freiheit kann es nur geben, wenn alle davon profitieren",
+				"\"Freedom day?\" - Euer Ernst?"
+			],
+			"einleitung": [
+				"Zum 20. März sollen alle Einschränkungen fallen. Von einigen Parlamentarier*innen wird dies auch als \"Freedom Day\" bezeichnet.",
+				"Einschränkungen sollen zum Ende des Monats fallen, aber auf wessen Kosten?"
+			],
+			"beschwerde": [
+				"Das Virus richtet sich nicht nach dem Tag oder nach dem Ort. Die bestehenden Maßnahmen reichen nicht aus, um das Virus unter Kontrolle zu bringen, eine Aufhebung der Maßnahmen wird daher ins Chaos führen.",
+				"Pauschale Lockerungen, die sich nicht nach den Infektionszahlen richten, sind zutiefst wissenschaftsfeindlich. Nicht jede Person hat ein intaktes Immunsystem, diese Menschen werden bei diesen Aufhebungen völlig vergessen.",
+				"Zum Schutz der gesamten Bevölkerung und nicht nur des gesunden Teils, ist es wichtig, die Maßnahmen weiter aufrecht zu erhalten, bis das Virus eingedämmt ist."
+			],
+			"appell": [
+				"Die Fortführung einfacher Schutzmaßnahmen, dazu gehört meines Erachtens auch 2G in Innenräumen, ist für eine Kontrolle des Virus notwendig. Stärkere Schutzmaßnahmen sollten allerdings etabliert werden, damit wir langfristig alle wieder aufatmen können.",
+				"Schutzmaßnahmen und eine Strategie zur Eindämmung der Pandemie sind meines Erachtens dringend notwendig. So zu tun, als gäbe es kein Corona mehr, ist einer Regierung unwürdig.",
+				"Eine pauschale Aufhebung entspricht einer Kapitulation. Dass dies überhaupt in Betracht gezogen wurde, zeigt, dass Ihnen die Menschen in diesem Land egal sind. Handeln Sie endlich!"
+			]
+		},
+		{
+			"name": "Reform des Infektionsschutzgesetz",
+			"limit": ["BUND"],
+			"betreff": ["Geplante IfSG-Reform", "Neufassung des Infektionsschutzgesetzes"],
+			"einleitung": [
+				"Die Regierungsfraktionen haben passend zum Ende der im Infektionsschutzgesetz befristeten Maßnahmen einen Entwurf für neue Regelungen vorgelegt.",
+				"Der Bundestag und federführend der Gesundheitssauschuss beraten aktuell über die Neufassung der Infektionsschutzmaßnahmen in der Corona-Pandemie.",
+				"Die meisten Zuständigkeiten für die Pandemiebekämpfung im Infektionsschutzgesetz sollen an die Bundesländer übertragen werden."
+			],
+			"beschwerde": [
+				"In der bisherigen Fassung des Entwurfs können Bundesländer einige Maßnahmen nur beschließen, wenn die Gefahr einer sich \"dynamisch ausbreitenden Infektionslage\" besteht. Der Entwurf sieht hier keine Grenzwerte vor.",
+				"Im Entwurf fällt die Verpflichtung zum Home-Office weg. Vor dem Hintergrund von Kontaktvermeidung und auch der sehr hohen Benzinpreise erscheint das etwas deplatziert.",
+				"Annähernd sämtliche Zuständigkeiten für den Infektionsschutz in der Pandemie gehen an die Bundesländer. Das wird einen gewaltigen Flickenteppich aus Hoffnungen, Wahlkampfversprechen und gegenseitigem Unterbieten befeuern.",
+				"In der aktuellen Fassung wird es sehr schwierig, Basis-Hygienemaßnahmen gerade in Schulen und Innenräumen verlässlich aufrecht zu erhalten. Das ist ein Irrweg."
+			],
+			"appell": [
+				"So als erster Schritt wäre nicht verkehrt, Schrankenwerte in konkreten Zahlen ins Gesetz zu schreiben - oder wenigstens eine Verordnungsermächtigung festzulegen, dass beispielsweise die Bundesregierung hier Grenzwerte verordnen kann.",
+				"Bei derzeit scheinbar grenzenlos nach oben steigenden Infektionszahlen klingt es äußerst unintuitiv den Ländern auch noch Schranken zu geben, welche Schutzmaßnahmen sie verordnen können. Schaffen Sie unbürokratische Befugnisse für die Länder.",
+				"Da auch bei eher milden Krankheitsverläufen chronische Beschwerden in der Folge entstehen können, ist das Beibehalten solider Basis-Schutzmaßnahmen unerlässlich. Die könnten im Entwurf, grade mit weiteren Maskenpflichten oder Home-Office-Regelungen nachgereicht werden.",
+				"Vielleicht wäre es an der Zeit nicht mehr so zu tun, als wäre alles in Ordnung, wenn sich binnen einer Woche regional 2 Prozent(!) der Bevölkerung neu infiziert haben.",
+				"Hören Sie auf die in der Anhörung vorgebrachten Argumente: Masken in Schulen, erprobte Maßnahmen, die die Länder weiter einsetzen können und konkrete Schwell- und Grenzwerte sollten ins Gesetz."
 			]
 		}
 	]

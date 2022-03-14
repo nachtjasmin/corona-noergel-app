@@ -2,7 +2,7 @@
 	import { cna } from "$lib/cna";
 	import Button from "$lib/components/Button.svelte";
 	import MonospacedInfo from "$lib/components/MonospacedInfo.svelte";
-	import type { Bundeslaender } from "$lib/definitions";
+	import type { Bundesland, Topic, Bundeslaender } from "$lib/definitions";
 	import { getRandom, replaceStringPlaceholders } from "$lib/helpers";
 	import { data, pageTitle } from "$lib/store";
 	import { tick } from "svelte";
@@ -14,7 +14,7 @@
 	let finalText = "";
 
 	$: topic = $cna.topics.find((x) => x.name === $data.topicName);
-	$: showBundeslandSelection = topic?.name?.length > 0;
+	$: showStateSelection = $data.bundeslandKey;
 	$: showSnippetSelection = $data.bundeslandKey !== "" && $data.empfaenger;
 	$: showTextBuilder =
 		showSnippetSelection &&
@@ -23,13 +23,35 @@
 		$data.beschwerde?.length > 0 &&
 		$data.appell?.length > 0 &&
 		$data.gruss?.length > 0;
-	$: showSendButton = finalText.length > 0;
+	$: showSendButton = showTextBuilder && finalText.length > 0;
 	$: mailto = buildMailToLink($data.empfaenger?.mail ?? "", finalText);
+	$: telLink = `tel:${$data?.empfaenger?.tel}`;
+	$: filterTopics($data.bundeslandKey);
 	$: beschwerden = topic?.beschwerde;
-	$: anreden = replaceStringPlaceholders($cna.anrede, { receiver: $data.empfaenger });
+	$: anreden = replaceStringPlaceholders($data.empfaenger?.anreden ?? $cna.anrede, {
+		receiver: $data.empfaenger,
+	});
 	$: appelle = replaceStringPlaceholders(topic?.appell, {
 		bundesland: bundeslaender[$data.bundeslandKey]?.land ?? "",
 	});
+
+	let topics: Topic[] = [];
+	const filterTopics = (bundeslandKey: string) => {
+		topics = $cna.topics.filter((t) => {
+			let bundesland = bundeslaender[bundeslandKey] as Bundesland;
+
+			// if undefined, always keep empty.
+			if (!bundesland) return false;
+
+			// exclude items without limit if needed
+			if (bundesland.onlyLimitedEntries && !t.limit) {
+				return false;
+			} else if (!bundesland.onlyLimitedEntries && t.limit) {
+				return t.limit.includes($data.bundeslandKey) ?? false;
+			}
+			return true;
+		});
+	};
 
 	const buildMailToLink = (empfaenger: string, preview: string): string => {
 		if (empfaenger === "" || preview === "") return "";
@@ -62,26 +84,20 @@
 <h1 class="text-2xl font-bold">Corona-Nörgel-App 🦠😷</h1>
 <div class="prose mt-4 dark:prose-invert">
 	<p>
-		Am 22.01. haben die Gesundheitsministieren in einer Telefonkonferenz weitgehende <a
-			href="https://www.gmkonline.de/Beschluesse.html?uid=268&jahr=2022"
-			>Einschränkungen für PCR-Tests</a
-		> beschlossen. Hier kannst du passend für dein Bundesland eine Beschwerdemail für dein zuständiges
-		Ministerium generieren. Abschicken musst du es noch selbst, dafür brauchst du ein eingerichtetes
+		Die deutsche Bundesregierung ist weiterhin nicht in der Lage, angemessen mit der Corona-Pandemie
+		umzugehen. So sorgt uns beispielsweise die als <i>"Freedom Day"</i> bekannte Aufhebung aller Schutzmaßnahmen
+		(niederschwellige Dinge wie Maskenpflicht ausgenommen) sehr. Nur durch einen Schutz der gesamten
+		Bevölkerung und nicht nur des als gesund wahrgenommenen Teils können wir die Pandemie beenden. Aber
+		nicht durch planloses Herumgeiere.
+	</p>
+	<p>
+		Hier kannst du passend für dein Bundesland eine Beschwerdemail für dein zuständiges Ministerium
+		generieren. Abschicken musst du es noch selbst, dafür brauchst du ein eingerichtetes
 		Mailprogramm wie Thunderbird, Outlook oder K9.
 	</p>
 	<p>
-		<b>Update (25.01.2022):</b> Wir haben die Kontaktdaten um die jeweiligen Staats- und Senatskanzleien
-		erweitert, sodass diese nun auch auf einfachem Wege kontaktiert werden können.
-	</p>
-	<p>
-		<b>Update (01.02.2022):</b> Es gibt nun deutlich mehr Beschwerden und Forderungen. Die sind nun auch
-		gruppiert, was im ersten Schritt dann ausgewählt werden kann. Dazu noch Fehlerbehebungen und Verbesserungen
-		in der UX und Barrierfreiheit.
-	</p>
-	<p>
-		<b>Update (08.02.2022):</b> Teilerfolg bei PCR-Tests.
-		<a href="https://twitter.com/MDRAktuell/status/1491006160874483713">Laut MDR</a>
-		kündigt Lauterbach an, dass Anspruch auf PCR-Tests bei positivem Schnelltest weiterhin bestehen soll.
+		Die bisherige Historie von <i>beschweren.rocks</i> lässt sich
+		<a href="/history">hier einsehen</a>, dort sind Updates und bisherige Teilerfolge verbucht.
 	</p>
 </div>
 
@@ -93,16 +109,7 @@
 -->
 <form on:submit|preventDefault={() => (finalText = data.buildText())} class="overflow-hidden">
 	<fieldset>
-		<legend>Schritt 1 von 5: Auswahl des Themas</legend>
-		<label for="Thema">Thema</label>
-		<select id="Thema" bind:value={$data.topicName} on:change={reset}>
-			{#each $cna.topics as topic}
-				<option value={topic.name}> {topic.name} </option>
-			{/each}
-		</select>
-	</fieldset>
-	<fieldset class:hidden={!showBundeslandSelection}>
-		<legend>Schritt 2 von 5: Auswahl des Bundeslandes</legend>
+		<legend>Schritt 1 von 5: Auswahl des Bundeslandes</legend>
 		<label for="bundesland">Bundesland</label>
 		<select id="bundesland" bind:value={$data.bundeslandKey} on:change={reset}>
 			<option disabled>Bundesland auswählen</option>
@@ -121,6 +128,15 @@
 				{/each}
 			</select>
 		{/if}
+	</fieldset>
+	<fieldset class:hidden={!showStateSelection}>
+		<legend>Schritt 2 von 5: Auswahl des Themas</legend>
+		<label for="Thema">Thema</label>
+		<select id="Thema" bind:value={$data.topicName}>
+			{#each topics as topic}
+				<option value={topic.name}> {topic.name} </option>
+			{/each}
+		</select>
 	</fieldset>
 	<fieldset class:hidden={!showSnippetSelection}>
 		<div class="flex flex-col items-baseline justify-between md:flex-row">
@@ -184,22 +200,45 @@
 	</fieldset>
 </form>
 <section class:hidden={!showSendButton}>
-	<p class="section-header">Schritt 5 von 5: Mail verschicken</p>
-	<p class="text-sm">
-		Bei dem Klick auf den folgenden Button wird ein sogenannter <code>mailto:</code>-Link erzeugt.
-		Dieser öffnet dein E-Mail-Programm mit dem obigen Text. Dabei werden zu keinem Zeitpunkt
-		Informationen an uns übermittelt.
+	<p class="section-header">Schritt 5 von 5: Druck aufbauen!</p>
+	<p>
+		Damit wir endlich gehört werden, ist es Zeit, Druck auf die Verantwortlichen aufzubauen! Dies
+		kann über verschiedene Wege geschehen, der Einfachste dürfte dabei für Viele der Versand der
+		automatisch erstellten E-Mail sein.
 	</p>
-	<Button href={mailto} class="mt-4">Mail senden</Button>
+	<p>
+		Aber auch der Anruf oder das Versanden eines Faxes sind <b>sehr effektive Methoden</b>, um Druck
+		aufzubauen. Diese sind aber nicht für alle zugänglich. Sofern Du jedoch Kapazitäten für den ein
+		oder anderen Anruf hast, scheue dich nicht!
+	</p>
 
-	<p class="section-header mt-4">
-		Alternativ: Brief/Fax senden <sup class="text-gray-600 dark:text-gray-400">(beta)</sup>
-	</p>
-	<p class="text-sm">
-		Papier ist in Deutschland heilig, wenn du möchstest, kannst du den obigen Text auch als fertigen
-		Brief ausdrucken oder als Fax absenden.
-	</p>
-	<Button href="/letter" class="mt-4">Brief/Fax senden</Button>
+	<div class="mt-4 flex flex-col justify-between gap-8">
+		<div>
+			<p class="mb-2 text-sm">
+				Bei dem Klick auf den Button wird ein sogenannter <code>mailto:</code>-Link erzeugt. Dieser
+				öffnet dein E-Mail-Programm mit dem obigen Text. Dabei werden zu keinem Zeitpunkt
+				Informationen an uns übermittelt.
+			</p>
+			<Button href={mailto}>Mail senden</Button>
+		</div>
+		<div>
+			<p class="mb-2 text-sm">
+				Papier ist in Deutschland heilig, wenn du möchstest, kannst du den obigen Text auch als
+				fertigen Brief ausdrucken oder als Fax absenden.
+			</p>
+			<Button href="/letter">Brief/Fax senden</Button>
+		</div>
+		{#if $data?.empfaenger?.tel}
+			<div>
+				<p class="mb-2 text-sm">
+					Der Text kann für einen Anruf als Gedankenstütze dienen. Erreichen tust du die
+					Verantwortlichen unter:
+					<MonospacedInfo>{$data.empfaenger.tel}</MonospacedInfo>
+				</p>
+				<Button href={telLink}>Anrufen</Button>
+			</div>
+		{/if}
+	</div>
 </section>
 
 <style lang="postcss">

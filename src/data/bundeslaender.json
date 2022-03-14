@@ -1,7 +1,93 @@
 {
 	"$schema": "../schema/bundeslaender.schema.json",
+	"BUND": {
+		"land": "Gesundheitsausschuss des Bundes",
+		"onlyLimitedEntries": true,
+		"kontakte": [
+			{
+				"bezeichnung": "Obmann FDP: Andrew Ullmann",
+				"titel": "Obmann",
+				"name": "Andrew Ullmann",
+				"anschrift": ["Platz der Republik 1", "11011 Berlin"],
+				"tel": "030 227-72415",
+				"fax": "nicht vorhanden",
+				"mail": "andrew.ullmann@bundestag.de",
+				"anreden": [
+					"Hallo",
+					"Guten Tag",
+					"Moin",
+					"Sehr geehrter ${titel} ${name}",
+					"Sehr geehrtes Team von ${titel} ${name}"
+				]
+			},
+			{
+				"bezeichnung": "Obmann CDU: Georg Kippels",
+				"titel": "Obmann",
+				"name": "Georg Kippels",
+				"tel": "030 22 77 52 45",
+				"fax": "030 22 77 62 45",
+				"mail": "georg.kippels@bundestag.de",
+				"anschrift": ["Platz der Republik 1", "11011 Berlin"],
+				"anreden": [
+					"Hallo",
+					"Guten Tag",
+					"Moin",
+					"Sehr geehrter ${titel} ${name}",
+					"Sehr geehrtes Team von ${titel} ${name}"
+				]
+			},
+			{
+				"bezeichnung": "Obfrau SPD: Heike Baehrens",
+				"titel": "Obfrau",
+				"name": "Heike Baehrens",
+				"tel": "030 / 227 74157",
+				"fax": "030 / 227 70159",
+				"mail": "heike.baehrens@bundestag.de",
+				"anschrift": ["Platz der Republik 1", "11011 Berlin"],
+				"anreden": [
+					"Hallo",
+					"Guten Tag",
+					"Moin",
+					"Sehr geehrte ${titel} ${name}",
+					"Sehr geehrtes Team von ${titel} ${name}"
+				]
+			},
+			{
+				"bezeichnung": "Obfrau DIE LINKE: Kathrin Vogler",
+				"titel": "Obfrau",
+				"name": "Kathrin Vogler",
+				"tel": "030 - 227 72 112",
+				"fax": "030 - 227 76 112",
+				"mail": "kathrin.vogler@bundestag.de",
+				"anschrift": ["Platz der Republik 1", "11011 Berlin"],
+				"anreden": [
+					"Hallo",
+					"Guten Tag",
+					"Moin",
+					"Sehr geehrte ${titel} ${name}",
+					"Sehr geehrtes Team von ${titel} ${name}"
+				]
+			},
+			{
+				"bezeichnung": "Obfrau Grüne: Saskia Weishaupt",
+				"titel": "Obfrau",
+				"name": "Saskia Weishaupt",
+				"tel": "nicht bekannt",
+				"fax": "nicht bekannt",
+				"mail": "saskia.weishaupt@bundestag.de",
+				"anschrift": ["Platz der Republik 1", "11011 Berlin"],
+				"anreden": [
+					"Hallo",
+					"Guten Tag",
+					"Moin",
+					"Sehr geehrte ${titel} ${name}",
+					"Sehr geehrtes Team von ${titel} ${name}"
+				]
+			}
+		]
+	},
 	"BW": {
-		"land": "Baden Württemberg",
+		"land": "Baden-Württemberg",
 		"kontakte": [
 			{
 				"bezeichnung": "Ministerium für Soziales, Gesundheit und Integration",
@@ -208,7 +294,7 @@
 		]
 	},
 	"MV": {
-		"land": "Mecklenburg Vorpommern",
+		"land": "Mecklenburg-Vorpommern",
 		"kontakte": [
 			{
 				"bezeichnung": "Ministerium für Soziales, Gesundheit und Sport",
@@ -266,7 +352,7 @@
 		]
 	},
 	"NW": {
-		"land": "Nordrhein Westfalen",
+		"land": "Nordrhein-Westfalen",
 		"kontakte": [
 			{
 				"bezeichnung": "Ministerium für Arbeit, Gesundheit und Soziales",
@@ -295,7 +381,7 @@
 		]
 	},
 	"RP": {
-		"land": "Rheinland Pfalz",
+		"land": "Rheinland-Pfalz",
 		"kontakte": [
 			{
 				"bezeichnung": "Ministerium für Wissenschaft und Gesundheit",
@@ -382,7 +468,7 @@
 		]
 	},
 	"ST": {
-		"land": "Sachsen Anhalt",
+		"land": "Sachsen-Anhalt",
 		"kontakte": [
 			{
 				"bezeichnung": "Ministerium für Arbeit, Soziales und Gesundheit und Gleichstellung",

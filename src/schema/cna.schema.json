@@ -40,6 +40,18 @@
 					"type": "string",
 					"title": "Der Titel des Beschwerdethemas."
 				},
+				"limit": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"title": "Ein Bundesland, definiert in bundeslaender.json."
+					},
+					"uniqueItems": true,
+					"title": "Limitierung der Bundesländer",
+					"description": "Dies kann dazu genutzt werden, um bestimmte Themen nur für bestimmte Bundesländer zu ermöglichen.",
+					"examples": [["NRW", "HE"]],
+					"minItems": 1
+				},
 				"einleitung": {
 					"type": "array",
 					"items": {

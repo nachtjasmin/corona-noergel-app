@@ -5,7 +5,7 @@
 	"type": "object",
 	"properties": { "$schema": true },
 	"patternProperties": {
-		"^.*$": { "type": "object", "$ref": "#/definitions/bundesland" }
+		"^[A-Z]+$": { "type": "object", "$ref": "#/definitions/bundesland" }
 	},
 	"definitions": {
 		"bundesland": {

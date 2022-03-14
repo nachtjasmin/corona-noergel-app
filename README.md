@@ -1,7 +1,5 @@
 # Corona-Nörgel-App
 
-_built with SvelteKit, currently in beta_
-
 Complaints as a service. We use prefabricated arguments and public address data to generate individual draft complaint emails. These can then be improved upon before sending, if so desired.
 
 Wir haben einige Argumente gesammelt und kombinieren diese automatisch zu individuellen Mailentwürfen, die dann vor dem Verschicken an das jeweilige Landesministerium, falls gewünscht, noch erweitert und angepasst werden können.

@@ -125,10 +125,8 @@
 		},
 		{
 			"name": "Reform des Infektionsschutzgesetz",
-			"betreff": [
-				"Geplante IfSG-Reform",
-				"Neufassung des Infektionsschutzgesetz"
-			],
+			"limit": ["BUND"],
+			"betreff": ["Geplante IfSG-Reform", "Neufassung des Infektionsschutzgesetz"],
 			"einleitung": [
 				"Die Regierungsfraktionen haben passend zum Ende der im Infektionsschutzgesetz befristeten Maßnahmen einen Entwurf für neue Regelungen vorgelegt.",
 				"Der Bundestag und federführend der Gesundheitssauschuss beraten aktuell über die Neufassung der Infektionsschutzmaßnahmen in der Corona-Pandemie.",

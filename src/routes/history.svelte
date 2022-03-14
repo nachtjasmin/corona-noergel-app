@@ -28,4 +28,9 @@
 			>könnte die Unterfassung der Corona-Infektionen hoch sein</a
 		>. Daher wurden die Beschwerden aktualisiert, um auf diesen Umstand aufmerksam zu machen.
 	</p>
+	<p>
+		<b>Update (14.03.2022):</b> Die angekündigte Aufhebung sämtlicher Schutzmaßnahmen bereitet uns starke
+		Bauchschmerzen. Die Daten des Gesundheitsausschusses wurden ergänzt, um an dieser Stelle etwas Druck
+		aufbauen zu können.
+	</p>
 </div>

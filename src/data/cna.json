@@ -10,13 +10,7 @@
 		"Sehr geehrte Bearbeitende",
 		"Sehr geehrte zuständige Person"
 	],
-	"gruss": [
-		"Freundliche Grüße",
-		"Mit freundlichen Grüßen",
-		"Beste Grüße",
-		"Hochachtungsvoll",
-		"Danki, UwU"
-	],
+	"gruss": ["Freundliche Grüße", "Mit freundlichen Grüßen", "Beste Grüße", "Hochachtungsvoll"],
 	"topics": [
 		{
 			"name": "Ungenutzte Kapazitäten für PCR-Tests",

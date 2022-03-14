@@ -2,7 +2,7 @@
 	import { cna } from "$lib/cna";
 	import Button from "$lib/components/Button.svelte";
 	import MonospacedInfo from "$lib/components/MonospacedInfo.svelte";
-	import type { Bundeslaender } from "$lib/definitions";
+	import { Bundesland, Topic, type Bundeslaender } from "$lib/definitions";
 	import { getRandom, replaceStringPlaceholders } from "$lib/helpers";
 	import { data, pageTitle } from "$lib/store";
 	import { tick } from "svelte";
@@ -26,12 +26,7 @@
 	$: showSendButton = showTextBuilder && finalText.length > 0;
 	$: mailto = buildMailToLink($data.empfaenger?.mail ?? "", finalText);
 	$: telLink = `tel:${$data?.empfaenger?.tel}`;
-	$: topics = $cna.topics.filter((t) => {
-		// always include topic if it has no limitation.
-		if (!t.limit) return true;
-
-		return t.limit.includes($data.bundeslandKey);
-	});
+	$: filterTopics($data.bundeslandKey);
 	$: beschwerden = topic?.beschwerde;
 	$: anreden = replaceStringPlaceholders($data.empfaenger?.anreden ?? $cna.anrede, {
 		receiver: $data.empfaenger,
@@ -39,6 +34,24 @@
 	$: appelle = replaceStringPlaceholders(topic?.appell, {
 		bundesland: bundeslaender[$data.bundeslandKey]?.land ?? "",
 	});
+
+	let topics: Topic[] = [];
+	const filterTopics = (bundeslandKey: string) => {
+		topics = $cna.topics.filter((t) => {
+			let bundesland = bundeslaender[bundeslandKey] as Bundesland;
+
+			// if undefined, always keep empty.
+			if (!bundesland) return false;
+
+			// exclude items without limit if needed
+			if (bundesland.onlyLimitedEntries && !t.limit) {
+				return false;
+			} else if (!bundesland.onlyLimitedEntries && t.limit) {
+				return t.limit.includes($data.bundeslandKey) ?? false;
+			}
+			return true;
+		});
+	};
 
 	const buildMailToLink = (empfaenger: string, preview: string): string => {
 		if (empfaenger === "" || preview === "") return "";

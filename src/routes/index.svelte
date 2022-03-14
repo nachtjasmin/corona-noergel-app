@@ -14,7 +14,7 @@
 	let finalText = "";
 
 	$: topic = $cna.topics.find((x) => x.name === $data.topicName);
-	$: showBundeslandSelection = topic?.name?.length > 0;
+	$: showStateSelection = $data.bundeslandKey;
 	$: showSnippetSelection = $data.bundeslandKey !== "" && $data.empfaenger;
 	$: showTextBuilder =
 		showSnippetSelection &&
@@ -26,6 +26,12 @@
 	$: showSendButton = showTextBuilder && finalText.length > 0;
 	$: mailto = buildMailToLink($data.empfaenger?.mail ?? "", finalText);
 	$: telLink = `tel:${$data?.empfaenger?.tel}`;
+	$: topics = $cna.topics.filter((t) => {
+		// always include topic if it has no limitation.
+		if (!t.limit) return true;
+
+		return t.limit.includes($data.bundeslandKey);
+	});
 	$: beschwerden = topic?.beschwerde;
 	$: anreden = replaceStringPlaceholders($data.empfaenger?.anreden ?? $cna.anrede, {
 		receiver: $data.empfaenger,
@@ -90,16 +96,7 @@
 -->
 <form on:submit|preventDefault={() => (finalText = data.buildText())} class="overflow-hidden">
 	<fieldset>
-		<legend>Schritt 1 von 5: Auswahl des Themas</legend>
-		<label for="Thema">Thema</label>
-		<select id="Thema" bind:value={$data.topicName} on:change={reset}>
-			{#each $cna.topics as topic}
-				<option value={topic.name}> {topic.name} </option>
-			{/each}
-		</select>
-	</fieldset>
-	<fieldset class:hidden={!showBundeslandSelection}>
-		<legend>Schritt 2 von 5: Auswahl des Bundeslandes</legend>
+		<legend>Schritt 1 von 5: Auswahl des Bundeslandes</legend>
 		<label for="bundesland">Bundesland</label>
 		<select id="bundesland" bind:value={$data.bundeslandKey} on:change={reset}>
 			<option disabled>Bundesland auswählen</option>
@@ -118,6 +115,15 @@
 				{/each}
 			</select>
 		{/if}
+	</fieldset>
+	<fieldset class:hidden={!showStateSelection}>
+		<legend>Schritt 2 von 5: Auswahl des Themas</legend>
+		<label for="Thema">Thema</label>
+		<select id="Thema" bind:value={$data.topicName}>
+			{#each topics as topic}
+				<option value={topic.name}> {topic.name} </option>
+			{/each}
+		</select>
 	</fieldset>
 	<fieldset class:hidden={!showSnippetSelection}>
 		<div class="flex flex-col items-baseline justify-between md:flex-row">

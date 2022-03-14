@@ -44,6 +44,7 @@ export class CNAData {
 
 export class Topic {
 	name?: string;
+	limit?: string[];
 	einleitung: string[] = [];
 	betreff: string[] = [];
 	beschwerde: string[] = [];

@@ -1,7 +1,7 @@
 {
 	"$schema": "../schema/bundeslaender.schema.json",
 	"BUND": {
-		"land": "Gesundheitsausschuss des Bundes",
+		"land": "Gesundheitsausschuss des Bundestages",
 		"onlyLimitedEntries": true,
 		"kontakte": [
 			{

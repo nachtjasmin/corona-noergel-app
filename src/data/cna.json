@@ -13,113 +13,124 @@
 	"gruss": ["Freundliche Grüße", "Mit freundlichen Grüßen", "Beste Grüße", "Hochachtungsvoll"],
 	"topics": [
 		{
-			"name": "Ungenutzte Kapazitäten für PCR-Tests",
+			"name": "Gute Tests zugänglich machen",
 			"betreff": [
-				"PCR-Priorisierung: Beschwerde",
-				"PCR-Beschlüsse bitte dringend überdenken",
-				"PCR-Testkapazitäten ungenutzt, bitte wieder für alle ermöglichen!",
-				"50% Positivrate, potenziell hohe Untererfassung: wieder mehr PCR-Tests ermöglichen!"
+				"Corona-Tests zugänglicher machen",
+				"PCR-Tests als Bürger*innentests etablieren",
+
 			],
 			"einleitung": [
-				"Der ALM e.V., ein Zusammenschluss von Laboren, berichtet von einer deutlich rückläufigen Anzahl angeforderter PCR-Tests. Dies ist auf die Beschlüsse zur PCR-Testpriorisierung zurückzuführen.",
-				"Aus der Presse habe ich von den Beschlüssen zur PCR-Testpriorisierung erfahren.",
-				"In der tagesaktuellen Berichterstattung bin ich über die Beschlüsse zur Priorisierung von PCR-Tests gestolpert."
+				"Tests, insbesondere PCR-Tests sind notwendig für einen Überblick über das pandemische Geschehen.",
+				"Von einer schnellen Bearbeitung von Corona-Tests können alle (die erkrankte Person, ihr Umfeld und politische Entscheider*innen) profitieren."
 			],
 			"beschwerde": [
-				"Bei einer Test-Positivrate von rund 50% ist die Pandemie noch lange nicht unter Kontrolle. Maßnahmen wie der \"Freedom Day\" sind aktuell falsch am Platze.",
-				"Wir erreichen aktuell neue Inzidenz-Höchstwerte, zuletzt von 1500. Bestehende Maßnahmen bieten offensichtlich keinen ausreichenden Schutz.",
+				"Corona-Tests werden kaum noch durch Verordnungen verlangt und sind immer schwieriger zu bekommen.",
+				"Test-Angebote werden immer seltener wahrgenommen. Für die Datenlage ist das mindestens ungünstig.",
 				"Statistiken lassen sich zwar durch das Weglassen von Tests schönigen, der Bevölkerung ist damit aber nicht geholfen."
 			],
 			"appell": [
-				"Die Labore weisen Kapazitäten auf, diese sollten auch genutzt werden! Ohne einen Überblick über das Pandemiegeschehen, rauschen wir nur wieder in die nächste Welle.",
-				"Es wäre allerhöchste Zeit, niedrigschwellig, kostenlos und für alle tägliche PCR-Tests anzubieten. Der Stadt Wien ist das gelungen, ich erwarte, dass ${Bundesland} hier weiter Kapazitäten aufbaut.",
-				"Antigentests unterliegen nicht den gleichen Kontrollen wie PCR-Tests, sie bieten keinen Ersatz. Die Aufhebung der PCR-Test-Priorisierung ist das Mindeste, was Sie jetzt tun können.",
-				"Wenn Antigentests tatsächlich eine Diagnose über PCR ersetzen sollen, muss die Lagerung der Tests für Testzentren dringend regelementiert und überprüft werden. Die aktuellen Außentemperaturen sind weiter außerhalb des für die Tests zugelassenen Bereichs.",
-				"Durch die starke Fokussierung auf Antigentests sollte dringend die Empfindlichkeit dieser in die Reglementierung einbezogen werden, da aus den Daten des PEI hervorgeht, dass einige selbst bei sehr hohen Viruslasten nicht zuverlässig anschlagen. Hier müssen Mindeststandards etabliert werden."
+				"Es wäre allerhöchste Zeit, niedrigschwellig, kostenlos (oder in einer günstigen Flatrate) und für alle tägliche PCR-Tests anzubieten. Der Stadt Wien ist das gelungen, ich erwarte, dass solche Modelle auch hierzulande eingeführt werden.",
+				"Gurgeltests, die zu Hause eine zuverlässige Probenentnahme gewährleisten, zugängliche Möglichkeiten einen Test zur Auswertung abzugeben und per App über das Ergebnis informiert zu werden, können im Herbst und Winter einen entscheidenden Unterschied machen.",
+				"Durch eine breite Zugänglichmachung von PCR-Tests, wie es in Österreich der Fall war, wären deutlich verlässlichere Zahlen über den Verlauf der Pandemie zugänglich. Das ist nicht nur für gute Politik notwendig, sondern auch für den Einzelnen nützlich, um individuelle Risiken besser erkennen zu können.",
+
 			]
 		},
 		{
-			"name": "Unzureichende Maßnahmen an Schulen",
+			"name": "Winterliche Maskenpflicht etablieren",
 			"betreff": [
 				"Schützen Sie unsere Kinder!",
 				"Durchseuchung auf Kosten der Kinder",
 				"Unterrichtsausfälle und Strategie der Bundesregierung"
 			],
 			"einleitung": [
-				"Deutschland treibt auf immer höheren, kurz aufeinanderfolgenden Corona-Wellen. Die Omikron-Welle dominiert seit Wochen das Infektionsgeschehen. Dennoch bleiben die Schulen geöffnet.",
-				"Aufgrund der hohen Inzidenzen, insbesondere unter Schüler*innen, fällt immer häufiger der Unterricht aus oder kann nicht wie geplant stattfinden."
+				"Durch die weltweiten Corona-Maßnahmen konnte ein Stamm Grippe-Erreger beinahe ausgerottet werden.",
+				"In den Wintermonaten steigt traditionell die Anzahl der Atemwegserkrankungen."
 			],
 			"beschwerde": [
-				"Angesichts der hohen Inzidenzen jenseits der 1000, finde ich es fatal, dass der Schutz der Kinder keine Priorität mehr aufweist.",
-				"Kinder, insbesondere in den Kitas, haben bisher nicht die Möglichkeit gehabt, geimpft werden zu können. Die hohen Inzidenzen deuten darauf hin, dass der Schutz dieser Bevölkerungsgruppe egal scheint.",
-				"Eltern werden seit Beginn in dieser Pandemie alleine gelassen, sowohl auf Landesebene und auf Bundesebene scheint der Schutz von Familien keine Rolle zu spielen.",
-				"Während es eine legitime politische Entscheidung sein kann, Kontakte und Begegnungen durch Aufrechterhalten von schulischem Alltag inkaufzunehmen, vermisse ich aktuell den Teil des Konzepten, der Lernende und Lehrende ausreichend schützt.",
-				"Es entsteht der Eindruck, dass der Wille Schüler*innen vor einer der für sie aktuell gefährlichsten Krankheiten zu schützen, ein paar plakativen Alibi-Regeln gewichen ist."
+				"Im Herbst und Winter steigt für alle das Risiko grippaler Infekte und auch Infektionen mit dem Corona-Virus werden wahrscheinlicher. Das sollte vermieden werden.",
+				"Krank sein und krank werden ist auf persönlicher und gesellschaftlicher Ebene nicht so super. Bisher wird das über Herbst und Winter zu stark in Kauf genommen (und Corona-Maßnahmen zeigten uns, dass es auch anders gehandhabt werden kann)."
+
 			],
 			"appell": [
-				"Ich bitte sie daher, schleunigst eine Null-Inzidenz-Strategie zu etablieren, um Kinder und Jugendliche in dieser Pandemie zu schützen.",
-				"Zum Schutz unserer Kinder, bitte ich Sie daher darum, geeignete Maßnahmen an den Schulen und Kitas zu ergreifen, etwa die Wiedereinführung der flächendeckenden PCR-Tests.",
-				"Ein Auslaufen der Schutzmaßnahmen zum Mai ist angesichts dieser Lage unverantwortlich. Das Gegenteil - die Umsetzung der S3-Richtlinien - ist als absolutes Minimum zu ergreifen.",
-				"Als absolutes Minimum sollten dringend zeitnah die S3-Leitlinien zum Schulbetrieb in der Pandemie umgesetzt werden.",
-				"Hören Sie endlich auf, regulären Schulbetrieb als absolute unantastbare Priorität zu behandeln, hinter dem alles andere zurückweichen muss.",
-				"In einer Situation, in der die Auflösung positiver PCR-Pools an Schulen nicht mehr gewährleistet werden kann, muss mindestens die Präsenzpflicht ausgesetzt werden.",
-				"Vielleicht wäre es an der Zeit anzuerkennen, dass es dringend ein Umdenken in der Schul-Corona-Politik braucht, da es dem Virus herzlich egal ist, ob \"Schule\" über dem Eingang eines Gebäudes steht."
+				"Die dauerhafte Einführung einer Maskenpflicht (bei geringen Inzidenzen auch mit einfachen Mund-Nase-Bedeckungen) in der Erkältungssaison käme uns allen entgegen.",
+				"Gäbe es im Winter grundsätzliche Maskenpflichten beim Einkaufen, für Amtsbesuche, Schulen, Unis, öffentliche Verkehrsmittel und Innenräume allgemeine, könnten wir nachhaltig Erkrankungen vermeiden."
+
 			]
 		},
 		{
-			"name": "Lage in Kindertagesstätten",
+			"name": "Impfen",
 			"betreff": [
 				"Corona-Situation in KiTas",
 				"Pandemie ist auch in KiTas",
 				"Kitas außer Kontrolle"
 			],
 			"einleitung": [
-				"Viele Familien sind auch in der Pandemie auf Kindertagesstätten und Kindergärten angewiesen.",
-				"KiTas sind für viele Elternteile unverzichtbare Unterstützung für den Alltag.",
-				"Als Arbeitgeber sind auch Kindertagesstätten in der Verantwortung, sowohl Mitarbeitende als auch die Kinder zu schützen."
+				"Sowohl weltweit als auch in gefährdeten Gruppen hier ist die Impfquote gegen Covid nocht etwas ausbaufähig.",
+				"Die Impfkampagne gegen das Corona-Virus ist ein wenig ins Stocken geraten."
 			],
 			"beschwerde": [
-				"Konsequentes Maskentragen ist in KiTas ein äußerst unrealistisches Szenario.",
-				"Lüften mit entsprechenden Temperatur-Unterschieden ist bei den Jüngsten nicht die beste aller Ideen.",
-				"Für unter 5-jährige sind bislang keine Impfstoffe gegen Covid zugelassen.",
-				"Auch wenn im Vergleich zu anderen Altersgruppen Infektionen für Kleinkinder weniger gefährlich sind, können sie ältere Familienmitglieder infizieren.",
-				"Covid kann bei sehr jungen Personen hohes Fieber auslösen, was in der Altersgruppe sehr gefährlich ist.",
-				"Nach Covid-Erkrankungen besteht bei Kindern ein vielfach erhöhtes Risiko für PIMS.",
-				"Durch die Omikron-Welle sind sowohl die Infektionszahlen bei Beschäftigten als auch bei Kindern deutlich angestiegen, Konsequenzen sind dringend geboten."
+				"Impfungen sind in dieser Pandemie ein zu gutes Werkzeug, um sie, wie derzeit kaum zu bewerben oder zu nutzen.",
+				"Zu niedrige Impfquoten hier und überall verlängern diese Pandemie unnötig."
 			],
 			"appell": [
-				"Da sich die Kleinsten nicht individuell durch Masken, Abstand oder Impfung schützen können, ist es notwendig, Gruppen zu verkleinern.",
-				"KiTas müssen konsequent mit Luftfiltern ausgestattet werden, um Infektionen - nicht nur mit Covid - zu vermeiden.",
-				"Der Eindruck, dass KiTas in der Pandemiepolitik als komplett ungefährliche Orte gehandelt werden, sollte nicht erhalten bleiben.",
-				"Ein Aussteigen aus dem allgemeinen Testen, so wie es NRW angekündigt hatte, ist mindestens grobe Fahrlässigkeit auf Kosten der Kinder."
+				"Menschen könnten, ähnlich wie in Bremen geschehen, rechtzeitig zum Herbst persönliche Einladungen zu Informations- und Impfterminen zugesandt bekommen.",
+				"Vielleicht kommt der Bundestag ja auch durch Hinwirken hinreichend zur Vernunft, um einen erfolgreichen Anlauf für eine allgemeine Corona-Impfpflicht zu wege zu bringen."
 			]
 		},
 		{
-			"name": "Ausweitung der Hotspot-Regelung auf das Bundesland",
+			"name": "Luftfilter sind gut und nützlich",
 			"betreff": [
-				"Bitte Hotspot-Regelung umfassend nutzen",
-				"Vorschlag zur Nutzung der IfSG-Neufassung",
-				"Schutz der Bevölkerung nicht ausreichend, dringender Nachbesserungsbedarf!",
-				"Bitte die Maskenpflicht wieder einführen!"
+				"Vorschlag: neuer Anlauf für mehr Luftfilter",
+				"Luftfilter für öffentliche Räume verfügbar machen"
 			],
 			"einleitung": [
-				"Die Regierungsfraktionen haben passend zum Ende der im Infektionsschutzgesetz befristeten Maßnahmen einen Entwurf für neue Regelungen vorgelegt.",
-				"Die meisten Zuständigkeiten für die Pandemiebekämpfung im Infektionsschutzgesetz wurden an die Bundesländer übertragen.",
-				"Nach der Verkündung des sogenannten \"Freedom Day\" folgten leider viele Lockerungen. Einige Bundesländer, wie Mecklenburg-Vorpommern, haben bereits damit begonnen, das ganze Bundesland als Hotspot zu definieren."
+				"Im Herbst und Winter ist es recht einfach, sich in Innenräumen anzustecken.",
+				"Saubere Luft auch in Innenräumen ist eine ziemlich gute Idee.",
 			],
 			"beschwerde": [
-				"Das Virus richtet sich nicht nach dem Tag oder nach dem Ort. Die bestehenden Maßnahmen reichen nicht aus, um das Virus unter Kontrolle zu bringen, ein - mindestens grundlegender - Schutz ist daher zwingend notwendig.",
-				"Pauschale Lockerungen, die sich nicht nach den Infektionszahlen richten, sind zutiefst wissenschaftsfeindlich. Nicht jede Person hat ein intaktes Immunsystem, diese Menschen werden bei diesen Aufhebungen völlig vergessen.",
-				"Zum Schutz der gesamten Bevölkerung und nicht nur des gesunden Teils, ist es wichtig, die Maßnahmen weiter aufrecht zu erhalten, bis das Virus eingedämmt ist.",
-				"Die Gefahr einer \"dynamisch ausbreitenden Infektionslage\" kann angesichts der hohen Positivrate als gegeben betrachtet werden. Ein Ausbau der Schutzmaßnahmen ist notwendig.",
-				"Grundlegende Schutzmaßnahmen, wie etwa das Beibehalten der Maskenpflicht in Innenräumen, ist angesichts der Inzidenzen notwendig. Ein konsequenter Ausbau Luftfilter in Gebäuden ist eine Investition in die Zukunft!"
+				"Viel zu wenig öffentliche Gebäude sind mit Luftfiltern ausgestattet, obwohl evident ist, dass sie es deutlich erleichtern, Infektionsrisiken zu senken."
 			],
 			"appell": [
-				"Da auch bei eher milden Krankheitsverläufen chronische Beschwerden in der Folge entstehen können, ist das Beibehalten solider Basis-Schutzmaßnahmen unerlässlich. Die könnten im Entwurf, grade mit weiteren Maskenpflichten oder Home-Office-Regelungen nachgereicht werden.",
-				"Vielleicht wäre es an der Zeit nicht mehr so zu tun, als wäre alles in Ordnung, wenn sich binnen einer Woche regional 2 Prozent(!) der Bevölkerung neu infiziert haben.",
-				"Die Fortführung einfacher Schutzmaßnahmen, dazu gehört meines Erachtens auch 2G in Innenräumen, ist für eine Kontrolle des Virus notwendig. Stärkere Schutzmaßnahmen sollten allerdings etabliert werden, damit wir langfristig alle wieder aufatmen können.",
-				"Schutzmaßnahmen und eine Strategie zur Eindämmung der Pandemie sind meines Erachtens dringend notwendig. So zu tun, als gäbe es kein Corona mehr, ist einer Regierung unwürdig.",
-				"Eine pauschale Aufhebung entspricht einer Kapitulation. Dass dies überhaupt in Betracht gezogen wurde, zeigt, dass Ihnen die Menschen in diesem Land egal sind. Handeln Sie endlich!"
+				"Schulen, Universitäten, Ämter, Behörden, Kulturstätten und andere Versammlungsräume sollten bis zum Winter mit Luftfiltern ausgestattet werden.",
+				"Es sollten erneut Fördergelder für die Ausstattung von Versammlungsräumen mit Luftfiltern bereitgestellt werden. Dieses Mal aber unbürokratischer und zugänglicher, dass Mittel auch verwendet werden und Menschen schützen können."
+			]
+		},
+				{
+			"name": "Digitalisierung",
+			"betreff": [
+				"Aufbruch aus digitaler Steinzeit wäre in dieser Pandemie hilfreich",
+				"Digitalisieren wäre nützlich gegen diese Pandemie",
+			],
+			"einleitung": [
+				"Ohne ausreichende Datengrundlage ist es schwierig bis unmöglich, Maßnahmen in der Pandemie zu evaluieren oder zu planen.",
+				"Ohne ausreichende digitale Infrastruktur ist es unnötig schwierig, von reinen Präsenzformaten auszuweichen, auch wenn es pandemisch bedingt nützlich wäre."
+			],
+			"beschwerde": [
+				"Auch nach Jahren in dieser Pandemie ist es immer noch ein Problem, dass Daten rechtzeitig und nutzbar da sind, wo sie nützlich wären. Das ist kein Zustand",
+				"Schulen, Universitäten, Lernende und Lehrende sind nach zwei Jahren Pandemie immer noch ähnlich wie Ämter, Labore und Institute zu selten ausreichend stabil vernetzt. Hier besteht Nacholbedarf."
+			],
+			"appell": [
+				"Solide, dem Bedarf angemessene Software und Anbindung, um Daten über diese Pandemie zu erfassen, aufzubereiten und auszuwerten, sollte dringend endlich flächendeckend etabliert werden.",
+				"Es brauch endlich eine sinnvolle Grundlage für Digitaliserung -auch im Kampf gegen diese Pandemie. Verschaffen Sie Expert*innen, die Verfahren nicht in den Computer bringen, sondern wirklich digitalisieren ausreichend Gehör."
+			]
+		},
+				{
+			"name": "Verlässliche Verordnungen",
+			"betreff": [
+				"Verlässliche Verordnungen für den Winter vorbereiten",
+				"Wie werden die Corona-Verordnungen für Herbst/Winter?"
+			],
+			"einleitung": [
+				"Corona-Schutzverordnungen brachten in der Vergangenheit häufig Stufenpläne mit, wurden aber häufig geändert, bevor neue Stufen erreicht wurden.",
+				"Verlässliche Regelungen für den kommenden Herbst und Winter, um -nicht nur, aber vor allem- Corona-Fallzahlen niedrig zu halten, wären nützlich."
+			],
+			"beschwerde": [
+				"Wenn sich Verordnungen ständig ändern, fehlt die Zeit und die Möglichkeit, diese solide nachzuvollziehen und das schadet auch der Akzeptanz.",
+				"Während sich gerade, gefühlt sehr unvorbereitet von politischer Seite, eine Sommer-Corona-Welle ausbreitet, drängt sich die Sorge auf, dass die Wellen im Herbst und Winter uns ähnlich unvorbereitet treffen könnten."
+			],
+			"appell": [
+				"Bringen Sie uns rechtzeitig zum Herbst nachhaltige Verordnungen, um Wellen möglichst flach und Erkrankungszahlen niedrig halten zu können, auf den Weg",
+				"Gut begründete und nachvollziehbare (das heißt auch: gut und zugänglich erklärte) Verordnungen werden für den Winter wichtig. Bringen Sie diese bald auf den Weg!"
 			]
 		}
 	]

@@ -14,11 +14,7 @@
 	"topics": [
 		{
 			"name": "Gute Tests zugänglich machen",
-			"betreff": [
-				"Corona-Tests zugänglicher machen",
-				"PCR-Tests als Bürger*innentests etablieren",
-
-			],
+			"betreff": ["Corona-Tests zugänglicher machen", "PCR-Tests als Bürger*innentests etablieren"],
 			"einleitung": [
 				"Tests, insbesondere PCR-Tests sind notwendig für einen Überblick über das pandemische Geschehen.",
 				"Von einer schnellen Bearbeitung von Corona-Tests können alle (die erkrankte Person, ihr Umfeld und politische Entscheider*innen) profitieren."
@@ -31,8 +27,7 @@
 			"appell": [
 				"Es wäre allerhöchste Zeit, niedrigschwellig, kostenlos (oder in einer günstigen Flatrate) und für alle tägliche PCR-Tests anzubieten. Der Stadt Wien ist das gelungen, ich erwarte, dass solche Modelle auch hierzulande eingeführt werden.",
 				"Gurgeltests, die zu Hause eine zuverlässige Probenentnahme gewährleisten, zugängliche Möglichkeiten einen Test zur Auswertung abzugeben und per App über das Ergebnis informiert zu werden, können im Herbst und Winter einen entscheidenden Unterschied machen.",
-				"Durch eine breite Zugänglichmachung von PCR-Tests, wie es in Österreich der Fall war, wären deutlich verlässlichere Zahlen über den Verlauf der Pandemie zugänglich. Das ist nicht nur für gute Politik notwendig, sondern auch für den Einzelnen nützlich, um individuelle Risiken besser erkennen zu können.",
-
+				"Durch eine breite Zugänglichmachung von PCR-Tests, wie es in Österreich der Fall war, wären deutlich verlässlichere Zahlen über den Verlauf der Pandemie zugänglich. Das ist nicht nur für gute Politik notwendig, sondern auch für den Einzelnen nützlich, um individuelle Risiken besser erkennen zu können."
 			]
 		},
 		{
@@ -49,12 +44,10 @@
 			"beschwerde": [
 				"Im Herbst und Winter steigt für alle das Risiko grippaler Infekte und auch Infektionen mit dem Corona-Virus werden wahrscheinlicher. Das sollte vermieden werden.",
 				"Krank sein und krank werden ist auf persönlicher und gesellschaftlicher Ebene nicht so super. Bisher wird das über Herbst und Winter zu stark in Kauf genommen (und Corona-Maßnahmen zeigten uns, dass es auch anders gehandhabt werden kann)."
-
 			],
 			"appell": [
 				"Die dauerhafte Einführung einer Maskenpflicht (bei geringen Inzidenzen auch mit einfachen Mund-Nase-Bedeckungen) in der Erkältungssaison käme uns allen entgegen.",
 				"Gäbe es im Winter grundsätzliche Maskenpflichten beim Einkaufen, für Amtsbesuche, Schulen, Unis, öffentliche Verkehrsmittel und Innenräume allgemeine, könnten wir nachhaltig Erkrankungen vermeiden."
-
 			]
 		},
 		{
@@ -85,7 +78,7 @@
 			],
 			"einleitung": [
 				"Im Herbst und Winter ist es recht einfach, sich in Innenräumen anzustecken.",
-				"Saubere Luft auch in Innenräumen ist eine ziemlich gute Idee.",
+				"Saubere Luft auch in Innenräumen ist eine ziemlich gute Idee."
 			],
 			"beschwerde": [
 				"Viel zu wenig öffentliche Gebäude sind mit Luftfiltern ausgestattet, obwohl evident ist, dass sie es deutlich erleichtern, Infektionsrisiken zu senken."
@@ -95,11 +88,11 @@
 				"Es sollten erneut Fördergelder für die Ausstattung von Versammlungsräumen mit Luftfiltern bereitgestellt werden. Dieses Mal aber unbürokratischer und zugänglicher, dass Mittel auch verwendet werden und Menschen schützen können."
 			]
 		},
-				{
+		{
 			"name": "Digitalisierung",
 			"betreff": [
 				"Aufbruch aus digitaler Steinzeit wäre in dieser Pandemie hilfreich",
-				"Digitalisieren wäre nützlich gegen diese Pandemie",
+				"Digitalisieren wäre nützlich gegen diese Pandemie"
 			],
 			"einleitung": [
 				"Ohne ausreichende Datengrundlage ist es schwierig bis unmöglich, Maßnahmen in der Pandemie zu evaluieren oder zu planen.",
@@ -114,7 +107,7 @@
 				"Es brauch endlich eine sinnvolle Grundlage für Digitaliserung -auch im Kampf gegen diese Pandemie. Verschaffen Sie Expert*innen, die Verfahren nicht in den Computer bringen, sondern wirklich digitalisieren ausreichend Gehör."
 			]
 		},
-				{
+		{
 			"name": "Verlässliche Verordnungen",
 			"betreff": [
 				"Verlässliche Verordnungen für den Winter vorbereiten",

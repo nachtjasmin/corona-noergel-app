@@ -193,9 +193,7 @@
 			<p class="mb-2 text-sm">
 				Empfänger*in: <MonospacedInfo>{$data.empfaenger?.mail ?? ""}</MonospacedInfo>
 			</p>
-			<textarea id="text" readonly class="w-full rounded bg-gray-100 dark:bg-slate-800" rows="10"
-				>{finalText}</textarea
-			>
+			<textarea id="text" readonly rows="10">{finalText}</textarea>
 		</div>
 	</fieldset>
 </form>
@@ -246,9 +244,13 @@
 		@apply text-sm;
 	}
 	select,
-	input {
-		@apply mt-1 mb-2 w-full rounded;
-		@apply dark:bg-slate-800;
+	input,
+	textarea {
+		@apply mt-1 mb-4 block w-full rounded-md border-slate-300 py-2 pl-3 pr-10 text-base focus:border-accent-500 focus:outline-none focus:ring-accent-500 sm:text-sm;
+		@apply dark:border-slate-600 dark:bg-slate-800;
+	}
+	textarea {
+		@apply bg-slate-50 dark:bg-slate-800;
 	}
 	fieldset,
 	section {

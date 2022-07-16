@@ -2,7 +2,6 @@
 	"$schema": "../schema/bundeslaender.schema.json",
 	"BUND": {
 		"land": "Gesundheitsausschuss des Bundestages",
-		"onlyLimitedEntries": true,
 		"kontakte": [
 			{
 				"bezeichnung": "Obmann FDP: Andrew Ullmann",

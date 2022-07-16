@@ -85,10 +85,10 @@
 <div class="prose mt-4 dark:prose-invert">
 	<p>
 		Die deutsche Bundesregierung ist weiterhin nicht in der Lage, angemessen mit der Corona-Pandemie
-		umzugehen. So sorgt uns beispielsweise die als <i>"Freedom Day"</i> bekannte Aufhebung aller Schutzmaßnahmen
-		(niederschwellige Dinge wie Maskenpflicht ausgenommen) sehr. Nur durch einen Schutz der gesamten
-		Bevölkerung und nicht nur des als gesund wahrgenommenen Teils können wir die Pandemie beenden. Aber
-		nicht durch planloses Herumgeiere.
+		umzugehen. Die Inzidenzen sind immer noch zu hoch, um überhaupt das Ende der Pandemie annehemne
+		zu können. Long Covid ist immer noch ein Ding und das Einzige, was unserem Gesundheitsminister
+		einfällt ist "bitte lasst euch noch die 4. Impfung geben". Impfungen sind zwar nice, aber ähm,
+		davon geht die Pandemie leider nicht weg.
 	</p>
 	<p>
 		Hier kannst du passend für dein Bundesland eine Beschwerdemail für dein zuständiges Ministerium

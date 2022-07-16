@@ -33,4 +33,10 @@
 		Bauchschmerzen. Die Daten des Gesundheitsausschusses wurden ergänzt, um an dieser Stelle etwas Druck
 		aufbauen zu können.
 	</p>
+	<p>
+		<b>Update (16.07.2022):</b> Wie erwartet, sind die Zahlen im Sommer deutlich in die Höhe gegangen.
+		Im Vergleich zu den beiden Sommern davor, ist die Inzidenz "jenseits von Gut und Böse", und zwar
+		kontinuierlich im oberen dreistelligen Bereich. Maßnahmen gibt es keine, stattdessen wurden aus "Kostengründen"
+		noch die Antigen-Tests kostenpflichtig gemacht.
+	</p>
 </div>

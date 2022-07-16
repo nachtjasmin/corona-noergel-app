@@ -4,13 +4,13 @@
 		"land": "Gesundheitsausschuss des Bundestages",
 		"kontakte": [
 			{
-				"bezeichnung": "Obmann FDP: Andrew Ullmann",
-				"titel": "Obmann",
-				"name": "Andrew Ullmann",
+				"bezeichnung": "Obfrau FDP: Nicole Westig",
+				"titel": "Obfrau",
+				"name": "Nicole Westig",
 				"anschrift": ["Platz der Republik 1", "11011 Berlin"],
-				"tel": "030 227-72415",
-				"fax": "nicht vorhanden",
-				"mail": "andrew.ullmann@bundestag.de",
+				"tel": "02224 986 97 14",
+				"fax": "030 227 70325",
+				"mail": "nicole.westig.wk@bundestag.de",
 				"anreden": [
 					"Hallo",
 					"Guten Tag",
@@ -74,6 +74,86 @@
 				"tel": "nicht bekannt",
 				"fax": "nicht bekannt",
 				"mail": "saskia.weishaupt@bundestag.de",
+				"anschrift": ["Platz der Republik 1", "11011 Berlin"],
+				"anreden": [
+					"Hallo",
+					"Guten Tag",
+					"Moin",
+					"Sehr geehrte ${titel} ${name}",
+					"Sehr geehrtes Team von ${titel} ${name}"
+				]
+			},
+						{
+				"bezeichnung": "Gesundheitspolitische Sprecherin Linke: Kathrin Vogler",
+				"titel": "Gesundheitspolitische Sprecherin",
+				"name": "Kathrin Vogler",
+				"anschrift": ["Karlstraße 17", "48282 Emsdetten"],
+				"tel": "0 25 72 9 60 77 60",
+				"fax": "0 25 72 9 60 67 65",
+				"mail": "kathrin.vogler.wk@bundestag.de",
+				"anreden": [
+					"Hallo",
+					"Guten Tag",
+					"Moin",
+					"Sehr geehrter ${titel} ${name}",
+					"Sehr geehrtes Team von ${titel} ${name}"
+				]
+			},
+			{
+				"bezeichnung": "Gesundheitspolitischer Sprecher FDP: Prof. Dr. Andrew Ullmann",
+				"titel": "Gesundheitspolitischer Sprecher",
+				"name": "Andrew Ullmann",
+				"tel": "0931 40 70 70 20",
+				"fax": "nicht bekannt",
+				"mail": "andrew.ullmann.wk@bundestag.de",
+				"anschrift": ["Pleicherkirchplatz 15", "97070 Würzburg"],
+				"anreden": [
+					"Hallo",
+					"Guten Tag",
+					"Moin",
+					"Sehr geehrter ${titel} ${name}",
+					"Sehr geehrtes Team von ${titel} ${name}"
+				]
+			},
+			{
+				"bezeichnung": "Gesundheitspolitischer Sprecher CDU: Tino Sorge",
+				"titel": "Gesundheitspolitischer Sprecher",
+				"name": "Tino Sorge",
+				"tel": "0391 / 254 98 16",
+				"fax": "0391 / 254 98 11",
+				"mail": "tino.sorge.wk@bundestag.de",
+				"anschrift": ["Fürstenwallstraße 17", "39104 Magdeburg"],
+				"anreden": [
+					"Hallo",
+					"Guten Tag",
+					"Moin",
+					"Sehr geehrte ${titel} ${name}",
+					"Sehr geehrtes Team von ${titel} ${name}"
+				]
+			},
+			{
+				"bezeichnung": "Gesundheitspolitsche Sprecherin SPD: Heike Baehrens",
+				"titel": "Gesundheitspolitische Sprecherin",
+				"name": "Heike Baehrens",
+				"tel": "07161 - 988 35 46",
+				"fax": "07161 - 504 82 74",
+				"mail": "heike.baehrens.wk@bundestag.de",
+				"anschrift": ["Schillerplatz 10", "73033 Göppingen"],
+				"anreden": [
+					"Hallo",
+					"Guten Tag",
+					"Moin",
+					"Sehr geehrte ${titel} ${name}",
+					"Sehr geehrtes Team von ${titel} ${name}"
+				]
+			},
+			{
+				"bezeichnung": "Gesundheitspolitischer Sprecher Grüne: Dr. Janosch Dahmen",
+				"titel": "Gesundheitspolitischer Sprecher",
+				"name": "Janosch Dahmen",
+				"tel": "nicht bekannt",
+				"fax": "nicht bekannt",
+				"mail": "janosch.dahmen.wk@bundestag.de",
 				"anschrift": ["Platz der Republik 1", "11011 Berlin"],
 				"anreden": [
 					"Hallo",

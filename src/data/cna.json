@@ -131,6 +131,29 @@
 				"Bringen Sie uns rechtzeitig zum Herbst nachhaltige Verordnungen, um Wellen möglichst flach und Erkrankungszahlen niedrig halten zu können, auf den Weg",
 				"Gut begründete und nachvollziehbare (das heißt auch: gut und zugänglich erklärte) Verordnungen werden für den Winter wichtig. Bringen Sie diese bald auf den Weg!"
 			]
+		},
+		{
+			"name": "Flüche, Wut, Zynismus und allgemeine Frustration (achtung, unhöflich.)",
+			"betreff": [
+				"Habt ihr sie noch alle?",
+				"Ey, bekommt mal den Arsch hoch",
+				"Macht mal was, Pandemie ist immer noch nicht lustig",
+				"Vom Wegschauen geht die Pandemie auch nicht vorüber"
+			],
+			"einleitung": [
+				"Seit Anfang 2020 ist hier Pandemie und ich hab keinen Bock mehr auf die Scheiße.",
+				"2,5 Jahre und was haben wir? Immer noch Pandemie und akuten Notstand im Gesundheitssystem.",
+				"Ein Haufen Clowns würde sinnvollere Maßnahmen beschließen als das, was ihr da fabriziert."
+			],
+			"beschwerde": [
+				"Ihr seid so ein unfähiger Haufen an 🤡. Bisschen was an vernünftigen Maßnahmen (Maske, Impfpflicht) ist echt nicht zu viel verlangt.",
+				"Ey kommt, macht mal was, ich würd gern mal wieder sowas wie ein normales Leben führen. Ist mit Vorerkrankungen bei eurer Politik aber nicht drin."
+			],
+			"appell": [
+				"Bekommt euren Arsch endlich mal an die Wand!",
+				"Husch, Maßnahmenpakete schreiben sich nicht von selbst.",
+				"Bin sauer, kommt mir bloß nicht in die Quere."
+			]
 		}
 	]
 }

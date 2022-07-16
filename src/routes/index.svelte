@@ -81,7 +81,7 @@
 	const focusText = () => document.getElementById("text").focus();
 </script>
 
-<h1 class="text-2xl font-bold">Corona-Nörgel-App 🦠😷</h1>
+<h1 class="text-2xl font-bold">Corona-Nörgel-App &mdash; Sommerwelle-Update 🌞</h1>
 <div class="prose mt-4 dark:prose-invert">
 	<p>
 		Die deutsche Bundesregierung ist weiterhin nicht in der Lage, angemessen mit der Corona-Pandemie

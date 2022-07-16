@@ -107,7 +107,7 @@
 	Although there is no overflowing content on this page, setting the overflow to hidden prevents
 	the appearance of the the horizontal scrollbar.
 -->
-<form on:submit|preventDefault={() => (finalText = data.buildText())} class="overflow-hidden">
+<form on:submit|preventDefault={() => (finalText = data.buildText())} class="overflow-hidden px-1">
 	<fieldset>
 		<legend>Schritt 1 von 5: Auswahl des Bundeslandes</legend>
 		<label for="bundesland">Bundesland</label>

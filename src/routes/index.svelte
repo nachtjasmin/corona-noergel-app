@@ -93,9 +93,10 @@
 		davon alleine geht die Pandemie leider nicht weg.
 	</p>
 	<p>
-		Hier kannst du für die gesundheitspolitischen Sprecher*innen und Obleute im Gesundheitsausschuss
-		Mails generieren. Abschicken musst du es noch selbst, dafür brauchst du ein eingerichtetes
-		Mailprogramm wie Thunderbird, Outlook oder K9.
+		Hier kannst du für die gesundheitspolitischen Sprecher*innen und Obleute, also die jeweils
+		Vorsitzenden für eine Fraktion, im Gesundheitsausschuss Mails generieren. Abschicken musst
+		du es noch selbst, dafür brauchst du ein eingerichtetes Mailprogramm wie Thunderbird,
+		Outlook oder K9.
 	</p>
 	<p>
 		Die bisherige Historie von <i>beschweren.rocks</i> lässt sich

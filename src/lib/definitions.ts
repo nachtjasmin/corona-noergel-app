@@ -4,22 +4,8 @@
 */
 
 export interface Bundeslaender {
-	BW: Bundesland;
-	BY: Bundesland;
-	BE: Bundesland;
-	BB: Bundesland;
-	HB: Bundesland;
-	HH: Bundesland;
-	HE: Bundesland;
-	MV: Bundesland;
-	NI: Bundesland;
-	NW: Bundesland;
-	RP: Bundesland;
-	SL: Bundesland;
-	SN: Bundesland;
-	ST: Bundesland;
-	SH: Bundesland;
-	TH: Bundesland;
+	$schema: string;
+	BUND: Bundesland;
 }
 
 export class Bundesland {

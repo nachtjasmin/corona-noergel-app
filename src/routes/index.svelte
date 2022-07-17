@@ -8,6 +8,9 @@
 	import { tick } from "svelte";
 	import bundeslaenderJson from "../data/bundeslaender.json";
 	let bundeslaender = bundeslaenderJson as Bundeslaender;
+	delete bundeslaender.$schema;
+
+	console.log(bundeslaender);
 
 	pageTitle.reset();
 
@@ -34,6 +37,7 @@
 	$: appelle = replaceStringPlaceholders(topic?.appell, {
 		bundesland: bundeslaender[$data.bundeslandKey]?.land ?? "",
 	});
+	$: kontakte = bundeslaender[$data.bundeslandKey]?.kontakte ?? [];
 
 	let topics: Topic[] = [];
 	const filterTopics = (bundeslandKey: string) => {
@@ -123,7 +127,7 @@
 		{#if $data.bundeslandKey}
 			<label for="kontakt">Empfänger*in</label>
 			<select id="kontakt" bind:value={$data.empfaenger}>
-				{#each bundeslaender[$data.bundeslandKey].kontakte as k}
+				{#each kontakte as k}
 					<option value={k}>{k.bezeichnung}</option>
 				{/each}
 			</select>

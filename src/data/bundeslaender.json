@@ -95,8 +95,8 @@
 					"Hallo",
 					"Guten Tag",
 					"Moin",
-					"Sehr geehrter ${titel} ${name}",
-					"Sehr geehrtes Team von ${titel} ${name}"
+					"Sehr geehrter ${name}",
+					"Sehr geehrtes Team von ${name}"
 				]
 			},
 			{
@@ -111,8 +111,8 @@
 					"Hallo",
 					"Guten Tag",
 					"Moin",
-					"Sehr geehrter ${titel} ${name}",
-					"Sehr geehrtes Team von ${titel} ${name}"
+					"Sehr geehrter ${name}",
+					"Sehr geehrtes Team von ${name}"
 				]
 			},
 			{
@@ -127,8 +127,8 @@
 					"Hallo",
 					"Guten Tag",
 					"Moin",
-					"Sehr geehrte ${titel} ${name}",
-					"Sehr geehrtes Team von ${titel} ${name}"
+					"Sehr geehrte ${name}",
+					"Sehr geehrtes Team von ${name}"
 				]
 			},
 			{
@@ -143,8 +143,8 @@
 					"Hallo",
 					"Guten Tag",
 					"Moin",
-					"Sehr geehrte ${titel} ${name}",
-					"Sehr geehrtes Team von ${titel} ${name}"
+					"Sehr geehrte ${name}",
+					"Sehr geehrtes Team von ${name}"
 				]
 			},
 			{
@@ -159,8 +159,8 @@
 					"Hallo",
 					"Guten Tag",
 					"Moin",
-					"Sehr geehrte ${titel} ${name}",
-					"Sehr geehrtes Team von ${titel} ${name}"
+					"Sehr geehrte ${name}",
+					"Sehr geehrtes Team von ${name}"
 				]
 			}
 		]

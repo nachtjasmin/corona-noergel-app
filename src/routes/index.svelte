@@ -10,8 +10,6 @@
 	let bundeslaender = bundeslaenderJson as Bundeslaender;
 	delete bundeslaender.$schema;
 
-	console.log(bundeslaender);
-
 	pageTitle.reset();
 
 	let finalText = "";

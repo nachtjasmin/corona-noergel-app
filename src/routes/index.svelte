@@ -8,6 +8,9 @@
 	import { tick } from "svelte";
 	import bundeslaenderJson from "../data/bundeslaender.json";
 	let bundeslaender = bundeslaenderJson as Bundeslaender;
+	delete bundeslaender.$schema;
+
+	console.log(bundeslaender);
 
 	pageTitle.reset();
 
@@ -34,6 +37,7 @@
 	$: appelle = replaceStringPlaceholders(topic?.appell, {
 		bundesland: bundeslaender[$data.bundeslandKey]?.land ?? "",
 	});
+	$: kontakte = bundeslaender[$data.bundeslandKey]?.kontakte ?? [];
 
 	let topics: Topic[] = [];
 	const filterTopics = (bundeslandKey: string) => {
@@ -81,14 +85,14 @@
 	const focusText = () => document.getElementById("text").focus();
 </script>
 
-<h1 class="text-2xl font-bold">Corona-Nörgel-App 🦠😷</h1>
+<h1 class="text-2xl font-bold">Corona-Nörgel-App &mdash; Sommerwelle-Update 🌞</h1>
 <div class="prose mt-4 dark:prose-invert">
 	<p>
 		Die deutsche Bundesregierung ist weiterhin nicht in der Lage, angemessen mit der Corona-Pandemie
-		umzugehen. So sorgt uns beispielsweise die als <i>"Freedom Day"</i> bekannte Aufhebung aller Schutzmaßnahmen
-		(niederschwellige Dinge wie Maskenpflicht ausgenommen) sehr. Nur durch einen Schutz der gesamten
-		Bevölkerung und nicht nur des als gesund wahrgenommenen Teils können wir die Pandemie beenden. Aber
-		nicht durch planloses Herumgeiere.
+		umzugehen. Die Inzidenzen sind immer noch zu hoch, um überhaupt das Ende der Pandemie annehemne
+		zu können. Long Covid ist immer noch ein Ding und das Einzige, was unserem Gesundheitsminister
+		einfällt ist "bitte lasst euch noch die 4. Impfung geben". Impfungen sind zwar nice, aber ähm,
+		davon geht die Pandemie leider nicht weg.
 	</p>
 	<p>
 		Hier kannst du passend für dein Bundesland eine Beschwerdemail für dein zuständiges Ministerium
@@ -107,7 +111,7 @@
 	Although there is no overflowing content on this page, setting the overflow to hidden prevents
 	the appearance of the the horizontal scrollbar.
 -->
-<form on:submit|preventDefault={() => (finalText = data.buildText())} class="overflow-hidden">
+<form on:submit|preventDefault={() => (finalText = data.buildText())} class="overflow-hidden px-1">
 	<fieldset>
 		<legend>Schritt 1 von 5: Auswahl des Bundeslandes</legend>
 		<label for="bundesland">Bundesland</label>
@@ -123,7 +127,7 @@
 		{#if $data.bundeslandKey}
 			<label for="kontakt">Empfänger*in</label>
 			<select id="kontakt" bind:value={$data.empfaenger}>
-				{#each bundeslaender[$data.bundeslandKey].kontakte as k}
+				{#each kontakte as k}
 					<option value={k}>{k.bezeichnung}</option>
 				{/each}
 			</select>
@@ -193,9 +197,7 @@
 			<p class="mb-2 text-sm">
 				Empfänger*in: <MonospacedInfo>{$data.empfaenger?.mail ?? ""}</MonospacedInfo>
 			</p>
-			<textarea id="text" readonly class="w-full rounded bg-gray-100 dark:bg-slate-800" rows="10"
-				>{finalText}</textarea
-			>
+			<textarea id="text" readonly rows="10">{finalText}</textarea>
 		</div>
 	</fieldset>
 </form>
@@ -246,9 +248,13 @@
 		@apply text-sm;
 	}
 	select,
-	input {
-		@apply mt-1 mb-2 w-full rounded;
-		@apply dark:bg-slate-800;
+	input,
+	textarea {
+		@apply mt-1 mb-4 block w-full rounded-md border-slate-300 py-2 pl-3 pr-10 text-base focus:border-accent-500 focus:outline-none focus:ring-accent-500 sm:text-sm;
+		@apply dark:border-slate-600 dark:bg-slate-800;
+	}
+	textarea {
+		@apply bg-slate-50 dark:bg-slate-800;
 	}
 	fieldset,
 	section {

@@ -92,23 +92,5 @@
 			"additionalProperties": false,
 			"required": ["bezeichnung", "titel", "name", "mail", "fax", "anschrift"]
 		}
-	},
-	"required": [
-		"BW",
-		"BY",
-		"BE",
-		"BB",
-		"HB",
-		"HH",
-		"HE",
-		"MV",
-		"NI",
-		"NW",
-		"RP",
-		"SL",
-		"SN",
-		"ST",
-		"SH",
-		"TH"
-	]
+	}
 }

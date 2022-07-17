@@ -12,7 +12,10 @@ const config = {
 	],
 
 	kit: {
-		prerender: { default: true },
+		prerender: {
+			enabled: true,
+			default: true,
+		},
 		adapter: adapter(),
 	},
 };

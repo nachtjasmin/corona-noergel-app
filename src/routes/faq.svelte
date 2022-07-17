@@ -20,8 +20,7 @@
 		<a href="https://github.com/xenein" rel="noopener">Xenia</a> und
 		<a href="https://github.com/chloe-the-catgirl" rel="noopener">Jasmin</a> entwickeln die Software,
 		die Beschweren.Rocks betreibt, setzen Themen und stellen die Formulierungsvorschläge zusammen. Beide
-		entwerfen und erstellen hauptberuflich Software. [hier gegebenenfalls noch 1,5 biographische Sätze,
-		falls wir wollen sollten]
+		entwerfen und erstellen hauptberuflich Software. 
 	</p>
 	<h3>Was mache ich, wenn ich einen Fehler auf Beschweren.Rocks gefunden habe?</h3>
 	<p>

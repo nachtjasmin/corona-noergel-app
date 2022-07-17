@@ -57,17 +57,17 @@
 	<h2>Impfungen</h2>
 	<p>
 		Impfungen sind gut, Impfungen sind nützlich. Aber diese funktionieren immer noch am Besten, wenn
-		möglichst viele Menschen versorgt werden können. Daher ist es uns wichtig, dass:
+		<strong>möglichst viele Menschen versorgt werden</strong> können. Daher ist es uns wichtig, dass:
 	</p>
 	<ul>
-		<li>weltweit die Impfungen gegen SARS-COV-2 vorangebracht werden</li>
+		<li><strong>weltweit die Impfungen gegen SARS-COV-2 vorangebracht werden</strong></li>
 		<li>
-			Menschen hierzulande für Impftermine eingeladen werden, so wie es die Freie Hansestadt Bremen
-			getan hat
+			<strong>Menschen hierzulande für Impftermine eingeladen werden</strong>, so wie es die Freie
+			Hansestadt Bremen getan hat
 		</li>
 		<li>
-			eine allgemeine Impfpflicht für das Corona-Virus durchgesetzt wird, um endlich mal eine
-			bessere Immunität aufbauen zu können
+			eine <strong>allgemeine Impfpflicht</strong> für das Corona-Virus durchgesetzt wird, um endlich
+			mal eine bessere Immunität aufbauen zu können
 		</li>
 		<li>
 			die Verfügbarkeit auch für reguläre Grippe-Impfungen ausgeweitet und kostenlos zugänglich
@@ -113,9 +113,10 @@
 	</ul>
 	<h2>Verlässliche und vorhersehbare Verordnungen</h2>
 	<p>
-		Wir als Bevölkerung sind auf eine gewisse Planbarkeit angewiesen. Erst hü und dann hott ist für
-		Privatpersonen und Unternehmen gleichermaßen bescheiden und untermauert nur das Misstrauen in
-		den Staat. Daher ist eine Einführung eines Stufenplans sinnvoll. Dieser sollte:
+		Wir als Bevölkerung sind auf eine gewisse <strong>Planbarkeit</strong> angewiesen. Erst hü und
+		dann hott ist für Privatpersonen und Unternehmen gleichermaßen bescheiden und untermauert nur
+		das Misstrauen in den Staat. Daher ist eine <strong>Einführung eines Stufenplans</strong> sinnvoll.
+		Dieser sollte:
 	</p>
 	<ul>
 		<li>den Schutz der Bevölkerung priorisieren</li>

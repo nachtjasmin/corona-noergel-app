@@ -28,7 +28,7 @@
 	<h2>Unterstützung</h2>
 	<p>
 		Jene nicht-binären Hobbits sind für die Umsetzung dieser Seite nicht auf finanzielle
-		Unterstützung angewiesen. Wer genre etwas in eine virtuelle Kaffeekasse geben möchte, sei
+		Unterstützung angewiesen. Wer gerne etwas in eine virtuelle Kaffeekasse geben möchte, sei
 		eingeladen, das gemeinnützige <a href="https://queer-lexikon.net/unterstuetze-uns/">
 			Queer Lexikon</a
 		>

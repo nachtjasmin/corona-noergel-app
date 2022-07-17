@@ -2,7 +2,7 @@
 
 <div class="prose mt-4 mb-8 dark:prose-invert">
 	<p>
-		Da wir gefragt worden, warum wir diese Webseite denn überhaupt hier betreiben, einmal kurz und
+		Da wir gefragt wurden, warum wir diese Webseite denn überhaupt hier betreiben, einmal kurz und
 		bündig unsere Position:
 	</p>
 	<h2>Tests</h2>

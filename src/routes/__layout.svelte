@@ -1,8 +1,16 @@
 <script>
 	import FormContainer from "$lib/components/FormContainer.svelte";
 	import { pageTitle } from "$lib/store";
+	import { page } from "$app/stores";
 	import "../app.css";
 	import version from "../data/version.txt?raw";
+
+	const navigation = [
+		{ path: "/", name: "Startseite" },
+		{ path: "/faq", name: "FAQ" },
+		{ path: "/unsere-position", name: "Unsere Position" },
+		{ path: "/imprint", name: "Impressum & Datenschutz" },
+	];
 </script>
 
 <svelte:head>
@@ -12,10 +20,16 @@
 <FormContainer>
 	<nav>
 		<ul class="mb-8 flex flex-col justify-center sm:flex-row sm:space-x-4">
-			<li><a href="/" class="footer-link">Startseite</a></li>
-			<li><a href="/faq" class="footer-link">FAQ</a></li>
-			<li><a href="/unsere-position" class="footer-link">Unsere Position</a></li>
-			<li><a href="/imprint" class="footer-link">Impressum & Datenschutzerklärung</a></li>
+			{#each navigation as link}
+				<li>
+					<a
+						class="footer-link"
+						href={link.path}
+						aria-current={$page.url.pathname === link.path}
+						class:active={$page.url.pathname === link.path}>{link.name}</a
+					>
+				</li>
+			{/each}
 		</ul>
 	</nav>
 	<slot />
@@ -28,5 +42,8 @@
 	.footer-link {
 		@apply text-sm underline;
 		@apply text-gray-600 dark:text-gray-200;
+	}
+	.footer-link.active {
+		@apply font-semibold;
 	}
 </style>

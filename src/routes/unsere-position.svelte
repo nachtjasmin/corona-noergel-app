@@ -7,7 +7,7 @@
 	</p>
 	<h2>Tests</h2>
 	<p>
-		Tests sind gut und wichtig für die Datenlage. Und Wien (Österrich) hat es richtig vorgemacht.
+		Tests sind gut und wichtig für die Datenlage. Und Wien (Österreich) hat es richtig vorgemacht.
 	</p>
 	<ul>
 		<li>

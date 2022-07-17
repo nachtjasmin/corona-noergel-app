@@ -111,8 +111,7 @@
 	</p>
 	<p>
 		Anfragen, insofern das Medium, in dem veröffentlicht werden soll, nicht dem Springer-Verlag
-		angeschlossen ist, gerne an <a href="mailto:hallo@beschweren.rocks">hallo@beschweren.rocks</a
-		>.
+		angeschlossen ist, gerne an <a href="mailto:hallo@beschweren.rocks">hallo@beschweren.rocks</a>.
 	</p>
 	<h3>
 		Wie viele Aufrufe auf Beschweren.Rocks gibt es? Wie viele Mails wurden bereits verschickt?

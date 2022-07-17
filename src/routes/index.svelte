@@ -111,10 +111,10 @@
 -->
 <form on:submit|preventDefault={() => (finalText = data.buildText())} class="overflow-hidden px-1">
 	<fieldset>
-		<legend>Schritt 1 von 5: Auswahl des Bundeslandes</legend>
-		<label for="bundesland">Bundesland</label>
+		<legend>Schritt 1 von 5: Auswahl des*der Empfänger*in</legend>
+		<label for="bundesland">Institution</label>
 		<select id="bundesland" bind:value={$data.bundeslandKey} on:change={reset}>
-			<option disabled>Bundesland auswählen</option>
+			<option disabled>Institution auswählen</option>
 			{#each Object.keys(bundeslaender).filter((x) => x !== "$schema") as land}
 				<option value={land}>
 					{bundeslaender[land].land}

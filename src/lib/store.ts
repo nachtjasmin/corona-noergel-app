@@ -15,17 +15,24 @@ export type StoreStructure = {
 
 const emptyStructure: StoreStructure = { bundeslandKey: "", name: "" };
 
+const appendedText =
+	"Ausführlichere Informationen zu meiner Position finden sich unter: https://beschweren.rocks/unsere-position";
+
 function createDataStore() {
 	const structure = writable<StoreStructure>(emptyStructure);
 
-	const buildInnerText = (): string => {
+	const buildInnerText = (appendLinkToPosition = false): string => {
 		const data = get(structure);
-		return `${data.einleitung}\n${data.beschwerde}\n${data.appell}`;
+		let result = `${data.einleitung}\n${data.beschwerde}\n${data.appell}`;
+		if (appendLinkToPosition) result += "\n" + appendedText;
+		return result;
 	};
 
-	const buildText = (): string => {
+	const buildText = (appendLinkToPosition = false): string => {
 		const data = get(structure);
-		return `${data.anrede},\n\n${buildInnerText()}\n\n${data.gruss}\n${data.name}`;
+		return `${data.anrede},\n\n${buildInnerText(appendLinkToPosition)}\n\n${data.gruss}\n${
+			data.name
+		}`;
 	};
 
 	return {

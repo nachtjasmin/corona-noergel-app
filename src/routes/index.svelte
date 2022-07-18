@@ -13,6 +13,7 @@
 	pageTitle.reset();
 
 	let finalText = "";
+	let appendLinkToPosition = false;
 
 	$: topic = $cna.topics.find((x) => x.name === $data.topicName);
 	$: showStateSelection = $data.bundeslandKey;
@@ -76,11 +77,17 @@
 		$data.appell = getRandom(appelle);
 		$data.gruss = getRandom($cna.gruss);
 
-		finalText = data.buildText();
+		finalText = data.buildText(appendLinkToPosition);
 		await tick();
 		focusText();
 	};
 	const focusText = () => document.getElementById("text").focus();
+	const refreshText = async () => {
+		finalText = data.buildText(appendLinkToPosition);
+
+		await tick();
+		focusText();
+	};
 </script>
 
 <h1 class="text-2xl font-bold">Corona-Nörgel-App &mdash; Sommerwelle-Update 🌞</h1>
@@ -187,6 +194,31 @@
 
 		<label for="name">Dein Name</label>
 		<input id="name" type="text" placeholder="(optional)" bind:value={$data.name} />
+
+		<div class="relative flex items-start">
+			<div class="flex h-5 items-center">
+				<input
+					id="append-link-to-position"
+					aria-describedby="append-link-to-position-description"
+					name="append-link-to-position"
+					type="checkbox"
+					bind:checked={appendLinkToPosition}
+					on:change={() => refreshText()}
+				/>
+			</div>
+			<div class="ml-3 text-sm">
+				<label for="append-link-to-position" class="font-medium text-slate-700 dark:text-slate-300">
+					Verweis zu unserer Position anhängen
+				</label>
+				<p id="append-link-to-position-description" class="text-slate-500">
+					Dies ergänzt den Text um einen abschließenden Verweis auf eine <a
+						class="underline"
+						href="/unsere-position"
+						>ausführlichere Position, die die Anliegen detaillierter erläutert</a
+					>.
+				</p>
+			</div>
+		</div>
 	</fieldset>
 	<fieldset class:hidden={!showTextBuilder}>
 		<legend>Schritt 4 von 5: Text erzeugen</legend>
@@ -246,9 +278,13 @@
 		@apply text-sm;
 	}
 	select,
-	input,
+	input[type="text"],
 	textarea {
 		@apply mt-1 mb-4 block w-full rounded-md border-slate-300 py-2 pl-3 pr-10 text-base focus:border-accent-500 focus:outline-none focus:ring-accent-500 sm:text-sm;
+		@apply dark:border-slate-600 dark:bg-slate-800;
+	}
+	input[type="checkbox"] {
+		@apply h-4 w-4 rounded border-slate-300 text-accent-600 focus:ring-accent-500;
 		@apply dark:border-slate-600 dark:bg-slate-800;
 	}
 	textarea {

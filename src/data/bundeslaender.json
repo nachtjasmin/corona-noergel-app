@@ -95,7 +95,7 @@
 					"Hallo",
 					"Guten Tag",
 					"Moin",
-					"Sehr geehrter ${name}",
+					"Sehr geehrte ${name}",
 					"Sehr geehrtes Team von ${name}"
 				]
 			},

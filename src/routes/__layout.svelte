@@ -10,6 +10,7 @@
 		{ path: "/faq", name: "FAQ" },
 		{ path: "/unsere-position", name: "Unsere Position" },
 		{ path: "/imprint", name: "Impressum & Datenschutz" },
+		{ path: "/fehler-gefunden", name: "Fehler gefunden?" },
 	];
 </script>
 

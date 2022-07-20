@@ -15,7 +15,7 @@
 					"Hallo",
 					"Guten Tag",
 					"Moin",
-					"Sehr geehrter ${titel} ${name}",
+					"Sehr geehrte ${titel} ${name}",
 					"Sehr geehrtes Team von ${titel} ${name}"
 				]
 			},
@@ -84,22 +84,6 @@
 				]
 			},
 			{
-				"bezeichnung": "Gesundheitspolitische Sprecherin Linke: Kathrin Vogler",
-				"titel": "Gesundheitspolitische Sprecherin",
-				"name": "Kathrin Vogler",
-				"anschrift": ["Karlstraße 17", "48282 Emsdetten"],
-				"tel": "0 25 72 9 60 77 60",
-				"fax": "0 25 72 9 60 67 65",
-				"mail": "kathrin.vogler.wk@bundestag.de",
-				"anreden": [
-					"Hallo",
-					"Guten Tag",
-					"Moin",
-					"Sehr geehrte ${name}",
-					"Sehr geehrtes Team von ${name}"
-				]
-			},
-			{
 				"bezeichnung": "Gesundheitspolitischer Sprecher FDP: Prof. Dr. Andrew Ullmann",
 				"titel": "Gesundheitspolitischer Sprecher",
 				"name": "Andrew Ullmann",
@@ -127,23 +111,7 @@
 					"Hallo",
 					"Guten Tag",
 					"Moin",
-					"Sehr geehrte ${name}",
-					"Sehr geehrtes Team von ${name}"
-				]
-			},
-			{
-				"bezeichnung": "Gesundheitspolitsche Sprecherin SPD: Heike Baehrens",
-				"titel": "Gesundheitspolitische Sprecherin",
-				"name": "Heike Baehrens",
-				"tel": "07161 - 988 35 46",
-				"fax": "07161 - 504 82 74",
-				"mail": "heike.baehrens.wk@bundestag.de",
-				"anschrift": ["Schillerplatz 10", "73033 Göppingen"],
-				"anreden": [
-					"Hallo",
-					"Guten Tag",
-					"Moin",
-					"Sehr geehrte ${name}",
+					"Sehr geehrter ${name}",
 					"Sehr geehrtes Team von ${name}"
 				]
 			},
@@ -159,7 +127,7 @@
 					"Hallo",
 					"Guten Tag",
 					"Moin",
-					"Sehr geehrte ${name}",
+					"Sehr geehrter ${name}",
 					"Sehr geehrtes Team von ${name}"
 				]
 			}

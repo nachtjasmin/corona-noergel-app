@@ -1,4 +1,4 @@
-<h1 class="text-2xl font-bold">Unsere Position zur Pandemie und dessen Eindämmung</h1>
+<h1 class="text-2xl font-bold">Unsere Position zur Pandemie und deren Eindämmung</h1>
 
 <div class="prose mt-4 mb-8 dark:prose-invert">
 	<p>

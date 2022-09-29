@@ -10,13 +10,10 @@ const config = {
 			postcss: true,
 		}),
 	],
-
 	kit: {
-		prerender: {
-			enabled: true,
-			default: true,
-		},
-		adapter: adapter(),
+		adapter: adapter({
+			fallback: "index.html",
+		}),
 	},
 };
 

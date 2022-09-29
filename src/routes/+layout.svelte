@@ -1,4 +1,6 @@
 <script>
+	export const prerender = true;
+
 	import FormContainer from "$lib/components/FormContainer.svelte";
 	import { pageTitle } from "$lib/store";
 	import { page } from "$app/stores";

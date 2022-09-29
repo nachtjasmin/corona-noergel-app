@@ -1,6 +1,7 @@
 {
 	"compilerOptions": {
-		"resolveJsonModule": true
+		"resolveJsonModule": true,
+		"allowSyntheticDefaultImports": true
 	},
 	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte", "src/data/*.json"],
 	"extends": "./.svelte-kit/tsconfig.json"
